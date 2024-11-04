@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ivy-module
+	version="2.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+	
+	<info
+		organisation="jeb"
+		module="jeb"
+		status="prototype">
+	</info>
+	
+	<dependencies>
+
+		<!-- https://mvnrepository.com/artifact/javax.vecmath/vecmath -->
+		<dependency org="javax.vecmath" name="vecmath" rev="1.5.2"/>
+
+
+		<!-- https://mvnrepository.com/artifact/org.jogamp.gluegen/gluegen-rt -->
+		<!--dependency org="org.jogamp.gluegen" name="gluegen-rt" rev="2.3.2"/-->
+		
+		<!-- https://mvnrepository.com/artifact/org.jogamp.gluegen/gluegen-rt-main -->
+		<!--dependency org="org.jogamp.gluegen" name="gluegen-rt-main" rev="2.3.2"/-->
+
+		<!-- https://mvnrepository.com/artifact/org.jogamp.jogl/jogl-all -->
+		<!--dependency org="org.jogamp.jogl" name="jogl-all" rev="2.3.2"/-->
+
+		<!-- https://mvnrepository.com/artifact/org.jogamp.jogl/jogl-all-main -->
+		<!--dependency org="org.jogamp.jogl" name="jogl-all-main" rev="2.3.2"/-->
+
+		<!-- https://mvnrepository.com/artifact/org.jogamp.jogl/oculusvr -->
+		<!--dependency org="org.jogamp.jogl" name="oculusvr" rev="2.3.2"/-->
+
+		<!-- https://mvnrepository.com/artifact/org.jogamp.joal/joal -->
+		<!--dependency org="org.jogamp.joal" name="joal" rev="2.3.2"/-->
+
+		<!-- https://mvnrepository.com/artifact/net.java.jinput/jinput -->
+		<dependency org="net.java.jinput" name="jinput" rev="2.0.10"/>
+
+		<!-- https://mvnrepository.com/artifact/net.java.jinput/windows-plugin -->
+		<dependency org="net.java.jinput" name="windows-plugin" rev="2.0.10"/>
+
+		<!-- https://mvnrepository.com/artifact/net.java.jinput/jinput-platform -->
+		<dependency org="net.java.jinput" name="jinput-platform" rev="2.0.7">
+		    <artifact name="jinput-platform" type="pom" ext="pom"/>
+		</dependency>
+	
+	</dependencies>
+	
+</ivy-module>
