@@ -1,50 +1,47 @@
 //*********************************************************************************************************************
-package spark.world.generated;
+package spark.qtree;
 //*********************************************************************************************************************
 
-import java.util.List;
-import org.eclipse.collections.impl.list.mutable.FastList;
-
-import spark.world.Galaxy;
-import spark.world.Universe;
-import spark.world.generator.UniverseGenerator;
+import java.util.HashSet;
+import java.util.Set;
 
 //*********************************************************************************************************************
-public class GeneratedUniverse extends Generated<GeneratedUniverse> implements Universe {
+public class QTree {
 
 	//=================================================================================================================
-	private List<GeneratedGalaxy> galaxies = null;
+	private QNode        root    = new QNode();
+	private Set<QObject> objects = new HashSet<>();
 	//=================================================================================================================
-	
+
 	//=================================================================================================================
-	public GeneratedUniverse(long seed) {
-		super(seed);
-		this.galaxies = new FastList<GeneratedGalaxy>();
-	}
-	//=================================================================================================================
-	
-	//=================================================================================================================
-	public int galaxyCount() {
-		return this.galaxies.size();
+	public QTree() {
+		root = new QNode();
 	}
 	//=================================================================================================================
 
 	//=================================================================================================================
-	public Galaxy galaxy(int index) {
-		return this.galaxies.get(index);
+	public void add(QObject object) {
+		objects.add(object);
+		root.add(object);
 	}
 	//=================================================================================================================
 
 	//=================================================================================================================
-	public void galaxy(GeneratedGalaxy galaxy) {
-		this.galaxies.add(galaxy);
+	public void delete(QObject object) {
+		if (objects.remove(object)) {
+			object.node.delete(object);
+		}
 	}
 	//=================================================================================================================
-	
+
 	//=================================================================================================================
-	public void generate() {		
-		UniverseGenerator.INSTANCE.generate(this);
-		super.generate();
+	public void update(QObject object) {
+		QNode current = object.node;
+		while (current.parent != null && !current.encloses(object)) {
+			current = current.parent;
+		}
+		object.node.delete(object);
+		current.add(object);		
 	}
 	//=================================================================================================================
 	

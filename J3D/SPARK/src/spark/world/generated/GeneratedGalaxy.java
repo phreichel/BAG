@@ -2,10 +2,11 @@
 package spark.world.generated;
 //*********************************************************************************************************************
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.vecmath.Vector3f;
+
+import org.eclipse.collections.impl.list.mutable.FastList;
 
 import spark.world.Galaxy;
 import spark.world.Starsystem;
@@ -29,7 +30,7 @@ public class GeneratedGalaxy extends Generated<GeneratedGalaxy> implements Galax
 		super(seed);
 		this.location = location;
 		this.universe = universe;
-		this.systems = new ArrayList<GeneratedStarsystem>();
+		this.systems = new FastList<GeneratedStarsystem>();
 	}
 	//=================================================================================================================
 

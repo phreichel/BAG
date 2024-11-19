@@ -12,8 +12,8 @@
 	
 	<dependencies>
 
+		<dependency org="org.eclipse.collections" name="eclipse-collections" rev="11.0.0"/>
 		<dependency org="org.apache.commons" name="commons-math3" rev="3.6.1" />
-
 		<dependency org="javax.vecmath" name="vecmath" rev="1.5.2"/>
 
 		<dependency org="org.jogamp.gluegen" name="gluegen-rt" rev="2.3.2"/>
