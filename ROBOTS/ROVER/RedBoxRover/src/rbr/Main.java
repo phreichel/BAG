@@ -27,7 +27,9 @@ public class Main implements AWTEventListener {
 	//=============================================================================================
 
 	//=============================================================================================
+	boolean connected = false;
 	boolean terminated = false;
+	boolean triggered = false;
 	private int m1 = 0;
 	private int m2 = 0;
 	//=============================================================================================
@@ -41,13 +43,38 @@ public class Main implements AWTEventListener {
 		Toolkit.getDefaultToolkit().addAWTEventListener(this, AWTEvent.KEY_EVENT_MASK);
 		System.out.println("EVENTS.");
 		
-		socket = new Socket("192.168.178.79", 80);
-		reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-		writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
-		System.out.println("CONNECTED.");
-		
 		setMotors(m1, m2);
 		
+	}
+	//=============================================================================================
+
+	//=============================================================================================
+	private void connect() throws Exception {
+		if (!connected) {
+			socket = new Socket("192.168.178.79", 80);
+			reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+			writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+			System.out.println("CONNECTED.");
+			connected = true;
+		}
+	}
+	//=============================================================================================
+	
+	//=============================================================================================
+	private void setMotors(int m1, int m2) {
+		try {
+			connect();
+			String cmd = String.format("[%s,%s]%n", m1, m2);
+			System.out.println(cmd);
+			writer.append(cmd);
+			writer.flush();
+		} catch (Exception e) {
+			connected = false;
+			System.out.println("DISCONNECT");
+			try {
+				done();
+			} catch (Exception x) {}
+		}
 	}
 	//=============================================================================================
 
@@ -58,23 +85,18 @@ public class Main implements AWTEventListener {
 		socket.close();
 	}
 	//=============================================================================================
-
-	//=============================================================================================
-	private void setMotors(int m1, int m2) throws Exception {
-		String cmd = String.format("[%s,%s]%n", m1, m2);
-		System.out.println(cmd);
-		writer.append(cmd);
-		writer.flush();
-	}
-	//=============================================================================================
-
+	
 	//=============================================================================================
 	public void run() throws Exception {
 		init();
 		while (!terminated) {
-			Thread.yield();
+			update();
+			try {
+				Thread.sleep(1);
+			} catch (InterruptedException e) {}
 		}
 		done();
+		frame.dispose();
 	}
 	//=============================================================================================
 	
@@ -97,44 +119,111 @@ public class Main implements AWTEventListener {
 			case KeyEvent.VK_X:
 				terminated = true;
 				break;
-			case KeyEvent.VK_Q:
-				if (keyEvent == KeyEvent.KEY_PRESSED)
-					m1 = 255;
-				else if (keyEvent == KeyEvent.KEY_RELEASED)
+			case KeyEvent.VK_UP:
+				if (keyEvent == KeyEvent.KEY_PRESSED) {
+					triggered = true;
+					m1 = 200;
+					m2 = 200;
+				}
+				else if (keyEvent == KeyEvent.KEY_RELEASED) {
+					triggered = true;
 					m1 = 0;
+					m2 = 0;
+				}
+				break;
+			case KeyEvent.VK_DOWN:
+				if (keyEvent == KeyEvent.KEY_PRESSED) {
+					triggered = true;
+					m1 = -200;
+					m2 = -200;
+				}
+				else if (keyEvent == KeyEvent.KEY_RELEASED) {
+					triggered = true;
+					m1 = 0;
+					m2 = 0;
+				}
+				break;
+			case KeyEvent.VK_LEFT:
+				if (keyEvent == KeyEvent.KEY_PRESSED) {
+					triggered = true;
+					m1 =  200;
+					m2 = -200;
+				}
+				else if (keyEvent == KeyEvent.KEY_RELEASED) {
+					triggered = true;
+					m1 = 0;
+					m2 = 0;
+				}
+				break;
+			case KeyEvent.VK_RIGHT:
+				if (keyEvent == KeyEvent.KEY_PRESSED) {
+					triggered = true;
+					m1 = -200;
+					m2 =  200;
+				}
+				else if (keyEvent == KeyEvent.KEY_RELEASED) {
+					triggered = true;
+					m1 = 0;
+					m2 = 0;
+				}
+				break;
+			case KeyEvent.VK_Q:
+				if (keyEvent == KeyEvent.KEY_PRESSED) {					
+					triggered = true;
+					m1 = 255;
+				}
+				else if (keyEvent == KeyEvent.KEY_RELEASED) {
+					triggered = true;
+					m1 = 0;
+				}
 				break;
 			case KeyEvent.VK_A:
-				if (keyEvent == KeyEvent.KEY_PRESSED)
+				if (keyEvent == KeyEvent.KEY_PRESSED) {
+					triggered = true;
 					m1 = -255;
-				else if (keyEvent == KeyEvent.KEY_RELEASED)
+				}
+				else if (keyEvent == KeyEvent.KEY_RELEASED) {
+					triggered = true;
 					m1 = 0;
+				}
 				break;
 			case KeyEvent.VK_E:
-				if (keyEvent == KeyEvent.KEY_PRESSED)
+				if (keyEvent == KeyEvent.KEY_PRESSED) {
+					triggered = true;
 					m2 = 255;
-				else if (keyEvent == KeyEvent.KEY_RELEASED)
+				}
+				else if (keyEvent == KeyEvent.KEY_RELEASED) {
+					triggered = true;
 					m2 = 0;
+				}
 				break;
 			case KeyEvent.VK_D:
-				if (keyEvent == KeyEvent.KEY_PRESSED)
+				if (keyEvent == KeyEvent.KEY_PRESSED) {
+					triggered = true;
 					m2 = -255;
-				else if (keyEvent == KeyEvent.KEY_RELEASED)
+				}
+				else if (keyEvent == KeyEvent.KEY_RELEASED) {
+					triggered = true;
 					m2 = 0;
+				}
 				break;
 			case KeyEvent.VK_S:
+				triggered = true;
 				m1 = 0;
 				m2 = 0;
 				break;
 		}
-		
-		try {
-			setMotors(m1, m2);
-		} catch (Exception x) {
-			x.printStackTrace();
-		}
-
 	}
 	//=============================================================================================
 	
+	//=============================================================================================
+	private void update() {
+		if (triggered) {
+			triggered = false;
+			setMotors(m1, m2);
+		}
+	}
+	//=============================================================================================
+
 }
 //*************************************************************************************************
