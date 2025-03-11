@@ -92,4 +92,7 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
+  	<target name="run" depends="build">
+  	    <java classname="spark.app.Main" classpath="${build.dir}:${lib.dir}" fork="true"/>
+  	</target>              	
 </project>
