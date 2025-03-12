@@ -1,0 +1,3 @@
+#!/bin/bash
+
+java -jar ../../../util/ivy-2.5.2.jar
