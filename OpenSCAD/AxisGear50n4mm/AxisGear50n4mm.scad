@@ -1,0 +1,66 @@
+$fa=0.1;
+$fs=0.1;
+
+function rgear(m,n) = (m*n)/(2*PI);
+
+module axis(l,r) {
+  rp=r/2;
+  rn=-(r+r/2); 
+  difference() {
+    cylinder(l,r,r);
+    union() {
+      translate([rp,rp,-1]) cube([r,r,l+2]);
+      translate([rp,rn,-1]) cube([r,r,l+2]);
+      translate([rn,rp,-1]) cube([r,r,l+2]);
+      translate([rn,rn,-1]) cube([r,r,l+2]);
+    }
+  }
+}
+
+module gear(h,m,n) {
+  r=rgear(m,n);
+  m4=m/4;
+  stp=360/n;
+  difference() {
+    union() {
+      cylinder(h,r,r);
+      for (i=[0:n-1]) {
+        rotate(i*stp) {
+          translate([r,0,0]) cylinder(h,m4,m4);
+        }
+      }
+    }
+    union() {
+      for (i=[0:n-1]) {
+        rotate((stp/2)+(i*stp)) {
+          translate([r,0,-1]) cylinder(h+2,m4,m4);
+        }
+      }
+    }
+  }
+}
+
+r=rgear(4,50);
+union() {
+  difference() {
+    union() {
+      gear(7,4,50);
+    }
+    union() {
+      translate([0,0,-1]) axis(7+2,4);
+      difference() {
+        union() {
+          translate([0,0,-1]) cylinder(9,r-4,r-4);
+        }
+        translate([0,0,-1]) cylinder(9,7,7);
+      }
+    }
+  }
+  for (i=[0:11]) {
+    rotate([0,0,i*(360/12)]) {
+      translate([6,-1,0]) {
+       cube([r-8,2,7]);
+      }
+    }
+  }
+}
