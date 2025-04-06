@@ -35,7 +35,7 @@ module disk(R,N) {
 
 module axis(e) {
 	color("#a08000") {
-		cyl(11,6.5);
+		cyl(13,6.5);
 		tx(e)
 		cyl(6,7.5);
 		tz(5)
@@ -82,7 +82,7 @@ union() {
 }
 
 rz($t*360*N) {
-	tz(-1)
+	tz(-2)
 	axis(e);
 	tx(e)
 	rz(-(1+1/N)*$t*360*N) {
