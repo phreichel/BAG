@@ -23,9 +23,9 @@ TASKID;TASKNAME;TASKTYP;STARTZEIT;STOPZEIT
 22;Ankommen/Ausruhen/Essen;normal;2025-04-14 19:01:38;2025-04-14 19:22:06
 23;Privat Wekzeug auspacken/evaluieren;normal;2025-04-14 19:22:06;2025-04-14 19:28:31
 24;Privat Abendessen;normal;2025-04-14 19:28:31;2025-04-14 20:11:38
-25;Privat Entspannen , YT;normal;2025-04-14 20:11.285755;2025-04-14 22:25
-26;Privat Klo gehen;interrupt;2025-04-14 22:25:14;2025-04-14 22:33:19
+25;Privat Entspannen , YT;normal;2025-04-14 20:11;2025-04-14 22:25
 26;Privat Klo gehen;interrupt;2025-04-14 22:25:14;2025-04-14 22:43:45
 27;Privat Entspannen , YT;normal;2025-04-14 22:43:45;2025-04-14 22:44:08
 28;Privat Task Tracker reparieren;normal;2025-04-14 22:44:08;2025-04-14 23:02:39
 29;Kurzer Test wie beenden reagiert;interrupt;2025-04-14 23:02:39;2025-04-14 23:03:04
+29;Privat Task Tracker reparieren;normal;2025-04-14 23:03:04;2025-04-14 23:05:48
