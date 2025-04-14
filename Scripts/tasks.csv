@@ -1,24 +1,30 @@
-TASKID,TASKNAME,TASKTYP,STARTZEIT,STOPZEIT
-1,SMC Doku,normal,2025-04-14T09:41:02.678009,2025-04-14T09:58:30.236869
-2,Arbeit hinweg,normal,2025-04-14T09:58:30.250050,2025-04-14T09:58:36.659019
-2,Arbeit hinweg,normal,2025-04-14T09:58:30.250050,2025-04-14T10:28:27.085970
-2,Arbeit hinweg,normal,2025-04-14T09:58:30.250050,2025-04-14T11:39:02.459771
-3,Arbeit Platz vorbereiten,normal,2025-04-14T11:39:02.460583,2025-04-14T11:43:06.304370
-4,Arbeit Klo,interrupt,2025-04-14T11:43:06.304995,2025-04-14T11:45:58.962805
-5,Arbeit SMC Übersicht verschaffen,normal,2025-04-14T11:45:58.963418,2025-04-14T11:49:17.185757
-6,Arbeit SMC Task 14895 Paketierung vorerst,normal,2025-04-14T11:49:17.186423,2025-04-14T11:57:58.172340
-7,Arbeit SMB Project Import Bereinigen für Paketierung,interrupt,2025-04-14T11:57:58.172947,2025-04-14T12:00:30.756153
-8,Arbeit SMC Task 14895 Paketierung vorerst,normal,2025-04-14T12:00:30.756829,2025-04-14T12:02:17.380606
-9,SMC Arbeit Paketexport bereinigen cont.,interrupt,2025-04-14T12:02:17.381216,2025-04-14T12:12:39.960842
-10,Arbeit SMC Task 14895 Paketierung vorerst,normal,2025-04-14T12:12:39.962383,2025-04-14T12:12:59.288618
-11,Arbeit kurze Kaffeepause,interrupt,2025-04-14T12:12:59.289958,2025-04-14T12:28:13.636617
-12,Arbeit SMC Task 14895 Paketierung vorerst,normal,2025-04-14T12:28:13.638259,2025-04-14T12:58:26.689092
-13,Arbeit SMC Sprint Meeting,normal,2025-04-14T12:58:26.692923,2025-04-14T13:40:36.902627
-14,Arbeit SMC Paketierung,normal,2025-04-14T13:40:36.903478,2025-04-14T13:40:44.571431
-15,Arbeit Klo,interrupt,2025-04-14T13:40:44.571956,2025-04-14T14:13:43.887776
-16,Arbeit SMC Paketierung,normal,2025-04-14T14:13:43.889035,2025-04-14T14:14:24.081309
-17,Arbeit REGA mit Luca Fragebogen,normal,2025-04-14T14:14:24.082826,2025-04-14T15:22:54.235816
-18,Arbeit SMC Paketierung,normal,2025-04-14T15:22:54.237532,2025-04-14T16:18:02.963111
-19,Arbeit SMC Versuch Document Delete für TGV zu erreichen,normal,2025-04-14T16:18:02.971292,2025-04-14T17:25:48.631402
-20,Arbeit Heimgehen vorbereiten,normal,2025-04-14T17:25:48.633751,2025-04-14T17:30:27.323103
-21,Arbeit heimweg,normal,2025-04-14T17:30:27.324671,2025-04-14T17:30:35.119884
+TASKID;TASKNAME;TASKTYP;STARTZEIT;STOPZEIT
+1;SMC Doku;normal;2025-04-14 09:41:02;2025-04-14 09:58:30
+2;Arbeit hinweg;normal;2025-04-14 09:58:30;2025-04-14 11:39:02
+3;Arbeit Platz vorbereiten;normal;2025-04-14 11:39:02;2025-04-14 11:43:06
+4;Arbeit Klo;interrupt;2025-04-14 11:43:06;2025-04-14 11:45:58
+5;Arbeit SMC Übersicht verschaffen;normal;2025-04-14 11:45:58;2025-04-14 11:49:17
+6;Arbeit SMC Task 14895 Paketierung vorerst;normal;2025-04-14 11:49:17;2025-04-14 11:57:58
+7;Arbeit SMB Project Import Bereinigen für Paketierung;interrupt;2025-04-14 11:57:58;2025-04-14 12:00:30
+8;Arbeit SMC Task 14895 Paketierung vorerst;normal;2025-04-14 12:00:30;2025-04-14 12:02:17
+9;SMC Arbeit Paketexport bereinigen cont.;interrupt;2025-04-14 12:02:17;2025-04-14 12:12:39
+10;Arbeit SMC Task 14895 Paketierung vorerst;normal;2025-04-14 12:12:39;2025-04-14 12:12:59
+11;Arbeit kurze Kaffeepause;interrupt;2025-04-14 12:12:59;2025-04-14 12:28:13
+12;Arbeit SMC Task 14895 Paketierung vorerst;normal;2025-04-14 12:28:13;2025-04-14 12:58:26
+13;Arbeit SMC Sprint Meeting;normal;2025-04-14 12:58:26;2025-04-14 13:40:36
+14;Arbeit SMC Paketierung;normal;2025-04-14 13:40:36;2025-04-14 13:40:44
+15;Arbeit Klo;interrupt;2025-04-14 13:40:44;2025-04-14 14:13:43
+16;Arbeit SMC Paketierung;normal;2025-04-14 14:13:43;2025-04-14 14:14:24
+17;Arbeit REGA mit Luca Fragebogen;normal;2025-04-14 14:14:24;2025-04-14 15:22:54
+18;Arbeit SMC Paketierung;normal;2025-04-14 15:22:54;2025-04-14 16:18:02
+19;Arbeit SMC Versuch Document Delete für TGV zu erreichen;normal;2025-04-14 16:18:02;2025-04-14 17:25:48
+20;Arbeit Heimgehen vorbereiten;normal;2025-04-14 17:25:48;2025-04-14 17:30:27
+21;Arbeit heimweg;normal;2025-04-14 17:30:27;2025-04-14 19:01:38
+22;Ankommen/Ausruhen/Essen;normal;2025-04-14 19:01:38;2025-04-14 19:22:06
+23;Privat Wekzeug auspacken/evaluieren;normal;2025-04-14 19:22:06;2025-04-14 19:28:31
+24;Privat Abendessen;normal;2025-04-14 19:28:31;2025-04-14 20:11:38
+25;Privat Entspannen , YT;normal;2025-04-14 20:11.285755;2025-04-14 22:25
+26;Privat Klo gehen;interrupt;2025-04-14 22:25:14;2025-04-14 22:33:19
+26;Privat Klo gehen;interrupt;2025-04-14 22:25:14;2025-04-14 22:43:45
+27;Privat Entspannen , YT;normal;2025-04-14 22:43:45;2025-04-14 22:44:08
+28;Privat Task Tracker reparieren;normal;2025-04-14 22:44:08;2025-04-14 22:44:15

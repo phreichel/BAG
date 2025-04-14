@@ -1,5 +1,6 @@
 import csv
 import os
+import json
 import time
 from datetime import datetime, timedelta
 import threading
@@ -19,7 +20,7 @@ def load_last_state():
     global task_id, current_task, task_stack
     if os.path.exists(CSV_FILE):
         with open(CSV_FILE, "r", newline="", encoding="utf-8") as f:
-            reader = csv.DictReader(f)
+            reader = csv.DictReader(f, delimiter=';')
             rows = list(reader)
             if rows:
                 task_id = int(rows[-1]["TASKID"]) + 1
@@ -28,17 +29,17 @@ def load_last_state():
         with open(STATE_FILE, "r", encoding="utf-8") as f:
             lines = f.read().splitlines()
             if lines:
-                task_stack = eval(lines[0])
+                task_stack = json.loads(lines[0])
                 current_task = task_stack[-1] if task_stack else None
 
 def save_state():
     with open(STATE_FILE, "w", encoding="utf-8") as f:
-        f.write(str(task_stack))
+        f.write(json.dumps(task_stack))
 
 def save_task_to_csv(task):
     exists = os.path.isfile(CSV_FILE)
     with open(CSV_FILE, "a", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=TASK_FIELDS)
+        writer = csv.DictWriter(f, fieldnames=TASK_FIELDS, delimiter=';')
         if not exists:
             writer.writeheader()
         writer.writerow(task)
@@ -46,7 +47,7 @@ def save_task_to_csv(task):
 def end_current_task():
     global current_task
     if current_task:
-        current_task["STOPZEIT"] = datetime.now().isoformat()
+        current_task["STOPZEIT"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         save_task_to_csv(current_task)
         current_task = None
 
@@ -57,7 +58,7 @@ def start_task(name="Task", typ="normal"):
         "TASKID": task_id,
         "TASKNAME": name,
         "TASKTYP": typ,
-        "STARTZEIT": datetime.now().isoformat(),
+        "STARTZEIT": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "STOPZEIT": ""
     }
     task_id += 1
