@@ -27,4 +27,5 @@ TASKID;TASKNAME;TASKTYP;STARTZEIT;STOPZEIT
 26;Privat Klo gehen;interrupt;2025-04-14 22:25:14;2025-04-14 22:33:19
 26;Privat Klo gehen;interrupt;2025-04-14 22:25:14;2025-04-14 22:43:45
 27;Privat Entspannen , YT;normal;2025-04-14 22:43:45;2025-04-14 22:44:08
-28;Privat Task Tracker reparieren;normal;2025-04-14 22:44:08;2025-04-14 22:44:15
+28;Privat Task Tracker reparieren;normal;2025-04-14 22:44:08;2025-04-14 23:02:39
+29;Kurzer Test wie beenden reagiert;interrupt;2025-04-14 23:02:39;2025-04-14 23:03:04

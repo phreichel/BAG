@@ -118,7 +118,7 @@ def main():
                     print("Unbekannter Befehl. Nutze 't', 't <name>', 'i', 'i <name>' oder 'r'.")
         except KeyboardInterrupt:
             print("\nBeende Programm. Fortschritt wird gespeichert.")
-            end_current_task()
+#           end_current_task()
             save_state()
             break
 
