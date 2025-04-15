@@ -36,3 +36,13 @@ TASKID;TASKNAME;TASKTYP;STARTZEIT;STOPZEIT
 33;Privar Aufstehen;normal;2025-04-15 08:24:03;2025-04-15 08:46:35
 34;Privat Frühstück;normal;2025-04-15 08:46:35;2025-04-15 09:07:18
 35;Arbeit Vorbereitung SMC Meeting;normal;2025-04-15 09:07:18;2025-04-15 10:06:27
+36;Arbeit Anfahrt;normal;2025-04-15 10:06:27;2025-04-15 11:54:51
+36;Arbeit Platzvorbereitung;normal;2025-04-15 11:54:51;2025-04-15 12:24:23
+37;Arbeit REGA Klären;normal;2025-04-15 12:24:23;2025-04-15 14:58:34
+38;Interrupt 38;interrupt;2025-04-15 14:58:34;2025-04-15 14:58:53
+39;vorher: Fabi Config Betrachtungen;interrupt;2025-04-15 14:58:53;2025-04-15 14:59:21
+40;Arbeit REGA Klären;normal;2025-04-15 14:59:21;2025-04-15 16:06:36
+41;Mawera Ticket mit Luca;interrupt;2025-04-15 16:06:36;2025-04-15 16:52:50
+42;Arbeit REGA Klären;normal;2025-04-15 16:52:50;2025-04-15 17:02:27
+43;Work Heimarbeit Vorbereiten;normal;2025-04-15 17:02:27;2025-04-15 17:28:42
+44;Heimfahrt;normal;2025-04-15 17:28:42;2025-04-15 20:02:35
