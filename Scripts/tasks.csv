@@ -29,3 +29,10 @@ TASKID;TASKNAME;TASKTYP;STARTZEIT;STOPZEIT
 28;Privat Task Tracker reparieren;normal;2025-04-14 22:44:08;2025-04-14 23:02:39
 29;Kurzer Test wie beenden reagiert;interrupt;2025-04-14 23:02:39;2025-04-14 23:03:04
 29;Privat Task Tracker reparieren;normal;2025-04-14 23:03:04;2025-04-14 23:05:48
+30;Privat Tiefenentspannen;normal;2025-04-14 23:05:48;2025-04-15 03:21:34
+30;Privat MC ALU bauen;normal;2025-04-15 03:21:34;2025-04-15 04:06:39
+31;Privat kurze Pause;normal;2025-04-15 04:06:39;2025-04-15 06:47:15
+32;Privat Schlafen;normal;2025-04-15 06:47:15;2025-04-15 08:24:03
+33;Privar Aufstehen;normal;2025-04-15 08:24:03;2025-04-15 08:46:35
+34;Privat Frühstück;normal;2025-04-15 08:46:35;2025-04-15 09:07:18
+35;Arbeit Vorbereitung SMC Meeting;normal;2025-04-15 09:07:18;2025-04-15 10:06:27
