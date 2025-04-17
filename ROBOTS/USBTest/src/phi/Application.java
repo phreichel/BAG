@@ -18,7 +18,7 @@ import org.usb4java.javax.Services;
 public class Application implements UsbDeviceListener {
 
 	//=============================================================================================
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "unused" })
 	private UsbDevice findDevice(UsbHub hub, short vendorId, short productId)
 	{
 	    for (UsbDevice device : (List<UsbDevice>) hub.getAttachedUsbDevices())

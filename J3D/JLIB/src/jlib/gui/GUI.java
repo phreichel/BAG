@@ -51,7 +51,7 @@ public class GUI implements MessageReceiver {
 	public void receive(Message message) {
 		switch (message.channel) {
 		case Message.CH_INPUT:
-			var data = message.content(InputData.class);
+			message.content(InputData.class);
 			break;
 		}
 	}
