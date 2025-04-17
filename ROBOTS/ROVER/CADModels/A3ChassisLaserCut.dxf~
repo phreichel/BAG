@@ -23,7 +23,7 @@ $INSBASE
   9
 $EXTMIN
  10
-0
+-64.67165258764655
  20
 0
  30
@@ -91,7 +91,7 @@ STANDARD
   9
 $CLAYER
   8
-borders
+cuts
   9
 $CELTYPE
   6
@@ -1121,9 +1121,9 @@ AcDbViewportTableRecord
  21
 1
  12
-235.5204539712917
+508.1175142800741
  22
-176.2565066225834
+205.2318397521862
  13
 0
  23
@@ -1149,9 +1149,9 @@ AcDbViewportTableRecord
  37
 0
  40
-487.6225305168335
+637.5286936982804
  41
-1.297229219143577
+1.910336239103362
  42
 50
  43
@@ -3189,6 +3189,292 @@ AcDbPolyline
  20
 193.5
   0
+LWPOLYLINE
+  5
+60
+100
+AcDbEntity
+  8
+borders
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    4
+ 70
+    1
+ 43
+0
+ 10
+83
+ 20
+20
+ 10
+127
+ 20
+20
+ 10
+127
+ 20
+64
+ 10
+83
+ 20
+64
+  0
+LWPOLYLINE
+  5
+61
+100
+AcDbEntity
+  8
+borders
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    3
+ 70
+    1
+ 43
+0
+ 10
+-64.67165258764655
+ 20
+260.5618856669726
+ 10
+-64.67165258764655
+ 20
+260.5618856669726
+ 10
+-64.67165258764655
+ 20
+260.5618856669726
+  0
+LWPOLYLINE
+  5
+62
+100
+AcDbEntity
+  8
+borders
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    4
+ 70
+    1
+ 43
+0
+ 10
+83
+ 20
+233
+ 10
+127
+ 20
+233
+ 10
+127
+ 20
+277
+ 10
+83
+ 20
+277
+  0
+CIRCLE
+  5
+63
+100
+AcDbEntity
+  8
+cuts
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbCircle
+ 10
+87.5
+ 20
+24.5
+ 40
+1.5
+  0
+CIRCLE
+  5
+64
+100
+AcDbEntity
+  8
+cuts
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbCircle
+ 10
+122.5
+ 20
+24.5
+ 40
+1.5
+  0
+CIRCLE
+  5
+65
+100
+AcDbEntity
+  8
+cuts
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbCircle
+ 10
+122.5
+ 20
+59.5
+ 40
+1.5
+  0
+CIRCLE
+  5
+66
+100
+AcDbEntity
+  8
+cuts
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbCircle
+ 10
+87.5
+ 20
+59.5
+ 40
+1.5
+  0
+CIRCLE
+  5
+67
+100
+AcDbEntity
+  8
+cuts
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbCircle
+ 10
+87.5
+ 20
+235.5
+ 40
+1.5
+  0
+CIRCLE
+  5
+68
+100
+AcDbEntity
+  8
+cuts
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbCircle
+ 10
+87.5
+ 20
+270.5
+ 40
+1.5
+  0
+CIRCLE
+  5
+69
+100
+AcDbEntity
+  8
+cuts
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbCircle
+ 10
+122.5
+ 20
+270.5
+ 40
+1.5
+  0
+CIRCLE
+  5
+6A
+100
+AcDbEntity
+  8
+cuts
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbCircle
+ 10
+122.5
+ 20
+235.5
+ 40
+1.5
+  0
 ENDSEC
   0
 SECTION
@@ -3221,7 +3507,7 @@ AcDbDictionary
   0
 PLOTSETTINGS
   5
-60
+6B
 100
 AcDbPlotSettings
   6
