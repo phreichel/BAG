@@ -46,3 +46,12 @@ TASKID;TASKNAME;TASKTYP;STARTZEIT;STOPZEIT
 42;Arbeit REGA Klären;normal;2025-04-15 16:52:50;2025-04-15 17:02:27
 43;Work Heimarbeit Vorbereiten;normal;2025-04-15 17:02:27;2025-04-15 17:28:42
 44;Heimfahrt;normal;2025-04-15 17:28:42;2025-04-15 20:02:35
+45;Ausrugen nach Essen;normal;2025-04-15 20:02:35;2025-04-15 20:17:01
+45;Privat Schlafen;normal;2025-04-15 20:17:01;2025-04-16 03:15:09
+46;Aufwachen;normal;2025-04-16 03:15:10;2025-04-16 04:15:52
+47;Privat Tiefenentspannung;normal;2025-04-16 04:15:52;2025-04-16 05:02:37
+48;Privat Rover Schrauben;normal;2025-04-16 05:02:37;2025-04-16 05:41:27
+49;Privat YT über Servo Motoren;normal;2025-04-16 05:41:27;2025-04-16 08:44:46
+50;Private Frühstück;normal;2025-04-16 08:44:46;2025-04-16 09:00:31
+51;Privat Task Tool in Java;normal;2025-04-16 09:00:31;2025-04-17 01:31:40
+52;Privat Tiefenentspannung;normal;2025-04-17 01:31:40;2025-04-17 06:18:40
