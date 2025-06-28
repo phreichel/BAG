@@ -1,0 +1,10 @@
+D:\PROJECTS\CSharp\TransposeApp\TransposeApp\bin\Debug\TransposeApp.exe.config
+D:\PROJECTS\CSharp\TransposeApp\TransposeApp\bin\Debug\TransposeApp.exe
+D:\PROJECTS\CSharp\TransposeApp\TransposeApp\bin\Debug\TransposeApp.pdb
+D:\PROJECTS\CSharp\TransposeApp\TransposeApp\obj\Debug\TransposeApp.csproj.AssemblyReference.cache
+D:\PROJECTS\CSharp\TransposeApp\TransposeApp\obj\Debug\TransposeApp.MainForm.resources
+D:\PROJECTS\CSharp\TransposeApp\TransposeApp\obj\Debug\TransposeApp.Properties.Resources.resources
+D:\PROJECTS\CSharp\TransposeApp\TransposeApp\obj\Debug\TransposeApp.csproj.GenerateResource.cache
+D:\PROJECTS\CSharp\TransposeApp\TransposeApp\obj\Debug\TransposeApp.csproj.CoreCompileInputs.cache
+D:\PROJECTS\CSharp\TransposeApp\TransposeApp\obj\Debug\TransposeApp.exe
+D:\PROJECTS\CSharp\TransposeApp\TransposeApp\obj\Debug\TransposeApp.pdb

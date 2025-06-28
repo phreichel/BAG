@@ -1,0 +1,53 @@
+# NEXT
+# FULFILLED
+- _Full Iron_
+- _Iron Farm_
+- _Villager Breeder_
+- _Villager Infector_
+- _Simple Smelter_
+- _Melon Farm_
+- _Starter Base_
+- _Simple Storage_
+- _Nether Portal_
+- _Blaze Rods / Blaze Farm_
+- _Nether Wart Farm_
+-  _Trading Hall_
+# ZIELE
+- Full Enchanted Diamond Gear
+    - Sword: Mending, Durability 3, Sweeping Edge 3, Looting 3
+    -  Bow: Infinity, Durability 3, Power 5, Punch 2, Flame
+    - Pick: Mending, Eff 5, Durability 3, Fortune 3
+    - Pick: Mending, Eff 5, Durability 3, Silk Touch
+    - Axe: Mending, Eff 5, Durability 3, Silk Touch
+    -  Axe: Mending, Eff 5, Durability 3, Fortune 3 (?)
+    - Shovel: Mending, Eff 5, Durability 3, Silk Touch (Maybe less Eff?)
+    -  Shovel: Mending, Eff 5, Durability 3, Fortune 3 (?)
+- Full Enchanted Diamond Armor
+- Nether Raid
+    - Enderperlen
+    - Blaze Rods DONE
+    - Netherwarzen DONE
+    - Soul Sand DONE
+    - Ancient Debris
+    - Warped Wood
+    - Warped Shroomlights
+    - Blaze Farm
+    - Goldfarm
+    - Wither Skull Farm
+    - Conjure Wither
+    - Nether Star
+    - Beacon
+- End Raid
+    - Drachenatem
+    - Elytra
+    - Shulker Boxen
+    - End Tree Knospen
+- Eisenfarm DONE
+- Melonenfarm DONE
+- Villager Trading Hall DONE
+- Bambusfarm DONE
+- Super Smelter
+- Slime Farm
+- Cobble Farm
+- Baum Farm
+- Witch Farm

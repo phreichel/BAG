@@ -1,0 +1,23 @@
+\documentclass{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{a4paper}
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+\usepackage{enumitem}
+\newlist{worddefs}{description}{1}
+\setlist[worddefs]{font=\sffamily\bfseries, labelindent=\parindent, leftmargin=6em, style=sameline}
+\usepackage{subfiles}
+
+\title{Developer Log}
+\author{Philip Reichel}
+\begin{document}
+\maketitle
+\tableofcontents
+\subfile{part1/part1.tex}
+\end{document}
