@@ -1,0 +1,22 @@
+=======================================
+=  ROVER Stakeholder Needs
+=======================================
+
+Currently the only stakeholder is me in person.
+But to improve the quality of the stakeholder needs I will invent role based personas for/by whom the stakholder needs are written.
+
+The following list shows all personas by role they fulfill.
+It is intended to make that list as complete as possible.
+
+[SNP11] regulator
+[SNP01] investor
+[SNP02] designer
+[SNP03] builder/constructor
+[SNP04] operator
+[SNP05] maintainer
+[SNP06] destructor
+[SNP07] scientist
+[SNP08] public audience
+[SNP09] security officer
+[SNP10] safety officer
+

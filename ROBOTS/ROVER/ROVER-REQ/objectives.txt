@@ -1,0 +1,24 @@
+=======================================
+=  ROVER Objectives
+=======================================
+
+[O1]
+The goal is to build a modular robot rover based on arduino and maybe raspbery pie,
+with the help of a desktop computer and a WLAN network.
+
+[O2]
+The method to develop the rover is the vmodel top down aproach in which
+* first all stakeholder needs are collected and
+* then organised and uniquely numbered and refined in a requirements engineering process
+* After this the requirements are split down into functional sub modules that ideally also represent a physical module if possible
+* and interface requirements between module boundaries are defined
+* Then the design of the sub modules and the integrated overall design is made with full traceability to the requirements
+* Then the test objectives are defined from the requirements
+* and the test procedures are written.
+* Then the design is defined in detail as CAD parts and assemblies, schematics and spoftware code.
+* Then the software code is tested, and the built and assembled CAD parts and schematics are tested based on the test procedures defined before.
+* A full traceability between requirements design implementation test objectives and tests has to be established.
+
+[O3]
+The development must be capable to maintain several parallel builds in different stages
+and to allow parallel development on different snapshots without getting confused.

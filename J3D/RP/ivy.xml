@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ivy-module
+	version="2.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+	
+	<info
+		organisation="jsim"
+		module="jsim"
+		status="integration">
+	</info>
+	
+	<dependencies>
+
+		<!-- https://mvnrepository.com/artifact/javax.vecmath/vecmath -->
+		<dependency org="javax.vecmath" name="vecmath" rev="1.5.2"/>
+
+		<!-- https://mvnrepository.com/artifact/org.jogamp.gluegen/gluegen-rt -->
+		<dependency org="org.jogamp.gluegen" name="gluegen-rt" rev="2.3.2"/>
+		
+		<!-- https://mvnrepository.com/artifact/org.jogamp.gluegen/gluegen-rt-main -->
+		<dependency org="org.jogamp.gluegen" name="gluegen-rt-main" rev="2.3.2"/>
+
+		<!-- https://mvnrepository.com/artifact/org.jogamp.jogl/jogl-all -->
+		<dependency org="org.jogamp.jogl" name="jogl-all" rev="2.3.2"/>
+
+		<!-- https://mvnrepository.com/artifact/org.jogamp.jogl/jogl-all-main -->
+		<dependency org="org.jogamp.jogl" name="jogl-all-main" rev="2.3.2"/>
+
+		<!-- https://mvnrepository.com/artifact/org.jogamp.jogl/oculusvr -->
+		<dependency org="org.jogamp.jogl" name="oculusvr" rev="2.3.2"/>
+
+	</dependencies>
+	
+</ivy-module>

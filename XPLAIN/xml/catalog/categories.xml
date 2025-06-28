@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<categories>
+	<category tag="mechanic"/>
+	<category tag="electric">
+		<category tag="passive">
+			<category tag="wire"/>
+			<category tag="cable"/>
+			<category tag="connector"/>
+			<category tag="capacitor"/>
+			<category tag="diode"/>
+			<category tag="resistor"/>
+			<category tag="switch"/>
+		</category>
+		<category tag="active">
+			<category tag="transistor"/>
+			<category tag="opamp"/>
+			<category tag="timer"/>
+			<category tag="logical"/>
+			<category tag="microcontroller"/>
+		</category>
+	</category>
+</categories>

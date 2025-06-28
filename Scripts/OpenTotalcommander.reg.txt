@@ -1,0 +1,22 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\shell\OpenWithTotalCommander]
+@="Total Commander"
+"Icon"="\"D:\\Apps\\totalcmd\\TOTALCMD64.EXE\",0"
+
+[HKEY_CLASSES_ROOT\Directory\shell\OpenWithTotalCommander\command]
+@="\"D:\\Apps\\totalcmd\\TOTALCMD64.EXE\" \"%1\""
+
+[HKEY_CLASSES_ROOT\DesktopBackground\shell\OpenWithTotalCommander]
+@="Total Commander"
+"Icon"="\"D:\\Apps\\totalcmd\\TOTALCMD64.EXE\",0"
+
+[HKEY_CLASSES_ROOT\DesktopBackground\shell\OpenWithTotalCommander\command]
+@="\"D:\\Apps\\totalcmd\\TOTALCMD64.EXE\" \"%V\""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenWithTotalCommander]
+@="Total Commander"
+"Icon"="\"D:\\Apps\\totalcmd\\TOTALCMD64.EXE\",0"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenWithTotalCommander\command]
+@="\"D:\\Apps\\totalcmd\\TOTALCMD64.EXE\" \"%V\""

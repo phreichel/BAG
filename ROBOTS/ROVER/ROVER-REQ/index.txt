@@ -1,0 +1,13 @@
+objectives.txt
+stakeholder-needs/stakeholder-needs.txt
+stakeholder-needs/regulator.txt
+stakeholder-needs/investor.txt
+stakeholder-needs/designer.txt
+stakeholder-needs/builder.txt
+stakeholder-needs/operator.txt
+stakeholder-needs/maintainer.txt
+stakeholder-needs/destructor.txt
+stakeholder-needs/scientist.txt
+stakeholder-needs/audience.txt
+stakeholder-needs/security.txt
+stakeholder-needs/safety.txt
