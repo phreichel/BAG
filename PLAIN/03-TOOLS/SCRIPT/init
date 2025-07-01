@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Get the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+RC_FILE="$HOME/.bashrc"
+
+# Check if the path is already in .bashrc
+if ! grep -q "export PATH=\"\$PATH:$SCRIPT_DIR\"" "$RC_FILE"; then
+    echo "Adding $SCRIPT_DIR to PATH in $RC_FILE"
+    echo "export PATH=\"\$PATH:$SCRIPT_DIR\"" >> "$RC_FILE"
+else
+    echo "Path $SCRIPT_DIR already exists in $RC_FILE"
+fi
+
+# Apply changes
+source "$RC_FILE"

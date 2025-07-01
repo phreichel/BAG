@@ -1,0 +1,2 @@
+SET NEW_PATH=%~dp0
+setx PATH "%PATH%;%NEW_PATH%"

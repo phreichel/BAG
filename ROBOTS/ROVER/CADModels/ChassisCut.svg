@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:lc="https://librecad.org" xmlns:xlink="http://www.w3.org/1999/xlink" width="411.5mm" height="297mm" viewBox="0 0 411.5 297">
+    <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="0.1"/>
+    <g lc:layername="cuts" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="0.1">
+        <path d="M180,90 L210,90 L210,20 L180,20 L180,90 Z "/>
+        <circle cx="10" cy="10" r="1.5"/>
+        <circle cx="200" cy="10" r="1.5"/>
+        <circle cx="220" cy="10" r="1.5"/>
+        <path d="M180,277 L210,277 L210,207 L180,207 L180,277 Z "/>
+        <path d="M0,277 L30,277 L30,207 L0,207 L0,277 Z "/>
+        <circle cx="10" cy="287" r="1.5"/>
+        <circle cx="200" cy="287" r="1.5"/>
+        <circle cx="220" cy="287" r="1.5"/>
+        <circle cx="410" cy="287" r="1.5"/>
+        <circle cx="410" cy="10" r="1.5"/>
+        <line x1="210" y1="297" x2="210" y2="0"/>
+        <path d="M0,90 L30,90 L30,20 L0,20 L0,90 Z "/>
+        <circle cx="87.5" cy="272.5" r="1.5"/>
+        <circle cx="122.5" cy="272.5" r="1.5"/>
+        <circle cx="122.5" cy="237.5" r="1.5"/>
+        <circle cx="87.5" cy="237.5" r="1.5"/>
+        <circle cx="87.5" cy="59.5" r="1.5"/>
+        <circle cx="87.5" cy="24.5" r="1.5"/>
+        <circle cx="122.5" cy="24.5" r="1.5"/>
+        <circle cx="122.5" cy="59.5" r="1.5"/>
+        <circle cx="58.25" cy="272.5" r="1.5"/>
+        <circle cx="151.75" cy="272.5" r="1.5"/>
+        <circle cx="58.25" cy="24.5" r="1.5"/>
+        <circle cx="151.75" cy="24.5" r="1.5"/>
+        <circle cx="36.5" cy="223" r="1.5"/>
+        <circle cx="173.5" cy="223" r="1.5"/>
+        <circle cx="36.5" cy="74" r="1.5"/>
+        <circle cx="173.5" cy="74" r="1.5"/>
+        <circle cx="66" cy="199.5" r="1.5"/>
+        <circle cx="144" cy="199.5" r="1.5"/>
+        <circle cx="66" cy="97.5" r="1.5"/>
+        <circle cx="144" cy="97.5" r="1.5"/>
+        <circle cx="15.5" cy="191.5" r="1.5"/>
+        <circle cx="194.5" cy="191.5" r="1.5"/>
+        <circle cx="15.5" cy="105.5" r="1.5"/>
+        <circle cx="194.5" cy="105.5" r="1.5"/>
+    </g>
+</svg>

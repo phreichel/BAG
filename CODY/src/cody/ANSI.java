@@ -1,108 +1,84 @@
-//*********************************************************************************************************************
+//*****************************************************************************
 package cody;
-//*********************************************************************************************************************
+//*****************************************************************************
 
-//*********************************************************************************************************************
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.PrintStream;
+import java.io.Reader;
+import java.io.StringReader;
+
+//*****************************************************************************
 public final class ANSI {
 
-	//=================================================================================================================
-	public static enum Color {
+	//=========================================================================
+	public static void ansi(PrintStream s, String code) throws Exception {
+		s.write(0x1b);
+		s.write('[');
+		s.append(code);
+		s.write('m');
+	}
+	//=========================================================================
 
-		BLACK(0),
-		RED(1),
-		GREEN(2),
-		YELLOW(3),
-		BLUE(4),
-		MAGENTA(5),
-		LTBLUE(6),
-		WHITE(7);
-				
-		Color(int n) { NUMBER = n; }
-		public final int NUMBER;
+	//=========================================================================
+	public static void print(String resource, PrintStream target) throws Exception {
 		
-	};
-	//=================================================================================================================
-
-	//=================================================================================================================
-	public static final String FG(Color color) {
-		String code = "\033[3" + color.NUMBER + "m";
-		return code.intern();
+		InputStream is = Main.class.getClassLoader().getResourceAsStream(resource);
+		Reader      ir = new InputStreamReader(is);
+		print(ir, target);
+		
 	}
-	//=================================================================================================================
+	//=========================================================================
 
-	//=================================================================================================================
-	public static final String BG(Color color) {
-		String code = "\033[4" + color.NUMBER + "m";
-		return code.intern();
+	//=========================================================================
+	public static void print(PrintStream target, String text) throws Exception {
+		
+		Reader ir = new StringReader(text);
+		print(ir, target);
+		
 	}
-	//=================================================================================================================
-
-	//=================================================================================================================
-	public static final String COLOR(Color fg, Color bg) {
-		String code = "\033[3" + fg.NUMBER + ";4" + bg.NUMBER + "m";
-		return code.intern();
-	}
-	//=================================================================================================================
-
-	//=================================================================================================================
-	public static final String FG_BLACK   = FG(Color.BLACK);
-	public static final String FG_RED     = FG(Color.RED);
-	public static final String FG_GREEN   = FG(Color.GREEN);
-	public static final String FG_YELLOW  = FG(Color.YELLOW);
-	public static final String FG_MAGENTA = FG(Color.MAGENTA);
-	public static final String FG_LTBLUE  = FG(Color.LTBLUE);
-	public static final String FG_WHITE   = FG(Color.WHITE);
-	//=================================================================================================================
-
-	//=================================================================================================================
-	public static final String BG_BLACK   = BG(Color.BLACK);
-	public static final String BG_RED     = BG(Color.RED);
-	public static final String BG_GREEN   = BG(Color.GREEN);
-	public static final String BG_YELLOW  = BG(Color.YELLOW);
-	public static final String BG_MAGENTA = BG(Color.MAGENTA);
-	public static final String BG_LTBLUE  = BG(Color.LTBLUE);
-	public static final String BG_WHITE   = BG(Color.WHITE);
-	//=================================================================================================================
-
-	//=================================================================================================================
-	public static final String RESET      = "\033[0m";
-	//=================================================================================================================
-
-	//=================================================================================================================
-	public static final String FORMATFG(String text, Color fg) {
-		return FG(fg) + text + RESET;
-	}
-	//=================================================================================================================
+	//=========================================================================
 	
-	//=================================================================================================================
-	public static final String FORMATFG(String text, Color fg, boolean reset) {
-		return FG(fg) + text + (reset ? RESET : "");
+	//=========================================================================
+	public static void print(Reader source, PrintStream target) throws Exception {
+		
+		int res = source.read();
+		while (res != -1) {
+			if (((char)res) == '#') {
+				res = source.read();
+				switch ((char) res) {
+				case '0' -> { ansi(target, "0");  }
+				case 'n' -> { ansi(target, "30"); }
+				case 'r' -> { ansi(target, "31"); }
+				case 'g' -> { ansi(target, "32"); }
+				case 'y' -> { ansi(target, "33"); }
+				case 'b' -> { ansi(target, "34"); }
+				case 'm' -> { ansi(target, "35"); }
+				case 'a' -> { ansi(target, "36"); }
+				case 'w' -> { ansi(target, "37"); }
+				case 'N' -> { ansi(target, "40"); }
+				case 'R' -> { ansi(target, "41"); }
+				case 'G' -> { ansi(target, "42"); }
+				case 'Y' -> { ansi(target, "43"); }
+				case 'B' -> { ansi(target, "44"); }
+				case 'M' -> { ansi(target, "45"); }
+				case 'A' -> { ansi(target, "46"); }
+				case 'W' -> { ansi(target, "47"); }
+				default -> {
+					target.write('#');
+					target.write(res);
+				}
+				}
+			} else {
+				target.write(res);
+			}
+			res = source.read();
+		}
+		source.close();
+		target.flush();
+		
 	}
-	//=================================================================================================================
+	//=========================================================================
 
-	//=================================================================================================================
-	public static final String FORMATBG(String text, Color bg) {
-		return BG(bg) + text + RESET;
-	}
-	//=================================================================================================================
-	
-	//=================================================================================================================
-	public static final String FORMATBG(String text, Color bg, boolean reset) {
-		return BG(bg) + text + (reset ? RESET : "");
-	}
-	//=================================================================================================================
-
-	//=================================================================================================================
-	public static final String FORMAT(String text, Color fg, Color bg) {
-		return COLOR(fg, bg) + text + RESET;
-	}
-	//=================================================================================================================
-	
-	//=================================================================================================================
-	public static final String FORMAT(String text, Color fg, Color bg, boolean reset) {
-		return COLOR(fg, bg) + text + (reset ? RESET : "");
-	}
-	//=================================================================================================================
-	
 }
-//*********************************************************************************************************************
+//*****************************************************************************

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ivy-module
+	version="2.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+
+
+	<info
+		organisation="jeb"
+		module="jeb"
+		status="prototype">
+	</info>
+	
+	<dependencies>
+
+		<dependency org="org.eclipse.collections" name="eclipse-collections" rev="11.0.0"/>
+		<dependency org="org.apache.commons" name="commons-math3" rev="3.6.1" />
+		<dependency org="javax.vecmath" name="vecmath" rev="1.5.2"/>
+
+		<dependency org="org.jogamp.gluegen" name="gluegen-rt" rev="2.3.2"/>
+		<dependency org="org.jogamp.gluegen" name="gluegen-rt-main" rev="2.3.2"/>
+		<dependency org="org.jogamp.jogl" name="jogl-all" rev="2.3.2"/>
+		<dependency org="org.jogamp.jogl" name="jogl-all-main" rev="2.3.2"/>
+		<dependency org="org.jogamp.joal" name="joal" rev="2.3.2"/>
+		<dependency org="org.jogamp.jogl" name="oculusvr" rev="2.3.2"/>
+		
+		<!--
+		<dependency org="org.jogamp.gluegen" name="gluegen-rt" rev="2.5.0"/>
+		<dependency org="org.jogamp.gluegen" name="gluegen-rt-main" rev="2.5.0"/>
+		<dependency org="org.jogamp.jogl" name="jogl-all" rev="2.5.0"/>
+		<dependency org="org.jogamp.jogl" name="jogl-all-main" rev="2.5.0"/>
+		<dependency org="org.jogamp.joal" name="joal" rev="2.5.0"/>
+		<dependency org="org.jogamp.joal" name="joal-main" rev="2.5.0"/>
+		<dependency org="org.jogamp.jocl" name="jocl" rev="2.5.0"/>
+		<dependency org="org.jogamp.jocl" name="jocl-main" rev="2.5.0"/>
+		-->
+    		
+	</dependencies>
+	
+</ivy-module>

@@ -1,0 +1,261 @@
+Typ,Kapazität,Menge,Lagerort,Spannung
+Keramikkondensator,2 pF,5,Ordner,50V
+Keramikkondensator,3 pF,5,Ordner,50V
+Keramikkondensator,5.5 pF,5,Ordner,50V
+Keramikkondensator,10 pF,5,Ordner,50V
+Keramikkondensator,15 pF,5,Ordner,50V
+Keramikkondensator,22 pF,5,Ordner,50V
+Keramikkondensator,30 pF,5,Ordner,50V
+Keramikkondensator,33 pF,5,Ordner,50V
+Keramikkondensator,47 pF,5,Ordner,50V
+Keramikkondensator,68 pF,5,Ordner,50V
+Keramikkondensator,75 pF,5,Ordner,50V
+Keramikkondensator,82 pF,5,Ordner,50V
+Keramikkondensator,100 pF,5,Ordner,50V
+Keramikkondensator,150 pF,5,Ordner,50V
+Keramikkondensator,220 pF,5,Ordner,50V
+Keramikkondensator,330 pF,5,Ordner,50V
+Keramikkondensator,470 pF,5,Ordner,50V
+Keramikkondensator,680 pF,5,Ordner,50V
+Keramikkondensator,1 nF,5,Ordner,50V
+Keramikkondensator,1.5 nF,5,Ordner,50V
+Keramikkondensator,2.2 nF,5,Ordner,50V
+Keramikkondensator,3.3 nF,5,Ordner,50V
+Keramikkondensator,4.7 nF,5,Ordner,50V
+Keramikkondensator,6.8 nF,5,Ordner,50V
+Keramikkondensator,100 nF,5,Ordner,50V
+Keramikkondensator,1.5 nF,0,externer Behälter,50V
+Keramikkondensator,2.2 nF,0,externer Behälter,50V
+Keramikkondensator,4.7 nF,0,externer Behälter,50V
+Keramikkondensator,6.8 nF,0,externer Behälter,50V
+Keramikkondensator,100 nF,1000,externer Behälter,50V
+Elektrolytkondensator,0.22 µF,5,Ordner,50V
+Elektrolytkondensator,0.47 µF,5,Ordner,50V
+Elektrolytkondensator,1 µF,5,Ordner,50V
+Elektrolytkondensator,2.2 µF,5,Ordner,50V
+Elektrolytkondensator,4.7 µF,5,Ordner,50V
+Elektrolytkondensator,10 µF,5,Ordner,50V
+Elektrolytkondensator,22 µF,5,Ordner,50V
+Elektrolytkondensator,33 µF,5,Ordner,16V
+Elektrolytkondensator,47 µF,5,Ordner,16V
+Elektrolytkondensator,100 µF,5,Ordner,16V
+Elektrolytkondensator,220 µF,5,Ordner,16V
+Elektrolytkondensator,470 µF,5,Ordner,16V
+PCB Jumper,schwarz,50,Ordner,
+PCB Lötösen / Lötlitzen,,75,Ordner,
+Leuchtdiode,rot,30,Ordner,2V 20mA
+Leuchtdiode,blau,30,Ordner,3.2V 20mA
+Leuchtdiode,grün,30,Ordner,2.4V 20mA
+Leuchtdiode,gelb,30,Ordner,2V 20mA
+Leuchtdiode,weiß,30,Ordner,3V 20mA
+Leuchtdiode,RGB,2,Ordner,
+Gleichrichterdiode,1N5399,20,Ordner,"1A 1000V, Vf 0.7–1V"
+Gleichrichterdiode,1N4007,20,Ordner,"1A 1000V, Vf 0.7–1.1V"
+Gleichrichterdiode (Fast),FR107,20,Ordner,"1A 1000V, Vf 0.7–1V"
+Gleichrichterdiode,1N5408,20,Ordner,"3A 1000V, Vf 0.7–1V"
+Gleichrichterdiode (Fast),FR207,20,Ordner,"3A 1000V, Vf 0.7–1.1V"
+Signaldioden,1N4148,20,Ordner,"300mA 75V, Vf 0.7V, fast (ns)"
+Schottkydiode,1N5819,20,Ordner,"1A 40V, Vf 0.4–0.5V"
+Schottkydiode,1N5822,20,Ordner,"3A 40V, Vf 0.3–0.5V"
+Photowiderstand,GM5539 / GM5528,10,Ordner,LDR
+Transistor (NPN BJT),2N5551,10,Ordner,80V 800mA
+Transistor (PNP BJT),S8550,10,Ordner,-25V 1.5A
+Transistor (PNP BJT),2N3906,10,Ordner,-40V 200mA 250MHz
+Transistor (PNP BJT),S9012,10,Ordner,-40V 500mA 150MHz
+Transistor (PNP BJT),S9015,10,Ordner,-45V 100mA 100MHz
+Transistor (PNP BJT),A1015,10,Ordner,-50V 150mA 80MHz
+Transistor (PNP BJT),2N5401,10,Ordner,-150V 600mA 50MHz
+Transistor (PNP BJT),2N5401A2,10,Ordner,-300V 500mA 50MHz
+Transistor (PNP BJT),MPSA92,10,Ordner,-30V 50mA 50MHz
+Transistor (NPN HF BJT),9018,10,Ordner,15V 50mA HF
+Transistor (NPN BJT),S9013,10,Ordner,40V 200mA 250MHz
+Transistor (NPN BJT),2N2222A,10,Ordner,40V 800mA 250MHz
+Transistor (NPN BJT),9014,10,Ordner,45V 100mA 150MHz
+Transistor (NPN BJT),C945,10,Ordner,50V 150mA 250MHz
+Transistor (NPN BJT),C1815,10,Ordner,50V 150mA 200MHz
+Transistor (NPN BJT),A733,10,Ordner,60V 150mA 250MHz
+Transistor (NPN BJT),S8050,10,Ordner,60V 1A 250MHz
+Transistor (NPN BJT),2N8904,10,Ordner,60V 15A 10MHz
+Widerstand,10 Ω,20,Ordner,0.25W
+Widerstand,22 Ω,20,Ordner,0.25W
+Widerstand,47 Ω,20,Ordner,0.25W
+Widerstand,100 Ω,20,Ordner,0.25W
+Widerstand,150 Ω,20,Ordner,0.25W
+Widerstand,200 Ω,20,Ordner,0.25W
+Widerstand,220 Ω,20,Ordner,0.25W
+Widerstand,270 Ω,20,Ordner,0.25W
+Widerstand,330 Ω,20,Ordner,0.25W
+Widerstand,470 Ω,20,Ordner,0.25W
+Widerstand,510 Ω,20,Ordner,0.25W
+Widerstand,680 Ω,20,Ordner,0.25W
+Widerstand,1 kΩ,20,Ordner,0.25W
+Widerstand,2 kΩ,20,Ordner,0.25W
+Widerstand,2.2 kΩ,20,Ordner,0.25W
+Widerstand,3.3 kΩ,20,Ordner,0.25W
+Widerstand,4.7 kΩ,20,Ordner,0.25W
+Widerstand,5.1 kΩ,20,Ordner,0.25W
+Widerstand,6.8 kΩ,20,Ordner,0.25W
+Widerstand,10 kΩ,20,Ordner,0.25W
+Widerstand,15.1 kΩ,20,Ordner,0.25W
+Widerstand,20 kΩ,20,Ordner,0.25W
+Widerstand,47 kΩ,20,Ordner,0.25W
+Widerstand,51 kΩ,20,Ordner,0.25W
+Widerstand,68 kΩ,20,Ordner,0.25W
+Widerstand,100 kΩ,20,Ordner,0.25W
+Widerstand,220 kΩ,20,Ordner,0.25W
+Widerstand,300 kΩ,20,Ordner,0.25W
+Widerstand,470 kΩ,20,Ordner,0.25W
+Widerstand,680 kΩ,20,Ordner,0.25W
+Widerstand,1 MΩ,20,Ordner,0.25W
+Unbekanntes Bauteil,18820 / 2421 C4,1,Ordner,"Transistorgehäuse, Funktion unklar"
+MOSFET,2N7000,100,Schreibtisch-Schublade (Plastikbox),
+MOSFET,2N7000,100,Schreibtisch-Schublade (Plastikbox),
+Glassicherung,0.2 A,10,Schreibtisch-Schublade (Plastikbox),M5x20 mm
+Glassicherung,0.5 A,10,Schreibtisch-Schublade (Plastikbox),M5x20 mm
+Glassicherung,1 A,10,Schreibtisch-Schublade (Plastikbox),M5x20 mm
+Glassicherung,2 A,10,Schreibtisch-Schublade (Plastikbox),M5x20 mm
+Glassicherung,3 A,10,Schreibtisch-Schublade (Plastikbox),M5x20 mm
+Glassicherung,5 A,10,Schreibtisch-Schublade (Plastikbox),M5x20 mm
+Glassicherung,8 A,10,Schreibtisch-Schublade (Plastikbox),M5x20 mm
+Glassicherung,10 A,10,Schreibtisch-Schublade (Plastikbox),M5x20 mm
+Glassicherung,15 A,10,Schreibtisch-Schublade (Plastikbox),M5x20 mm
+Glassicherung,20 A,10,Schreibtisch-Schublade (Plastikbox),M5x20 mm
+Logik-IC (Hex Buffer with Open-Collector Outputs),74LS07,2,Schreibtisch-Schublade (Plastikbox),
+Logik-IC (Quad 2-Input OR Gate),74HC32,2,Schreibtisch-Schublade (Plastikbox),
+Logik-IC (Quad 2-Input XOR Gate),74LS86,2,Schreibtisch-Schublade (Plastikbox),
+Logik-IC (3-to-8 Line Decoder/Demultiplexer),74HC138,2,Schreibtisch-Schublade (Plastikbox),
+Logik-IC (Decade Counter (BCD)),74LS90,2,Schreibtisch-Schublade (Plastikbox),
+Logik-IC (8-Bit Serial-In Parallel-Out Shift Register),74HC164,2,Schreibtisch-Schublade (Plastikbox),
+Logik-IC (3-to-8 Line Decoder/Demultiplexer),74LS138,2,Schreibtisch-Schublade (Plastikbox),
+Logik-IC (8-Bit Parallel-In Serial-Out Shift Register),74HC165,2,Schreibtisch-Schublade (Plastikbox),
+Logik-IC (Octal Bus Transceiver),74LS245,2,Schreibtisch-Schublade (Plastikbox),
+Logik-IC (8-Bit Serial-In Parallel-Out Shift Register),74HC595,2,Schreibtisch-Schublade (Plastikbox),
+Logik-IC (Quad 2-Input NAND Gate),74LS00,2,Schreibtisch-Schublade (Plastikbox),
+Logik-IC (Quad 2-Input NAND Gate),74HC00,2,Schreibtisch-Schublade (Plastikbox),
+Logik-IC (Quad 2-Input NOR Gate),74LS02,2,Schreibtisch-Schublade (Plastikbox),
+Logik-IC (Quad 2-Input NOR Gate),74HC02,2,Schreibtisch-Schublade (Plastikbox),
+Logik-IC (Hex Inverter),74LS04,2,Schreibtisch-Schublade (Plastikbox),
+Logik-IC (Hex Inverter),74HC04,2,Schreibtisch-Schublade (Plastikbox),
+Logik-IC (Quad 2-Input AND Gate),74LS08,2,Schreibtisch-Schublade (Plastikbox),
+Logik-IC (Quad 2-Input AND Gate),74HC08,2,Schreibtisch-Schublade (Plastikbox),
+Logik-IC (Quad 2-Input OR Gate),74LS32,2,Schreibtisch-Schublade (Plastikbox),
+Logik-IC (Hex Schmitt-Trigger Inverter),74HC14,2,Schreibtisch-Schublade (Plastikbox),
+IC,NE555,10,Schreibtisch-Schublade (Plastikbox),
+IC,LM324,5,Schreibtisch-Schublade (Plastikbox),
+IC,LM393,10,Schreibtisch-Schublade (Plastikbox),
+IC,UA741,10,Schreibtisch-Schublade (Plastikbox),
+IC,LM2803,5,Schreibtisch-Schublade (Plastikbox),
+IC,LM358,10,Schreibtisch-Schublade (Plastikbox),
+IC,LM386,10,Schreibtisch-Schublade (Plastikbox),
+IC,NE5532,10,Schreibtisch-Schublade (Plastikbox),
+IC,ULN2003,5,Schreibtisch-Schublade (Plastikbox),
+Optokoppler,PC817,10,Schreibtisch-Schublade (Plastikbox),
+DIP-Schalter (blau),1-polig,5,Schreibtisch-Schublade (Plastikbox),"VOGENC GZ072-T02, X001J GTBJD"
+DIP-Schalter (blau),2-polig,5,Schreibtisch-Schublade (Plastikbox),"VOGENC GZ072-T02, X001J GTBJD"
+DIP-Schalter (blau),3-polig,5,Schreibtisch-Schublade (Plastikbox),"VOGENC GZ072-T02, X001J GTBJD"
+DIP-Schalter (blau),4-polig,5,Schreibtisch-Schublade (Plastikbox),"VOGENC GZ072-T02, X001J GTBJD"
+DIP-Schalter (blau),8-polig,6,Schreibtisch-Schublade (Plastikbox),"VOGENC GZ072-T02, X001J GTBJD"
+DIP-Schalter (blau),10-polig,5,Schreibtisch-Schublade (Plastikbox),"VOGENC GZ072-T02, X001J GTBJD"
+DIP-Schalter (blau),12-polig,5,Schreibtisch-Schublade (Plastikbox),"VOGENC GZ072-T02, X001J GTBJD"
+DIP-Schalter (rot),1-polig,5,Schreibtisch-Schublade (Plastikbox),"VOGENC GZ072-T01, X001J GTBJ3"
+DIP-Schalter (rot),2-polig,5,Schreibtisch-Schublade (Plastikbox),"VOGENC GZ072-T01, X001J GTBJ3"
+DIP-Schalter (rot),3-polig,5,Schreibtisch-Schublade (Plastikbox),"VOGENC GZ072-T01, X001J GTBJ3"
+DIP-Schalter (rot),4-polig,5,Schreibtisch-Schublade (Plastikbox),"VOGENC GZ072-T01, X001J GTBJ3"
+DIP-Schalter (rot),8-polig,6,Schreibtisch-Schublade (Plastikbox),"VOGENC GZ072-T01, X001J GTBJ3"
+DIP-Schalter (rot),10-polig,5,Schreibtisch-Schublade (Plastikbox),"VOGENC GZ072-T01, X001J GTBJ3"
+DIP-Schalter (rot),12-polig,5,Schreibtisch-Schublade (Plastikbox),"VOGENC GZ072-T01, X001J GTBJ3"
+PCB-Streifenraster,"50x100 mm, 2.54 mm Lochabstand",50,Schreibtisch-Schublade (Plastikbox),"Art.-Nr. VKA 7101, Rademacher Elektronik GmbH"
+PCB-Streifenraster,"16x10 cm, 2.54 mm Lochabstand",50,Schreibtisch-Schublade (Plastikbox),Hersteller unbekannt
+PCB-Lochraster doppelseitig,6x28 Löcher (2.54 mm),5,Schreibtisch-Schublade (Plastikbox),punktloch-metallisiert
+PCB-Lochraster doppelseitig,10x24 Löcher (2.54 mm),5,Schreibtisch-Schublade (Plastikbox),punktloch-metallisiert
+PCB-Lochraster doppelseitig,14x20 Löcher (2.54 mm),5,Schreibtisch-Schublade (Plastikbox),punktloch-metallisiert
+PCB-Lochraster doppelseitig,18x22 Löcher (2.54 mm),5,Schreibtisch-Schublade (Plastikbox),punktloch-metallisiert
+PCB-Rohmaterial (einseitig),10x7 cm,20,Schreibtisch-Schublade (Plastikbox),"Kupferkaschiert, zum Ätzen"
+PCB-Lochraster (einseitig),6.5x5 cm,100,Schreibtisch-Schublade (Plastikbox),"mit Kupferringen, 4 Befestigungslöcher, einfache Qualität"
+PCB-Terminalblock (female),"2-polig, schraubbar",5,Schreibtisch-Schublade (Plastikbox),"Set X001TIBMST, YE-0192WB A02"
+PCB-Terminalblock (female),"3-polig, schraubbar",5,Schreibtisch-Schublade (Plastikbox),"Set X001TIBMST, YE-0192WB A02"
+PCB-Terminalblock (female),"5-polig, schraubbar",3,Schreibtisch-Schublade (Plastikbox),"Set X001TIBMST, YE-0192WB A02"
+PCB-Terminalblock (male),"2-polig, lötbar",5,Schreibtisch-Schublade (Plastikbox),"Set X001TIBMST, YE-0192WB A02"
+PCB-Terminalblock (male),"3-polig, lötbar",5,Schreibtisch-Schublade (Plastikbox),"Set X001TIBMST, YE-0192WB A02"
+PCB-Terminalblock (male),"5-polig, lötbar",3,Schreibtisch-Schublade (Plastikbox),"Set X001TIBMST, YE-0192WB A02"
+Schrumpfschlauch,1 mm x 45 mm,400,Schreibtisch-Schublade (Sortimentskasten),"Polyethylen, -55°C bis +125°C, Schrumpftemp. 84–120°C, 1kV isoliert"
+Schrumpfschlauch,1.5 mm x 45 mm,300,Schreibtisch-Schublade (Sortimentskasten),"Polyethylen, -55°C bis +125°C, Schrumpftemp. 84–120°C, 1kV isoliert"
+Schrumpfschlauch,2 mm x 45 mm,200,Schreibtisch-Schublade (Sortimentskasten),"Polyethylen, -55°C bis +125°C, Schrumpftemp. 84–120°C, 1kV isoliert"
+Schrumpfschlauch,2.5 mm x 45 mm,160,Schreibtisch-Schublade (Sortimentskasten),"Polyethylen, -55°C bis +125°C, Schrumpftemp. 84–120°C, 1kV isoliert"
+Schrumpfschlauch,3 mm x 45 mm,120,Schreibtisch-Schublade (Sortimentskasten),"Polyethylen, -55°C bis +125°C, Schrumpftemp. 84–120°C, 1kV isoliert"
+Schrumpfschlauch,3.5 mm x 45 mm,100,Schreibtisch-Schublade (Sortimentskasten),"Polyethylen, -55°C bis +125°C, Schrumpftemp. 84–120°C, 1kV isoliert"
+Schrumpfschlauch,4 mm x 45 mm,100,Schreibtisch-Schublade (Sortimentskasten),"Polyethylen, -55°C bis +125°C, Schrumpftemp. 84–120°C, 1kV isoliert"
+Schrumpfschlauch,5 mm x 45 mm,80,Schreibtisch-Schublade (Sortimentskasten),"Polyethylen, -55°C bis +125°C, Schrumpftemp. 84–120°C, 1kV isoliert"
+Schrumpfschlauch,6 mm x 45 mm,60,Schreibtisch-Schublade (Sortimentskasten),"Polyethylen, -55°C bis +125°C, Schrumpftemp. 84–120°C, 1kV isoliert"
+Schrumpfschlauch,7 mm x 45 mm,60,Schreibtisch-Schublade (Sortimentskasten),"Polyethylen, -55°C bis +125°C, Schrumpftemp. 84–120°C, 1kV isoliert"
+Schrumpfschlauch,10 mm x 45 mm,60,Schreibtisch-Schublade (Sortimentskasten),"Polyethylen, -55°C bis +125°C, Schrumpftemp. 84–120°C, 1kV isoliert"
+Schrumpfschlauch,13 mm x 45 mm,60,Schreibtisch-Schublade (Sortimentskasten),"Polyethylen, -55°C bis +125°C, Schrumpftemp. 84–120°C, 1kV isoliert"
+Breadboard Jumper Wire,extra lang (gelb),30,Schublade (Kiste),"Farbcodiert, geschätzt 10–50 Stück je Länge"
+Breadboard Jumper Wire,sehr lang (rot),30,Schublade (Kiste),
+Breadboard Jumper Wire,lang (grau),30,Schublade (Kiste),
+Breadboard Jumper Wire,mittel-lang (orange),30,Schublade (Kiste),
+Breadboard Jumper Wire,mittel (braun),30,Schublade (Kiste),
+Breadboard Jumper Wire,mittel-kurz (blau),30,Schublade (Kiste),
+Breadboard Jumper Wire,kurz-lang (rot),30,Schublade (Kiste),
+Breadboard Jumper Wire,kurz-mittel (grün),30,Schublade (Kiste),
+Breadboard Jumper Wire,kurz (gelb),30,Schublade (Kiste),
+Breadboard Jumper Wire,extra-kurz (orange),30,Schublade (Kiste),
+Breadboard Jumper Wire,mini (grau),30,Schublade (Kiste),
+Breadboard Jumper Wire,ultra-kurz (blau),30,Schublade (Kiste),
+Breadboard Jumper Wire,kleinste (grün),30,Schublade (Kiste),
+Drahtrolle (20 AWG),rot,1,Schublade (Kiste),"Kunststoffisolation, 1 Kiste à 6 Farben"
+Drahtrolle (20 AWG),grün,1,Schublade (Kiste),
+Drahtrolle (20 AWG),blau,1,Schublade (Kiste),
+Drahtrolle (20 AWG),gelb,1,Schublade (Kiste),
+Drahtrolle (20 AWG),schwarz,1,Schublade (Kiste),
+Drahtrolle (20 AWG),weiß,1,Schublade (Kiste),
+Drahtrolle (vermutlich 18 AWG),rot,1,Schublade (Kiste),"Kunststoffisolation, 1 Kiste à 6 Farben"
+Drahtrolle (vermutlich 18 AWG),grün,1,Schublade (Kiste),
+Drahtrolle (vermutlich 18 AWG),blau,1,Schublade (Kiste),
+Drahtrolle (vermutlich 18 AWG),gelb,1,Schublade (Kiste),
+Drahtrolle (vermutlich 18 AWG),schwarz,1,Schublade (Kiste),
+Drahtrolle (vermutlich 18 AWG),weiß,1,Schublade (Kiste),
+Wire-Wrapping-Draht (30 AWG),schwarz,1,Rolle,
+Wire-Wrapping-Draht (30 AWG),braun,1,Rolle,
+Signaldraht (flexibel),gelb,1,Rolle,
+Signaldraht (flexibel),grün,1,Rolle,
+Signaldraht (flexibel),schwarz,1,Rolle,
+Signaldraht (flexibel),rot,1,Rolle,
+Signaldraht (flexibel),blau,1,Rolle,
+Signaldraht (dünn/flexibel),gelb,1,Rolle,
+Signaldraht (dünn/flexibel),weiß,1,Rolle,
+Signaldraht (dünn/flexibel),rot,1,Rolle,
+Signaldraht (dünn/flexibel),schwarz,1,Rolle,
+Signaldraht (dünn/flexibel),grün,1,Rolle,
+Signaldraht (dünn/flexibel),braun,1,Rolle,
+Signaldraht (dünn/flexibel),hellblau,1,Rolle,
+Vollkern-Draht,rot,1,Rolle,
+Vollkern-Draht,blau,1,Rolle,
+Vollkern-Draht,gelb,1,Rolle,
+Vollkern-Draht,schwarz,1,Rolle,
+Vollkern-Draht,braun,1,Rolle,
+Vollkern-Draht,grün,1,Rolle,
+Vollkern-Draht (dicker),weiß,1,Rolle,
+Vollkern-Draht (dicker),schwarz,1,Rolle,
+Vollkern-Draht (dicker),gelb,1,Rolle,
+Vollkern-Draht (dicker),rot,1,Rolle,
+Kupferlackdraht,"unisoliert, beschichtet",3,Rolle,"fein, lackisoliert"
+Haushaltsstromdraht (Vollkern),schwarz,1,Rolle,
+Haushaltsstromdraht (Vollkern),blau,1,Rolle,
+Haushaltsstromdraht (Litze),rot,1,Rolle,
+Klingeldraht,weiß,1,Rolle,
+Blumenbindedraht,diverse,5,Rolle,"flexibel, beschichtet"
+Metall-Draht (unisoliert),unbekannter Durchmesser,1,Rolle,"dicker, universell"
+"Signaldraht (Litze, dünn)",violett,1,Rolle,
+"Signaldraht (Litze, dünn)",schwarz,1,Rolle,
+"Signaldraht (Litze, dünn)",weiß,1,Rolle,
+"Signaldraht (Litze, dünn)",rot,1,Rolle,
+"Signaldraht (Litze, dünn)",grün,1,Rolle,
+"Signaldraht (Litze, dünn)",orange,1,Rolle,
+"Signaldraht (Litze, dünn)",grau,1,Rolle,
+"Signaldraht (Litze, dünn)",blau,1,Rolle,
+Kupferband,"5 cm breit, selbstklebend",1,Rolle,"einseitig leitfähig, haftend"
+Flachbandkabel,"mehrpolig, farbcodiert",1,Rolle,"mehradrig, zur Datenübertragung"
+Stromversorgungskabel (2-adrig),rot/schwarz,1,Rolle,"für LED-Leuchten, Plus/Minus gekennzeichnet"
+Datenübertragungskabel (6-adrig),rund,1,Rolle,"für Datenleitungen, rund, geschirmt möglich"
+USB-Kabel (Rohware),"4-adrig, 10 m",1,Rolle,"weiß, ohne Stecker, vermutlich Daten + Strom"

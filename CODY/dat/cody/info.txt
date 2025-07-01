@@ -1,0 +1,10 @@
+#a**** CODY DEVELOPMENT SUITE *****#0
+
+  #yUsage:#0
+    #gcody.cmd#0 #m[args]#0
+    #gjava -jar cody.jar#0 #m[args]#0
+
+  #yOptions:#0
+    #ahelp	#b[command]#0	- show help options
+    #acheck	#b<file>#0		- check file syntax
+    #acompile	#b<file>#0		- compile file
