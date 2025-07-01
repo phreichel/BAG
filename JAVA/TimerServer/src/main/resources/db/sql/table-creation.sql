@@ -1,0 +1,16 @@
+--liquibase formatted sql
+
+--changeset philip:table-creation
+
+CREATE TABLE "TASK" (
+	"ID" UUID PRIMARY KEY,
+	"IDENT" VARCHAR(255) UNIQUE NOT NULL,
+	"SUBJECT" TEXT NOT NULL
+);
+
+CREATE TABLE "WORK" (
+	"ID" UUID PRIMARY KEY,
+	"TASK_ID" UUID,
+	"START_TS" TIMESTAMP,
+	"STOP_TS" TIMESTAMP
+);
