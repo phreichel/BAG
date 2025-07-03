@@ -3,6 +3,7 @@ package spark.particle;
 //****************************************************************************
 
 import java.util.List;
+import javax.vecmath.Vector3f;
 import java.util.ArrayList;
 
 //****************************************************************************

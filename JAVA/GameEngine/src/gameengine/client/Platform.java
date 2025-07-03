@@ -260,7 +260,7 @@ public class Platform implements WindowListener, GLEventListener, KeyListener, M
 		var surface = new Surface(Surface.CONTEXT_INIT, drawable, textRenderers);
 		surface.font("SYSTEM", "Arial-BOLD-12");
 		for (var surfaceHandler : surfaceHandlers) {
-			surfaceHandler.handle(surface);
+			surfaceHandler.handleSurface(surface);
 		}
 
 	}
@@ -272,7 +272,7 @@ public class Platform implements WindowListener, GLEventListener, KeyListener, M
 
 		var surface = new Surface(Surface.CONTEXT_DONE, drawable, textRenderers);
 		for (var surfaceHandler : surfaceHandlers) {
-			surfaceHandler.handle(surface);
+			surfaceHandler.handleSurface(surface);
 		}
 
 		for (var name : textRenderers.keySet()) {
@@ -295,7 +295,7 @@ public class Platform implements WindowListener, GLEventListener, KeyListener, M
 		api.glDisable(GL2.GL_DEPTH_TEST);
 		var surface = new Surface(Surface.CONTEXT_UPDATE, drawable, textRenderers);
 		for (var surfaceHandler : surfaceHandlers) {
-			surfaceHandler.handle(surface);
+			surfaceHandler.handleSurface(surface);
 		}
 
 	}
