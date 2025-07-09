@@ -66,8 +66,8 @@ public class UI implements Video2D {
 				stars.remove(i--);
 			}
 		}
-		var r = Math.round(Math.random() * 10);		
-		for (var i=0; i<r; i++) {
+		float r = Math.round(Math.random() * 10);		
+		for (int i=0; i<r; i++) {
 			if (stars.size() < 100000)
 				stars.add(new Star());
 		}

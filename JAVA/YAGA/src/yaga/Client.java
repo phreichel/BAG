@@ -22,8 +22,8 @@ public class Client {
 
 	//=========================================================================
 	public Client() {
-		var profile = GLProfile.getDefault();
-		var caps = new GLCapabilities(profile);
+		GLProfile profile = GLProfile.get(GLProfile.GL4);
+		GLCapabilities caps = new GLCapabilities(profile);
 		window = GLWindow.create(caps);
 		window.setFullscreen(true);
 		audio = new Audio();

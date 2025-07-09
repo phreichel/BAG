@@ -7,7 +7,7 @@ public class Main {
 
 	//=========================================================================
 	public static void main(String[] args) {
-		var app = new Application();
+		Application app = new Application();
 		app.run(args);
 	}
 	//=========================================================================

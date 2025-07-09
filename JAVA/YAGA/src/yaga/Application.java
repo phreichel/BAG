@@ -54,8 +54,8 @@ public class Application {
 	
 	//=========================================================================
 	protected void update() {
-		var tnow = System.nanoTime();
-		var tdelta = tnow-tthen;
+		long tnow = System.nanoTime();
+		long tdelta = tnow-tthen;
 		if (tdelta > 100L) {
 			tthen = tnow;
 			float dT = 0.000000001f * tdelta;

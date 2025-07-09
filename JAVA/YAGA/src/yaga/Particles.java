@@ -16,8 +16,8 @@ public class Particles {
 	
 	//=========================================================================
 	public void update(float dT) {
-		var rate = new Vector3f();
-		for (var particle : particles) {
+		Vector3f rate = new Vector3f();
+		for (Particle particle : particles) {
 			rate.set(particle.vel);
 			rate.scale(dT);
 			particle.loc.add(rate);

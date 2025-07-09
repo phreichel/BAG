@@ -3,10 +3,12 @@ package yaga;
 //*****************************************************************************
 
 import java.io.File;
+import java.io.InputStream;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
@@ -25,8 +27,8 @@ public class Audio {
 
 	//=========================================================================
 	public void register(Map<String, File> clips) {
-		for (var clipName : clips.keySet()) {
-			var clipFile = clips.get(clipName);
+		for (String clipName : clips.keySet()) {
+			File clipFile = clips.get(clipName);
 			register(clipName, clipFile);
 		}
 	}
@@ -35,8 +37,8 @@ public class Audio {
 	//=========================================================================
 	public void register(String clipName, File clipFile) {
 		try {
-			var inputStream = AudioSystem.getAudioInputStream(clipFile);
-			var clip = AudioSystem.getClip();
+			AudioInputStream inputStream = AudioSystem.getAudioInputStream(clipFile);
+			Clip clip = AudioSystem.getClip();
 			clip.open(inputStream);
 			clipMap.put(clipName, clip);
 		} catch (Exception e) {
@@ -47,7 +49,7 @@ public class Audio {
 
 	//=========================================================================
 	public void remove(String ...  clipNames) {
-		for (var name : clipNames) {
+		for (String name : clipNames) {
 			remove(name);
 		}
 	}
@@ -55,7 +57,7 @@ public class Audio {
 	
 	//=========================================================================
 	public void remove(Collection<String> clipNames) {
-		for (var name : clipNames) {
+		for (String name : clipNames) {
 			remove(name);
 		}
 	}
@@ -63,7 +65,7 @@ public class Audio {
 	
 	//=========================================================================
 	public void remove(String name) {
-		var target = clipMap.remove(name);
+		Clip target = clipMap.remove(name);
 		if (target.isActive()) target.stop();
 		if (target.isOpen()) target.close();		
 	}
@@ -79,7 +81,7 @@ public class Audio {
 
 	//=========================================================================
 	public void play(String name) {
-		var target = clipMap.get(name);
+		Clip target = clipMap.get(name);
 		if (target != null) {
 			target.setFramePosition(0);
 			target.start();
@@ -89,8 +91,8 @@ public class Audio {
 	
 	//=========================================================================
 	public void done() {
-		for (var key : clipMap.keySet()) {
-			var value = clipMap.get(key);
+		for (String key : clipMap.keySet()) {
+			Clip value = clipMap.get(key);
 			if (value.isActive()) {
 				value.stop();
 			}
