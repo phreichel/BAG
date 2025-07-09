@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ivy-module
+	version="2.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd"
+	xmlns:m="http://ant.apache.org/ivy/maven">		
+
+	<info
+		organisation="phi"
+		module="TaskTool"
+		status="integration">
+	</info>
+	
+	<dependencies>
+	
+	    <!-- Lombok: https://repo.maven.apache.org/maven2/org/projectlombok/lombok/ -->
+	    <dependency org="org.projectlombok" name="lombok" rev="1.18.24" transitive="true" />
+	
+	    <!-- Javalin: Lightweight Webserver framework -->
+	    <!-- dependency org="io.javalin" name="javalin" rev="5.6.1" transitive="true" /-->
+	    
+	    <!-- Jackson Dependencies -->
+	    <!-- dependency org="com.fasterxml.jackson.core" name="jackson-databind" rev="2.18.3" transitive="true" /-->
+	    <!-- dependency org="com.fasterxml.jackson.core" name="jackson-core" rev="2.18.3" transitive="true" /-->
+	    <!-- dependency org="com.fasterxml.jackson.core" name="jackson-annotations" rev="2.18.3" transitive="true" /-->
+	    
+		<!-- dependency org="com.h2database" name="h2" rev="2.1.214" transitive="true" /-->
+
+	    <!-- Hibernate Core -->
+	    <!-- dependency org="org.hibernate" name="hibernate-core" rev="5.6.14.Final" transitive="true" /-->
+	    
+		<!-- https://mvnrepository.com/artifact/javax.vecmath/vecmath -->
+		<dependency org="javax.vecmath" name="vecmath" rev="1.5.2"  transitive="true" />
+
+		<!-- https://mvnrepository.com/artifact/org.jogamp.gluegen/gluegen-rt -->
+		<dependency org="org.jogamp.gluegen" name="gluegen-rt" rev="2.3.2" transitive="true" />
+		
+		<!-- https://mvnrepository.com/artifact/org.jogamp.gluegen/gluegen-rt-main -->
+		<dependency org="org.jogamp.gluegen" name="gluegen-rt-main" rev="2.3.2" transitive="true" />
+
+		<!-- https://mvnrepository.com/artifact/org.jogamp.jogl/jogl-all -->
+		<dependency org="org.jogamp.jogl" name="jogl-all" rev="2.3.2" transitive="true" />
+
+		<!-- https://mvnrepository.com/artifact/org.jogamp.jogl/jogl-all-main -->
+		<dependency org="org.jogamp.jogl" name="jogl-all-main" rev="2.3.2" transitive="true" />
+
+		<!-- https://mvnrepository.com/artifact/org.jogamp.jogl/oculusvr -->
+		<!--dependency org="org.jogamp.jogl" name="oculusvr" rev="2.3.2" transitive="true" /-->
+
+		<!-- https://mvnrepository.com/artifact/org.jogamp.joal/joal -->
+		<!--dependency org="org.jogamp.joal" name="joal" rev="2.3.2" transitive="true" /-->
+	    
+	    <dependency org="net.java.jinput" name="jinput" rev="2.0.9" />
+		<dependency org="net.java.jinput" name="jinput-platform" rev="2.0.5">
+		  <artifact name="jinput-platform" type="jar" ext="jar" m:classifier="natives-windows" />
+		</dependency>
+						    
+	</dependencies>
+	
+</ivy-module>
