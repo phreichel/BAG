@@ -2,45 +2,31 @@
 package core;
 //************************************************************************************************
 
+import java.util.Set;
+
 //************************************************************************************************
-public class Application implements IApplication {
+public interface IInputMapping {
 
 	//============================================================================================
-	private InputMapper inputHandler = new InputMapper();
-	private IPlatform   platform     = new Platform();
+	public enum Target {
+		ACTION,
+		CHANNEL
+	}
 	//============================================================================================
 	
 	//============================================================================================
-	@Override
-	public void run () {
-		
-		platform.init();
-		platform.setTitle("PETERCHENS MONDFAHRT");
-
-		Asset fontSystem = new Asset("system", "Font", "code", "Arial-PLAIN-20");
-		Asset fontPlain = new Asset("plain", "Font", "code", "Arial-PLAIN-20");
-		Asset fontBold  = new Asset("bold", "Font", "code", "Arial-BOLD-20");
-		
-		platform.addAsset(fontSystem);
-		platform.addAsset(fontBold);
-		platform.addAsset(fontPlain);
-		
-		platform.addInputHandler(inputHandler);
-		platform.addCanvas(this::onPaint);
-		
-		while (true)  {
-			platform.updateInputs();
-			platform.updateGraphics();
-			Thread.yield();
-		}
-		
-	}
+	public Target  getTarget();
+	public String  getIdent();
+	public boolean matches(Set<InputEvent.Axis> axisStates, InputEvent event);
 	//============================================================================================
 
 	//============================================================================================
-	private void onPaint(IGraphics g) {
-		g.setColor(1, 0, 0);
-	}
+	// Actual matching to Channel or Action is done in InputMapper
+	// Action : if matches and value is 1f (PRESSED) : -> Action is triggered 
+	// Channel: if matches -> if Analog Axis: value is directly passed in
+	//                     -> if Button Axit: value PRESSED is passed as 1f (HIGH)
+	//                                        value RELEASED is passed as 0f (LOW)
+	//                                        other values (TYPED etc) are ignored
 	//============================================================================================
 	
 }

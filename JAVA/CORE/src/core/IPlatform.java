@@ -14,7 +14,12 @@ public interface IPlatform {
 	public void addAsset(Asset asset);
 	public void removeAsset(Asset asset);
 	//============================================================================================
-	
+
+	//============================================================================================
+	public void addInputHandler(IInputHandler handler);
+	public void removeInputHandler(IInputHandler handler);
+	//============================================================================================
+
 	//============================================================================================
 	public void addCanvas(ICanvas canvas);
 	public void removeCanvas(ICanvas canvas);
@@ -22,7 +27,8 @@ public interface IPlatform {
 	
 	//============================================================================================
 	void init();
-	void update();
+	void updateInputs();
+	void updateGraphics();
 	//============================================================================================
 
 }
