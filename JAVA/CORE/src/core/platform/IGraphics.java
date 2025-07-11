@@ -1,32 +1,38 @@
 //************************************************************************************************
-package core;
+package core.platform;
 //************************************************************************************************
 
-import java.util.Set;
+import javax.vecmath.Color3f;
+import javax.vecmath.Color4f;
 
 //************************************************************************************************
-public interface IInputMapping {
+public interface IGraphics {
 
 	//============================================================================================
-	public enum Target {
-		ACTION,
-		CHANNEL
-	}
+	int getWidth();
+	int getHeight();
+	//============================================================================================
+
+	//============================================================================================
+	void setColor(Color3f color);
+	void setColor(Color4f color);
+	void setColor(float r, float g, float b);
+	void setColor(float r, float g, float b, float a);
+	//============================================================================================
+
+	//============================================================================================
+	void push();
+	void pop();
+	void translate(float dx, float dy);
+	void rotate(float a);
 	//============================================================================================
 	
 	//============================================================================================
-	public Target  getTarget();
-	public String  getIdent();
-	public boolean matches(Set<InputEvent.Axis> axisStates, InputEvent event);
-	//============================================================================================
-
-	//============================================================================================
-	// Actual matching to Channel or Action is done in InputMapper
-	// Action : if matches and value is 1f (PRESSED) : -> Action is triggered 
-	// Channel: if matches -> if Analog Axis: value is directly passed in
-	//                     -> if Button Axit: value PRESSED is passed as 1f (HIGH)
-	//                                        value RELEASED is passed as 0f (LOW)
-	//                                        other values (TYPED etc) are ignored
+	void drawPoints(float ... coords);
+	void drawPolyline(float ... coords);
+	void drawClosedPolyline(float ... coords);
+	void drawPolygon(float ... coords);
+	void drawText(String font, String text, float x, float y);
 	//============================================================================================
 	
 }

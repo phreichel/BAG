@@ -1,35 +1,46 @@
 //************************************************************************************************
-package core;
+package core.event;
 //************************************************************************************************
 
 //************************************************************************************************
-public interface IPlatform {
+public class GameEvent {
 
 	//============================================================================================
-	public String getTitle();
-	public void   setTitle(String title);
+	public enum Type {
+		ACTION,
+		CHANNEL,
+		TEXT,
+		LOGIN,
+		LOGOUT,
+		SPAWN,
+		DESPAWN,
+		DEATH,
+		PROJECTILE
+	}
 	//============================================================================================
 
 	//============================================================================================
-	public void addAsset(Asset asset);
-	public void removeAsset(Asset asset);
+	public Enum<?> type  = null;
+	public String  text  = null;
+	public float   value = Float.NaN;
+	public Object  data  = null;
 	//============================================================================================
 
 	//============================================================================================
-	public void addInputHandler(IInputHandler handler);
-	public void removeInputHandler(IInputHandler handler);
-	//============================================================================================
-
-	//============================================================================================
-	public void addCanvas(ICanvas canvas);
-	public void removeCanvas(ICanvas canvas);
+	public void clear() {
+		type  = null;
+		text  = null;
+		value = Float.NaN;
+		data  = null;
+	}
 	//============================================================================================
 	
 	//============================================================================================
-	void init();
-	void updateInputs();
-	void updateGraphics();
+	@SuppressWarnings("unchecked")
+	public <T> T data(Class<T> c) {
+		return (T) data;
+	};
 	//============================================================================================
-
+	
 }
 //************************************************************************************************

@@ -1,18 +1,30 @@
 //************************************************************************************************
-package core;
+package core.main;
 //************************************************************************************************
+
+import core.api.IApplication;
+import core.asset.Asset;
+import core.event.EventManager;
+import core.event.GameEvent;
+import core.input.InputMapper;
+import core.platform.IGraphics;
+import core.platform.IPlatform;
+import core.platform.Platform;
 
 //************************************************************************************************
 public class Application implements IApplication {
 
 	//============================================================================================
-	private InputMapper inputHandler = new InputMapper();
-	private IPlatform   platform     = new Platform();
+	private InputMapper  inputHandler = new InputMapper();
+	private IPlatform    platform     = new Platform();
+	private EventManager eventManager = new EventManager();
 	//============================================================================================
 	
 	//============================================================================================
 	@Override
 	public void run () {
+		
+		inputHandler.init(eventManager);
 		
 		platform.init();
 		platform.setTitle("PETERCHENS MONDFAHRT");
@@ -28,8 +40,14 @@ public class Application implements IApplication {
 		platform.addInputHandler(inputHandler);
 		platform.addCanvas(this::onPaint);
 		
+		eventManager.registerEventTypeClass(GameEvent.Type.class);
+		eventManager.register(GameEvent.Type.ACTION,  this::handleAction);
+		eventManager.register(GameEvent.Type.CHANNEL, this::handleChannel);
+		eventManager.register(GameEvent.Type.TEXT,    this::handleText);
+		
 		while (true)  {
 			platform.updateInputs();
+			eventManager.update();
 			platform.updateGraphics();
 			Thread.yield();
 		}
@@ -40,6 +58,24 @@ public class Application implements IApplication {
 	//============================================================================================
 	private void onPaint(IGraphics g) {
 		g.setColor(1, 0, 0);
+	}
+	//============================================================================================
+
+	//============================================================================================
+	private void handleAction(GameEvent event) {
+		
+	}
+	//============================================================================================
+
+	//============================================================================================
+	private void handleChannel(GameEvent event) {
+		
+	}
+	//============================================================================================
+
+	//============================================================================================
+	private void handleText(GameEvent event) {
+		
 	}
 	//============================================================================================
 	

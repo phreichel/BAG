@@ -1,5 +1,5 @@
 //************************************************************************************************
-package core;
+package core.platform;
 //************************************************************************************************
 
 import java.awt.Font;
@@ -28,6 +28,12 @@ import com.jogamp.opengl.GLProfile;
 import com.jogamp.opengl.glu.GLU;
 import com.jogamp.opengl.util.awt.TextRenderer;
 
+import core.api.ICanvas;
+import core.api.IInputHandler;
+import core.asset.Asset;
+import core.event.EventManager;
+import core.input.InputEvent;
+
 //************************************************************************************************
 public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListener, MouseListener {
 
@@ -54,11 +60,11 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 	//============================================================================================
 
 	//============================================================================================
-	private List<InputEvent> inputList  = new ArrayList<>();
-	private List<InputEvent> outputList = new ArrayList<>();
-	private List<InputEvent> cacheList  = new ArrayList<>();
+	private List<InputEvent> input  = new ArrayList<>();
+	private List<InputEvent> output = new ArrayList<>();
+	private List<InputEvent> pool   = new ArrayList<>();
 	//============================================================================================
-	
+
 	//============================================================================================
 	public Platform() {
 		
@@ -145,9 +151,9 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 	@Override
 	public void updateInputs() {
 		
-		var active = inputList;
-		inputList = outputList;
-		outputList = active;
+		var active = input;
+		input = output;
+		output = active;
 		
 		for (var event : active) {
 			for (var handler : inputHandlerList) {
@@ -496,7 +502,7 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 			if (!axis.equals(InputEvent.Axis.NONE)) {
 				var event = alloc();
 				event.set(axis, InputEvent.VALUE_TYPED);
-				inputList.add(event);
+				input.add(event);
 			}
 		}
 	}
@@ -542,7 +548,7 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 			if (!axis.equals(InputEvent.Axis.NONE)) {
 				var event = alloc();
 				event.set(axis, InputEvent.VALUE_PRESSED);
-				inputList.add(event);
+				input.add(event);
 			}
 		}
 	}
@@ -578,7 +584,7 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 			if (!axis.equals(InputEvent.Axis.NONE)) {
 				var event = alloc();
 				event.set(axis, InputEvent.VALUE_RELEASED);
-				inputList.add(event);
+				input.add(event);
 			}
 		}
 	}
@@ -590,11 +596,11 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 		{
 			var event = alloc();
 			event.set(InputEvent.Axis.PT_X, e.getX());
-			inputList.add(event);
+			input.add(event);
 		}{
 			var event = alloc();
 			event.set(InputEvent.Axis.PT_Y, e.getY());
-			inputList.add(event);
+			input.add(event);
 		}
 	}
 	//============================================================================================
@@ -621,7 +627,7 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 	public void mouseWheelMoved(MouseEvent e) {
 		var event = alloc();
 		event.set(InputEvent.Axis.PT_Z, e.getRotation()[1] * e.getRotationScale() );
-		inputList.add(event);
+		input.add(event);
 	}
 	//============================================================================================
 
@@ -638,13 +644,13 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 				var character = '\0';
 				if (e.isPrintableKey()) character = e.getKeyChar();
 				event.set(axis, InputEvent.VALUE_PRESSED, character);
-				inputList.add(event);
+				input.add(event);
 			}
 			if (e.isPrintableKey()) {
 				var event = alloc();
 				var character = e.getKeyChar();
 				event.set(axis, InputEvent.VALUE_TYPED, character);
-				inputList.add(event);
+				input.add(event);
 			}
 		}
 	}
@@ -663,7 +669,7 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 				var character = '\0';
 				if (e.isPrintableKey()) character = e.getKeyChar();
 				event.set(axis, InputEvent.VALUE_RELEASED, character);
-				inputList.add(event);
+				input.add(event);
 			}
 		}
 	}
@@ -778,7 +784,7 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 	private InputEvent alloc() {
 		InputEvent event = null;
 		try {
-			event = cacheList.removeFirst();
+			event = pool.removeFirst();
 		} catch (NoSuchElementException e) {
 			event = new InputEvent();
 		}
@@ -789,7 +795,7 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 	//============================================================================================
 	private void free(InputEvent event ) {
 		event.clear();
-		cacheList.add(event);
+		pool.add(event);
 	}
 	//============================================================================================
 	

@@ -1,81 +1,66 @@
 //************************************************************************************************
-package core;
+package core.input;
 //************************************************************************************************
 
+import java.util.Arrays;
 import java.util.EnumSet;
 import java.util.Set;
 
+import core.input.InputEvent.Axis;
+
 //************************************************************************************************
-public class InputMapper implements IInputHandler {
+public class ChordMapping implements IInputMapping {
 
 	//============================================================================================
-	public enum Context {
-		NONE,
-		GUI,
-		TEXT
-	}
-	//============================================================================================
-
-	//============================================================================================
-	private Context context = Context.NONE;
-	//============================================================================================
-	
-	//============================================================================================
-	private Set<InputEvent.Axis> allButtons     = EnumSet.noneOf(InputEvent.Axis.class); 
-	private Set<InputEvent.Axis> allAnalogs     = EnumSet.noneOf(InputEvent.Axis.class); 
-	private Set<InputEvent.Axis> pressedButtons = EnumSet.noneOf(InputEvent.Axis.class); 
+	private String ident = "";
+	private Target target = Target.NONE;
+	private InputEvent.Axis trigger = InputEvent.Axis.NONE;
+	private Set<InputEvent.Axis> modifiers = EnumSet.noneOf(InputEvent.Axis.class);
 	//============================================================================================
 
 	//============================================================================================
-	public InputMapper() {
-
-		for (var axis : InputEvent.Axis.values()) {
-			if (axis.name().startsWith("KB_")) allButtons.add(axis);
-			if (axis.name().contains("_BTN"))  allButtons.add(axis);
-			if (axis.name().contains("_HUD"))  allButtons.add(axis);
-		}
-		
-		allAnalogs.add(InputEvent.Axis.PT_X);
-		allAnalogs.add(InputEvent.Axis.PT_Y);
-		allAnalogs.add(InputEvent.Axis.PT_Z);
-		for (var axis : InputEvent.Axis.values()) {
-			if (axis.name().contains("_AS")) allAnalogs.add(axis);
-		}
-		
-	}
-	//============================================================================================
-
-	//============================================================================================
-	public Context getContext() {
-		return context; 
-	}
-	//============================================================================================
-
-	//============================================================================================
-	public void setContext(Context context) {
-		this.context = context; 
+	public ChordMapping(
+			String ident,
+			Target target,
+			InputEvent.Axis trigger,
+			InputEvent.Axis ... modifiers) {
+		this.ident = ident;
+		this.target = target;
+		this.trigger = trigger;
+		this.modifiers.addAll(Arrays.asList(modifiers));
 	}
 	//============================================================================================
 	
 	//============================================================================================
 	@Override
-	public void onInput(InputEvent event) {
+	public Target getTarget() {
+		return target;
+	}
+	//============================================================================================
 
-		// set button states
-		if (allButtons.contains(event.axis)) {
-			if (event.value == InputEvent.VALUE_PRESSED) {
-				pressedButtons.add(event.axis);
-			}
-			else if (event.value == InputEvent.VALUE_RELEASED) {
-				pressedButtons.remove(event.axis);
-			}
-		}
-		
-		// set analog axis history
-		if (allAnalogs.contains(event.axis)) {
-			// do some history gathering ..
-		}
-		
+	//============================================================================================
+	@Override
+	public String getIdent() {
+		return ident;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public InputEvent.Axis getTrigger() {
+		return trigger;
+	}
+	//============================================================================================
+	
+	//============================================================================================
+	public Set<InputEvent.Axis> getModifiers() {
+		return modifiers;
+	}
+	//============================================================================================
+	
+	//============================================================================================
+	@Override
+	public boolean matches(Set<Axis> axisStates, InputEvent event) {
+		return axisStates.containsAll(modifiers) && event.axis.equals(trigger);
 	}
 	//============================================================================================
 

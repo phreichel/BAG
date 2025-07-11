@@ -1,39 +1,39 @@
 //************************************************************************************************
-package core;
+package core.platform;
 //************************************************************************************************
 
-import javax.vecmath.Color3f;
-import javax.vecmath.Color4f;
+import core.api.ICanvas;
+import core.api.IInputHandler;
+import core.asset.Asset;
 
 //************************************************************************************************
-public interface IGraphics {
+public interface IPlatform {
 
 	//============================================================================================
-	int getWidth();
-	int getHeight();
-	//============================================================================================
-
-	//============================================================================================
-	void setColor(Color3f color);
-	void setColor(Color4f color);
-	void setColor(float r, float g, float b);
-	void setColor(float r, float g, float b, float a);
+	public String getTitle();
+	public void   setTitle(String title);
 	//============================================================================================
 
 	//============================================================================================
-	void push();
-	void pop();
-	void translate(float dx, float dy);
-	void rotate(float a);
+	public void addAsset(Asset asset);
+	public void removeAsset(Asset asset);
+	//============================================================================================
+
+	//============================================================================================
+	public void addInputHandler(IInputHandler handler);
+	public void removeInputHandler(IInputHandler handler);
+	//============================================================================================
+
+	//============================================================================================
+	public void addCanvas(ICanvas canvas);
+	public void removeCanvas(ICanvas canvas);
 	//============================================================================================
 	
 	//============================================================================================
-	void drawPoints(float ... coords);
-	void drawPolyline(float ... coords);
-	void drawClosedPolyline(float ... coords);
-	void drawPolygon(float ... coords);
-	void drawText(String font, String text, float x, float y);
+	void init();
+	void updateInputs();
+	void updateGraphics();
 	//============================================================================================
-	
+
 }
 //************************************************************************************************
