@@ -11,7 +11,6 @@ import java.util.Set;
 
 import core.api.IInputHandler;
 import core.event.EventManager;
-import core.event.GameEvent;
 
 //************************************************************************************************
 public class InputMapper implements IInputHandler {
@@ -156,7 +155,7 @@ public class InputMapper implements IInputHandler {
 	private void fireAction(String actionName) {
 		if (eventManager == null) return;
 		var event = eventManager.createEvent();
-		event.type = GameEvent.Type.ACTION;
+		event.type = EventType.ACTION;
 		event.text = actionName;
 		eventManager.postEvent(event);
 	}
@@ -166,7 +165,7 @@ public class InputMapper implements IInputHandler {
 	private void fireChannel(String channelName, float value) {
 		if (eventManager == null) return;
 		var event = eventManager.createEvent();
-		event.type  = GameEvent.Type.CHANNEL;
+		event.type  = EventType.CHANNEL;
 		event.text  = channelName;
 		event.value = value;
 		eventManager.postEvent(event);
@@ -177,7 +176,7 @@ public class InputMapper implements IInputHandler {
 	private void fireText(char character) {
 		if (eventManager == null) return;
 		var event = eventManager.createEvent();
-		event.type  = GameEvent.Type.TEXT;
+		event.type  = EventType.TEXT;
 		event.text  = "" + character;
 		eventManager.postEvent(event);
 	}

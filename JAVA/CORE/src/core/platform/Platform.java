@@ -31,7 +31,6 @@ import com.jogamp.opengl.util.awt.TextRenderer;
 import core.api.ICanvas;
 import core.api.IInputHandler;
 import core.asset.Asset;
-import core.event.EventManager;
 import core.input.InputEvent;
 
 //************************************************************************************************
@@ -147,6 +146,14 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 	}
 	//============================================================================================
 
+	//============================================================================================
+	@Override
+	public void done() {
+		glWindow.setVisible(false);
+		glWindow.destroy();
+	}
+	//============================================================================================
+	
 	//============================================================================================
 	@Override
 	public void updateInputs() {
@@ -343,6 +350,7 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 	//============================================================================================
 
 	//============================================================================================
+	@Override
 	public void push() {
 		var api = glWindow.getGL().getGL2();
 		api.glPushMatrix();
@@ -350,6 +358,7 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 	//============================================================================================
 
 	//============================================================================================
+	@Override
 	public void pop() {
 		var api = glWindow.getGL().getGL2();
 		api.glPopMatrix();
@@ -357,6 +366,7 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 	//============================================================================================
 
 	//============================================================================================
+	@Override
 	public void translate(float dx, float dy) {
 		var api = glWindow.getGL().getGL2();
 		api.glTranslatef(dx, dy, 0);
@@ -364,6 +374,7 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 	//============================================================================================
 
 	//============================================================================================
+	@Override
 	public void rotate(float a) {
 		var api = glWindow.getGL().getGL2();
 		api.glRotatef(a, 0, 0, 1);
@@ -371,6 +382,7 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 	//============================================================================================
 
 	//============================================================================================
+	@Override
 	public void drawPoints(float ... coords) {
 		var api = glWindow.getGL().getGL2();
 		assert(coords.length >= 2);
@@ -383,6 +395,7 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 	//============================================================================================
 
 	//============================================================================================
+	@Override
 	public void drawPolyline(float ... coords) {
 		var api = glWindow.getGL().getGL2();
 		assert(coords.length >= 4);
@@ -395,6 +408,7 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 	//============================================================================================
 
 	//============================================================================================
+	@Override
 	public void drawClosedPolyline(float ... coords) {
 		var api = glWindow.getGL().getGL2();
 		assert(coords.length >= 4);
@@ -407,6 +421,7 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 	//============================================================================================
 
 	//============================================================================================
+	@Override
 	public void drawPolygon(float ... coords) {
 		var api = glWindow.getGL().getGL2();
 		assert(coords.length >= 4);
@@ -419,7 +434,52 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 	//============================================================================================
 
 	//============================================================================================
+	private TextRenderer usedRenderer = null;
+	//============================================================================================
+	
+	//============================================================================================
+	@Override
+	public void startTextRaw(String font) {
+		
+		assert(usedRenderer == null);
+		
+		TextRenderer textRenderer = fontAssetTypeMap.get(font);
+		if (textRenderer == null) textRenderer = fontAssetTypeMap.get("system");
+		
+		usedRenderer = textRenderer; 
+		usedRenderer.begin3DRendering();
+		
+	}
+	//============================================================================================
+
+	//============================================================================================
+	@Override
+	public void drawTextRaw(String text, float x, float y) {
+
+		assert(usedRenderer != null);
+
+		usedRenderer.draw3D(text, x, y, 0, 1); 
+		
+	}
+	//============================================================================================
+	
+	//============================================================================================
+	@Override
+	public void endTextRaw() {
+		
+		assert(usedRenderer != null);
+		
+		usedRenderer.end3DRendering();		
+		usedRenderer = null;
+		
+	}
+	//============================================================================================
+	
+	//============================================================================================
+	@Override
 	public void drawText(String font, String text, float x, float y) {
+
+		assert(usedRenderer == null);
 		
 		TextRenderer textRenderer = fontAssetTypeMap.get(font);
 		if (textRenderer == null) textRenderer = fontAssetTypeMap.get("system");
@@ -427,6 +487,31 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 		textRenderer.begin3DRendering();
 		textRenderer.draw3D(text, x, y, 0, 1); 
 		textRenderer.end3DRendering();
+		
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public TextProbe probeText(String font, String text, TextProbe probe) {
+		
+		TextRenderer textRenderer = fontAssetTypeMap.get(font);
+		if (textRenderer == null) textRenderer = fontAssetTypeMap.get("system");
+		var rect = textRenderer.getBounds(text);
+		if (probe == null) probe = new TextProbe();
+		probe.width = (float) rect.getWidth();
+		probe.height = (float) rect.getHeight();
+		probe.descent = (float) rect.getY();
+		probe.ascent = probe.height - probe.descent;
+
+		var frc = textRenderer.getFontRenderContext();
+		var nativeFont = textRenderer.getFont();
+		var gv = nativeFont.createGlyphVector(frc, text);
+		var start = gv.getGlyphPosition(0);
+		var end = gv.getGlyphPosition(gv.getNumGlyphs());
+		float advance = (float)(end.getX() - start.getX());		
+		probe.advance = advance;
+		
+		return probe;
 		
 	}
 	//============================================================================================
@@ -650,7 +735,7 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 				var event = alloc();
 				var character = e.getKeyChar();
 				event.set(axis, InputEvent.VALUE_TYPED, character);
-				input.add(event);
+				input.add(event);			
 			}
 		}
 	}

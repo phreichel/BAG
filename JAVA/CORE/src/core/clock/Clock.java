@@ -1,43 +1,57 @@
 //************************************************************************************************
-package core.platform;
+package core.clock;
+
+import java.util.ArrayList;
+import java.util.List;
+
 //************************************************************************************************
 
-import javax.vecmath.Color3f;
-import javax.vecmath.Color4f;
-
 //************************************************************************************************
-public interface IGraphics {
+public class Clock {
 
 	//============================================================================================
-	int getWidth();
-	int getHeight();
-	//============================================================================================
-
-	//============================================================================================
-	void setColor(Color3f color);
-	void setColor(Color4f color);
-	void setColor(float r, float g, float b);
-	void setColor(float r, float g, float b, float a);
+	private long lastNs;
+	private List<Schedule> schedules = new ArrayList<>();
 	//============================================================================================
 
 	//============================================================================================
-	void push();
-	void pop();
-	void translate(float dx, float dy);
-	void rotate(float a);
+	public void add(long period, ITask task) {
+		var schedule = new Schedule(period, task);
+		schedules.add(schedule);
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public void remove(ITask task) {
+		for (int i=0; i<schedules.size(); i++) {
+			var schedule = schedules.get(i);
+			if (schedule.task == task) {
+				schedules.remove(i);
+				i--;
+			}
+		}
+	}
 	//============================================================================================
 	
 	//============================================================================================
-	void drawPoints(float ... coords);
-	void drawPolyline(float ... coords);
-	void drawClosedPolyline(float ... coords);
-	void drawPolygon(float ... coords);
-	TextProbe probeText(String font, String text, TextProbe probe);
-	void drawText(String font, String text, float x, float y);
-	void startTextRaw(String font);
-	void drawTextRaw(String text, float x, float y);
-	void endTextRaw();
+	public void start() {
+		lastNs = System.nanoTime();
+	}
 	//============================================================================================
 	
+	//============================================================================================
+	public void update() {
+
+		long nowNs = System.nanoTime();
+		long deltaNs = nowNs - lastNs;
+		lastNs = nowNs;
+		
+		for (var schedule : schedules) {
+			schedule.update(deltaNs);
+		}
+		
+	}
+	//============================================================================================
+
 }
 //************************************************************************************************

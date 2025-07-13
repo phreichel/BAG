@@ -1,43 +1,35 @@
 //************************************************************************************************
-package core.platform;
+package core.gui;
 //************************************************************************************************
 
-import javax.vecmath.Color3f;
-import javax.vecmath.Color4f;
-
 //************************************************************************************************
-public interface IGraphics {
+public class Insets4f {
 
 	//============================================================================================
-	int getWidth();
-	int getHeight();
-	//============================================================================================
-
-	//============================================================================================
-	void setColor(Color3f color);
-	void setColor(Color4f color);
-	void setColor(float r, float g, float b);
-	void setColor(float r, float g, float b, float a);
-	//============================================================================================
-
-	//============================================================================================
-	void push();
-	void pop();
-	void translate(float dx, float dy);
-	void rotate(float a);
+	public static final Insets4f NONE = new Insets4f();
 	//============================================================================================
 	
 	//============================================================================================
-	void drawPoints(float ... coords);
-	void drawPolyline(float ... coords);
-	void drawClosedPolyline(float ... coords);
-	void drawPolygon(float ... coords);
-	TextProbe probeText(String font, String text, TextProbe probe);
-	void drawText(String font, String text, float x, float y);
-	void startTextRaw(String font);
-	void drawTextRaw(String text, float x, float y);
-	void endTextRaw();
+	public final float bottom;
+	public final float top;
+	public final float left;
+	public final float right;
 	//============================================================================================
-	
+
+	//============================================================================================
+	public Insets4f() {
+		this(0f, 0f, 0f, 0f);
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public Insets4f(float bottom, float top, float left, float right) {
+		this.bottom = bottom;
+		this.top = top;
+		this.left = left;
+		this.right = right;
+	}
+	//============================================================================================
+
 }
 //************************************************************************************************

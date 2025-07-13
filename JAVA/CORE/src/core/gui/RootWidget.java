@@ -1,31 +1,21 @@
 //************************************************************************************************
-package core.event;
+package core.gui;
 //************************************************************************************************
 
 //************************************************************************************************
-public class GameEvent {
+public class RootWidget extends WidgetContainerBase implements IRootWidget {
 
 	//============================================================================================
-	public Enum<?> type  = null;
-	public String  text  = null;
-	public float   value = Float.NaN;
-	public Object  data  = null;
-	//============================================================================================
-
-	//============================================================================================
-	public void clear() {
-		type  = null;
-		text  = null;
-		value = Float.NaN;
-		data  = null;
+	@Override
+	public void _setParent(IWidget parent) {
+		throw new RuntimeException("Illegal Operation");
 	}
 	//============================================================================================
 	
 	//============================================================================================
-	@SuppressWarnings("unchecked")
-	public <T> T data(Class<T> c) {
-		return (T) data;
-	};
+	public void addLayer(ILayerWidget layer) {
+		this._addChild(layer);
+	}
 	//============================================================================================
 	
 }

@@ -2,22 +2,63 @@
 package core.main;
 //************************************************************************************************
 
+import java.util.ArrayList;
+import java.util.List;
+
 import core.api.IApplication;
 import core.asset.Asset;
+import core.clock.Clock;
 import core.event.EventManager;
 import core.event.GameEvent;
+import core.input.ChordMapping;
+import core.input.EventType;
 import core.input.InputMapper;
+import core.input.IInputMapping.Target;
+import core.input.InputEvent;
 import core.platform.IGraphics;
 import core.platform.IPlatform;
 import core.platform.Platform;
+import core.platform.TextProbe;
 
 //************************************************************************************************
 public class Application implements IApplication {
 
 	//============================================================================================
+	private Clock        clock        = new Clock();
 	private InputMapper  inputHandler = new InputMapper();
 	private IPlatform    platform     = new Platform();
 	private EventManager eventManager = new EventManager();
+	//============================================================================================
+
+	//============================================================================================
+	private boolean  terminated   = false;
+	//============================================================================================
+
+	//============================================================================================
+	private static class Stroke {
+
+		long   t;
+		String s;
+		
+		public Stroke(String s) {
+			this(System.currentTimeMillis(), s);
+		}
+		
+		public Stroke(long t, String s) {
+			this.t = t;
+			this.s = s;
+		}
+		
+		public float fade(long now, long millis) {
+			return (float) (now-t) / (float) millis;
+		}
+
+		public boolean expired(long now, long millis) {
+			return (now - t) > millis;
+		}
+		
+	}
+	private List<Stroke> strokes = new ArrayList<>();
 	//============================================================================================
 	
 	//============================================================================================
@@ -25,12 +66,13 @@ public class Application implements IApplication {
 	public void run () {
 		
 		inputHandler.init(eventManager);
+		inputHandler.addMapping(InputMapper.Context.NONE, new ChordMapping("quit", Target.ACTION, InputEvent.Axis.KB_ESCAPE));
 		
 		platform.init();
 		platform.setTitle("PETERCHENS MONDFAHRT");
 
 		Asset fontSystem = new Asset("system", "Font", "code", "Arial-PLAIN-20");
-		Asset fontPlain = new Asset("plain", "Font", "code", "Arial-PLAIN-20");
+		Asset fontPlain = new Asset("plain", "Font", "code", "Bauhaus 93-PLAIN-20");
 		Asset fontBold  = new Asset("bold", "Font", "code", "Arial-BOLD-20");
 		
 		platform.addAsset(fontSystem);
@@ -40,30 +82,94 @@ public class Application implements IApplication {
 		platform.addInputHandler(inputHandler);
 		platform.addCanvas(this::onPaint);
 		
-		eventManager.registerEventTypeClass(GameEvent.Type.class);
-		eventManager.register(GameEvent.Type.ACTION,  this::handleAction);
-		eventManager.register(GameEvent.Type.CHANNEL, this::handleChannel);
-		eventManager.register(GameEvent.Type.TEXT,    this::handleText);
+		eventManager.registerEventTypeClass(EventType.class);
+		eventManager.register(EventType.ACTION,  this::handleAction);
+		eventManager.register(EventType.CHANNEL, this::handleChannel);
+		eventManager.register(EventType.TEXT,    this::handleText);
 		
-		while (true)  {
-			platform.updateInputs();
-			eventManager.update();
-			platform.updateGraphics();
+		clock.add(1_000_000_0L, this::updateEvents);
+		clock.add(  500_000_0L, this::updateOutput);
+		clock.start();
+		
+		while (!terminated)  {
+			clock.update();
 			Thread.yield();
 		}
+		
+		platform.done();
 		
 	}
 	//============================================================================================
 
 	//============================================================================================
+	private void updateEvents(int nFrames, long periodNs) {
+		platform.updateInputs();
+		eventManager.update();
+	}
+	//============================================================================================
+
+	//============================================================================================
+	private void updateOutput(int nFrames, long periodNs) {
+		platform.updateGraphics();
+	}
+	//============================================================================================
+	
+	//============================================================================================
 	private void onPaint(IGraphics g) {
-		g.setColor(1, 0, 0);
+		
+		long now = System.currentTimeMillis();
+
+		float x = 10f;
+		float y = g.getHeight() - 50;
+		
+		var probe = new TextProbe();
+		g.startTextRaw("plain");
+		
+		for (int i=0; i<strokes.size(); i++) {
+			
+			var stroke = strokes.get(i);
+			
+			if (stroke.expired(now, 50000)) {
+				strokes.remove(i);
+				i--;
+			} else if (stroke.s.equals("\r")) {
+				x = 10f;
+				y -= 30f;
+			} else if (stroke.s.equals("\b")) {
+				strokes.remove(i);
+				if (i > 0) {
+					strokes.remove(i-1);
+					i--;
+				}
+			} else if (stroke.s.equals("\t")) {
+				int n = ((int) x) / 100;
+				x = (n+1) * 100;
+			} else {
+				
+				float a = 1f - Math.min(1f, stroke.fade(now, 50000));
+				g.setColor(1f, .5f, 0f, a);
+				g.drawTextRaw(stroke.s, x, y);
+				
+				probe = g.probeText("bold", stroke.s, probe);
+				x += probe.advance;				
+				if (x >= 1000f) {
+					x = 10f;
+					y -= 30f;
+				}
+				
+			}
+		}
+
+		g.endTextRaw();
+		
 	}
 	//============================================================================================
 
 	//============================================================================================
 	private void handleAction(GameEvent event) {
-		
+		if (event.text.equals("quit")) {
+			terminated = true;
+		}
 	}
 	//============================================================================================
 
@@ -75,7 +181,7 @@ public class Application implements IApplication {
 
 	//============================================================================================
 	private void handleText(GameEvent event) {
-		
+		strokes.add(new Stroke(event.text));
 	}
 	//============================================================================================
 	
