@@ -21,7 +21,9 @@ public abstract class WidgetBase implements IWidget, IWidgetIntern {
 	private final Vector2f     outerExtent   = new Vector2f();     
 	private final Vector2f     innerExtent   = new Vector2f();     
 	private final Vector2f     borderOffset  = new Vector2f();     
-	private       Insets4f     borderInsets  = Insets4f.NONE;     
+	private       Insets4f     borderInsets  = Insets4f.NONE;
+	private       boolean      layoutDirty   = false;
+	private       ILayout      layout        = null;
 	//============================================================================================
 
 	//============================================================================================
@@ -140,6 +142,7 @@ public abstract class WidgetBase implements IWidget, IWidgetIntern {
 			extX - (borderInsets.left+borderInsets.right),
 			extY - (borderInsets.bottom+borderInsets.top)
 		);
+		_setLayoutDirty(true);
 	}
 	//============================================================================================
 
@@ -158,6 +161,7 @@ public abstract class WidgetBase implements IWidget, IWidgetIntern {
 			extX + (borderInsets.left+borderInsets.right),
 			extY + (borderInsets.bottom+borderInsets.top)
 		);
+		_setLayoutDirty(true);
 	}
 	//============================================================================================
 
@@ -170,6 +174,58 @@ public abstract class WidgetBase implements IWidget, IWidgetIntern {
 		    this.outerExtent.x - (borderInsets.left + borderInsets.right),
 		    this.outerExtent.y - (borderInsets.top + borderInsets.bottom)
 		);
+		_setLayoutDirty(true);
+	}
+	//============================================================================================
+
+	//============================================================================================
+	@Override
+	public void update(int nFrames, long periodNs) {}
+	//============================================================================================
+
+	//============================================================================================
+	@Override
+	public ILayout getLayout() {
+		return layout;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	@Override
+	public void setLayout(ILayout layout) {
+		if (this.layout == layout) return;		
+		this.layout = layout;
+		if (this.layout != null) {
+			this.layout.preserveState(this);
+		}
+		_setLayoutDirty(true);
+	}
+	//============================================================================================
+
+	//============================================================================================
+	@Override
+	public void updateLayout() {
+		var layout = getLayout();
+		if (layout == null) return;
+		if (_isLayoutDirty()) {
+			layout.updateLayout(this);
+			layout.preserveState(this);
+			_setLayoutDirty(false);
+		}
+	}
+	//============================================================================================
+	
+	//============================================================================================
+	@Override
+	public boolean _isLayoutDirty() {
+		return layoutDirty;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	@Override
+	public void _setLayoutDirty(boolean b) {
+		layoutDirty = b;
 	}
 	//============================================================================================
 	

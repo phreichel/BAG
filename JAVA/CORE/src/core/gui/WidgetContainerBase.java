@@ -57,6 +57,7 @@ public abstract class WidgetContainerBase extends WidgetBase implements IWidgetC
 			if (_parent != null) _parent._removeChild(child);
 			_child._setParent(this);
 			children.add(idx, child);
+			_setLayoutDirty(true);
 		}
 	}
 	//============================================================================================
@@ -80,6 +81,7 @@ public abstract class WidgetContainerBase extends WidgetBase implements IWidgetC
 		if (children.remove(child)) {
 			var _child = (IWidgetIntern) child;
 			_child._setParent(null);
+			_setLayoutDirty(true);
 			return true;
 		}
 		return false;
@@ -90,9 +92,9 @@ public abstract class WidgetContainerBase extends WidgetBase implements IWidgetC
 	@Override
 	public IWidget _removeChild(int idx) {
 		var child = children.remove(idx);
-		if (child == null) return null;
 		var _child = (IWidgetIntern) child;
 		_child._setParent(null);
+		_setLayoutDirty(true);
 		return child; 
 	}
 	//============================================================================================
@@ -103,6 +105,7 @@ public abstract class WidgetContainerBase extends WidgetBase implements IWidgetC
 		var child = children.remove(fromIdx);
 		if (child == null) return false;
 		children.add(toIdx, child);
+		_setLayoutDirty(true);
 		return true;
 	}
 	//============================================================================================
@@ -112,6 +115,7 @@ public abstract class WidgetContainerBase extends WidgetBase implements IWidgetC
 	public boolean _relocateChild(IWidget child, int toIdx) {
 		if (children.remove(child)) {
 			children.add(toIdx, child);
+			_setLayoutDirty(true);
 			return true;
 		}
 		return false;
@@ -125,6 +129,7 @@ public abstract class WidgetContainerBase extends WidgetBase implements IWidgetC
 			int idx = children.indexOf(before);
 			if (idx == -1) return false;
 			children.add(idx, child);
+			_setLayoutDirty(true);
 			return true;
 		}
 		return false;
@@ -150,6 +155,20 @@ public abstract class WidgetContainerBase extends WidgetBase implements IWidgetC
 	//============================================================================================
 
 	//============================================================================================
+	@Override
+	public void update(int nFrames, long periodNs) {
+		updateWidget(nFrames, periodNs);
+		for (var child : getChildren()) {
+			child.update(nFrames, periodNs);
+		}
+	}
+	//============================================================================================
+
+	//============================================================================================
+	protected void updateWidget(int nFrames, long periodNs) {}
+	//============================================================================================
+	
+	//============================================================================================
 	protected void onPaintWidget(IGraphics graphics) {
 		
 	}
@@ -174,6 +193,17 @@ public abstract class WidgetContainerBase extends WidgetBase implements IWidgetC
 
 	//============================================================================================
 	protected void onEventAfterChildren(GameEvent e) {
+		
+	}
+	//============================================================================================
+	
+	//============================================================================================
+	@Override
+	public void updateLayout() {
+		super.updateLayout();
+		for (var child : getChildren()) {
+			child.updateLayout();
+		}
 		
 	}
 	//============================================================================================

@@ -2,12 +2,15 @@
 package core.gui;
 //************************************************************************************************
 
+import core.api.ICanvas;
 import core.api.IGameHandler;
+import core.clock.ITask;
 import core.event.GameEvent;
+import core.input.EventType;
 import core.platform.IGraphics;
 
 //************************************************************************************************
-public class GuiManager implements IGameHandler {
+public class GuiManager implements ICanvas, IGameHandler, ITask {
 
 	//============================================================================================
 	private final RootWidget root;
@@ -34,6 +37,10 @@ public class GuiManager implements IGameHandler {
 	//============================================================================================
 	@Override
 	public void onGameEvent(GameEvent e) {
+		if (e.type.equals(EventType.RESIZE)) {
+			var data = (float[]) e.data;
+			root._setOuterExtent(data[0], data[1]);
+		}
 		root.onGameEvent(e);
 	}
 	//============================================================================================
@@ -51,6 +58,14 @@ public class GuiManager implements IGameHandler {
 		var layerWidget = new LayerWidget();
 		layerWidget._setGuiManager(this);
 		return layerWidget;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	@Override
+	public void update(int nFrames, long periodNs) {
+		root.update(nFrames, periodNs);
+		root.updateLayout();
 	}
 	//============================================================================================
 	

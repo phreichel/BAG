@@ -15,10 +15,14 @@ import java.util.Set;
 import javax.vecmath.Color3f;
 import javax.vecmath.Color4f;
 
+import com.jogamp.nativewindow.WindowClosingProtocol.WindowClosingMode;
 import com.jogamp.newt.event.KeyEvent;
 import com.jogamp.newt.event.KeyListener;
 import com.jogamp.newt.event.MouseEvent;
 import com.jogamp.newt.event.MouseListener;
+import com.jogamp.newt.event.WindowEvent;
+import com.jogamp.newt.event.WindowListener;
+import com.jogamp.newt.event.WindowUpdateEvent;
 import com.jogamp.newt.opengl.GLWindow;
 import com.jogamp.opengl.GL2;
 import com.jogamp.opengl.GLAutoDrawable;
@@ -31,10 +35,12 @@ import com.jogamp.opengl.util.awt.TextRenderer;
 import core.api.ICanvas;
 import core.api.IInputHandler;
 import core.asset.Asset;
+import core.event.EventManager;
+import core.input.EventType;
 import core.input.InputEvent;
 
 //************************************************************************************************
-public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListener, MouseListener {
+public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListener, MouseListener, WindowListener {
 
 	//============================================================================================
 	private interface AssetHandler {
@@ -65,7 +71,13 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 	//============================================================================================
 
 	//============================================================================================
-	public Platform() {
+	private EventManager eventManager = null;
+	//============================================================================================
+	
+	//============================================================================================
+	public Platform( EventManager eventManager) {
+		
+		this.eventManager = eventManager;
 		
 		graphicsAssetTypeSet.add("Font");
 		graphicsAssetTypeSet.add("Texture");
@@ -141,7 +153,8 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 		glWindow.addGLEventListener(this);
 		glWindow.addKeyListener(this);
 		glWindow.addMouseListener(this);
-		glWindow.confinePointer(true);
+		glWindow.addWindowListener(this);
+		glWindow.setDefaultCloseOperation(WindowClosingMode.DO_NOTHING_ON_CLOSE);
 		glWindow.setVisible(true);
 	}
 	//============================================================================================
@@ -201,8 +214,10 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 	//============================================================================================
 	@Override
 	public void reshape(GLAutoDrawable drawable, int x, int y, int width, int height) {
-		// TODO Auto-generated method stub
-		
+		var event = eventManager.createEvent();
+		event.type = EventType.RESIZE;
+		event.data = new float[] { width, height }; 
+		eventManager.postEvent(event);
 	}
 	//============================================================================================
 	
@@ -883,6 +898,19 @@ public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListe
 		pool.add(event);
 	}
 	//============================================================================================
-	
+
+	//============================================================================================
+	@Override public void windowResized(WindowEvent e) {}
+	@Override public void windowMoved(WindowEvent e) {}
+	@Override public void windowDestroyNotify(WindowEvent e) {
+		var event = eventManager.createEvent();
+		event.type = EventType.TERMINATE;
+		eventManager.postEvent(event);
+	}
+	@Override public void windowDestroyed(WindowEvent e) {}
+	@Override public void windowGainedFocus(WindowEvent e) {}
+	@Override public void windowLostFocus(WindowEvent e) {}
+	@Override public void windowRepaint(WindowUpdateEvent e) {}
+
 }
 //************************************************************************************************

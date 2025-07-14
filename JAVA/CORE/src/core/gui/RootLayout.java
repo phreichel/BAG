@@ -1,16 +1,23 @@
 //************************************************************************************************
-package core.input;
+package core.gui;
 //************************************************************************************************
 
 //************************************************************************************************
-public enum EventType {
+public class RootLayout implements ILayout {
 
 	//============================================================================================
-	ACTION,
-	CHANNEL,
-	TEXT,
-	RESIZE,
-	TERMINATE
+	public void preserveState(IWidget widget) {};
+	//============================================================================================
+
+	//============================================================================================
+	public void updateLayout(IWidget widget) {
+		var outerExtent = widget.getOuterExtent();
+		var _container = (IWidgetContainer) widget;
+		for (var child : _container.getChildren()) {
+			var _child = (IWidgetIntern) child;
+			_child._setOuterExtent(outerExtent);
+		}
+	};
 	//============================================================================================
 	
 }

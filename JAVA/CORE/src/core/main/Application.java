@@ -10,6 +10,7 @@ import core.asset.Asset;
 import core.clock.Clock;
 import core.event.EventManager;
 import core.event.GameEvent;
+import core.gui.GuiManager;
 import core.input.ChordMapping;
 import core.input.EventType;
 import core.input.InputMapper;
@@ -24,10 +25,18 @@ import core.platform.TextProbe;
 public class Application implements IApplication {
 
 	//============================================================================================
+	private static final long ONE_SECOND_NS   = 1_000_000_000L;
+	private static final long EVENT_PERIOD    = ONE_SECOND_NS / 100L;
+	private static final long GRAPHICS_PERIOD = ONE_SECOND_NS / 20L;
+	private static final long GUI_PERIOD      = ONE_SECOND_NS / 20L;
+	//============================================================================================
+	
+	//============================================================================================
 	private Clock        clock        = new Clock();
+	private GuiManager   guiManager   = new GuiManager();
 	private InputMapper  inputHandler = new InputMapper();
-	private IPlatform    platform     = new Platform();
 	private EventManager eventManager = new EventManager();
+	private IPlatform    platform     = new Platform(eventManager);
 	//============================================================================================
 
 	//============================================================================================
@@ -66,7 +75,7 @@ public class Application implements IApplication {
 	public void run () {
 		
 		inputHandler.init(eventManager);
-		inputHandler.addMapping(InputMapper.Context.NONE, new ChordMapping("quit", Target.ACTION, InputEvent.Axis.KB_ESCAPE));
+		inputHandler.addMapping(InputMapper.Context.NONE, new ChordMapping("TERMINATE", Target.ACTION, InputEvent.Axis.KB_ESCAPE));
 		
 		platform.init();
 		platform.setTitle("PETERCHENS MONDFAHRT");
@@ -81,14 +90,17 @@ public class Application implements IApplication {
 		
 		platform.addInputHandler(inputHandler);
 		platform.addCanvas(this::onPaint);
+		platform.addCanvas(guiManager);
 		
 		eventManager.registerEventTypeClass(EventType.class);
-		eventManager.register(EventType.ACTION,  this::handleAction);
-		eventManager.register(EventType.CHANNEL, this::handleChannel);
-		eventManager.register(EventType.TEXT,    this::handleText);
+		eventManager.register(EventType.TEXT, this::handleText);
+		eventManager.register(EventType.ACTION, this::handleAction);
+		eventManager.register(EventType.TERMINATE, this::handleTerminate);
+		eventManager.register(EventType.RESIZE, guiManager);
 		
-		clock.add(1_000_000_0L, this::updateEvents);
-		clock.add(  500_000_0L, this::updateOutput);
+		clock.add(EVENT_PERIOD, this::updateEvents);
+		clock.add(GUI_PERIOD, guiManager);
+		clock.add(GRAPHICS_PERIOD, this::updateOutput);
 		clock.start();
 		
 		while (!terminated)  {
@@ -167,23 +179,25 @@ public class Application implements IApplication {
 
 	//============================================================================================
 	private void handleAction(GameEvent event) {
-		if (event.text.equals("quit")) {
-			terminated = true;
+		if (event.text.equals("TERMINATE")) {
+			var te = eventManager.createEvent();
+			te.type = EventType.TERMINATE;
+			eventManager.postEvent(te);
 		}
 	}
 	//============================================================================================
-
-	//============================================================================================
-	private void handleChannel(GameEvent event) {
-		
-	}
-	//============================================================================================
-
+	
 	//============================================================================================
 	private void handleText(GameEvent event) {
 		strokes.add(new Stroke(event.text));
 	}
 	//============================================================================================
-	
+
+	//============================================================================================
+	private void handleTerminate(GameEvent event) {
+		terminated = true;
+	}
+	//============================================================================================
+
 }
 //************************************************************************************************
