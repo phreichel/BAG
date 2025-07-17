@@ -6,5 +6,11 @@ package core.gui;
 public class LayerWidget extends WidgetContainerBase implements ILayerWidget {
 
 
+	//============================================================================================
+	public void addComponent(IWidget component) {
+		this._addChild(component);
+	}
+	//============================================================================================
+	
 }
 //************************************************************************************************
