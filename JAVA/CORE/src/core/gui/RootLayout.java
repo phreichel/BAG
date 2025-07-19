@@ -18,7 +18,7 @@ public class RootLayout implements ILayout {
 		var outerExtent = widget.getOuterExtent();
 		var _container = (IWidgetContainer) widget;
 		for (var child : _container.getChildren()) {
-			var _child = (IWidgetIntern) child;
+			var _child = (WidgetBase) child;
 			_child._setOuterExtent(outerExtent);
 		}
 	};

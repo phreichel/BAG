@@ -13,7 +13,7 @@ import core.platform.IGraphics;
 public class GuiManager implements ICanvas, IGameHandler, ITask {
 
 	//============================================================================================
-	private final IRootWidget root;
+	private final RootWidget root;
 	//============================================================================================
 
 	//============================================================================================
@@ -23,14 +23,14 @@ public class GuiManager implements ICanvas, IGameHandler, ITask {
 	//============================================================================================
 	
 	//============================================================================================
-	public IRootWidget getRoot() {
+	public RootWidget getRoot() {
 		return root;
 	}
 	//============================================================================================
 
 	//============================================================================================
 	public void onPaint(IGraphics graphics) {
-		root.onPaint(graphics);
+		this.root.onPaint(graphics);
 	}
 	//============================================================================================
 
@@ -47,27 +47,24 @@ public class GuiManager implements ICanvas, IGameHandler, ITask {
 	//============================================================================================
 
 	//============================================================================================
-	private IRootWidget createRootWidget() {
-		var rootWidget = new RootWidget();
-		rootWidget._setGuiManager(this);
+	private RootWidget createRootWidget() {
+		var rootWidget = new RootWidget(this);
 		rootWidget.setLayout(RootLayout.INSTANCE);
 		return rootWidget;
 	}
 	//============================================================================================
 
 	//============================================================================================
-	public ILayerWidget createLayerWidget() {
-		var layerWidget = new LayerWidget();
-		layerWidget._setGuiManager(this);
+	public LayerWidget createLayerWidget() {
+		var layerWidget = new LayerWidget(this);
 		return layerWidget;
 	}
 	//============================================================================================
 
 	//============================================================================================
-	public ILabel createLabel(String text) {
-		var label = new Label();
+	public Label createLabel(String text) {
+		var label = new Label(this);
 		label.setText(text);
-		label._setGuiManager(this);
 		return label;
 	}
 	//============================================================================================

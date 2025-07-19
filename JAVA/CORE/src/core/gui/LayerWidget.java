@@ -3,8 +3,13 @@ package core.gui;
 //************************************************************************************************
 
 //************************************************************************************************
-public class LayerWidget extends WidgetContainerBase implements ILayerWidget {
+public class LayerWidget extends WidgetContainerBase {
 
+	//============================================================================================
+	public LayerWidget(GuiManager guiManager) {
+		super(guiManager);
+	}
+	//============================================================================================
 
 	//============================================================================================
 	public void addComponent(IWidget component) {

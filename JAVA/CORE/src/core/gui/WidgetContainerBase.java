@@ -10,13 +10,19 @@ import core.event.GameEvent;
 import core.platform.IGraphics;
 
 //************************************************************************************************
-public abstract class WidgetContainerBase extends WidgetBase implements IWidgetContainer, IWidgetContainerIntern {
+public abstract class WidgetContainerBase extends WidgetBase implements IWidgetContainer {
 
 	//============================================================================================
 	private final List<IWidget> children = new ArrayList<>();
 	private final List<IWidget> childrenReadonly = Collections.unmodifiableList(children);
 	//============================================================================================
 
+	//============================================================================================
+	public WidgetContainerBase(GuiManager guiManager) {
+		super(guiManager);
+	}
+	//============================================================================================
+	
 	//============================================================================================
 	@Override
 	public int getChildCount() {
@@ -39,7 +45,6 @@ public abstract class WidgetContainerBase extends WidgetBase implements IWidgetC
 	//============================================================================================
 	
 	//============================================================================================
-	@Override
 	public void _addChild(IWidget child) {
 		if (checkCanAdd(child)) {
 			_addChild(children.size(), child);
@@ -48,13 +53,12 @@ public abstract class WidgetContainerBase extends WidgetBase implements IWidgetC
 	//============================================================================================
 
 	//============================================================================================
-	@Override
 	public void _addChild(int idx, IWidget child) {
 		if (checkCanAdd(child)) {
-			var _child = (IWidgetIntern) child;
-			var _parent = (IWidgetContainerIntern) child.getParent();
-			if (_parent == this) return;
-			if (_parent != null) _parent._removeChild(child);
+			var parent = (WidgetContainerBase) child.getParent();
+			if (parent == this) return;
+			if (parent != null) parent._removeChild(child);
+			var _child = (WidgetBase) child; 
 			_child._setParent(this);
 			children.add(idx, child);
 			_setLayoutDirty(true);
@@ -64,7 +68,6 @@ public abstract class WidgetContainerBase extends WidgetBase implements IWidgetC
 
 	//============================================================================================
 	private boolean checkCanAdd(IWidget child) {
-
 		if (child == null) return false;
 		var ancestor = (IWidget) this;
 		while (ancestor != null) {
@@ -76,10 +79,9 @@ public abstract class WidgetContainerBase extends WidgetBase implements IWidgetC
 	//============================================================================================
 	
 	//============================================================================================
-	@Override
 	public boolean _removeChild(IWidget child) {
 		if (children.remove(child)) {
-			var _child = (IWidgetIntern) child;
+			var _child = (WidgetBase) child;
 			_child._setParent(null);
 			_setLayoutDirty(true);
 			return true;
@@ -89,18 +91,15 @@ public abstract class WidgetContainerBase extends WidgetBase implements IWidgetC
 	//============================================================================================
 
 	//============================================================================================
-	@Override
 	public IWidget _removeChild(int idx) {
-		var child = children.remove(idx);
-		var _child = (IWidgetIntern) child;
-		_child._setParent(null);
+		var child = (WidgetBase) children.remove(idx);
+		child._setParent(null);
 		_setLayoutDirty(true);
 		return child; 
 	}
 	//============================================================================================
 
 	//============================================================================================
-	@Override
 	public boolean _relocateChild(int fromIdx, int toIdx) {
 		var child = children.remove(fromIdx);
 		if (child == null) return false;
@@ -111,7 +110,6 @@ public abstract class WidgetContainerBase extends WidgetBase implements IWidgetC
 	//============================================================================================
 
 	//============================================================================================
-	@Override
 	public boolean _relocateChild(IWidget child, int toIdx) {
 		if (children.remove(child)) {
 			children.add(toIdx, child);
@@ -123,7 +121,6 @@ public abstract class WidgetContainerBase extends WidgetBase implements IWidgetC
 	//============================================================================================
 
 	//============================================================================================
-	@Override
 	public boolean _relocateChild(IWidget child, IWidget before) {
 		if (children.remove(child)) {
 			int idx = children.indexOf(before);

@@ -8,7 +8,7 @@ import core.event.GameEvent;
 import core.platform.IGraphics;
 
 //************************************************************************************************
-public class Label extends WidgetBase implements ILabel {
+public class Label extends WidgetBase {
 
 	//============================================================================================
 	private String font = "system";
@@ -16,8 +16,8 @@ public class Label extends WidgetBase implements ILabel {
 	//============================================================================================
 
 	//============================================================================================
-	public Label() {
-		super();
+	public Label(GuiManager guiManager) {
+		super(guiManager);
 		this.setLayout(new LabelLayout());
 	}
 	//============================================================================================
@@ -39,14 +39,12 @@ public class Label extends WidgetBase implements ILabel {
 	//============================================================================================
 
 	//============================================================================================
-	@Override
 	public String getFont() {
 		return this.font;
 	}
 	//============================================================================================
 	
 	//============================================================================================
-	@Override
 	public void setFont(String font) {
 		this.font = font;
 		this._setLayoutDirty(true);
@@ -54,14 +52,12 @@ public class Label extends WidgetBase implements ILabel {
 	//============================================================================================
 	
 	//============================================================================================
-	@Override
 	public String getText() {
 		return this.text;
 	}
 	//============================================================================================
 	
 	//============================================================================================
-	@Override
 	public void setText(String text) {
 		this.text = text;
 		this._setLayoutDirty(true);
@@ -69,14 +65,12 @@ public class Label extends WidgetBase implements ILabel {
 	//============================================================================================
 
 	//============================================================================================
-	@Override
 	public void setLocation(float x, float y) {
 		this._setLocation(x, y);
 	}
 	//============================================================================================
 
 	//============================================================================================
-	@Override
 	public void setLocation(Vector2f location) {
 		this._setLocation(location);
 	}

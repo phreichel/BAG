@@ -10,7 +10,7 @@ import java.util.Set;
 import javax.vecmath.Vector2f;
 
 //************************************************************************************************
-public abstract class WidgetBase implements IWidget, IWidgetIntern {
+public abstract class WidgetBase implements IWidget {
 
 	//============================================================================================
 	private GuiManager         guiManager    = null;
@@ -27,16 +27,15 @@ public abstract class WidgetBase implements IWidget, IWidgetIntern {
 	//============================================================================================
 
 	//============================================================================================
+	public WidgetBase(GuiManager guiManager) {
+		this.guiManager = guiManager;
+	}
+	//============================================================================================
+	
+	//============================================================================================
 	@Override
 	public GuiManager getGuiManager() {
 		return guiManager;
-	}
-	//============================================================================================
-
-	//============================================================================================
-	@Override
-	public void _setGuiManager(GuiManager guiManager) {
-		this.guiManager = guiManager;
 	}
 	//============================================================================================
 
@@ -55,7 +54,6 @@ public abstract class WidgetBase implements IWidget, IWidgetIntern {
 	//============================================================================================
 
 	//============================================================================================
-	@Override
 	public void _setFlags(boolean state, GuiFlag ... flags) {
 		if (state)
 			this.flags.addAll(Arrays.asList(flags));
@@ -72,7 +70,6 @@ public abstract class WidgetBase implements IWidget, IWidgetIntern {
 	//============================================================================================
 
 	//============================================================================================
-	@Override
 	public void _setParent(IWidget parent) {
 		this.parent = parent;
 	}
@@ -114,28 +111,24 @@ public abstract class WidgetBase implements IWidget, IWidgetIntern {
 	//============================================================================================
 
 	//============================================================================================
-	@Override
 	public void _setLocation(Vector2f location) {
 		_setLocation(location.x, location.y);
 	}
 	//============================================================================================
 
 	//============================================================================================
-	@Override
 	public void _setLocation(float x, float y) {
 		this.location.set(x, y);
 	}
 	//============================================================================================
 
 	//============================================================================================
-	@Override
 	public void _setOuterExtent(Vector2f outerExtent) {
 		_setOuterExtent(outerExtent.x, outerExtent.y);
 	}
 	//============================================================================================
 
 	//============================================================================================
-	@Override
 	public void _setOuterExtent(float extX, float extY) {
 		this.outerExtent.set(extX, extY);
 		this.innerExtent.set(
@@ -147,14 +140,12 @@ public abstract class WidgetBase implements IWidget, IWidgetIntern {
 	//============================================================================================
 
 	//============================================================================================
-	@Override
 	public void _setInnerExtent(Vector2f innerExtent) {
 		_setInnerExtent(innerExtent.x, innerExtent.y);
 	}
 	//============================================================================================
 
 	//============================================================================================
-	@Override
 	public void _setInnerExtent(float extX, float extY) {
 		this.innerExtent.set(extX, extY);
 		this.outerExtent.set(
@@ -166,7 +157,6 @@ public abstract class WidgetBase implements IWidget, IWidgetIntern {
 	//============================================================================================
 
 	//============================================================================================
-	@Override
 	public void _setBorderInsets(Insets4f borderInsets) {
 		this.borderInsets = borderInsets;
 		this.borderOffset.set(this.borderInsets.left, this.borderInsets.bottom);
@@ -216,14 +206,12 @@ public abstract class WidgetBase implements IWidget, IWidgetIntern {
 	//============================================================================================
 	
 	//============================================================================================
-	@Override
 	public boolean _isLayoutDirty() {
 		return layoutDirty;
 	}
 	//============================================================================================
 
 	//============================================================================================
-	@Override
 	public void _setLayoutDirty(boolean b) {
 		layoutDirty = b;
 	}
