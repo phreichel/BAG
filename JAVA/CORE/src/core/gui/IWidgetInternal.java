@@ -7,6 +7,7 @@ public interface IWidgetInternal {
 
 	//============================================================================================
 	public void _setParent(IWidgetContainer parent);
+	public void _setLayout(ILayout layout);
 	//============================================================================================
 
 }

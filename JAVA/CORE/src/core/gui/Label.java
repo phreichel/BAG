@@ -18,7 +18,7 @@ public class Label extends WidgetBase {
 	//============================================================================================
 	public Label(GuiManager guiManager) {
 		super(guiManager);
-		this.setLayout(new LabelLayout());
+		this._setLayout(new LabelLayout());
 	}
 	//============================================================================================
 	

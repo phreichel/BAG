@@ -48,7 +48,7 @@ public class GuiManager implements ICanvas, IGameHandler, ITask {
 	//============================================================================================
 	private Root createRoot() {
 		var root = new Root(this);
-		root.setLayout(RootLayout.INSTANCE);
+		root._setLayout(RootLayout.INSTANCE);
 		return root;
 	}
 	//============================================================================================

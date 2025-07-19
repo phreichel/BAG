@@ -182,7 +182,7 @@ public abstract class WidgetBase implements IWidget {
 
 	//============================================================================================
 	@Override
-	public void setLayout(ILayout layout) {
+	public void _setLayout(ILayout layout) {
 		if (this.layout == layout) return;		
 		this.layout = layout;
 		if (this.layout != null) {

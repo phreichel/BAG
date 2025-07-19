@@ -41,7 +41,6 @@ public interface IWidget extends IWidgetInternal, ICanvas, IGameHandler, ITask {
 	
 	//============================================================================================
 	public ILayout      getLayout();
-	public void         setLayout(ILayout layout);
 	public void         updateLayout();
 	//============================================================================================
 
