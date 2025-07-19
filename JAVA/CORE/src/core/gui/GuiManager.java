@@ -13,17 +13,17 @@ import core.platform.IGraphics;
 public class GuiManager implements ICanvas, IGameHandler, ITask {
 
 	//============================================================================================
-	private final RootWidget root;
+	private final Root root;
 	//============================================================================================
 
 	//============================================================================================
 	public GuiManager() {
-		this.root = createRootWidget();
+		this.root = createRoot();
 	}
 	//============================================================================================
 	
 	//============================================================================================
-	public RootWidget getRoot() {
+	public Root getRoot() {
 		return root;
 	}
 	//============================================================================================
@@ -39,25 +39,24 @@ public class GuiManager implements ICanvas, IGameHandler, ITask {
 	public void onGameEvent(GameEvent e) {
 		if (e.type.equals(EventType.RESIZE)) {
 			var data = (float[]) e.data;
-			var _root = (RootWidget) root;
-			_root._setOuterExtent(data[0], data[1]);
+			root._setOuterExtent(data[0], data[1]);
 		}
 		root.onGameEvent(e);
 	}
 	//============================================================================================
 
 	//============================================================================================
-	private RootWidget createRootWidget() {
-		var rootWidget = new RootWidget(this);
-		rootWidget.setLayout(RootLayout.INSTANCE);
-		return rootWidget;
+	private Root createRoot() {
+		var root = new Root(this);
+		root.setLayout(RootLayout.INSTANCE);
+		return root;
 	}
 	//============================================================================================
 
 	//============================================================================================
-	public LayerWidget createLayerWidget() {
-		var layerWidget = new LayerWidget(this);
-		return layerWidget;
+	public Layer createLayer() {
+		var layer = new Layer(this);
+		return layer;
 	}
 	//============================================================================================
 

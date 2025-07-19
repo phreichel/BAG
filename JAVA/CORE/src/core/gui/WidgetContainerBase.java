@@ -55,11 +55,10 @@ public abstract class WidgetContainerBase extends WidgetBase implements IWidgetC
 	//============================================================================================
 	public void _addChild(int idx, IWidget child) {
 		if (checkCanAdd(child)) {
-			var parent = (WidgetContainerBase) child.getParent();
+			var parent = child.getParent();
 			if (parent == this) return;
 			if (parent != null) parent._removeChild(child);
-			var _child = (WidgetBase) child; 
-			_child._setParent(this);
+			child._setParent(this);
 			children.add(idx, child);
 			_setLayoutDirty(true);
 		}
@@ -69,7 +68,7 @@ public abstract class WidgetContainerBase extends WidgetBase implements IWidgetC
 	//============================================================================================
 	private boolean checkCanAdd(IWidget child) {
 		if (child == null) return false;
-		var ancestor = (IWidget) this;
+		IWidget ancestor = this;
 		while (ancestor != null) {
 			if (ancestor == child) return false;
 			ancestor = ancestor.getParent();
@@ -81,8 +80,7 @@ public abstract class WidgetContainerBase extends WidgetBase implements IWidgetC
 	//============================================================================================
 	public boolean _removeChild(IWidget child) {
 		if (children.remove(child)) {
-			var _child = (WidgetBase) child;
-			_child._setParent(null);
+			child._setParent(null);
 			_setLayoutDirty(true);
 			return true;
 		}
@@ -92,7 +90,7 @@ public abstract class WidgetContainerBase extends WidgetBase implements IWidgetC
 
 	//============================================================================================
 	public IWidget _removeChild(int idx) {
-		var child = (WidgetBase) children.remove(idx);
+		var child = children.remove(idx);
 		child._setParent(null);
 		_setLayoutDirty(true);
 		return child; 

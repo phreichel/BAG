@@ -14,7 +14,7 @@ public abstract class WidgetBase implements IWidget {
 
 	//============================================================================================
 	private GuiManager         guiManager    = null;
-	private IWidget            parent        = null;
+	private IWidgetContainer   parent        = null;
 	private final Set<GuiFlag> flags         = EnumSet.noneOf(GuiFlag.class);
 	private final Set<GuiFlag> flagsReadonly = Collections.unmodifiableSet(flags);
 	private final Vector2f     location      = new Vector2f();     
@@ -64,13 +64,13 @@ public abstract class WidgetBase implements IWidget {
 	
 	//============================================================================================
 	@Override
-	public IWidget getParent() {
+	public IWidgetContainer getParent() {
 		return parent;
 	}
 	//============================================================================================
 
 	//============================================================================================
-	public void _setParent(IWidget parent) {
+	public void _setParent(IWidgetContainer parent) {
 		this.parent = parent;
 	}
 	//============================================================================================

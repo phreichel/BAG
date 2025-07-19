@@ -97,7 +97,7 @@ public class Application implements IApplication {
 		
 		var root = guiManager.getRoot();
 
-		var layer = guiManager.createLayerWidget();
+		var layer = guiManager.createLayer();
 		root.addLayer(layer);
 
 		var label = guiManager.createLabel("Hello World!");

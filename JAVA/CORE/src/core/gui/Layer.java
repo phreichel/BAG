@@ -3,24 +3,17 @@ package core.gui;
 //************************************************************************************************
 
 //************************************************************************************************
-public class RootWidget extends WidgetContainerBase {
+public class Layer extends WidgetContainerBase {
 
 	//============================================================================================
-	public RootWidget(GuiManager guiManager) {
+	public Layer(GuiManager guiManager) {
 		super(guiManager);
 	}
 	//============================================================================================
 
 	//============================================================================================
-	@Override
-	public void _setParent(IWidget parent) {
-		throw new RuntimeException("Illegal Operation");
-	}
-	//============================================================================================
-	
-	//============================================================================================
-	public void addLayer(LayerWidget layer) {
-		this._addChild(layer);
+	public void addComponent(IWidget component) {
+		this._addChild(component);
 	}
 	//============================================================================================
 	

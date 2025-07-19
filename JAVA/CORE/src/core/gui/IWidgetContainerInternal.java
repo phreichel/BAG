@@ -2,15 +2,11 @@
 package core.gui;
 //************************************************************************************************
 
-import java.util.List;
-
 //************************************************************************************************
-public interface IWidgetContainer extends IWidget, IWidgetContainerInternal {
+public interface IWidgetContainerInternal {
 
 	//============================================================================================
-	public int           getChildCount();
-	public List<IWidget> getChildren();
-	public IWidget       getChild(int idx);
+	public boolean _removeChild(IWidget child);
 	//============================================================================================
 
 }

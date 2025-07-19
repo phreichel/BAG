@@ -10,7 +10,7 @@ import core.api.IGameHandler;
 import core.clock.ITask;
 
 //************************************************************************************************
-public interface IWidget extends ICanvas, IGameHandler, ITask {
+public interface IWidget extends IWidgetInternal, ICanvas, IGameHandler, ITask {
 
 	//============================================================================================
 	public GuiManager   getGuiManager();
@@ -22,7 +22,7 @@ public interface IWidget extends ICanvas, IGameHandler, ITask {
 	//============================================================================================
 
 	//============================================================================================
-	public IWidget      getParent();
+	public IWidgetContainer getParent();
 	//============================================================================================
 
 	//============================================================================================
