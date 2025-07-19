@@ -67,6 +67,9 @@ public class Application implements IApplication {
 		}
 		
 	}
+	//============================================================================================
+
+	//============================================================================================
 	private List<Stroke> strokes = new ArrayList<>();
 	//============================================================================================
 	
@@ -91,6 +94,16 @@ public class Application implements IApplication {
 		platform.addInputHandler(inputHandler);
 		platform.addCanvas(this::onPaint);
 		platform.addCanvas(guiManager);
+		
+		var root = guiManager.getRoot();
+
+		var layer = guiManager.createLayerWidget();
+		root.addLayer(layer);
+
+		var label = guiManager.createLabel("Hello World!");
+		label.setFont("plain");
+		label.setLocation(500, 500);
+		layer.addComponent(label);
 		
 		eventManager.registerEventTypeClass(EventType.class);
 		eventManager.register(EventType.TEXT, this::handleText);

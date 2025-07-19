@@ -2,81 +2,83 @@
 package core.gui;
 //************************************************************************************************
 
-import core.api.ICanvas;
-import core.api.IGameHandler;
-import core.clock.ITask;
+import javax.vecmath.Vector2f;
+
 import core.event.GameEvent;
-import core.input.EventType;
 import core.platform.IGraphics;
 
 //************************************************************************************************
-public class GuiManager implements ICanvas, IGameHandler, ITask {
+public class Label extends WidgetBase implements ILabel {
 
 	//============================================================================================
-	private final IRootWidget root;
+	private String font = "system";
+	private String text = "Label";
 	//============================================================================================
 
 	//============================================================================================
-	public GuiManager() {
-		this.root = createRootWidget();
+	public Label() {
+		super();
+		this.setLayout(new LabelLayout());
 	}
 	//============================================================================================
 	
 	//============================================================================================
-	public IRootWidget getRoot() {
-		return root;
-	}
-	//============================================================================================
-
-	//============================================================================================
+	@Override
 	public void onPaint(IGraphics graphics) {
-		root.onPaint(graphics);
+		var insets = this.getBorderInsets();
+		float x = insets.left;
+		float y = insets.bottom;
+		graphics.setColor(.8f, .8f, .8f);
+		graphics.drawText(font, text, x, y);
 	}
 	//============================================================================================
 
 	//============================================================================================
 	@Override
-	public void onGameEvent(GameEvent e) {
-		if (e.type.equals(EventType.RESIZE)) {
-			var data = (float[]) e.data;
-			var _root = (RootWidget) root;
-			_root._setOuterExtent(data[0], data[1]);
-		}
-		root.onGameEvent(e);
-	}
+	public void onGameEvent(GameEvent e) {}
 	//============================================================================================
 
 	//============================================================================================
-	private IRootWidget createRootWidget() {
-		var rootWidget = new RootWidget();
-		rootWidget._setGuiManager(this);
-		rootWidget.setLayout(RootLayout.INSTANCE);
-		return rootWidget;
-	}
-	//============================================================================================
-
-	//============================================================================================
-	public ILayerWidget createLayerWidget() {
-		var layerWidget = new LayerWidget();
-		layerWidget._setGuiManager(this);
-		return layerWidget;
-	}
-	//============================================================================================
-
-	//============================================================================================
-	public ILabel createLabel(String text) {
-		var label = new Label();
-		label.setText(text);
-		label._setGuiManager(this);
-		return label;
+	@Override
+	public String getFont() {
+		return this.font;
 	}
 	//============================================================================================
 	
 	//============================================================================================
 	@Override
-	public void update(int nFrames, long periodNs) {
-		root.update(nFrames, periodNs);
-		root.updateLayout();
+	public void setFont(String font) {
+		this.font = font;
+		this._setLayoutDirty(true);
+	}
+	//============================================================================================
+	
+	//============================================================================================
+	@Override
+	public String getText() {
+		return this.text;
+	}
+	//============================================================================================
+	
+	//============================================================================================
+	@Override
+	public void setText(String text) {
+		this.text = text;
+		this._setLayoutDirty(true);
+	}
+	//============================================================================================
+
+	//============================================================================================
+	@Override
+	public void setLocation(float x, float y) {
+		this._setLocation(x, y);
+	}
+	//============================================================================================
+
+	//============================================================================================
+	@Override
+	public void setLocation(Vector2f location) {
+		this._setLocation(location);
 	}
 	//============================================================================================
 	
