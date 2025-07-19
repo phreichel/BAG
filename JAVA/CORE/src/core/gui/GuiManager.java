@@ -30,6 +30,7 @@ public class GuiManager implements ICanvas, IGameHandler, ITask {
 
 	//============================================================================================
 	public void onPaint(IGraphics graphics) {
+		this.root.updateLayout(graphics);
 		this.root.onPaint(graphics);
 	}
 	//============================================================================================
@@ -71,8 +72,7 @@ public class GuiManager implements ICanvas, IGameHandler, ITask {
 	//============================================================================================
 	@Override
 	public void update(int nFrames, long periodNs) {
-		root.update(nFrames, periodNs);
-		root.updateLayout();
+		this.root.update(nFrames, periodNs);
 	}
 	//============================================================================================
 	

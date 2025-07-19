@@ -11,6 +11,7 @@ import core.clock.Clock;
 import core.event.EventManager;
 import core.event.GameEvent;
 import core.gui.GuiManager;
+import core.gui.Insets4f;
 import core.input.ChordMapping;
 import core.input.EventType;
 import core.input.InputMapper;
@@ -101,7 +102,8 @@ public class Application implements IApplication {
 		root.addLayer(layer);
 
 		var label = guiManager.createLabel("Hello World!");
-		label.setFont("plain");
+		label.setFont("system");
+		label._setBorderInsets(new Insets4f(2, 2, 10, 10));
 		label.setLocation(500, 500);
 		layer.addComponent(label);
 		

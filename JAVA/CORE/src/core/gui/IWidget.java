@@ -8,6 +8,7 @@ import javax.vecmath.Vector2f;
 import core.api.ICanvas;
 import core.api.IGameHandler;
 import core.clock.ITask;
+import core.platform.IGraphics;
 
 //************************************************************************************************
 public interface IWidget extends IWidgetInternal, ICanvas, IGameHandler, ITask {
@@ -41,7 +42,7 @@ public interface IWidget extends IWidgetInternal, ICanvas, IGameHandler, ITask {
 	
 	//============================================================================================
 	public ILayout      getLayout();
-	public void         updateLayout();
+	public void         updateLayout(IGraphics graphics);
 	//============================================================================================
 
 }

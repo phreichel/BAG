@@ -2,6 +2,8 @@
 package core.gui;
 //************************************************************************************************
 
+import core.platform.IGraphics;
+
 //************************************************************************************************
 public class LabelLayout implements ILayout {
 
@@ -12,7 +14,13 @@ public class LabelLayout implements ILayout {
 
 	//============================================================================================
 	@Override
-	public void updateLayout(IWidget widget) {}
+	public void updateLayout(IWidget widget, IGraphics graphics) {
+		var _widget = (Label) widget;
+		var font  = _widget.getFont();
+		var text  = _widget.getText();
+		var probe = graphics.probeText(font, text, null);
+		_widget._setInnerExtent(probe.width, probe.height);		
+	}
 	//============================================================================================
 
 }

@@ -9,6 +9,8 @@ import java.util.Set;
 
 import javax.vecmath.Vector2f;
 
+import core.platform.IGraphics;
+
 //************************************************************************************************
 public abstract class WidgetBase implements IWidget {
 
@@ -23,7 +25,7 @@ public abstract class WidgetBase implements IWidget {
 	private final Vector2f     borderOffset  = new Vector2f();     
 	private       Insets4f     borderInsets  = Insets4f.NONE;
 	private       boolean      layoutDirty   = false;
-	private       ILayout      layout        = null;
+	private       ILayout      layout = null;
 	//============================================================================================
 
 	//============================================================================================
@@ -194,11 +196,11 @@ public abstract class WidgetBase implements IWidget {
 
 	//============================================================================================
 	@Override
-	public void updateLayout() {
+	public void updateLayout(IGraphics graphics) {
 		var layout = getLayout();
 		if (layout == null) return;
 		if (_isLayoutDirty()) {
-			layout.updateLayout(this);
+			layout.updateLayout(this, graphics);
 			layout.preserveState(this);
 			_setLayoutDirty(false);
 		}

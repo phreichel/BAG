@@ -181,23 +181,19 @@ public abstract class WidgetContainerBase extends WidgetBase implements IWidgetC
 	//============================================================================================
 
 	//============================================================================================
-	protected void onEventBeforeChildren(GameEvent e) {
-		
-	}
+	protected void onEventBeforeChildren(GameEvent e) {}
 	//============================================================================================
 
 	//============================================================================================
-	protected void onEventAfterChildren(GameEvent e) {
-		
-	}
+	protected void onEventAfterChildren(GameEvent e) {}
 	//============================================================================================
 	
 	//============================================================================================
 	@Override
-	public void updateLayout() {
-		super.updateLayout();
+	public void updateLayout(IGraphics graphics) {
+		super.updateLayout(graphics);
 		for (var child : getChildren()) {
-			child.updateLayout();
+			child.updateLayout(graphics);
 		}
 		
 	}

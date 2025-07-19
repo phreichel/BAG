@@ -28,6 +28,14 @@ public class Label extends WidgetBase {
 		var insets = this.getBorderInsets();
 		float x = insets.left;
 		float y = insets.bottom;
+		var w = getOuterExtent().x; 
+		var h = getOuterExtent().y;
+		graphics.setColor(0f, 1f, 0f);
+		graphics.drawClosedPolyline(
+			0f, 0f,
+			w,  0f,
+			w,  h,
+			0,  h);
 		graphics.setColor(.8f, .8f, .8f);
 		graphics.drawText(font, text, x, y);
 	}

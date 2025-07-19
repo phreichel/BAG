@@ -2,12 +2,14 @@
 package core.gui;
 //************************************************************************************************
 
+import core.platform.IGraphics;
+
 //************************************************************************************************
 public interface ILayout {
 
 	//============================================================================================
 	public void preserveState(IWidget widget);
-	public void updateLayout(IWidget widget);
+	public void updateLayout(IWidget widget, IGraphics graphics);
 	//============================================================================================
 
 }

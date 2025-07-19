@@ -2,6 +2,8 @@
 package core.gui;
 //************************************************************************************************
 
+import core.platform.IGraphics;
+
 //************************************************************************************************
 public class RootLayout implements ILayout {
 
@@ -14,12 +16,11 @@ public class RootLayout implements ILayout {
 	//============================================================================================
 
 	//============================================================================================
-	public void updateLayout(IWidget widget) {
+	public void updateLayout(IWidget widget, IGraphics graphics) {
+		var _widget = (Root) widget;
 		var outerExtent = widget.getOuterExtent();
-		var _container = (IWidgetContainer) widget;
-		for (var child : _container.getChildren()) {
-			var _child = (WidgetBase) child;
-			_child._setOuterExtent(outerExtent);
+		for (var child : _widget.getChildren()) {
+			child._setOuterExtent(outerExtent);
 		}
 	};
 	//============================================================================================
