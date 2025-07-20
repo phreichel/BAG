@@ -8,9 +8,10 @@ import javax.vecmath.Vector2f;
 public interface IWidgetInternal {
 
 	//============================================================================================
-	public void _setParent(IWidgetContainer parent);
-	public void _setLayout(ILayout layout);
-	public void _setOuterExtent(Vector2f outerExtent);
+	public void  _setParent(IWidgetContainer parent);
+	public void  _setLayout(ILayout layout);
+	public void  _setOuterExtent(Vector2f outerExtent);
+	public void  _setOuterExtent(float width, float height);
 	//============================================================================================
 
 }

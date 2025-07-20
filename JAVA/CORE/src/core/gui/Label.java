@@ -11,13 +11,17 @@ import core.platform.IGraphics;
 public class Label extends WidgetBase {
 
 	//============================================================================================
-	private String font = "system";
+	public static final String STYLE_IDENT = "gui.label";
+	//============================================================================================
+	
+	//============================================================================================
 	private String text = "Label";
 	//============================================================================================
 
 	//============================================================================================
 	public Label(GuiManager guiManager) {
 		super(guiManager);
+		this.styleIdent = STYLE_IDENT;
 		this._setLayout(new LabelLayout());
 	}
 	//============================================================================================
@@ -25,19 +29,35 @@ public class Label extends WidgetBase {
 	//============================================================================================
 	@Override
 	public void onPaint(IGraphics graphics) {
-		var insets = this.getBorderInsets();
-		float x = insets.left;
-		float y = insets.bottom;
+		var style = getStyle();
+		var borderInsets = style.getInsets("border");
+		var paddingInsets = style.getInsets("padding");
+		float x = borderInsets.left + paddingInsets.left; 
+		float y = borderInsets.bottom + paddingInsets.bottom;
 		var w = getOuterExtent().x; 
 		var h = getOuterExtent().y;
-		graphics.setColor(0f, 1f, 0f);
+		
+		var backColor = style.getColor("background");
+		graphics.setColor(backColor);
+		graphics.drawPolygon(
+				0f, 0f,
+				w,  0f,
+				w,  h,
+				0,  h);
+		
+		var borderColor = style.getColor("border");
+		graphics.setColor(borderColor);
 		graphics.drawClosedPolyline(
 			0f, 0f,
 			w,  0f,
 			w,  h,
 			0,  h);
-		graphics.setColor(.8f, .8f, .8f);
-		graphics.drawText(font, text, x, y);
+
+		var textColor = style.getColor("text");
+		var textFont  = style.getFont("text");
+		graphics.setColor(textColor);
+		graphics.drawText(textFont, text, x, y);
+		
 	}
 	//============================================================================================
 
@@ -46,19 +66,6 @@ public class Label extends WidgetBase {
 	public void onGameEvent(GameEvent e) {}
 	//============================================================================================
 
-	//============================================================================================
-	public String getFont() {
-		return this.font;
-	}
-	//============================================================================================
-	
-	//============================================================================================
-	public void setFont(String font) {
-		this.font = font;
-		this._setLayoutDirty(true);
-	}
-	//============================================================================================
-	
 	//============================================================================================
 	public String getText() {
 		return this.text;

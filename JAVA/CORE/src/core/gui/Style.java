@@ -2,195 +2,218 @@
 package core.gui;
 //************************************************************************************************
 
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.EnumSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
-import javax.vecmath.Vector2f;
-
-import core.platform.IGraphics;
+import javax.vecmath.Color4f;
 
 //************************************************************************************************
-public abstract class WidgetBase implements IWidget {
+public class Style {
 
 	//============================================================================================
-	private GuiManager         guiManager    = null;
-	private IWidgetContainer   parent        = null;
-	private final Set<GuiFlag> flags         = EnumSet.noneOf(GuiFlag.class);
-	private final Set<GuiFlag> flagsReadonly = Collections.unmodifiableSet(flags);
-	private final Vector2f     location      = new Vector2f();     
-	private final Vector2f     outerExtent   = new Vector2f();     
-	private       boolean      layoutDirty   = false;
-	private       ILayout      layout = null;
-	//============================================================================================
-
-	//============================================================================================
-	protected String styleIdent = "default";
+	public static final Style DEFAULT_STYLE = new Style("default");
 	//============================================================================================
 	
 	//============================================================================================
-	public WidgetBase(GuiManager guiManager) {
-		this.guiManager = guiManager;
-	}
+	private static final Color4f  DEFAULT_COLOR   = new Color4f();
+	private static final String   DEFAULT_FONT    = "system";
+	private static final String   DEFAULT_TEXTURE = "system";
+	private static final Insets4f DEFAULT_INSETS  = new Insets4f();
 	//============================================================================================
 	
 	//============================================================================================
-	@Override
-	public GuiManager getGuiManager() {
-		return guiManager;
+	private final String ident;
+	private final Style  parent;
+	//============================================================================================
+	
+	//============================================================================================
+	private final Map<String, Color4f>   colorMap   = new HashMap<>();
+	private final Map<String, String>    fontMap    = new HashMap<>();
+	private final Map<String, String>    textureMap = new HashMap<>();
+	private final Map<String, String>    textMap    = new HashMap<>();
+	private final Map<String, Insets4f>  insetsMap = new HashMap<>();
+	//============================================================================================
+
+	//============================================================================================
+	private final Map<String, Color4f>   colorMapReadonly   = Collections.unmodifiableMap(colorMap);
+	private final Map<String, String>    fontMapReadonly    = Collections.unmodifiableMap(fontMap);
+	private final Map<String, String>    textureMapReadonly = Collections.unmodifiableMap(textureMap);
+	private final Map<String, String>    textMapReadonly    = Collections.unmodifiableMap(textMap);
+	private final Map<String, Insets4f>  insetsMapReadonly = Collections.unmodifiableMap(insetsMap);
+	//============================================================================================
+
+	//============================================================================================
+	public Style(String ident) {
+		this(ident, null);
 	}
 	//============================================================================================
 
 	//============================================================================================
-	@Override
-	public Set<GuiFlag> getFlags() {
-		return this.flagsReadonly;
-	}
-	//============================================================================================
-	
-	//============================================================================================
-	@Override
-	public boolean hasFlags(GuiFlag ... flags) {
-		return this.flags.containsAll(Arrays.asList(flags));
-	}
-	//============================================================================================
-
-	//============================================================================================
-	public void _setFlags(boolean state, GuiFlag ... flags) {
-		if (state)
-			this.flags.addAll(Arrays.asList(flags));
-		else
-			this.flags.removeAll(Arrays.asList(flags));
-	}
-	//============================================================================================
-	
-	//============================================================================================
-	@Override
-	public IWidgetContainer getParent() {
-		return parent;
-	}
-	//============================================================================================
-
-	//============================================================================================
-	public void _setParent(IWidgetContainer parent) {
+	public Style(String ident, Style parent) {
+		this.ident  = ident;
 		this.parent = parent;
 	}
 	//============================================================================================
 
 	//============================================================================================
-	@Override
-	public Vector2f getLocation() {
-		return this.location;
-	}
-	//============================================================================================
-
-	//============================================================================================
-	@Override
-	public Vector2f getOuterExtent() {
-		return this.outerExtent;
-	}
-	//============================================================================================
-
-	//============================================================================================
-	public void _setLocation(Vector2f location) {
-		_setLocation(location.x, location.y);
-	}
-	//============================================================================================
-
-	//============================================================================================
-	public void _setLocation(float x, float y) {
-		this.location.set(x, y);
-	}
-	//============================================================================================
-
-	//============================================================================================
-	public void _setOuterExtent(Vector2f outerExtent) {
-		_setOuterExtent(outerExtent.x, outerExtent.y);
-	}
-	//============================================================================================
-
-	//============================================================================================
-	public void _setOuterExtent(float extX, float extY) {
-		this.outerExtent.set(extX, extY);
-		_setLayoutDirty(true);
-	}
-	//============================================================================================
-
-	//============================================================================================
-	@Override
-	public void update(int nFrames, long periodNs) {}
-	//============================================================================================
-
-	//============================================================================================
-	@Override
-	public String getStyleIdent() {
-		return this.styleIdent;
-	}
-	//============================================================================================
-
-	//============================================================================================
-	@Override
-	public Style getStyle() {
-		return this
-			.getGuiManager()
-			.getTheme()
-			.getStyle(this.getStyleIdent());
-	}
-	//============================================================================================
-
-	//============================================================================================
-	public Style _deriveStyle(String newStyleIdent) {
-		var theme = this.getGuiManager().getTheme();
-		var oldStyle = theme.getStyle(this.getStyleIdent());
-		var newStyle = oldStyle.derive(newStyleIdent);
-		theme._setStyle(newStyle);
-		this.styleIdent = newStyleIdent;
-		return newStyle;
+	public Style derive(String ident) {
+		return new Style(ident, this);
 	}
 	//============================================================================================
 	
 	//============================================================================================
-	@Override
-	public ILayout getLayout() {
-		return layout;
+	public String getIdent() {
+		return this.ident;
 	}
 	//============================================================================================
 
 	//============================================================================================
-	@Override
-	public void _setLayout(ILayout layout) {
-		if (this.layout == layout) return;		
-		this.layout = layout;
-		if (this.layout != null) {
-			this.layout.preserveState(this);
-		}
-		_setLayoutDirty(true);
-	}
-	//============================================================================================
-
-	//============================================================================================
-	@Override
-	public void updateLayout(IGraphics graphics) {
-		var layout = getLayout();
-		if (layout == null) return;
-		if (_isLayoutDirty()) {
-			layout.updateLayout(this, graphics);
-			layout.preserveState(this);
-			_setLayoutDirty(false);
-		}
+	public Style getParent() {
+		return this.parent;
 	}
 	//============================================================================================
 	
 	//============================================================================================
-	public boolean _isLayoutDirty() {
-		return layoutDirty;
+	public Map<String, Color4f> getColors() {
+		return this.colorMapReadonly;
 	}
 	//============================================================================================
 
 	//============================================================================================
-	public void _setLayoutDirty(boolean b) {
-		layoutDirty = b;
+	public Map<String, String> getFonts() {
+		return this.fontMapReadonly;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public Map<String, String> getTextures() {
+		return this.textureMapReadonly;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public Map<String, String> getStrings() {
+		return this.textMapReadonly;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public Map<String, Insets4f> getInsets() {
+		return this.insetsMapReadonly;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public Color4f getColor(String ident) {
+		var item = this.colorMap.get(ident);
+		if (item == null && parent != null) {
+			item = parent.getColor(ident);
+		}
+		if (item == null) {
+			item = DEFAULT_COLOR;
+		}
+		return item;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public String getText(String ident) {
+		var item = this.textMap.get(ident);
+		if (item == null && parent != null) {
+			item = parent.getText(ident);
+		}
+		if (item == null) {
+			item = ident;
+		}
+		return item;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public String getFont(String ident) {
+		var item = this.fontMap.get(ident);
+		if (item == null && parent != null) {
+			item = parent.getFont(ident);
+		}
+		if (item == null) {
+			item = DEFAULT_FONT;
+		}
+		return item;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public String getTexture(String ident) {
+		var item = this.textureMap.get(ident);
+		if (item == null && parent != null) {
+			item = parent.getTexture(ident);
+		}
+		if (item == null) {
+			item = DEFAULT_TEXTURE;
+		}
+		return item;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public Insets4f getInsets(String ident) {
+		var item = this.insetsMap.get(ident);
+		if (item == null && parent != null) {
+			item = parent.getInsets(ident);
+		}
+		if (item == null) {
+			item = DEFAULT_INSETS;
+		}
+		return item;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public void _setColor(String name, Color4f color) {
+		this.colorMap.put(name, color);
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public void _setColor(String name, float r, float g, float b) {
+		_setColor(name, new Color4f(r, g, b, 1));
+	}
+	//============================================================================================
+	
+	//============================================================================================
+	public void _setColor(String name, float r, float g, float b, float a) {
+		_setColor(name, new Color4f(r, g, b, a));
+	}
+	//============================================================================================
+	
+	//============================================================================================
+	public void _setText(String name, String text) {
+		this.textMap.put(name, text);
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public void _setFont(String name, String font) {
+		this.fontMap.put(name, font);
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public void _setTexture(String name, String texture) {
+		this.textureMap.put(name, texture);
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public void _setInsets(String name, Insets4f insets) {
+		this.insetsMap.put(name, insets);
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public void _setInsets(String name, float bottom, float top, float left, float right) {
+		_setInsets(name, new Insets4f(bottom, top, left, right));
 	}
 	//============================================================================================
 	

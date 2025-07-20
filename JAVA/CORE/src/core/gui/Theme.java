@@ -2,94 +2,109 @@
 package core.gui;
 //************************************************************************************************
 
-import core.api.ICanvas;
-import core.api.IGameHandler;
-import core.clock.ITask;
-import core.event.GameEvent;
-import core.input.EventType;
-import core.platform.IGraphics;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 
 //************************************************************************************************
-public class GuiManager implements ICanvas, IGameHandler, ITask {
+public class Theme {
 
 	//============================================================================================
-	private Theme theme = Theme.DEFAULT_THEME;
-	//============================================================================================
-	
-	//============================================================================================
-	private final Root root;
+	public static final Theme DEFAULT_THEME = createDefaultTheme();
 	//============================================================================================
 
 	//============================================================================================
-	public GuiManager() {
-		this.root = createRoot();
-	}
-	//============================================================================================
-
-	//============================================================================================
-	public Theme getTheme() {
+	private static final Theme createDefaultTheme() {
+		
+		Style defaultStyle = new Style("default");
+		defaultStyle._setColor("foreground", 0, 0, 0);
+		defaultStyle._setColor("background", .8f, .8f, .8f);
+		defaultStyle._setColor("border", 0, 0, 0);
+		defaultStyle._setColor("text", 0, 0, 0);
+		defaultStyle._setFont("text", "system");
+		defaultStyle._setInsets("margin", 2, 2, 2, 2);
+		defaultStyle._setInsets("padding", 2, 2, 2, 2);
+		defaultStyle._setInsets("border", 1, 1, 1, 1);
+		
+		Style labelStyle = defaultStyle.derive(Label.STYLE_IDENT);
+		
+		Theme theme = new Theme("default");
+		theme._setStyle(defaultStyle);
+		theme._setStyle(labelStyle);
 		return theme;
 	}
 	//============================================================================================
+	
+	//============================================================================================
+	private final String ident;
+	private final Theme  parent;
+	//============================================================================================
 
 	//============================================================================================
-	public void setTheme(Theme theme) {		
-		if (theme == null) theme = Theme.DEFAULT_THEME;
-		this.theme = theme;
-	}
+	private final Map<String, Style> styleMap = new HashMap<>();
+	private final Map<String, Style> styleMapReadonly = Collections.unmodifiableMap(styleMap);
 	//============================================================================================
 	
 	//============================================================================================
-	public Root getRoot() {
-		return root;
+	public Theme(String ident) {
+		this(ident, null);
 	}
 	//============================================================================================
 
 	//============================================================================================
-	public void onPaint(IGraphics graphics) {
-		this.root.updateLayout(graphics);
-		this.root.onPaint(graphics);
-	}
-	//============================================================================================
-
-	//============================================================================================
-	@Override
-	public void onGameEvent(GameEvent e) {
-		if (e.type.equals(EventType.RESIZE)) {
-			var data = (float[]) e.data;
-			root._setOuterExtent(data[0], data[1]);
+	public Theme(String ident, Theme parent) {
+		this.ident = ident;
+		this.parent = parent;
+		if (this.parent != null) {
+			for (var styleIdent : this.parent.getStyles().keySet()) {
+				var parentStyle = this.parent.getStyle(styleIdent);
+				var localStyle  = parentStyle.derive(styleIdent);
+				this._setStyle(localStyle);
+			}
 		}
-		root.onGameEvent(e);
 	}
 	//============================================================================================
 
 	//============================================================================================
-	private Root createRoot() {
-		var root = new Root(this);
-		root._setLayout(RootLayout.INSTANCE);
-		return root;
-	}
-	//============================================================================================
-
-	//============================================================================================
-	public Layer createLayer() {
-		var layer = new Layer(this);
-		return layer;
-	}
-	//============================================================================================
-
-	//============================================================================================
-	public Label createLabel(String text) {
-		var label = new Label(this);
-		label.setText(text);
-		return label;
+	public Theme derive(String ident) {
+		return new Theme(ident, this);
 	}
 	//============================================================================================
 	
 	//============================================================================================
-	@Override
-	public void update(int nFrames, long periodNs) {
-		this.root.update(nFrames, periodNs);
+	public String getIdent() {
+		return this.ident;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public Theme getParent() {
+		return this.parent;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public Map<String, Style> getStyles() {
+		return this.styleMapReadonly;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public Style getStyle(String ident) {
+		var item = this.styleMap.get(ident);
+		if (item == null && parent != null) {
+			item = parent.getStyle(ident);
+		}
+		if (item == null) {
+			return Style.DEFAULT_STYLE;
+		}
+		return item;
+	}
+	//============================================================================================
+	
+	//============================================================================================
+	public void _setStyle(Style style) {
+		this.styleMap.put(style.getIdent(), style);
 	}
 	//============================================================================================
 	

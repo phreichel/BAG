@@ -15,11 +15,16 @@ public class LabelLayout implements ILayout {
 	//============================================================================================
 	@Override
 	public void updateLayout(IWidget widget, IGraphics graphics) {
+		var style   = widget.getStyle();
+		var font    = style.getFont("text");
+		var borderInsets = style.getInsets("border");
+		var paddingInsets = style.getInsets("padding");
 		var _widget = (Label) widget;
-		var font  = _widget.getFont();
-		var text  = _widget.getText();
-		var probe = graphics.probeText(font, text, null);
-		_widget._setInnerExtent(probe.width, probe.height);		
+		var text    = _widget.getText();
+		var probe   = graphics.probeText(font, text, null);
+		widget._setOuterExtent(
+			probe.width + borderInsets.horz() + paddingInsets.horz(),
+			probe.height + borderInsets.vert() + paddingInsets.vert());
 	}
 	//============================================================================================
 

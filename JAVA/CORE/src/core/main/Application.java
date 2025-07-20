@@ -102,8 +102,6 @@ public class Application implements IApplication {
 		root.addLayer(layer);
 
 		var label = guiManager.createLabel("Hello World!");
-		label.setFont("system");
-		label._setBorderInsets(new Insets4f(2, 2, 10, 10));
 		label.setLocation(500, 500);
 		layer.addComponent(label);
 		
