@@ -2,67 +2,65 @@
 package core.input;
 //************************************************************************************************
 
-import java.util.Arrays;
+import java.util.Collections;
+import java.util.EnumMap;
 import java.util.EnumSet;
+import java.util.Map;
 import java.util.Set;
 
-import core.input.InputEvent.Axis;
-
 //************************************************************************************************
-public class ChordMapping implements IInputMapping {
+public class InputState {
 
 	//============================================================================================
-	private String ident = "";
-	private Target target = Target.NONE;
-	private InputEvent.Axis trigger = InputEvent.Axis.NONE;
-	private Set<InputEvent.Axis> modifiers = EnumSet.noneOf(InputEvent.Axis.class);
+	private final Set<InputAxis>        axisStateSet = EnumSet.noneOf(InputAxis.class); 
+	private final Map<InputAxis, Float> axisValueMap = new EnumMap<>(InputAxis.class); 
+	private final Set<InputAxis>        axisStateSetReadonly = Collections.unmodifiableSet(axisStateSet); 
+	private final Map<InputAxis, Float> axisValueMapReadonly = Collections.unmodifiableMap(axisValueMap); 
 	//============================================================================================
 
 	//============================================================================================
-	public ChordMapping(
-			String ident,
-			Target target,
-			InputEvent.Axis trigger,
-			InputEvent.Axis ... modifiers) {
-		this.ident = ident;
-		this.target = target;
-		this.trigger = trigger;
-		this.modifiers.addAll(Arrays.asList(modifiers));
+	public void clear() {
+		axisStateSet.clear();
+		axisValueMap.clear();
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public boolean isPressed(InputAxis axis) {
+		return axisStateSet.contains(axis);
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public float getValue(InputAxis axis) {
+		var value = axisValueMap.get(axis);
+		if (value == null) value = 0f;
+		return value;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public Set<InputAxis> getStates() {
+		return axisStateSetReadonly;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public Map<InputAxis,Float> getValues() {
+		return axisValueMapReadonly;
 	}
 	//============================================================================================
 	
 	//============================================================================================
-	@Override
-	public Target getTarget() {
-		return target;
-	}
-	//============================================================================================
-
-	//============================================================================================
-	@Override
-	public String getIdent() {
-		return ident;
-	}
-	//============================================================================================
-
-	//============================================================================================
-	public InputEvent.Axis getTrigger() {
-		return trigger;
+	public void update(InputEvent e) {
+		axisValueMap.put(e.axis, e.value);
+		if (e.value == InputEvent.VALUE_PRESSED) {
+			axisStateSet.add(e.axis);
+		} else if (e.value != InputEvent.VALUE_TYPED) {
+			axisStateSet.remove(e.axis);
+		}
 	}
 	//============================================================================================
 	
-	//============================================================================================
-	public Set<InputEvent.Axis> getModifiers() {
-		return modifiers;
-	}
-	//============================================================================================
-	
-	//============================================================================================
-	@Override
-	public boolean matches(Set<Axis> axisStates, InputEvent event) {
-		return axisStates.containsAll(modifiers) && event.axis.equals(trigger);
-	}
-	//============================================================================================
-
 }
 //************************************************************************************************

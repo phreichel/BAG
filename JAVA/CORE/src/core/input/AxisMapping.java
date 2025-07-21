@@ -2,43 +2,64 @@
 package core.input;
 //************************************************************************************************
 
+import java.util.Arrays;
+import java.util.EnumSet;
+import java.util.Set;
+
 //************************************************************************************************
-public class InputEvent {
+public class AxisMapping implements IInputMapping {
 
 	//============================================================================================
-	public final static float VALUE_INVALID  = Float.NaN;
-	public final static float VALUE_RELEASED = 0f;
-	public final static float VALUE_PRESSED  = 1f;
-	public final static float VALUE_TYPED    = 2f;
-	//============================================================================================
-	
-	//============================================================================================
-	public long      timestamp;
-	public InputAxis axis;
-	public float     value;
-	public char      character;
+	private IInputAction onValue = null;
+	private IInputAction onLoss  = null;
 	//============================================================================================
 
 	//============================================================================================
-	public void set(InputAxis axis, float value) {
-		set(axis, value, '\0');
+	private InputAxis            axis      = InputAxis.NONE;
+	private final Set<InputAxis> modifiers = EnumSet.noneOf(InputAxis.class);
+	//============================================================================================
+
+	//============================================================================================
+	public AxisMapping(
+		IInputAction onValue,
+		IInputAction onLoss,
+		InputAxis axis,
+		InputAxis ... modifiers) {
+		this.onValue = onValue;
+		this.onLoss  = onLoss;
+		this.axis    = axis;
+		this.modifiers.addAll(Arrays.asList(modifiers));
 	}
 	//============================================================================================
 
 	//============================================================================================
-	public void set(InputAxis axis, float value, char character) {
-		this.timestamp = System.currentTimeMillis();
-		this.axis      = axis;
-		this.value     = value;
-		this.character = character;
-	}
+	private boolean active = false;
 	//============================================================================================
 	
 	//============================================================================================
-	public void clear() {
-		set(InputAxis.NONE, VALUE_INVALID, '\0');
-	};
+	@Override
+	public void update(InputEvent event, InputState state) {
+		if (
+			event.axis.equals(axis) &&
+			state.getStates().containsAll(modifiers)
+		) {
+			if (onValue != null) {
+				onValue.perform(event, state);
+			}
+			active = true;
+		}
+		if (
+			active &&
+			event.axis.equals(axis) &&
+			!state.getStates().containsAll(modifiers)
+		) {
+			if (onLoss != null) {
+				onLoss.perform(event, state);
+			}
+			active = false;
+		}
+	}
 	//============================================================================================
-
+	
 }
 //************************************************************************************************

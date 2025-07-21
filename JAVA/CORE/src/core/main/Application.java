@@ -11,15 +11,14 @@ import core.clock.Clock;
 import core.event.EventManager;
 import core.event.GameEvent;
 import core.gui.GuiManager;
+import core.gui.InputEventType;
 import core.gui.Insets4f;
-import core.input.ChordMapping;
-import core.input.EventType;
-import core.input.InputMapper;
-import core.input.IInputMapping.Target;
 import core.input.InputEvent;
+import core.input.InputMapper;
 import core.platform.IGraphics;
 import core.platform.IPlatform;
 import core.platform.Platform;
+import core.platform.PlatformEventType;
 import core.platform.TextProbe;
 
 //************************************************************************************************
@@ -35,7 +34,7 @@ public class Application implements IApplication {
 	//============================================================================================
 	private Clock        clock        = new Clock();
 	private GuiManager   guiManager   = new GuiManager();
-	private InputMapper  inputHandler = new InputMapper();
+	private InputMapper  inputMapper  = new InputMapper();
 	private EventManager eventManager = new EventManager();
 	private IPlatform    platform     = new Platform(eventManager);
 	//============================================================================================
@@ -78,8 +77,8 @@ public class Application implements IApplication {
 	@Override
 	public void run () {
 		
-		inputHandler.init(eventManager);
-		inputHandler.addMapping(InputMapper.Context.NONE, new ChordMapping("TERMINATE", Target.ACTION, InputEvent.Axis.KB_ESCAPE));
+		inputMapper.init(eventManager);
+		inputMapper.addMapping(InputMapper.Context.NONE, new ActionMapping("TERMINATE", Target.ACTION, InputEvent.Axis.KB_ESCAPE));
 		
 		platform.init();
 		platform.setTitle("PETERCHENS MONDFAHRT");
@@ -92,7 +91,7 @@ public class Application implements IApplication {
 		platform.addAsset(fontBold);
 		platform.addAsset(fontPlain);
 		
-		platform.addInputHandler(inputHandler);
+		platform.addInputHandler(inputMapper::onInput);
 		platform.addCanvas(this::onPaint);
 		platform.addCanvas(guiManager);
 		
@@ -105,11 +104,13 @@ public class Application implements IApplication {
 		label.setLocation(500, 500);
 		layer.addComponent(label);
 		
-		eventManager.registerEventTypeClass(EventType.class);
-		eventManager.register(EventType.TEXT, this::handleText);
-		eventManager.register(EventType.ACTION, this::handleAction);
-		eventManager.register(EventType.TERMINATE, this::handleTerminate);
-		eventManager.register(EventType.RESIZE, guiManager);
+		eventManager.registerEventTypeClass(PlatformEventType.class);
+		eventManager.registerEventTypeClass(InputEventType.class);
+		
+		eventManager.register(InputEventType.TEXT, this::handleText);
+		eventManager.register(InputEventType.ACTION, this::handleAction);
+		eventManager.register(PlatformEventType.TERMINATE, this::handleTerminate);
+		eventManager.register(PlatformEventType.RESIZE, guiManager);
 		
 		clock.add(EVENT_PERIOD, this::updateEvents);
 		clock.add(GUI_PERIOD, guiManager);
@@ -194,7 +195,7 @@ public class Application implements IApplication {
 	private void handleAction(GameEvent event) {
 		if (event.text.equals("TERMINATE")) {
 			var te = eventManager.createEvent();
-			te.type = EventType.TERMINATE;
+			te.type = PlatformEventType.TERMINATE;
 			eventManager.postEvent(te);
 		}
 	}
