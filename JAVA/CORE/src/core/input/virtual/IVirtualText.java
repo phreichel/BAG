@@ -18,6 +18,7 @@ public interface IVirtualText {
 
 	//============================================================================================
 	public void    update(InputEvent event);
+	public void    update(int nFrames, long periodNs);
 	//============================================================================================
 	
 }

@@ -13,8 +13,12 @@ import core.event.GameEvent;
 import core.gui.GuiManager;
 import core.gui.InputEventType;
 import core.gui.Insets4f;
+import core.input.ActionMapping;
+import core.input.InputAxis;
 import core.input.InputEvent;
 import core.input.InputMapper;
+import core.input.TextMapping;
+import core.input.virtual.VirtualInput;
 import core.platform.IGraphics;
 import core.platform.IPlatform;
 import core.platform.Platform;
@@ -27,6 +31,7 @@ public class Application implements IApplication {
 	//============================================================================================
 	private static final long ONE_SECOND_NS   = 1_000_000_000L;
 	private static final long EVENT_PERIOD    = ONE_SECOND_NS / 100L;
+	private static final long VIRTUAL_PERIOD  = ONE_SECOND_NS / 100L;
 	private static final long GRAPHICS_PERIOD = ONE_SECOND_NS / 20L;
 	private static final long GUI_PERIOD      = ONE_SECOND_NS / 20L;
 	//============================================================================================
@@ -35,6 +40,7 @@ public class Application implements IApplication {
 	private Clock        clock        = new Clock();
 	private GuiManager   guiManager   = new GuiManager();
 	private InputMapper  inputMapper  = new InputMapper();
+	private VirtualInput virtualInput = new VirtualInput();
 	private EventManager eventManager = new EventManager();
 	private IPlatform    platform     = new Platform(eventManager);
 	//============================================================================================
@@ -77,8 +83,8 @@ public class Application implements IApplication {
 	@Override
 	public void run () {
 		
-		inputMapper.init(eventManager);
-		inputMapper.addMapping(InputMapper.Context.NONE, new ActionMapping("TERMINATE", Target.ACTION, InputEvent.Axis.KB_ESCAPE));
+		inputMapper.addMapping(new TextMapping(null));
+		inputMapper.addMapping(new ActionMapping(null, null, null, InputAxis.KB_ESCAPE));
 		
 		platform.init();
 		platform.setTitle("PETERCHENS MONDFAHRT");
@@ -112,6 +118,7 @@ public class Application implements IApplication {
 		eventManager.register(PlatformEventType.TERMINATE, this::handleTerminate);
 		eventManager.register(PlatformEventType.RESIZE, guiManager);
 		
+		clock.add(VIRTUAL_PERIOD, virtualInput::update);
 		clock.add(EVENT_PERIOD, this::updateEvents);
 		clock.add(GUI_PERIOD, guiManager);
 		clock.add(GRAPHICS_PERIOD, this::updateOutput);
