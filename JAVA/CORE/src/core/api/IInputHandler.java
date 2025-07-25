@@ -2,7 +2,7 @@
 package core.api;
 //************************************************************************************************
 
-import core.input.InputEvent;
+import core.input.raw.InputEvent;
 
 //************************************************************************************************
 public interface IInputHandler {

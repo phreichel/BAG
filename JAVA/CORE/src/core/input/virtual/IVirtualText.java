@@ -2,7 +2,7 @@
 package core.input.virtual;
 //************************************************************************************************
 
-import core.input.InputEvent;
+import core.input.raw.InputEvent;
 
 //************************************************************************************************
 public interface IVirtualText {

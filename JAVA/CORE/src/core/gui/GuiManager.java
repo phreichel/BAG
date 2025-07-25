@@ -6,8 +6,8 @@ import core.api.ICanvas;
 import core.api.IGameHandler;
 import core.clock.ITask;
 import core.event.GameEvent;
-import core.input.EventType;
 import core.platform.IGraphics;
+import core.platform.PlatformEventType;
 
 //************************************************************************************************
 public class GuiManager implements ICanvas, IGameHandler, ITask {
@@ -55,7 +55,7 @@ public class GuiManager implements ICanvas, IGameHandler, ITask {
 	//============================================================================================
 	@Override
 	public void onGameEvent(GameEvent e) {
-		if (e.type.equals(EventType.RESIZE)) {
+		if (e.type.equals(PlatformEventType.RESIZE)) {
 			var data = (float[]) e.data;
 			root._setOuterExtent(data[0], data[1]);
 		}

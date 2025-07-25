@@ -1,45 +1,43 @@
 //************************************************************************************************
-package core.input;
-
-import java.util.ArrayList;
-import java.util.List;
-
+package core.input.raw;
 //************************************************************************************************
 
 //************************************************************************************************
-public class InputMapper {
+public class InputEvent {
 
 	//============================================================================================
-	private final InputState inputState = new InputState();
-	private final List<IInputMapping> inputMappings = new ArrayList<>();
+	public final static float VALUE_INVALID  = Float.NaN;
+	public final static float VALUE_RELEASED = 0f;
+	public final static float VALUE_PRESSED  = 1f;
+	public final static float VALUE_TYPED    = 2f;
 	//============================================================================================
 	
 	//============================================================================================
-	public InputMapper() {
-		this.inputState.clear();
+	public long      timestamp;
+	public InputAxis axis;
+	public float     value;
+	public char      character;
+	//============================================================================================
+
+	//============================================================================================
+	public void set(InputAxis axis, float value) {
+		set(axis, value, '\0');
 	}
 	//============================================================================================
 
 	//============================================================================================
-	public void addMapping(IInputMapping mapping) {
-		if (!inputMappings.contains(mapping))
-			inputMappings.add(mapping);
-	}
-	//============================================================================================
-
-	//============================================================================================
-	public boolean removeMapping(IInputMapping mapping) {
-		return inputMappings.remove(mapping);
+	public void set(InputAxis axis, float value, char character) {
+		this.timestamp = System.currentTimeMillis();
+		this.axis      = axis;
+		this.value     = value;
+		this.character = character;
 	}
 	//============================================================================================
 	
 	//============================================================================================
-	public void onInput(InputEvent input) {
-		this.inputState.update(input);
-		for (var mapping : inputMappings) {
-			mapping.update(input, inputState);
-		}
-	}
+	public void clear() {
+		set(InputAxis.NONE, VALUE_INVALID, '\0');
+	};
 	//============================================================================================
 
 }

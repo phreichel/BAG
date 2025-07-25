@@ -1,5 +1,5 @@
 //************************************************************************************************
-package core.input;
+package core.input.mapping;
 //************************************************************************************************
 
 import java.util.Collections;
@@ -7,6 +7,9 @@ import java.util.EnumMap;
 import java.util.EnumSet;
 import java.util.Map;
 import java.util.Set;
+
+import core.input.raw.InputAxis;
+import core.input.raw.InputEvent;
 
 //************************************************************************************************
 public class InputState {

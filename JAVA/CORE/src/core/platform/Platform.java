@@ -36,8 +36,8 @@ import core.api.ICanvas;
 import core.api.IInputHandler;
 import core.asset.Asset;
 import core.event.EventManager;
-import core.input.InputAxis;
-import core.input.InputEvent;
+import core.input.raw.InputAxis;
+import core.input.raw.InputEvent;
 
 //************************************************************************************************
 public class Platform implements IPlatform, GLEventListener, IGraphics, KeyListener, MouseListener, WindowListener {

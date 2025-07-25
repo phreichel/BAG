@@ -10,10 +10,16 @@ public class VirtualInput {
 
 	//============================================================================================
 	private List<IVirtualAction> actionList = new ArrayList<>();
-	private List<IVirtualAxis>   axisList = new ArrayList<>();
-	private List<IVirtualText>   textList = new ArrayList<>();
+	private List<IVirtualAxis>   axisList   = new ArrayList<>();
+	private List<IVirtualText>   textList   = new ArrayList<>();
 	//============================================================================================
 
+	//============================================================================================
+	private VirtualInputBinding  inputBinding; 
+	private VirtualInterBinding  interBinding; 
+	private VirtualOutputBinding outputBinding; 
+	//============================================================================================
+	
 	//============================================================================================
 	public void addAction(IVirtualAction action) {
 		if (!actionList.contains(action)) {
