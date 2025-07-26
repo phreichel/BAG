@@ -1,74 +1,68 @@
 //************************************************************************************************
-package core.input.mapping;
+package core.input.virtual;
 //************************************************************************************************
 
-import java.util.Arrays;
-import java.util.EnumSet;
-import java.util.Set;
-
-import core.input.raw.InputAxis;
+import core.input.mapping.InputState;
+import core.input.mapping.TextMapping;
 import core.input.raw.InputEvent;
 
 //************************************************************************************************
-public class AxisMapping implements IInputMapping {
+public class VirtualInputText extends TextMapping implements IVirtualText {
 
 	//============================================================================================
-	protected IInputAction onValue = null;
-	protected IInputAction onLoss  = null;
-	//============================================================================================
-
-	//============================================================================================
-	private InputAxis            axis      = InputAxis.NONE;
-	private final Set<InputAxis> modifiers = EnumSet.noneOf(InputAxis.class);
+	private final String  ident;
+	private       boolean hasChanged = true;
+	private       String  value      = "";
 	//============================================================================================
 
 	//============================================================================================
-	public AxisMapping(
-		InputAxis axis,
-		InputAxis ... modifiers) {
-		this(null, null, axis, modifiers);
-	}
-	//============================================================================================
-	
-	//============================================================================================
-	public AxisMapping(
-		IInputAction onValue,
-		IInputAction onLoss,
-		InputAxis axis,
-		InputAxis ... modifiers) {
-		this.onValue = onValue;
-		this.onLoss  = onLoss;
-		this.axis    = axis;
-		this.modifiers.addAll(Arrays.asList(modifiers));
+	public VirtualInputText(String ident) {
+		super();
+		this.onText = this::onText;
+		this.ident = ident;
 	}
 	//============================================================================================
 
 	//============================================================================================
-	private boolean active = false;
+	private void onText(InputEvent event, InputState state) {
+		this.value += event.character;
+		this.hasChanged = true;		
+	}
 	//============================================================================================
-	
+
 	//============================================================================================
 	@Override
-	public void update(InputEvent event, InputState state) {
-		if (
-			event.axis.equals(axis) &&
-			state.getStates().containsAll(modifiers)
-		) {
-			if (onValue != null) {
-				onValue.perform(event, state);
-			}
-			active = true;
-		}
-		if (
-			active &&
-			event.axis.equals(axis) &&
-			!state.getStates().containsAll(modifiers)
-		) {
-			if (onLoss != null) {
-				onLoss.perform(event, state);
-			}
-			active = false;
-		}
+	public String getIdent() {
+		return this.ident;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	@Override
+	public boolean hasChanged() {
+		return this.hasChanged;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	@Override
+	public void confirmChanged() {
+		this.value = "";
+		this.hasChanged = false;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	@Override
+	public String getValue() {
+		return this.value;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	@Override
+	public void update(int nFrames, long periodNs) {
+		// ignored for this
 	}
 	//============================================================================================
 	

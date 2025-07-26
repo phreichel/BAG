@@ -13,9 +13,9 @@ import core.input.raw.InputEvent;
 public class ActionMapping implements IInputMapping {
 
 	//============================================================================================
-	private IInputAction         onPress   = null;
-	private IInputAction         onRelease = null;
-	private IInputAction         onType    = null;
+	protected IInputAction         onPress   = null;
+	protected IInputAction         onRelease = null;
+	protected IInputAction         onType    = null;
 	//============================================================================================
 
 	//============================================================================================
@@ -23,6 +23,12 @@ public class ActionMapping implements IInputMapping {
 	private final Set<InputAxis> modifiers = EnumSet.noneOf(InputAxis.class);
 	//============================================================================================
 
+	//============================================================================================
+	public ActionMapping(
+			InputAxis trigger,
+			InputAxis ... modifiers) {
+		this(null, null, null, trigger, modifiers);
+	}
 	//============================================================================================
 	public ActionMapping(
 		IInputAction onPress,

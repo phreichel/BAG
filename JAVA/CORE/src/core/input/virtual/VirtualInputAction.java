@@ -1,74 +1,72 @@
 //************************************************************************************************
-package core.input.mapping;
+package core.input.virtual;
 //************************************************************************************************
 
-import java.util.Arrays;
-import java.util.EnumSet;
-import java.util.Set;
-
+import core.input.mapping.ActionMapping;
+import core.input.mapping.InputState;
 import core.input.raw.InputAxis;
 import core.input.raw.InputEvent;
 
 //************************************************************************************************
-public class AxisMapping implements IInputMapping {
+public class VirtualInputAction extends ActionMapping implements IVirtualAction {
 
 	//============================================================================================
-	protected IInputAction onValue = null;
-	protected IInputAction onLoss  = null;
-	//============================================================================================
-
-	//============================================================================================
-	private InputAxis            axis      = InputAxis.NONE;
-	private final Set<InputAxis> modifiers = EnumSet.noneOf(InputAxis.class);
+	private final String  ident;
+	private final String  action;
+	private       boolean hasTriggered = false;
 	//============================================================================================
 
 	//============================================================================================
-	public AxisMapping(
-		InputAxis axis,
-		InputAxis ... modifiers) {
-		this(null, null, axis, modifiers);
-	}
-	//============================================================================================
-	
-	//============================================================================================
-	public AxisMapping(
-		IInputAction onValue,
-		IInputAction onLoss,
-		InputAxis axis,
-		InputAxis ... modifiers) {
-		this.onValue = onValue;
-		this.onLoss  = onLoss;
-		this.axis    = axis;
-		this.modifiers.addAll(Arrays.asList(modifiers));
+	public VirtualInputAction(
+			String ident,
+			String action,
+			InputAxis axis,
+			InputAxis ... modifiers) {
+		super(axis, modifiers);
+		this.ident = ident;
+		this.action = action;
+		this.onPress = this::onPress;
 	}
 	//============================================================================================
 
 	//============================================================================================
-	private boolean active = false;
+	private void onPress(InputEvent event, InputState state) {
+		this.hasTriggered = true;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	@Override
+	public String getIdent() {
+		return this.ident;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	@Override
+	public String getAction() {
+		return this.action;
+	}
 	//============================================================================================
 	
 	//============================================================================================
 	@Override
-	public void update(InputEvent event, InputState state) {
-		if (
-			event.axis.equals(axis) &&
-			state.getStates().containsAll(modifiers)
-		) {
-			if (onValue != null) {
-				onValue.perform(event, state);
-			}
-			active = true;
-		}
-		if (
-			active &&
-			event.axis.equals(axis) &&
-			!state.getStates().containsAll(modifiers)
-		) {
-			if (onLoss != null) {
-				onLoss.perform(event, state);
-			}
-			active = false;
-		}
+	public boolean hasTriggered() {
+		return this.hasTriggered;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	@Override
+	public void confirmTriggered() {
+		this.hasTriggered = false;
+	}
+	//============================================================================================
+
+	//============================================================================================
+	@Override
+	public void update(int nFrames, long periodNs) {
+		// ignored for this
 	}
 	//============================================================================================
 	

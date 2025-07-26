@@ -2,25 +2,37 @@
 package core.input.virtual;
 //************************************************************************************************
 
+import core.event.EventManager;
+
 //************************************************************************************************
-public interface IVirtualAxis {
+public class VirtualOutputAction extends VirtualActionBase{
 
 	//============================================================================================
-	public String  getIdent();
+	private final IVirtualAction source;
+	private final EventManager eventManager;
+	//============================================================================================
+	
+	//============================================================================================
+	public VirtualOutputAction(String ident, IVirtualAction source, EventManager eventManager) {
+		super(ident, source.getAction());
+		this.source = source;
+		this.eventManager = eventManager;
+	}
+	//============================================================================================
+	
+	//============================================================================================
+	@Override
+	public void update(int nFrames, long periodNs) {
+		if (this.source.hasTriggered()) {
+			this.source.confirmTriggered();
+			this.hasTriggered = true;
+			var e = eventManager.createEvent();
+			e.type = VirtualEventType.ACTION;
+			e.text = this.getAction();
+			eventManager.postEvent(e);
+		}
+	}
 	//============================================================================================
 
-	//============================================================================================
-	public boolean hasChanged();
-	public void    confirmChanged();
-	//============================================================================================
-	
-	//============================================================================================
-	public float   getValue();
-	//============================================================================================
-	
-	//============================================================================================
-	public void update(int nFrames, long periodNs);
-	//============================================================================================
-	
 }
 //************************************************************************************************

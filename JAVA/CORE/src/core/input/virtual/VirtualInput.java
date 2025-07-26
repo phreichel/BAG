@@ -15,12 +15,6 @@ public class VirtualInput {
 	//============================================================================================
 
 	//============================================================================================
-	private VirtualInputBinding  inputBinding; 
-	private VirtualInterBinding  interBinding; 
-	private VirtualOutputBinding outputBinding; 
-	//============================================================================================
-	
-	//============================================================================================
 	public void addAction(IVirtualAction action) {
 		if (!actionList.contains(action)) {
 			actionList.add(action);

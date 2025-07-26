@@ -12,11 +12,14 @@ import core.event.EventManager;
 import core.event.GameEvent;
 import core.gui.GuiManager;
 import core.gui.InputEventType;
-import core.input.mapping.ActionMapping;
 import core.input.mapping.InputMapper;
-import core.input.mapping.TextMapping;
 import core.input.raw.InputAxis;
+import core.input.virtual.VirtualEventType;
 import core.input.virtual.VirtualInput;
+import core.input.virtual.VirtualInputAction;
+import core.input.virtual.VirtualInputText;
+import core.input.virtual.VirtualOutputAction;
+import core.input.virtual.VirtualOutputText;
 import core.platform.IGraphics;
 import core.platform.IPlatform;
 import core.platform.Platform;
@@ -81,9 +84,6 @@ public class Application implements IApplication {
 	@Override
 	public void run () {
 		
-		inputMapper.addMapping(new TextMapping(null));
-		inputMapper.addMapping(new ActionMapping(null, null, null, InputAxis.KB_ESCAPE));
-		
 		platform.init();
 		platform.setTitle("PETERCHENS MONDFAHRT");
 
@@ -110,9 +110,22 @@ public class Application implements IApplication {
 		
 		eventManager.registerEventTypeClass(PlatformEventType.class);
 		eventManager.registerEventTypeClass(InputEventType.class);
+		eventManager.registerEventTypeClass(VirtualEventType.class);
 		
-		eventManager.register(InputEventType.TEXT, this::handleText);
-		eventManager.register(InputEventType.ACTION, this::handleAction);
+		var textInputMapping  = new VirtualInputText("text-input");
+		var textOutputMapping = new VirtualOutputText("text-output", textInputMapping, eventManager);
+		inputMapper.addMapping(textInputMapping);
+		virtualInput.addText(textInputMapping);
+		virtualInput.addText(textOutputMapping);
+		
+		var termActionInputMapping  = new VirtualInputAction("terminate-input", "TERMINATE", InputAxis.KB_ESCAPE);		
+		var termActionOutputMapping = new VirtualOutputAction("terminate-outout", termActionInputMapping, eventManager);
+		inputMapper.addMapping(termActionInputMapping);
+		virtualInput.addAction(termActionInputMapping);
+		virtualInput.addAction(termActionOutputMapping);
+		
+		eventManager.register(VirtualEventType.TEXT, this::handleText);
+		eventManager.register(VirtualEventType.ACTION, this::handleAction);
 		eventManager.register(PlatformEventType.TERMINATE, this::handleTerminate);
 		eventManager.register(PlatformEventType.RESIZE, guiManager);
 		
