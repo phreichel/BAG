@@ -90,7 +90,9 @@ int stptarget = 1024;
 void setup() {
 	
 	Serial.begin(9600);
-	
+
+	Serial.println("INIT START");
+
 	stp.setAcceleration(1e9);
 	stp.setMaxSpeed(300);
 	stp.setSpeed(300);
@@ -102,13 +104,17 @@ void setup() {
 	pwm.setPWMFreq(50);
 
 	delay(500);
+
 	current_apply(
 		target_shoulder,
 		target_ellbow,
 		target_wrist);
+
 	delay(500);
 
 	past = millis();
+
+	Serial.println("INIT COMPLETE");
 	
 };
 //==============================================================================
@@ -116,17 +122,17 @@ void setup() {
 //==============================================================================
 void loop() {
 	
-	/*
-
 	long mark = millis();
 	long delta = mark - past;
 	if (delta >= 100) {
 		clock += delta;
 		past = mark;
-		float dT = (float) delta / 1000.;
-		update(dT);
+		float dT = (float) delta / 1000.;		
+		//update(dT);
+		Serial.println("...");
 	}
 
+	/*
 	if (clock >= 2000) {
 		target_apply(500, 450, 325);
 	}
