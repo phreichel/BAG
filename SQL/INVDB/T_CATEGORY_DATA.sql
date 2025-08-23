@@ -1,0 +1,27 @@
+USE INVDB;
+
+INSERT INTO T_CATEGORY (ident) VALUES
+	('Storage'),
+	('Resistor'),
+	('Capacitor'),
+	('Diode'),
+	('Light Emitting Diode'),
+	('Potentiometer'),
+	('Photoresistor'),
+	('Wire'),
+	('Integrated Circuit'),
+	('Logic Circuit'),
+	('Microcontroller'),
+	('Timer'),
+	('Quartz'),
+	('Printed Circuit Board'),
+	('Motor'),
+	('Servo'),
+	('Step Motor'),
+	('Buck Converter'),
+	('Transistor'),
+	('Mosfet'),
+	('Switch'),
+	('Battery'),
+	('Accumulator'),
+	('Power Cell');
