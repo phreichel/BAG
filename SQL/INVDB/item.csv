@@ -1,0 +1,20 @@
+IDENT;DESCRIPTION
+ESP32 CAM;
+ESP32 WROOM;
+Arduio UNO;
+Arduino Nano;
+Arduino Mega;
+NEMA17;
+SG90_180;
+SG90_360;
+Location;
+Building;
+Room;
+Shelf;
+Drawer;
+Container;
+LED Normal Red;
+LED Normal Green;
+LED Normal Yellow;
+LED Normal White;
+LED Normal Blue;

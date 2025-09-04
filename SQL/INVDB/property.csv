@@ -1,0 +1,14 @@
+IDENT;UNIT;DESCRIPTION
+Min Voltage;Volt;
+Max Voltage;Volt;
+Min Current;Ampere;
+Max Current;Ampere;
+Resistance;Ohm;
+Capacitance;Farrad;
+Min Power;Watt;
+Max Power;Watt;
+Diameter;Meter;
+Length;Meter;
+Width;Meter;
+Height;Meter;
+Weight;Kilogramm;
