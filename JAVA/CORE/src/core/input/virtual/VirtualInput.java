@@ -12,6 +12,7 @@ public class VirtualInput {
 	private List<IVirtualAction> actionList = new ArrayList<>();
 	private List<IVirtualAxis>   axisList   = new ArrayList<>();
 	private List<IVirtualText>   textList   = new ArrayList<>();
+	private List<VirtualDevice>  deviceList = new ArrayList<>();
 	//============================================================================================
 
 	//============================================================================================
@@ -55,6 +56,20 @@ public class VirtualInput {
 		return textList.remove(text);
 	}
 	//============================================================================================
+
+	//============================================================================================
+	public void addDevice(VirtualDevice device) {
+		if (!deviceList.contains(device)) {
+			deviceList.add(device);
+		}
+	}
+	//============================================================================================
+
+	//============================================================================================
+	public boolean removeDevice(VirtualDevice device) {
+		return deviceList.remove(device);
+	}
+	//============================================================================================
 	
 	//============================================================================================
 	public void update(int nFrames, long periodNs) {
@@ -69,6 +84,10 @@ public class VirtualInput {
 
 		for (var text : textList) {
 			text.update(nFrames, periodNs);
+		}
+
+		for (var device : deviceList) {
+			device.update(nFrames, periodNs);
 		}
 		
 	}

@@ -14,9 +14,12 @@ import core.gui.GuiManager;
 import core.gui.InputEventType;
 import core.input.mapping.InputMapper;
 import core.input.raw.InputAxis;
+import core.input.virtual.DeviceData;
+import core.input.virtual.VirtualDevice;
 import core.input.virtual.VirtualEventType;
 import core.input.virtual.VirtualInput;
 import core.input.virtual.VirtualInputAction;
+import core.input.virtual.VirtualInputAxis;
 import core.input.virtual.VirtualInputText;
 import core.input.virtual.VirtualOutputAction;
 import core.input.virtual.VirtualOutputText;
@@ -124,8 +127,20 @@ public class Application implements IApplication {
 		virtualInput.addAction(termActionInputMapping);
 		virtualInput.addAction(termActionOutputMapping);
 		
+		var pointerXAxis = new VirtualInputAxis("pointer-x", InputAxis.PT_X);
+		var pointerYAxis = new VirtualInputAxis("pointer-y", InputAxis.PT_Y);
+		inputMapper.addMapping(pointerXAxis);
+		inputMapper.addMapping(pointerYAxis);
+		var pointerDevice = new VirtualDevice("pointer", eventManager);
+		pointerDevice.add("x", pointerXAxis);
+		pointerDevice.add("y", pointerYAxis);
+		virtualInput.addAxis(pointerXAxis);
+		virtualInput.addAxis(pointerYAxis);
+		virtualInput.addDevice(pointerDevice);
+		
 		eventManager.register(VirtualEventType.TEXT, this::handleText);
 		eventManager.register(VirtualEventType.ACTION, this::handleAction);
+		eventManager.register(VirtualEventType.DEVICE, this::handleDevice);
 		eventManager.register(PlatformEventType.TERMINATE, this::handleTerminate);
 		eventManager.register(PlatformEventType.RESIZE, guiManager);
 		
@@ -225,6 +240,16 @@ public class Application implements IApplication {
 	}
 	//============================================================================================
 
+	//============================================================================================
+	private void handleDevice(GameEvent event) {
+		String devName = event.text;
+		var devX = event.data(DeviceData.class).getAxes().get("x");
+		var devY = event.data(DeviceData.class).getAxes().get("y");
+		String devLog = String.format("%s: (%s, %s)", devName, devX, devY);
+		System.out.println(devLog);
+	}
+	//============================================================================================
+	
 	//============================================================================================
 	private void handleTerminate(GameEvent event) {
 		terminated = true;
