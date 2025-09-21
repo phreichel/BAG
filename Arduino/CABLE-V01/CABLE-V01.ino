@@ -15,6 +15,17 @@ const int PIN_ZDIR = 7;   // DIR
 const int PIN_ASTP = 12;   // STEP
 const int PIN_ADIR = 13;   // DIR
 
+const int PIN_CALI1 = 9;
+const int PIN_CALI2 = 10;
+const int PIN_CALI3 = 11;
+const int PIN_CALI4 = A3;
+
+long TRG_CALI1 = -1;
+long TRG_CALI2 = -1;
+long TRG_CALI3 = -1;
+long TRG_CALI4 = -1;
+long TRG_TURN  = -1;
+
 //~ AccelStepper X(AccelStepper::DRIVER, PIN_XSTP, PIN_XDIR);
 //~ AccelStepper Y(AccelStepper::DRIVER, PIN_YSTP, PIN_YDIR);
 //~ AccelStepper Z(AccelStepper::DRIVER, PIN_ZSTP, PIN_ZDIR);
@@ -39,6 +50,11 @@ void setup() {
   Serial.begin(115200);
 
   while (!Serial) {;}  // für Leonardo/Micro irrelevant beim UNO, schadet nicht
+
+  pinMode(PIN_CALI1, INPUT_PULLUP);
+  pinMode(PIN_CALI2, INPUT_PULLUP);
+  pinMode(PIN_CALI3, INPUT_PULLUP);
+  pinMode(PIN_CALI4, INPUT_PULLUP);
 
   pinMode(PIN_EN, OUTPUT);
   digitalWrite(PIN_EN, LOW);    // Treiber EIN
@@ -105,23 +121,60 @@ void loop() {
   //~ Z.run();
   //~ A.run();
 
+  long now = millis();
+  
+  if (digitalRead(PIN_CALI1)==LOW && TRG_CALI1==-1) {
+	  TRG_CALI1 = now;
+      Serial.println(F("CALI1 PRESSED"));
+  } else if (digitalRead(PIN_CALI1)==HIGH && TRG_CALI1!=-1 && (now-TRG_CALI1)>=10) {
+	  TRG_CALI1 = -1;
+      Serial.println(F("CALI1 RELEASED"));
+  }
+
+  if (digitalRead(PIN_CALI2)==LOW && (TRG_CALI2==-1)) {
+	  TRG_CALI2 = now;
+      Serial.println(F("CALI2 PRESSED"));
+  } else if (digitalRead(PIN_CALI2)==HIGH && TRG_CALI2!=-1 && (now-TRG_CALI2)>=10) {
+	  TRG_CALI2 = -1;
+      Serial.println(F("CALI2 RELEASED"));
+  }
+
+  if (digitalRead(PIN_CALI3)==LOW && (TRG_CALI3==-1)) {
+	  TRG_CALI3 = now;
+      Serial.println(F("CALI3 PRESSED"));
+  } else if (digitalRead(PIN_CALI3)==HIGH && TRG_CALI3!=-1 && (now-TRG_CALI3)>=10) {
+	  TRG_CALI3 = -1;
+      Serial.println(F("CALI3 RELEASED"));
+  }
+
+  if (digitalRead(PIN_CALI4)==LOW && (TRG_CALI4==-1)) {
+	  TRG_CALI4 = now;
+      Serial.println(F("CALI4 PRESSED"));
+  } else if (digitalRead(PIN_CALI4)==HIGH && TRG_CALI4!=-1 && (now-TRG_CALI4)>=10) {
+	  TRG_CALI4 = -1;
+      Serial.println(F("CALI4 RELEASED"));
+  }
+
   if (
 		(X.moving()==0) &&
 		(Y.moving()==0) &&
 		(Z.moving()==0) &&
-		(A.moving()==0)
+		(A.moving()==0) &&
+		(TRG_TURN==-1)
   ){
-    
-    delay(2000);
-    Serial.println(F("Richtung gewechselt."));
-    
-    target = -target;
-    
-    X.moveTo(target);
-    Y.moveTo(target);
-    Z.moveTo(target);
-    A.moveTo(target);
-    
+    TRG_TURN = now;
+    Serial.println(F("STOP."));
+  } else if (TRG_TURN != -1) {
+	long delta = (now-TRG_TURN);
+	if (delta >= 2000) {
+		TRG_TURN = -1;
+		Serial.println(F("TURN!"));
+		target = -target;
+		X.moveTo(target);
+		Y.moveTo(target);
+		Z.moveTo(target);
+		A.moveTo(target);
+	}
   }
-  
+
 }
