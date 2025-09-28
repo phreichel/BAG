@@ -14,8 +14,8 @@ BAUDRATE=115200
 
 compile() {
     echo "🔨 Kompiliere..."
+    rm -R $OUTDIR
     mkdir -p "$LIBDIR" "$OUTDIR"
-    rm -R $OUTDIR/*
 	arduino-cli lib install AccelStepper
 	arduino-cli lib install MobaTools
     arduino-cli compile --fqbn "$FQBN" --output-dir "$OUTDIR"
