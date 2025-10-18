@@ -4,10 +4,10 @@
 #include <MobaTools.h>
 
 //=============================================================================
-#define STEPPER_DRIVER_TYPE A4988
-#define STEPS_PER_ROTATION 200
-#define MICROSTEP_RESOLUTION 16
-#define MICROSTEPS_PER_ROTATION STEPS_PER_ROTATION * MICROSTEP_RESOLUTION
+const int STEPPER_DRIVER_TYPE = A4988
+const int STEPS_PER_ROTATION = 200
+const int MICROSTEP_RESOLUTION = 16
+const int MICROSTEPS_PER_ROTATION = STEPS_PER_ROTATION * MICROSTEP_RESOLUTION
 //=============================================================================
 
 //=============================================================================
