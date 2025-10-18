@@ -1,5 +1,6 @@
 #include "CABLE-V02.h"
 
+//-----------------------------------------------------------------------------
 enum ActionType : uint8_t { MOVE, WAIT };
 struct ActionTarget { int32_t X, Y, Z, A; };
 struct ActionTime { uint32_t MS; };
@@ -10,12 +11,16 @@ struct Action {
 		ActionTime   time;
 	};
 };
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 constexpr uint8_t ACTION_BUFFER_SIZE = 10;
 uint8_t actionBufferStart = 0;
 uint8_t actionBufferStop  = 0;
 Action actionBuffer[ACTION_BUFFER_SIZE];
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 bool addMoveAction(int32_t x, int32_t y, int32_t z, int32_t a) {
 	uint8_t actionBufferNext = (actionBufferStop+1) % ACTION_BUFFER_SIZE;
 	if (actionBufferNext == actionBufferStart)
@@ -29,7 +34,9 @@ bool addMoveAction(int32_t x, int32_t y, int32_t z, int32_t a) {
 	entry->target.A = a;
 	return true;
 }
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 bool addWaitAction(uint32_t ms) {
 	uint8_t actionBufferNext = (actionBufferStop+1) % ACTION_BUFFER_SIZE;
 	if (actionBufferNext == actionBufferStart)
@@ -40,7 +47,9 @@ bool addWaitAction(uint32_t ms) {
 	entry->time.MS = ms;
 	return true;
 }
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 bool peekAction(Action* dst) {
 	if (dst == nullptr) return false;
 	if (actionBufferStart == actionBufferStop) return false;
@@ -48,18 +57,22 @@ bool peekAction(Action* dst) {
 	*dst = *src;
 	return true;	
 }
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 bool popAction(Action* dst) {
 	if (!peekAction(dst)) return false;
 	uint8_t actionBufferNext = (actionBufferStart+1) % ACTION_BUFFER_SIZE;
 	actionBufferStart = actionBufferNext;
 	return true;	
 }
-
+//-----------------------------------------------------------------------------
 
 // ---- Geometrie & Mechanik ---------------------------------------------------
 struct Vec3 { float x, y, z; };           // cm
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 // Aufhängepunkte relativ zum Koordinatenursprung (Mitte oben am Schlitten)
 static const float ANCH[4][3] = {
   {-20.0f, -20.0f, 38.8f},  // A (links vorn)
@@ -67,24 +80,32 @@ static const float ANCH[4][3] = {
   { 20.0f,  20.0f, 38.8f},  // X (rechts hinten)
   {-20.0f,  20.0f, 38.8f}   // Z (links hinten)
 };
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 // Schritt-/Trommel-Parameter
 static const int   FULL_STEPS_PER_REV = 200;  // 1.8°/Step
 static const int   MICROSTEP_DIV      = 16;   // 1/16
 static const float DRUM_RADIUS_CM     = 2.5f; // cm
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 // Richtungskorrektur pro Motor (falls Verkabelung/Treiber invertiert):
 // +1 = "positiv = kürzer", -1 = invertieren
 static const int DIR[4] = { +1, +1, +1, +1 };
+//-----------------------------------------------------------------------------
 
 // ---- abgeleitete Konstanten -------------------------------------------------
 static const int   MICROSTEPS_PER_REV = FULL_STEPS_PER_REV * MICROSTEP_DIV; // 3200
 static const float DRUM_CIRCUMF_CM    = 2.0f * 3.14159265358979323846f * DRUM_RADIUS_CM;
 static const float MICROSTEPS_PER_CM  = (float)MICROSTEPS_PER_REV / DRUM_CIRCUMF_CM; // ≈101.859
+//-----------------------------------------------------------------------------
 
 // ---- Hilfen -----------------------------------------------------------------
 static inline float sqr(float v){ return v*v; }
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 // euklidische Länge vom Punkt p zur i-ten Aufhängung
 static float cableLengthCm(int i, const Vec3& p){
   float dx = ANCH[i][0] - p.x;
@@ -92,12 +113,16 @@ static float cableLengthCm(int i, const Vec3& p){
   float dz = ANCH[i][2] - p.z;
   return sqrtf(sqr(dx) + sqr(dy) + sqr(dz));
 }
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 // Rechne Längen (cm) für alle vier Kabel
 static void cableLengthsCm(const Vec3& p, float L[4]){
   for(int i=0;i<4;++i) L[i] = cableLengthCm(i, p);
 }
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 // Delta-Länge (cm) -> Mikroschritte (Vorzeichenkonvention: + = kürzen)
 // Mit DIR[i] für motorindividuelle Invertierung
 static long deltaLenCmToMicrosteps(float dLenCm, int motorIndex){
@@ -106,9 +131,9 @@ static long deltaLenCmToMicrosteps(float dLenCm, int motorIndex){
   long  steps = lroundf(micro);
   return steps * DIR[motorIndex];
 }
+//-----------------------------------------------------------------------------
 
 // ---- Hauptfunktionen --------------------------------------------------------
-
 // Schritte relativ zu einer REFERENZ-Position pRef (z.B. letzte Istposition)
 void stepsFromTo(const Vec3& pRef, const Vec3& pNew, long stepsOut[4]){
   float Lref[4], Lnew[4];
@@ -119,17 +144,22 @@ void stepsFromTo(const Vec3& pRef, const Vec3& pNew, long stepsOut[4]){
     stepsOut[i] = deltaLenCmToMicrosteps(dL, i);
   }
 }
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 // Schritte relativ zur HOME-Position (Ruhe, p=(0,0,0))
 void stepsFromHome(const Vec3& pNew, long stepsOut[4]){
   const Vec3 HOME{0.0f, 0.0f, 0.0f};
   stepsFromTo(HOME, pNew, stepsOut);
 }
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 // Optional: Workspace-Check (x,y in [-20,20], z in [0,38])
 static bool withinWorkspace(const Vec3& p){
   return (p.x>=-20 && p.x<=20) && (p.y>=-20 && p.y<=20) && (p.z>=0 && p.z<=38);
 }
+//-----------------------------------------------------------------------------
 
 // ---- Beispielnutzung --------------------------------------------------------
 /*
@@ -150,42 +180,63 @@ void setup(){
 void loop(){}
 */
 
+//-----------------------------------------------------------------------------
 const int PIN_EN   = 8;   // Enable (LOW = Treiber EIN)
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 const int PIN_XSTP = 2;   // STEP
 const int PIN_XDIR = 5;   // DIR
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 const int PIN_YSTP = 3;   // STEP
 const int PIN_YDIR = 6;   // DIR
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 const int PIN_ZSTP = 4;   // STEP
 const int PIN_ZDIR = 7;   // DIR
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 const int PIN_ASTP = 12;   // STEP
 const int PIN_ADIR = 13;   // DIR
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 const int PIN_CALI_Z = 9;
 const int PIN_CALI_Y = 10;
 const int PIN_CALI_A = 11;
 const int PIN_CALI_X = A3;
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 // Test-Parameter
 const float MAX_SPEED = 1200.f;
 const float ACCEL     =  800.f;
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 const unsigned int SPEED = 800;
 const unsigned int RAMP  = 200;
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 MoToStepper X(200*16, A4988);
 MoToStepper Y(200*16, A4988);
 MoToStepper Z(200*16, A4988);
 MoToStepper A(200*16, A4988);
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 MoToStepper* Steppers[] { &Z, &Y, &A, &X };
 int  HoldPinIdent[]     { PIN_CALI_Z, PIN_CALI_Y, PIN_CALI_A, PIN_CALI_X };
 bool HoldPinPress[]     { false, false, false, false };
 long HoldPinMark[]      { -1, -1, -1, -1 };
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 void initSerial() {
   Serial.begin(115200);
   // für Leonardo/Micro irrelevant beim UNO, schadet nicht
@@ -194,35 +245,47 @@ void initSerial() {
   delay(1000);
   Serial.flush();
 }
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 void initHoldPins() {
   for (int i=0; i<4; i++) {
     pinMode(HoldPinIdent[i], INPUT_PULLUP);
   }
 }
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 void initMotor(MoToStepper& S, int stp, int dir) {
   S.attach(stp, dir);
   S.setRampLen( RAMP );
   S.setSpeed( SPEED );
 }
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 void initMotors() {
 	initMotor(X,PIN_XSTP,PIN_XDIR);
 	initMotor(Y,PIN_YSTP,PIN_YDIR);
 	initMotor(Z,PIN_ZSTP,PIN_ZDIR);
 	initMotor(A,PIN_ASTP,PIN_ADIR);
 }
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 void initEnablePin() {
   pinMode(PIN_EN, OUTPUT);
 }
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 void setEnabled(bool enabled) {
   int state = enabled? HIGH : LOW;
   digitalWrite(PIN_EN, state);
 }
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 void updateHoldPins(long now) {
 	for (int i=0; i<4; i++) {
 		int probe = digitalRead(HoldPinIdent[i]);
@@ -241,7 +304,9 @@ void updateHoldPins(long now) {
 		}
 	}
 }
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 bool probeHoldPins() {
 	for (int i=0; i<4; i++) {
 		if (!HoldPinPress[i]) {
@@ -250,7 +315,9 @@ bool probeHoldPins() {
 	}
 	return true;
 }
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 bool probeAnyHoldPin() {
 	for (int i=0; i<4; i++) {
 		if (HoldPinPress[i]) {
@@ -259,16 +326,22 @@ bool probeAnyHoldPin() {
 	}
 	return false;
 }
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 enum class CalibrateMode : uint8_t { PROBE, RX, PX, RY, PY, RZ, PZ, RA, PA, U1, SET };
 enum class StopMode : uint8_t { CENTER, LOWER, STOP };
 enum class RunMode : uint8_t { INIT, ERROR, STOP, MOVE, IDLE, SLEEP, WAIT };
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 RunMode       mode          = RunMode::INIT; 
 CalibrateMode calibrateMode = CalibrateMode::PROBE;
 StopMode      stopMode      = StopMode::CENTER;
 int           error         = 0;
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 void initCable() {
   initSerial();
   Serial.println("=== INIT ===");
@@ -278,7 +351,9 @@ void initCable() {
   setEnabled(true);
   Serial.println("=== START ===");
 }
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 void probe() {
 	
 	X.move(-50);
@@ -309,7 +384,9 @@ void probe() {
 	}
 
 }
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 void tighten(MoToStepper& S, int nextError, CalibrateMode nextMode) {
 	if (abs(S.currentPosition()) >= 500) {
 		S.stop();
@@ -324,7 +401,9 @@ void tighten(MoToStepper& S, int nextError, CalibrateMode nextMode) {
 		calibrateMode = nextMode;
 	}
 }
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 void loosen(MoToStepper& S, int nextError, CalibrateMode nextMode) {
 	if (abs(S.currentPosition()) >= 500) {
 		S.stop();
@@ -339,7 +418,9 @@ void loosen(MoToStepper& S, int nextError, CalibrateMode nextMode) {
 		calibrateMode = nextMode;
 	}
 }
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 void lift(int nextError, CalibrateMode nextMode) {
 	if (
 		(abs(X.currentPosition()) >= 500) ||
@@ -377,7 +458,9 @@ void lift(int nextError, CalibrateMode nextMode) {
 		calibrateMode = nextMode;
 	}
 }
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 void stopMotors() {
 	switch (stopMode) {
 		case StopMode::CENTER:
@@ -414,10 +497,14 @@ void stopMotors() {
 			break;
 	}
 }
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 Vec3 stepsCoords;
 long stepsOut[4];
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 void calibrate() {
 	switch (calibrateMode) {
 		case CalibrateMode::PROBE:
@@ -567,10 +654,14 @@ void calibrate() {
 			break;
 	}
 }
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 Action   currentAction;
 uint32_t currentWait;
+//-----------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------
 void runCable() {
 
 	long now = millis();
@@ -646,3 +737,5 @@ void runCable() {
 		
 	}
 }
+//-----------------------------------------------------------------------------
+
