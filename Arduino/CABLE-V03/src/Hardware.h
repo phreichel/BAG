@@ -1,21 +1,41 @@
 #ifndef __Hardware_h__
 #define __Hardware_h__
 
+#include <MobaTools.h>
+
+//=============================================================================
+inline const int STEPPER_DRIVER_TYPE     = A4988;
+inline const int STEPS_PER_ROTATION      = 200;
+inline const int MICROSTEP_RESOLUTION    = 16;
+inline const int MICROSTEPS_PER_ROTATION = STEPS_PER_ROTATION * MICROSTEP_RESOLUTION;
+//=============================================================================
+
 //=============================================================================
 class Hardware {
 
 	//-------------------------------------------------------------------------
 	public:
 	//-------------------------------------------------------------------------
-	
+
 	Hardware();
 	~Hardware();
+
+	void setup();
+	void loop();
+
+	bool enabled();
+	void enabled(bool enabled);
 
 	//-------------------------------------------------------------------------
 	private:
 	//-------------------------------------------------------------------------
 
-	:w
+	void setupMotor(MoToStepper& stepper, int stp, int dir);
+
+	MoToStepper A(MICROSTEPS_PER_ROTATION, STEPPER_DRIVER_TYPE);
+	MoToStepper B(MICROSTEPS_PER_ROTATION, STEPPER_DRIVER_TYPE);
+	MoToStepper C(MICROSTEPS_PER_ROTATION, STEPPER_DRIVER_TYPE);
+	MoToStepper D(MICROSTEPS_PER_ROTATION, STEPPER_DRIVER_TYPE);
 
 };
 //=============================================================================

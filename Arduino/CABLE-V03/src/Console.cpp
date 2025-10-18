@@ -2,13 +2,15 @@
 #include "Console.h"
 
 //=============================================================================
-Console::Console() {
-}
+const int BAUDRATE = 115200;
 //=============================================================================
 
 //=============================================================================
-Console::~Console() {
-}
+Console::Console() {}
+//=============================================================================
+
+//=============================================================================
+Console::~Console() {}
 //=============================================================================
 
 //=============================================================================
@@ -24,7 +26,7 @@ void Console::setup() {
 void Console::loop() {
 	if (Serial.available() > 0) {
 
-		String line = Serial.readStringUntil('\n');		
+		String line = Serial.readStringUntil('\n');
 
 		line.trim();
 		line.toUpperCase();
@@ -58,15 +60,15 @@ void Console::home() {
 void Console::jog() {
 
 	Serial.println("JOGGING");
-	
+
 	Serial.print("X COORD:>");
 	while (Serial.available() == 0) delay(10);
 	String xStr = Serial.readStringUntil('\n');
-	
+
 	Serial.print("Y COORD:>");
 	while (Serial.available() == 0) delay(10);
 	String yStr = Serial.readStringUntil('\n');
-	
+
 	Serial.print("Z COORD:>");
 	while (Serial.available() == 0) delay(10);
 	String zStr = Serial.readStringUntil('\n');
