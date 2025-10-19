@@ -1,6 +1,9 @@
 #ifndef __Console_h__
 #define __Console_h__
 
+#include "Hardware.h"
+#include "Model.h"
+
 //=============================================================================
 class Console {
 
@@ -8,7 +11,7 @@ class Console {
 	public:
 	//-------------------------------------------------------------------------
 
-	Console();
+	Console(Hardware* _hardwarePtr);
 	~Console();
 
 	void setup();
@@ -18,9 +21,14 @@ class Console {
 	private:
 	//-------------------------------------------------------------------------
 
+	void enable();
 	void calibrate();
+	void raw();
 	void home();
 	void jog();
+
+	Model     model;
+	Hardware* hardwarePtr;
 
 };
 //=============================================================================

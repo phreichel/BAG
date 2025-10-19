@@ -41,10 +41,10 @@ void Hardware::setup() {
 	pinMode(SHIELD_AENDSTOP_PIN, INPUT_PULLUP);
 
 	// Motors and Motor Pins
-	setupMotor(A, SHIELD_XAXIS_STEP_PIN, SHIELD_XAXIS_DIRECTION_PIN);
+	setupMotor(A, SHIELD_AAXIS_STEP_PIN, SHIELD_AAXIS_DIRECTION_PIN);
 	setupMotor(B, SHIELD_YAXIS_STEP_PIN, SHIELD_YAXIS_DIRECTION_PIN);
-	setupMotor(C, SHIELD_ZAXIS_STEP_PIN, SHIELD_ZAXIS_DIRECTION_PIN);
-	setupMotor(D, SHIELD_AAXIS_STEP_PIN, SHIELD_AAXIS_DIRECTION_PIN);
+	setupMotor(C, SHIELD_XAXIS_STEP_PIN, SHIELD_XAXIS_DIRECTION_PIN);
+	setupMotor(D, SHIELD_ZAXIS_STEP_PIN, SHIELD_ZAXIS_DIRECTION_PIN);
 
 };
 //=============================================================================
@@ -54,6 +54,7 @@ void Hardware::setupMotor(MoToStepper& motor, int stp, int dir) {
   motor.attach(stp, dir);
   motor.setRampLen( MOTOR_RAMP );
   motor.setSpeed( MOTOR_SPEED );
+  motor.setZero();
 }
 //=============================================================================
 
@@ -64,12 +65,46 @@ void Hardware::loop() {
 
 //=============================================================================
 bool Hardware::enabled() {
-	return digitalRead(PIN_EN) == HIGH;
+	return enabledFlag;
 };
 //=============================================================================
 
 //=============================================================================
-void Hardware::enabled(bool enabled) {
-  digitalWrite(PIN_EN, enabled? HIGH : LOW);
+void Hardware::enabled(bool _enabled) {
+  enabledFlag = _enabled;
+  digitalWrite(SHIELD_ENABLE_PIN , enabledFlag? HIGH : LOW);
+};
+//=============================================================================
+
+//=============================================================================
+void Hardware::zero() {
+	A.setZero();
+	B.setZero();
+	C.setZero();
+	D.setZero();
+};
+//=============================================================================
+
+//=============================================================================
+void Hardware::stop() {
+	A.stop();
+	B.stop();
+	C.stop();
+	D.stop();
+};
+//=============================================================================
+
+//=============================================================================
+void Hardware::home() {
+	move(0,0,0,0);
+};
+//=============================================================================
+
+//=============================================================================
+void Hardware::move(int a, int b, int c, int d) {
+	A.moveTo(a);
+	B.moveTo(b);
+	C.moveTo(c);
+	D.moveTo(d);
 };
 //=============================================================================

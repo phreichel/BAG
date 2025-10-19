@@ -5,8 +5,8 @@
 #include "Console.h"
 
 //=============================================================================
-void cableSetup();
-void cableLoop();
+extern void cableSetup();
+extern void cableLoop();
 //=============================================================================
 
 #endif
