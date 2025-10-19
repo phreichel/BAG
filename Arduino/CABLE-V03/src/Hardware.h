@@ -30,6 +30,7 @@ class Hardware {
 	void stop();
 	void home();
 	void move(int a, int b, int c, int d);
+	void relmove(int a, int b, int c, int d);
 
 	//-------------------------------------------------------------------------
 	private:

@@ -24,8 +24,10 @@ class Console {
 	void enable();
 	void calibrate();
 	void raw();
+	void relraw();
 	void home();
 	void jog();
+	String* readInput(char* prompt, String* buffer);
 
 	Model     model;
 	Hardware* hardwarePtr;

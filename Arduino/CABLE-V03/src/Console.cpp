@@ -44,6 +44,8 @@ void Console::loop() {
 			jog();
 		} else if (line.startsWith("RAW", 0)) {
 			raw();
+		} else if (line.startsWith("RELRAW", 0)) {
+			relraw();
 		}
 
 		Serial.print(">>>");
@@ -83,21 +85,14 @@ void Console::jog() {
 
 	Serial.println("JOGGING");
 
-	Serial.print("X COORD:>");
-	while (Serial.available() == 0) delay(10);
-	String xStr = Serial.readStringUntil('\n');
+	String xStr;
+	readInput("X COORD:", &xStr);
 
-	Serial.print("Y COORD:>");
-	while (Serial.available() == 0) delay(10);
-	String yStr = Serial.readStringUntil('\n');
+	String yStr;
+	readInput("Y COORD:", &yStr);
 
-	Serial.print("Z COORD:>");
-	while (Serial.available() == 0) delay(10);
-	String zStr = Serial.readStringUntil('\n');
-
-	xStr.trim();
-	yStr.trim();
-	zStr.trim();
+	String zStr;
+	readInput("Z COORD:", &zStr);
 
 	float xFloat = xStr.toFloat();
 	float yFloat = yStr.toFloat();
@@ -123,7 +118,7 @@ void Console::jog() {
 	Serial.print(model.stpd);
 	Serial.println();
 
-	//hardwarePtr->move(aInt, bInt, cInt, dInt);
+	hardwarePtr->move(model.stpa, model.stpb, model.stpc, model.stpd);
 
 }
 //=============================================================================
@@ -133,26 +128,17 @@ void Console::raw() {
 
 	Serial.println("RAW MODE");
 
-	Serial.print("A STEPS:>");
-	while (Serial.available() == 0) delay(10);
-	String aStr = Serial.readStringUntil('\n');
+	String aStr;
+	readInput("A STEPS:", &aStr);
 
-	Serial.print("B STEPS:>");
-	while (Serial.available() == 0) delay(10);
-	String bStr = Serial.readStringUntil('\n');
+	String bStr;
+	readInput("B STEPS:", &bStr);
 
-	Serial.print("C STEPS:>");
-	while (Serial.available() == 0) delay(10);
-	String cStr = Serial.readStringUntil('\n');
+	String cStr;
+	readInput("C STEPS:", &cStr);
 
-	Serial.print("D STEPS:>");
-	while (Serial.available() == 0) delay(10);
-	String dStr = Serial.readStringUntil('\n');
-
-	aStr.trim();
-	bStr.trim();
-	cStr.trim();
-	dStr.trim();
+	String dStr;
+	readInput("D STEPS:", &dStr);
 
 	unsigned int aInt = aStr.toInt();
 	unsigned int bInt = bStr.toInt();
@@ -174,3 +160,58 @@ void Console::raw() {
 }
 //=============================================================================
 
+//=============================================================================
+void Console::relraw() {
+
+	Serial.println("RELATIVE RAW MODE");
+
+	String aStr;
+	readInput("A STEPS:", &aStr);
+
+	String bStr;
+	readInput("B STEPS:", &bStr);
+
+	String cStr;
+	readInput("C STEPS:", &cStr);
+
+	String dStr;
+	readInput("D STEPS:", &dStr);
+
+	int aInt = aStr.toInt();
+	int bInt = bStr.toInt();
+	int cInt = cStr.toInt();
+	int dInt = dStr.toInt();
+
+	Serial.print("RELATIVE RAW MOVE TO: ");
+	Serial.print(aInt);
+	Serial.print(" | ");
+	Serial.print(bInt);
+	Serial.print(" | ");
+	Serial.print(cInt);
+	Serial.print(" | ");
+	Serial.print(dInt);
+	Serial.println();
+
+	hardwarePtr->relmove(aInt, bInt, cInt, dInt);
+
+}
+//=============================================================================
+
+
+//=============================================================================
+String* Console::readInput(char* prompt, String* buffer) {
+	
+	if (buffer == NULL) return buffer;
+
+	Serial.print(prompt);
+	Serial.print(">");
+	
+	while (Serial.available() == 0) delay(10);
+	*buffer = Serial.readStringUntil('\n');
+	buffer->trim();
+	buffer->toUpperCase();
+
+	return buffer;
+
+}
+//=============================================================================

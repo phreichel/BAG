@@ -1,4 +1,5 @@
 #include "Model.h"
+#include <Arduino.h>
 
 //=============================================================================
 inline const float SLED_HALF_WIDTH = 4.0f;
@@ -88,6 +89,17 @@ void Model::at(float px, float py, float pz) {
 	float dbl = bl - cbl;
 	float dcl = cl - ccl;
 	float ddl = dl - cdl;
+
+	Serial.print("CORD LENGTHS: ");
+	Serial.print(cal);
+	Serial.print(" | ");
+	Serial.print(cbl);
+	Serial.print(" | ");
+	Serial.print(ccl);
+	Serial.print(" | ");
+	Serial.print(cdl);
+	Serial.println();
+
 
 	stpa = round(dal / STEP_LENGTH);
 	stpb = round(dbl / STEP_LENGTH);
