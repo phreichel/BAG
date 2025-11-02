@@ -2,8 +2,8 @@
 package jarcanoid.game;
 //**************************************************************************************************
 
-import jade.ExampleActions;
-import jade.ExampleTriggers;
+//import jade.ExampleActions;
+//import jade.ExampleTriggers;
 import jade.Platform;
 import jade.clock.Clock;
 import jarcanoid.model.JarkanoidSimulation;

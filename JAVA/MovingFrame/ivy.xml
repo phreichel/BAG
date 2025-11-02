@@ -28,7 +28,7 @@
 		<dependency org="javax.vecmath" name="vecmath" rev="1.5.2"/>
 		
 		<!-- https://fazecast.github.io/jSerialComm/ -->
-		<dependency org="com.fazecast" name="jSerialComm" rev="[2.0.0,3.0.0)"/>		
+		<!--dependency org="com.fazecast" name="jSerialComm" rev="[2.0.0,3.0.0)"/-->		
 
 		<!-- https://mvnrepository.com/artifact/org.jogamp.gluegen/gluegen-rt -->
 		<dependency org="org.jogamp.gluegen" name="gluegen-rt" rev="2.3.2"/>

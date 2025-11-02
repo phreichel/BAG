@@ -22,7 +22,7 @@ public class Client {
 
 	//=========================================================================
 	public Client() {
-		GLProfile profile = GLProfile.get(GLProfile.GL4);
+		GLProfile profile = GLProfile.get(GLProfile.GL2);
 		GLCapabilities caps = new GLCapabilities(profile);
 		window = GLWindow.create(caps);
 		window.setFullscreen(true);

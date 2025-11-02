@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.Set;
 
 import com.jogamp.newt.opengl.GLWindow;
-import com.jogamp.opengl.GL4;
+import com.jogamp.opengl.GL2;
 import com.jogamp.opengl.GLAutoDrawable;
 import com.jogamp.opengl.GLEventListener;
 import com.jogamp.opengl.glu.GLU;
@@ -25,7 +25,7 @@ public class Video implements G2D, G3D, GLEventListener {
 
 	//=========================================================================
 	private GLWindow window;
-	private GL4 api;
+	private GL2 api;
 	private GLU glu;
 	//=========================================================================
 
@@ -128,10 +128,10 @@ public class Video implements G2D, G3D, GLEventListener {
 	//=========================================================================
 	public void init(GLAutoDrawable drawable) {
 		
-		api = drawable.getGL().getGL4();
-		//api.glHint(GL4.GL_POINT_SMOOTH, GL4.GL_NICEST);
-		api.glHint(GL4.GL_LINE_SMOOTH, GL4.GL_NICEST);
-		api.glHint(GL4.GL_POLYGON_SMOOTH, GL4.GL_NICEST);
+		api = drawable.getGL().getGL2();
+		//api.glHint(GL2.GL_POINT_SMOOTH, GL4.GL_NICEST);
+		api.glHint(GL2.GL_LINE_SMOOTH, GL2.GL_NICEST);
+		api.glHint(GL2.GL_POLYGON_SMOOTH, GL2.GL_NICEST);
 		
 	}
 	//=========================================================================
@@ -143,7 +143,7 @@ public class Video implements G2D, G3D, GLEventListener {
 	//=========================================================================
 	public void display(GLAutoDrawable drawable) {
 
-		api = drawable.getGL().getGL4();
+		api = drawable.getGL().getGL2();
 		glu = GLU.createGLU(api); 
 		
 		for (String textureName : loadMap.keySet()) {
@@ -167,29 +167,29 @@ public class Video implements G2D, G3D, GLEventListener {
 		int   height = window.getHeight();
 		float aspect = (float) width / (float) height;
 		
-		api.glEnable(GL4.GL_DEPTH_TEST);
-		api.glEnable(GL4.GL_COLOR_MATERIAL);
-		api.glColorMaterial(GL4.GL_FRONT_AND_BACK, GL4.GL_AMBIENT_AND_DIFFUSE);
-		api.glClear(GL4.GL_COLOR_BUFFER_BIT | GL4.GL_DEPTH_BUFFER_BIT);
+		api.glEnable(GL2.GL_DEPTH_TEST);
+		api.glEnable(GL2.GL_COLOR_MATERIAL);
+		api.glColorMaterial(GL2.GL_FRONT_AND_BACK, GL2.GL_AMBIENT_AND_DIFFUSE);
+		api.glClear(GL2.GL_COLOR_BUFFER_BIT | GL2.GL_DEPTH_BUFFER_BIT);
 
-		api.glMatrixMode(GL4.GL_PROJECTION);
+		api.glMatrixMode(GL2.GL_PROJECTION);
 		api.glLoadIdentity();
 		//glu.gluPerspective(fovy, aspect, znear, zfar);
 		glu.gluPerspective(60, aspect, .1f, 1000f);
 
-		api.glMatrixMode(GL4.GL_MODELVIEW);
+		api.glMatrixMode(GL2.GL_MODELVIEW);
 		api.glLoadIdentity();
 
 		scene(this);
 
-		api.glDisable(GL4.GL_DEPTH_TEST);
-		api.glClear(GL4.GL_DEPTH_BUFFER_BIT);
+		api.glDisable(GL2.GL_DEPTH_TEST);
+		api.glClear(GL2.GL_DEPTH_BUFFER_BIT);
 		
-		api.glMatrixMode(GL4.GL_PROJECTION);
+		api.glMatrixMode(GL2.GL_PROJECTION);
 		api.glLoadIdentity();
 		glu.gluOrtho2D(-1, width, height, -1);
 		
-		api.glMatrixMode(GL4.GL_MODELVIEW);
+		api.glMatrixMode(GL2.GL_MODELVIEW);
 		api.glLoadIdentity();
 		
 		surface(this);
@@ -275,7 +275,7 @@ public class Video implements G2D, G3D, GLEventListener {
 
 	//=========================================================================
 	public void line(float x1, float y1, float x2, float y2) {
-		api.glBegin(GL4.GL_LINES);
+		api.glBegin(GL2.GL_LINES);
 		api.glVertex2f(x1, y1);
 		api.glVertex2f(x2, y2);
 		api.glEnd();
@@ -284,7 +284,7 @@ public class Video implements G2D, G3D, GLEventListener {
 
 	//=========================================================================
 	public void box(boolean fill, float x1, float y1, float x2, float y2) {
-		int mode = fill ? GL4.GL_QUADS : GL4.GL_LINE_LOOP;  
+		int mode = fill ? GL2.GL_QUADS : GL2.GL_LINE_LOOP;  
 		api.glBegin(mode);
 		api.glVertex2f(x1, y2);
 		api.glVertex2f(x2, y2);
@@ -296,7 +296,7 @@ public class Video implements G2D, G3D, GLEventListener {
 	
 	//=========================================================================
 	public void polyline(boolean closed, float ... coords) {
-		int mode = closed ? GL4.GL_LINE_LOOP : GL4.GL_LINE_STRIP;
+		int mode = closed ? GL2.GL_LINE_LOOP : GL2.GL_LINE_STRIP;
 		api.glBegin(mode);
 		for (int i=0; i<coords.length/2; i++) {
 			float x = coords[i*2+0];
@@ -309,7 +309,7 @@ public class Video implements G2D, G3D, GLEventListener {
 
 	//=========================================================================
 	public void polyfill(float ... coords) {		
-		api.glBegin(GL4.GL_TRIANGLE_FAN);
+		api.glBegin(GL2.GL_TRIANGLE_FAN);
 		for (int i=0; i<coords.length/2; i++) {
 			float x = coords[i*2+0];
 			float y = coords[i*2+1];
@@ -330,7 +330,7 @@ public class Video implements G2D, G3D, GLEventListener {
 			texture.enable(api);
 		}
 		
-		api.glBegin(GL4.GL_QUADS);
+		api.glBegin(GL2.GL_QUADS);
 		
 		api.glTexCoord2f(0, 0);
 		api.glVertex2f(x1, y2);
@@ -361,7 +361,7 @@ public class Video implements G2D, G3D, GLEventListener {
 			texture.enable(api);
 		}
 		
-		api.glBegin(GL4.GL_TRIANGLE_FAN);
+		api.glBegin(GL2.GL_TRIANGLE_FAN);
 		
 		for (int i=0; i<coords.length/4; i++) {
 			float x  = coords[i*4+0];

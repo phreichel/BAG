@@ -84,6 +84,7 @@ public class BlockComponent implements Component {
 	//==============================================================================================
 
 	//==============================================================================================
+	@SuppressWarnings("unused")
 	private SIDE collides(float x1, float y1, float x2, float y2, float bx1, float by1, float bx2, float by2) {
 		
 		float dx1 = (bx1-x1) / (x2-x1); 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivysettings>
+    <settings defaultResolver="central"/>
+
+    <resolvers>
+        <!-- Maven Central Repository -->
+        <ibiblio name="central" m2compatible="true" />
+
+        <!-- JogAmp Repository (für JOGL, JOAL, GlueGen) -->
+        <ibiblio name="jogamp" root="https://jogamp.org/deployment/maven/" m2compatible="true" />
+
+        <!-- Orekit (enthält Hipparchus) -->
+        <ibiblio name="orekit" root="https://gitlab.orekit.org/orekit/orekit-maven/-/raw/main/releases" m2compatible="true" />
+
+    </resolvers>
+
+    <caches defaultCacheDir="${basedir}/lib/.ivy-cache"/>
+</ivysettings>
