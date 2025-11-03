@@ -4,7 +4,7 @@ import pyaudio
 import struct
 
 # --- MQTT Setup ---
-BROKER = "192.168.178.20"
+BROKER = "192.168.178.80"
 PORT = 1883
 TOPIC_MAP = {
     0: "cmnd/werkstatt/POWER",  # alexa
