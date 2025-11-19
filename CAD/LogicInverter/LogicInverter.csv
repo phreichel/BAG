@@ -1,0 +1,7 @@
+"Reference","Qty","Value","DNP","Exclude from BOM","Exclude from Board","Footprint","Datasheet"
+"D1","1","LED","","","","LED_THT:LED_D3.0mm","~"
+"IN_PIN1,JP_IN_PUSH_SIGNAL1,JP_IN_SIGNAL1,JP_IN_SIGNAL_COMBINED1","4","TestPoint","","","","TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm","~"
+"IN_SWITCH1","1","SW_Push","","","","Button_Switch_THT:SW_PUSH_6mm","~"
+"Q1,Q2","2","2N7000","","","","Package_TO_SOT_THT:TO-92_Inline","https://www.vishay.com/docs/70226/70226.pdf"
+"R1","1","220","","","","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal","~"
+"R2,R3,R4,R5","4","1000","","","","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal","~"
