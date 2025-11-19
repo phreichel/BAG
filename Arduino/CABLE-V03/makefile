@@ -3,7 +3,7 @@ DIR_BLD=./build/
 
 BOARD_ARCH=arduino:avr:uno
 
-SERIAL_PORT=/dev/ttyUSB0
+SERIAL_PORT=/dev/ttyUSB1
 SERIAL_BAUDRATE=115200
 
 deploy: build
