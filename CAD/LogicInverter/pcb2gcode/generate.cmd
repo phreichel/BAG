@@ -1,11 +1,12 @@
 pcb2gcode.exe ^
   --metric ^
+  --metricoutput ^
   --zero-start ^
   --front LogicInverter-F_Cu.gbr ^
   --outline LogicInverter-Edge_Cuts.gbr ^
   --drill LogicInverter-PTH.drl ^
-  --offset 0.25 ^
-  --extra-passes 0 ^
+  --mill-diameters 1.0 ^
+  --isolation-width 0.30 ^
   --zwork -0.10 ^
   --zsafe 2.0 ^
   --mill-feed 200 ^
@@ -14,9 +15,11 @@ pcb2gcode.exe ^
   --zcut -1.6 ^
   --cut-infeed 0.4 ^
   --cut-feed 200 ^
-  --cut-speed 15000 ^
+  --cut-speed 12000 ^
   --zdrill -1.7 ^
   --zchange 5.0 ^
   --drill-feed 100 ^
   --drill-speed 10000 ^
+  --onedrill ^
+  --drills-available 1.0 ^
   --nog81
