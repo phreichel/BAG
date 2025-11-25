@@ -1,0 +1,29 @@
+Inhaltsverzeichnis:
+
+1) Überblick
+============
+
+Im Hobbybereich ist es schwer größere komplexe Robotersysteme zu bauen,
+da schon auf oberster Ebene kein gemeinsamer kleinster Nenner existiert.
+
+
+2) Zielsetzung
+==============
+
+Dieses Projekt soll eine vereinheitlichte Systemarchitektur schaffen, damit
+auch für Hobbyprojekte es möglich ist, ein komplexeres Robotersystem aufzubauen.
+Vor allem soll durch die Vereinheitlichung das Problem der Bauteilvarianz gelöst
+werden, so dass man mit einigen wenigen Komponententypen den gesamten Oberbau
+eines solchen Systems erstellen kann und man so weniger Probleme in der Material-
+auswahl und -beschaffung hat.
+Durch die feste Systemstruktur soll es Hobbyentwicklern erleichtert sein sich
+direkt mit den Problemen zu beschäftigen die man lösen will, da der Gesamtrahmen
+in den man sein Projekt einbettet schon fest vorgegeben ist.
+Sollten dann Wiederverwendungen oder Erweiterungen stattfinden, oder sogar das
+Zusammenführen mehrerer Projekte sollte dies wegen des gemeinsamen gleichen
+atrukturellen Aufbaus auf Komponenten- und Kommunikationsebeene relativ leichter
+sein als wenn man jedes einzelne Projekt auf der grünen Wiese begonnen hat.
+
+3) Das Globale Bild
+===================
+

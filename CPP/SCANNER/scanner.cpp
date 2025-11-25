@@ -140,3 +140,11 @@ bool Scanner::isNewline() const {
 }
 //-------------------------------------------------------------------------------
 
+
+bool next(char* strNext) {
+    var i = 0;
+    for (i=0; i<strlen(strNext); i++) {
+        look = strNext[i];
+    }
+}
+
