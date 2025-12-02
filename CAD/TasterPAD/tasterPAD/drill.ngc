@@ -1,3 +1,6 @@
+(Block-name: Header)
+(Block-expand: 1)
+(Block-enable: 1)
 ( pcb2gcode 2.4.0 )
 ( Software-independent Gcode )
 
@@ -7,15 +10,15 @@ G94       (Millimeters per minute feed rate.)
 G21       (Units == Millimeters.)
 G91.1     (Incremental arc distance mode.)
 G90       (Absolute coordinates.)
+(Block-name: block)
+(Block-expand: 1)
+(Block-enable: 1)
 G00 S10000     (RPM spindle speed.)
 
 G00 Z5.00000 (Retract)
 T1
 M5      (Spindle stop.)
 G04 P1.00000
-(MSG, Change tool bit to drill size 1mm)
-M6      (Tool change.)
-M0      (Temporary machine stop.)
 M3      (Spindle on clockwise.)
 G0 Z2.00000
 G04 P1.00000
@@ -446,6 +449,9 @@ G1 Z-1.70000
 G1 Z2.00000
 
 G00 Z5.000 ( All done -- retract )
+(Block-name: block)
+(Block-expand: 0)
+(Block-enable: 1)
 
 M5      (Spindle off.)
 G04 P1.000000
