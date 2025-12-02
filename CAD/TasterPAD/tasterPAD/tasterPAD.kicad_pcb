@@ -38,7 +38,7 @@
 		(allow_soldermask_bridges_in_footprints no)
 		(tenting front back)
 		(pcbplotparams
-			(layerselection 0x00000000_00000000_55555555_5755f5ff)
+			(layerselection 0x00000000_00000000_55555555_57555554)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
 			(disableapertmacros no)
 			(usegerberextensions no)
@@ -72,7 +72,7 @@
 			(subtractmaskfromsilk no)
 			(outputformat 1)
 			(mirror no)
-			(drillshape 1)
+			(drillshape 0)
 			(scaleselection 1)
 			(outputdirectory "")
 		)
@@ -5755,7 +5755,6 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(net 1)
 			(uuid "b1a726b2-37e0-4a90-b5a5-4b5ee7337ef5")
 		)
 		(fp_line
@@ -5766,7 +5765,6 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(net 1)
 			(uuid "f1b1bf89-9f9c-48f9-a44b-9f80cdb7b218")
 		)
 		(fp_line
@@ -5777,7 +5775,6 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(net 1)
 			(uuid "580a2ba9-0cd1-4fa7-a2ae-e43756de2548")
 		)
 		(fp_line
@@ -5788,7 +5785,6 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(net 1)
 			(uuid "c5b75dae-1ccb-4a49-a87d-83a26cb04f90")
 		)
 		(fp_line
@@ -5799,7 +5795,6 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(net 1)
 			(uuid "69d7f4c0-295a-4da2-b171-329963838724")
 		)
 		(fp_line
@@ -5810,7 +5805,6 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(net 1)
 			(uuid "2ebaed39-1211-4723-8f91-0f6043b4bc0b")
 		)
 		(fp_line
@@ -5821,7 +5815,6 @@
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(net 1)
 			(uuid "d68a0c84-b212-4471-b869-0e717b3b7570")
 		)
 		(fp_line
@@ -5832,7 +5825,6 @@
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(net 1)
 			(uuid "97bb84be-e466-48f9-b548-b3c80fe61a42")
 		)
 		(fp_line
@@ -5843,7 +5835,6 @@
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(net 1)
 			(uuid "82bc97c3-b286-4606-85c0-b932f7ec2720")
 		)
 		(fp_line
@@ -5854,7 +5845,6 @@
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(net 1)
 			(uuid "5b418df9-805d-4a0f-8d0c-ef1b356fee83")
 		)
 		(fp_line
@@ -5865,7 +5855,6 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(net 1)
 			(uuid "4e5660e5-ae9d-4059-a239-0886ac1576d2")
 		)
 		(fp_line
@@ -5876,7 +5865,6 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(net 1)
 			(uuid "4c88d60e-2d2b-46d1-8bc3-89d2c2449b8f")
 		)
 		(fp_line
@@ -5887,7 +5875,6 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(net 1)
 			(uuid "d56dff63-2ce0-4358-8599-350de362a5f6")
 		)
 		(fp_line
@@ -5898,7 +5885,6 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(net 1)
 			(uuid "5755917a-a241-4280-9358-724d9e17a39d")
 		)
 		(fp_line
@@ -5909,7 +5895,6 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(net 1)
 			(uuid "1a172b0f-99d2-4e2b-a771-91b3bfb102e6")
 		)
 		(fp_text user "${REFERENCE}"
