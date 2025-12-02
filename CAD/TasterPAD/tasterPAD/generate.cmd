@@ -1,0 +1,25 @@
+pcb2gcode.exe ^
+  --metric ^
+  --metricoutput ^
+  --zero-start ^
+  --back tasterPAD-B_Cu.gbr ^
+  --outline tasterPAD-Edge_Cuts.gbr ^
+  --drill tasterPAD-PTH.drl ^
+  --mill-diameters 1.0 ^
+  --isolation-width 0.30 ^
+  --zwork -0.10 ^
+  --zsafe 2.0 ^
+  --mill-feed 200 ^
+  --mill-speed 12000 ^
+  --cutter-diameter 1.0 ^
+  --zcut -1.6 ^
+  --cut-infeed 0.4 ^
+  --cut-feed 200 ^
+  --cut-speed 12000 ^
+  --zdrill -1.7 ^
+  --zchange 5.0 ^
+  --drill-feed 100 ^
+  --drill-speed 10000 ^
+  --onedrill ^
+  --drills-available 1.0 ^
+  --nog81
