@@ -4,14 +4,11 @@ import pyaudio
 import struct
 import whisper
 import torch
-
 import simpleaudio as sa
 import wave
 import numpy as np
 from piper import PiperVoice
-
-# --- Piper Voice Setup ---
-voice = PiperVoice.load("d:\\ORGA\\VOICES\\piper-voices\\de\\de_DE\\thorsten\\medium\\de_DE-thorsten-medium.onnx")
+import paramiko
 
 def to_bytes(data):
     """Konvertiert alles in echte Bytes, egal welches Format Piper liefert."""
@@ -101,11 +98,50 @@ def transcribe_local(filename):
     result = model.transcribe(filename, fp16=False)
     return result["text"]
 
+def remote_shutdown(
+    host: str,
+    user: str,
+    ssh_password: str,
+    port: int = 22,
+    timeout: int = 10
+) -> None:
+    client = paramiko.SSHClient()
+    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+    try:
+        client.connect(
+            hostname=host,
+            port=port,
+            username=user,
+            password=ssh_password,
+            timeout=timeout
+        )
+
+        stdin, stdout, stderr = client.exec_command(
+            "sudo /sbin/shutdown -h now"
+        )
+
+        err = stderr.read().decode().strip()
+        if err:
+            raise RuntimeError(err)
+
+    finally:
+        client.close()
+
 def decide(text):
 	if "LICHT" in text:
 		client.publish(TOPIC_MAP[0], "TOGGLE")
 	if "NACHT" in text:
 		client.publish(TOPIC_MAP[1], "TOGGLE")
+	if ("LINUX" in text and ("SHUTDOWN" in text or "SHUT DOWN" in text)):
+		remote_shutdown(
+			host="192.168.178.20",
+			user="philip",
+			ssh_password="Sackkarre"
+		)
+
+# --- Piper Voice Setup ---
+voice = PiperVoice.load("d:\\ORGA\\VOICES\\piper-voices\\de\\de_DE\\thorsten\\medium\\de_DE-thorsten-medium.onnx")
 
 # --- MQTT Setup ---
 BROKER = "192.168.178.80"
