@@ -134,11 +134,14 @@ def decide(text):
 	if "NACHT" in text:
 		client.publish(TOPIC_MAP[1], "TOGGLE")
 	if ("LINUX" in text and ("SHUTDOWN" in text or "SHUT DOWN" in text)):
-		remote_shutdown(
-			host="192.168.178.20",
-			user="philip",
-			ssh_password="Sackkarre"
-		)
+		try:
+			remote_shutdown(
+				host="192.168.178.20",
+				user="philip",
+				ssh_password="Sackkarre"
+			)
+		except:
+			say("Fehler.");
 
 # --- Piper Voice Setup ---
 voice = PiperVoice.load("d:\\ORGA\\VOICES\\piper-voices\\de\\de_DE\\thorsten\\medium\\de_DE-thorsten-medium.onnx")
