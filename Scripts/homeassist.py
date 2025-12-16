@@ -164,7 +164,8 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 model = whisper.load_model("medium", device=device)
 
 # --- Porcupine Setup ---
-ACCESS_KEY = "Jp6FmuGjHbGzI6zjcujjbzgJJg0enavIkIVi+/AHOXS3Z3ZYjM86Ag=="
+# ACCESS_KEY = "Jp6FmuGjHbGzI6zjcujjbzgJJg0enavIkIVi+/AHOXS3Z3ZYjM86Ag==" # OLD KEY noobder?
+ACCESS_KEY = "QnbcxVBa+2ERgnuGTLVeDV1FWnxboT28T/tOluf6DN3DSkzNMDgoaw=="   # NEW KEY phreichel
 
 porcupine = pvporcupine.create(
     access_key=ACCESS_KEY,
