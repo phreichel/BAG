@@ -144,7 +144,7 @@ def decide(text):
 			say("Fehler.");
 
 # --- Piper Voice Setup ---
-voice = PiperVoice.load("d:\\ORGA\\VOICES\\piper-voices\\de\\de_DE\\thorsten\\medium\\de_DE-thorsten-medium.onnx")
+voice = PiperVoice.load("d:\\DAT\\VOICES\\piper-voices\\de\\de_DE\\thorsten\\medium\\de_DE-thorsten-medium.onnx")
 
 # --- MQTT Setup ---
 BROKER = "192.168.178.80"
