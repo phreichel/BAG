@@ -72,17 +72,14 @@ def say(text):
 
 def record_until_stop():
     frames = []
-
     while True:
         pcm = stream.read(porcupine.frame_length, exception_on_overflow=False)
         data = struct.unpack_from("h" * porcupine.frame_length, pcm)
         frames.append(pcm)
-
         # Ende-Wakeword prüfen
         kw = porcupine.process(data)
         if kw == STOP_KEYWORD:
             break
-
     return frames
 
 def save_wave(frames, filename="rec.wav"):
@@ -197,11 +194,9 @@ try:
             say("Ja?")
             frames = record_until_stop()
             wav = save_wave(frames)
-
             text = transcribe_local(wav)
-            text = text.upper().replace("TERMINATOR", "")
-            say("OK. " + text)
             decide(text)
+            say("OK.")
 
 except KeyboardInterrupt:
     say("Beendet.")
