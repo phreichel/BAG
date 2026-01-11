@@ -18,9 +18,11 @@ class Model {
 	void init_c(float x, float y, float z, float l);
 	void init_d(float x, float y, float z, float l);
 
-	void at(float px, float py, float pz);
+	void pos2stp();
+	//void stp2pos();
 
-	unsigned int stpa, stpb, stpc, stpd;
+	float posx, posy, posz;
+	long  stpa, stpb, stpc, stpd;
 
 	//-------------------------------------------------------------------------
 	private:

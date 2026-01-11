@@ -78,7 +78,10 @@ void Console::calibrate() {
 //=============================================================================
 void Console::center() {
 	Serial.println("CENTERING");
-	model.at(0.f, 0.f, 10.f);
+	model.posx =  0.f;
+	model.posy =  0.f;
+	model.posz = 10.f;
+	model.pos2stp();
 	hardwarePtr->move(model.stpa, model.stpb, model.stpc, model.stpd);
 }
 //=============================================================================
@@ -86,8 +89,6 @@ void Console::center() {
 //=============================================================================
 void Console::home() {
 	Serial.println("HOMING");
-	model.at(0.f, 0.f, 10.f);
-	hardwarePtr->move(model.stpa, model.stpb, model.stpc, model.stpd);
 	hardwarePtr->home();
 }
 //=============================================================================
@@ -110,7 +111,10 @@ void Console::jog(char* line) {
 	Serial.print(z);
 	Serial.println();
 
-	model.at(x, y, z);
+	model.posx = x;
+	model.posy = y;
+	model.posz = z;
+	model.pos2stp();
 	hardwarePtr->move(model.stpa, model.stpb, model.stpc, model.stpd);
 
 }

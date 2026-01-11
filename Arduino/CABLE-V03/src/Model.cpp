@@ -57,28 +57,28 @@ void Model::init_d(float x, float y, float z, float l) {
 //=============================================================================
 
 //=============================================================================
-void Model::at(float px, float py, float pz) {
+void Model::pos2stp() {
 
-	float sadx = px - SLED_HALF_WIDTH;
-	float saby = py - SLED_HALF_WIDTH;
-	float sbcx = px + SLED_HALF_WIDTH;
-	float scdy = py + SLED_HALF_WIDTH;
+	float sadx = posx - SLED_HALF_WIDTH;
+	float saby = posy - SLED_HALF_WIDTH;
+	float sbcx = posx + SLED_HALF_WIDTH;
+	float scdy = posy + SLED_HALF_WIDTH;
 
 	float dax = ax - sadx;
 	float day = ay - saby;
-	float daz = az - pz;
+	float daz = az - posz;
 
 	float dbx = bx - sbcx;
 	float dby = by - saby;
-	float dbz = bz - pz;
+	float dbz = bz - posz;
 
 	float dcx = cx - sbcx;
 	float dcy = cy - scdy;
-	float dcz = cz - pz;
+	float dcz = cz - posz;
 
 	float ddx = dx - sadx;
 	float ddy = dy - scdy;
-	float ddz = dz - pz;
+	float ddz = dz - posz;
 
 	float cal = sqrt(dax*dax + day*day + daz*daz);
 	float cbl = sqrt(dbx*dbx + dby*dby + dbz*dbz);
@@ -89,17 +89,6 @@ void Model::at(float px, float py, float pz) {
 	float dbl = bl - cbl;
 	float dcl = cl - ccl;
 	float ddl = dl - cdl;
-
-	Serial.print("CORD LENGTHS: ");
-	Serial.print(cal);
-	Serial.print(" | ");
-	Serial.print(cbl);
-	Serial.print(" | ");
-	Serial.print(ccl);
-	Serial.print(" | ");
-	Serial.print(cdl);
-	Serial.println();
-
 
 	stpa = round(dal / STEP_LENGTH);
 	stpb = round(dbl / STEP_LENGTH);
