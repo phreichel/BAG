@@ -1,6 +1,7 @@
 #ifndef __Console_h__
 #define __Console_h__
 
+#include <Arduino.h>
 #include "Hardware.h"
 #include "Model.h"
 
@@ -23,11 +24,11 @@ class Console {
 
 	void enable();
 	void calibrate();
-	void raw(char* line);
-	void relraw(char* line);
+	void raw(String& line);
+	void relraw(String& line);
 	void home();
 	void center();
-	void jog(char* line);
+	void jog(String& line);
 
 	Model     model;
 	Hardware* hardwarePtr;

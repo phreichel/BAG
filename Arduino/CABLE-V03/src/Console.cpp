@@ -1,4 +1,3 @@
-#include <Arduino.h>
 #include "Console.h"
 
 //=============================================================================
@@ -43,11 +42,11 @@ void Console::loop() {
 		} else if (line.startsWith("home", 0)) {
 			home();
 		} else if (line.startsWith("jog", 0)) {
-			jog(line.c_str());
+			jog(line);
 		} else if (line.startsWith("raw", 0)) {
-			raw(line.c_str());
+			raw(line);
 		} else if (line.startsWith("rel", 0)) {
-			relraw(line.c_str());
+			relraw(line);
 		}
 
 		Serial.print(">>");
@@ -94,11 +93,11 @@ void Console::home() {
 //=============================================================================
 
 //=============================================================================
-void Console::jog(char* line) {
+void Console::jog(String& line) {
 
 	float x, y, z;
 
-	if (sscanf(line, "jog %f %f %f", &x, &y, &z) != 3) {
+	if (sscanf(line.c_str(), "jog %f %f %f", &x, &y, &z) != 3) {
 		Serial.println("ERR: jog x y z");
 		return;
 	}
@@ -121,11 +120,11 @@ void Console::jog(char* line) {
 //=============================================================================
 
 //=============================================================================
-void Console::raw(char* line) {
+void Console::raw(String& line) {
 
 	int a, b, c, d;
 
-	if (sscanf(line, "raw %i %i %i %i", &a, &b, &c, &d) != 4) {
+	if (sscanf(line.c_str(), "raw %i %i %i %i", &a, &b, &c, &d) != 4) {
 		Serial.println("ERR: raw a b c d");
 		return;
 	}
@@ -146,11 +145,11 @@ void Console::raw(char* line) {
 //=============================================================================
 
 //=============================================================================
-void Console::relraw(char* line) {
+void Console::relraw(String& line) {
 
 	int a, b, c, d;
 
-	if (sscanf(line, "rel %i %i %i %i", &a, &b, &c, &d) != 4) {
+	if (sscanf(line.c_str(), "rel %i %i %i %i", &a, &b, &c, &d) != 4) {
 		Serial.println("ERR: raw a b c d");
 		return;
 	}
