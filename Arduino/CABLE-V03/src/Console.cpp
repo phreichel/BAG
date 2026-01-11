@@ -31,24 +31,26 @@ void Console::loop() {
 	if (Serial.available() > 0) {
 
 		String line = Serial.readStringUntil('\n');
-
 		line.trim();
-		line.toUpperCase();
-		if (line.startsWith("ENABLE", 0)) {
+		line.toLowerCase();
+
+		if (line.startsWith("enable", 0)) {
 			enable();
-		} else if (line.startsWith("CALIBRATE", 0)) {
+		} else if (line.startsWith("cal", 0)) {
 			calibrate();
-		} else if (line.startsWith("HOME", 0)) {
+		} else if (line.startsWith("center", 0)) {
+			center();
+		} else if (line.startsWith("home", 0)) {
 			home();
-		} else if (line.startsWith("JOG", 0)) {
-			jog();
-		} else if (line.startsWith("RAW", 0)) {
-			raw();
-		} else if (line.startsWith("RELRAW", 0)) {
-			relraw();
+		} else if (line.startsWith("jog", 0)) {
+			jog(line.c_str());
+		} else if (line.startsWith("raw", 0)) {
+			raw(line.c_str());
+		} else if (line.startsWith("rel", 0)) {
+			relraw(line.c_str());
 		}
 
-		Serial.print(">>>");
+		Serial.print(">>");
 
 	}
 }
@@ -74,144 +76,92 @@ void Console::calibrate() {
 //=============================================================================
 
 //=============================================================================
+void Console::center() {
+	Serial.println("CENTERING");
+	model.at(0.f, 0.f, 10.f);
+	hardwarePtr->move(model.stpa, model.stpb, model.stpc, model.stpd);
+}
+//=============================================================================
+
+//=============================================================================
 void Console::home() {
 	Serial.println("HOMING");
+	model.at(0.f, 0.f, 10.f);
+	hardwarePtr->move(model.stpa, model.stpb, model.stpc, model.stpd);
 	hardwarePtr->home();
 }
 //=============================================================================
 
 //=============================================================================
-void Console::jog() {
+void Console::jog(char* line) {
 
-	Serial.println("JOGGING");
+	float x, y, z;
 
-	String xStr;
-	readInput("X COORD:", &xStr);
-
-	String yStr;
-	readInput("Y COORD:", &yStr);
-
-	String zStr;
-	readInput("Z COORD:", &zStr);
-
-	float xFloat = xStr.toFloat();
-	float yFloat = yStr.toFloat();
-	float zFloat = zStr.toFloat();
+	if (sscanf(line, "jog %f %f %f", &x, &y, &z) != 3) {
+		Serial.println("ERR: jog x y z");
+		return;
+	}
 
 	Serial.print("JOGGING TO: ");
-	Serial.print(xFloat);
-	Serial.print(" | ");
-	Serial.print(yFloat);
-	Serial.print(" | ");
-	Serial.print(zFloat);
+	Serial.print(x);
+	Serial.print(" ");
+	Serial.print(y);
+	Serial.print(" ");
+	Serial.print(z);
 	Serial.println();
 
-	model.at(xFloat, yFloat, zFloat);
-
-	Serial.print("RAW MOVE TO: ");
-	Serial.print(model.stpa);
-	Serial.print(" | ");
-	Serial.print(model.stpb);
-	Serial.print(" | ");
-	Serial.print(model.stpc);
-	Serial.print(" | ");
-	Serial.print(model.stpd);
-	Serial.println();
-
+	model.at(x, y, z);
 	hardwarePtr->move(model.stpa, model.stpb, model.stpc, model.stpd);
 
 }
 //=============================================================================
 
 //=============================================================================
-void Console::raw() {
+void Console::raw(char* line) {
 
-	Serial.println("RAW MODE");
+	int a, b, c, d;
 
-	String aStr;
-	readInput("A STEPS:", &aStr);
+	if (sscanf(line, "raw %i %i %i %i", &a, &b, &c, &d) != 4) {
+		Serial.println("ERR: raw a b c d");
+		return;
+	}
 
-	String bStr;
-	readInput("B STEPS:", &bStr);
-
-	String cStr;
-	readInput("C STEPS:", &cStr);
-
-	String dStr;
-	readInput("D STEPS:", &dStr);
-
-	unsigned int aInt = aStr.toInt();
-	unsigned int bInt = bStr.toInt();
-	unsigned int cInt = cStr.toInt();
-	unsigned int dInt = dStr.toInt();
-
-	Serial.print("RAW MOVE TO: ");
-	Serial.print(aInt);
-	Serial.print(" | ");
-	Serial.print(bInt);
-	Serial.print(" | ");
-	Serial.print(cInt);
-	Serial.print(" | ");
-	Serial.print(dInt);
+	Serial.print("RAW TO: ");
+	Serial.print(a);
+	Serial.print(" ");
+	Serial.print(b);
+	Serial.print(" ");
+	Serial.print(c);
+	Serial.print(" ");
+	Serial.print(d);
 	Serial.println();
 
-	hardwarePtr->move(aInt, bInt, cInt, dInt);
+	hardwarePtr->move(a, b, c, d);
 
 }
 //=============================================================================
 
 //=============================================================================
-void Console::relraw() {
+void Console::relraw(char* line) {
 
-	Serial.println("RELATIVE RAW MODE");
+	int a, b, c, d;
 
-	String aStr;
-	readInput("A STEPS:", &aStr);
+	if (sscanf(line, "rel %i %i %i %i", &a, &b, &c, &d) != 4) {
+		Serial.println("ERR: raw a b c d");
+		return;
+	}
 
-	String bStr;
-	readInput("B STEPS:", &bStr);
-
-	String cStr;
-	readInput("C STEPS:", &cStr);
-
-	String dStr;
-	readInput("D STEPS:", &dStr);
-
-	int aInt = aStr.toInt();
-	int bInt = bStr.toInt();
-	int cInt = cStr.toInt();
-	int dInt = dStr.toInt();
-
-	Serial.print("RELATIVE RAW MOVE TO: ");
-	Serial.print(aInt);
-	Serial.print(" | ");
-	Serial.print(bInt);
-	Serial.print(" | ");
-	Serial.print(cInt);
-	Serial.print(" | ");
-	Serial.print(dInt);
+	Serial.print("REL TO: ");
+	Serial.print(a);
+	Serial.print(" ");
+	Serial.print(b);
+	Serial.print(" ");
+	Serial.print(c);
+	Serial.print(" ");
+	Serial.print(d);
 	Serial.println();
 
-	hardwarePtr->relmove(aInt, bInt, cInt, dInt);
-
-}
-//=============================================================================
-
-
-//=============================================================================
-String* Console::readInput(char* prompt, String* buffer) {
-	
-	if (buffer == NULL) return buffer;
-
-	Serial.print(prompt);
-	Serial.print(">");
-	
-	while (Serial.available() == 0) delay(10);
-	*buffer = Serial.readStringUntil('\n');
-	buffer->trim();
-	buffer->toUpperCase();
-
-	return buffer;
+	hardwarePtr->relmove(a, b, c, d);
 
 }
 //=============================================================================
