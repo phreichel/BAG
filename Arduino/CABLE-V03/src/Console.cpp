@@ -95,12 +95,13 @@ void Console::home() {
 //=============================================================================
 void Console::jog(String& line) {
 
-	float x, y, z;
-
-	if (sscanf(line.c_str(), "jog %f %f %f", &x, &y, &z) != 3) {
-		Serial.println("ERR: jog x y z");
-		return;
-	}
+	int p1 = line.indexOf(' ');
+	int p2 = line.indexOf(' ', p1 + 1);
+	int p3 = line.indexOf(' ', p2 + 1);
+	
+	float x = line.substring(p1 + 1, p2).toFloat();
+	float y = line.substring(p2 + 1, p3).toFloat();
+	float z = line.substring(p3 + 1).toFloat();
 
 	Serial.print("JOGGING TO: ");
 	Serial.print(x);
