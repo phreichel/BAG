@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<project>                                  
+  <executable name="TasterPAD.elf">                 
+    <memory name="program">              
+      <units>bytes</units>                 
+      <length>1024</length>                 
+      <used>910</used>                     
+      <free>114</free>                     
+    </memory>                              
+    <memory name="data">                 
+      <units>bytes</units>                 
+      <length>64</length>                 
+      <used>2</used>                     
+      <free>62</free>                     
+    </memory>                              
+  </executable>                            
+</project>                                 

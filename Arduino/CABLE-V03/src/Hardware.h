@@ -26,6 +26,8 @@ class Hardware {
 	bool enabled();
 	void enabled(bool _enabled);
 
+	bool active() const;
+
 	void zero();
 	void stop();
 	void home();

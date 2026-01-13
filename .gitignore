@@ -3,3 +3,5 @@
 lib/
 bin/
 x64/
+/Scripts/rec.wav
+/Scripts/now.wav
