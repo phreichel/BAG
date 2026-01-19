@@ -19,7 +19,7 @@ class Model {
 	void init_d(float x, float y, float z, float l);
 
 	void pos2stp();
-	//void stp2pos();
+	void stp2pos();
 
 	float posx, posy, posz;
 	long  stpa, stpb, stpc, stpd;

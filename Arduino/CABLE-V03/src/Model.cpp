@@ -97,3 +97,58 @@ void Model::pos2stp() {
 
 }
 //=============================================================================
+
+//=============================================================================
+void Model::stp2pos() {
+
+	float La = al - stpa * STEP_LENGTH;
+	float Lb = bl - stpb * STEP_LENGTH;
+	float Lc = cl - stpc * STEP_LENGTH;
+	float Ld = dl - stpd * STEP_LENGTH;
+
+	float x = posx;
+	float y = posy;
+	float z = posz;
+
+	for (int i = 0; i < 40; i++) {
+
+		float sadx = x - SLED_HALF_WIDTH;
+		float saby = y - SLED_HALF_WIDTH;
+		float sbcx = x + SLED_HALF_WIDTH;
+		float scdy = y + SLED_HALF_WIDTH;
+
+		float dax = ax - sadx;
+		float day = ay - saby;
+		float daz = az - z;
+
+		float dbx = bx - sbcx;
+		float dby = by - saby;
+		float dbz = bz - z;
+
+		float dcx = cx - sbcx;
+		float dcy = cy - scdy;
+		float dcz = cz - z;
+
+		float ddx = dx - sadx;
+		float ddy = dy - scdy;
+		float ddz = dz - z;
+
+		float cal = sqrt(dax*dax + day*day + daz*daz);
+		float cbl = sqrt(dbx*dbx + dby*dby + dbz*dbz);
+		float ccl = sqrt(dcx*dcx + dcy*dcy + dcz*dcz);
+		float cdl = sqrt(ddx*ddx + ddy*ddy + ddz*ddz);
+
+		float ex = 0.02f;
+
+		x += ex * ((cal - La) + (cbl - Lb)) * 0.5f;
+		y += ex * ((ccl - Lc) + (cdl - Ld)) * 0.5f;
+		z += ex * ((cal - La) + (cbl - Lb) + (ccl - Lc) + (cdl - Ld)) * 0.25f;
+
+	}
+
+	posx = x;
+	posy = y;
+	posz = z;
+	
+}
+//=============================================================================

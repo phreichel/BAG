@@ -22,10 +22,6 @@ _start:
 	movw $0xfffe, %sp
 	sti
 
-	movb $0x0E, %ah
-	movb $'L', %al
-	int  $0x10
-
 	pushw $VBR_SEGMENT
 	popw  %ds
 	pushw %cs
@@ -61,6 +57,12 @@ _start:
 
 	# save boot drive
 	movb %dl, boot_drive
+
+	call cursor_home
+	call clear_screen
+
+	movw $msgIntro, %si
+	call puts
 
 	call calc_FAT_start_sector
 	call calc_rootdir_start_sector
@@ -359,6 +361,49 @@ disk_read_dap:
 
 #===========================================================
 
+clear_screen:
+	movw $0x0600, %ax	# Scroll Up / Clear
+	movb $0x07, %bh		# Attribut (grau auf schwarz)
+	xorw %cx, %cx		# oben links
+	movw $0x184F, %dx	# unten rechts (80x25)
+	int $0x10
+	ret
+
+#===========================================================
+
+cursor_home:
+	pushw %ax
+	pushw %bx
+	pushw %dx
+	xorw %ax, %ax
+	movb $0x02, %ah
+	xorw %bx, %bx
+	xorw %dx, %dx
+	int $0x10
+	popw %dx
+	popw %bx
+	popw %ax
+	ret
+
+#===========================================================
+
+puts:
+	pusha
+	pushw %cs
+	popw %ds
+.puts1:
+	lodsb
+	testb %al, %al
+	jz .puts2
+	movb $0x0E, %ah
+	int $0x10
+	jmp .puts1
+.puts2:
+	popa
+	ret
+
+#===========================================================
+
 halt:
 	cli
 	hlt
@@ -367,6 +412,8 @@ halt:
 	#never returns
 
 #===========================================================
+
+msgIntro:           .asciz "POS LOADER"
 
 KernelName:         .ascii "KERNEL  BIN" # exactly 11 bytes
 KernelFileSize:     .long 0
