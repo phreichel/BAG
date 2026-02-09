@@ -7,6 +7,6 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.apache.ivyde.eclipse.cpcontainer.IVYDE_CONTAINER/?project=Jarcanoid&amp;ivyXmlPath=ivy.xml&amp;confs=*"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/V01"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/V01"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
