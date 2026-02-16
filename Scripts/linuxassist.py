@@ -115,14 +115,15 @@ def stop_self():
 	subprocess.run(["systemctl", "--user", "stop", "linuxassist"], check=False)
 
 def decide(text):
+	found = False
 	if "LICHT" in text:
-		say("LICHT.")
+		found = True
 		client.publish(TOPIC_MAP[0], "TOGGLE")
 	if "NACHT" in text:
-		say("NACHT.")
+		found = True
 		client.publish(TOPIC_MAP[1], "TOGGLE")
-	if ("LINUX" in text and ("SHUTDOWN" in text or "SHUT DOWN" in text)):
-		say("LINUX Shutdown.")
+	if ("SHUTDOWN" in text or "SHUT DOWN" in text):
+		found = True
 		try:
 			remote_shutdown(
 				host="192.168.178.20",
@@ -130,10 +131,14 @@ def decide(text):
 				ssh_password="Sackkarre"
 			)
 		except:
-			say("Fehler.");
+			say("FEHLER");
 	if "DIENST BEENDEN" in text:
-		say("DIENST BEENDEN.")
+		found = True
 		stop_self()
+	if not found:
+		say("WAS?");
+
+
 
 # --- Stop Signal Handling Setup ---
 running = True
@@ -168,7 +173,7 @@ model = whisper.load_model("medium", device=device)
 # --- Vosk setup ---
 VOSK_MODEL_PATH = "/data/DAT/vosk-model-small-de-0.15"
 vosk_model = Model(VOSK_MODEL_PATH)
-keywords = ["klapper kasten", "stopp"]
+keywords = ["hallo du", "licht", "stopp"]
 grammar  = json.dumps(keywords)
 vosk_rec = KaldiRecognizer(vosk_model, 16000, grammar)
 vosk_rec.SetWords(False)
@@ -209,7 +214,7 @@ try:
 				state = STATE_IDLE
 				frames.clear()
 				vosk_rec.Reset()
-				say("Abbruch.")
+				say("ABBRUCH")
 				continue
 
 		has_final = vosk_rec.AcceptWaveform(pcm)
@@ -222,27 +227,33 @@ try:
 
 		if state == STATE_IDLE:
 			if keywords[0] in heard:
-				say("Ja?")
-				time.sleep(0.4) # wichtig
+				say("JA")
+				time.sleep(0.4)
 				state = STATE_RECORDING
 				frames.clear()
 				recording_start = time.time()
 				vosk_rec.Reset()   # reduziert Nachhall/Alttexte
 				continue
 
-		else: # STATE RECORDING
 			if keywords[1] in heard:
+				time.sleep(0.4)
+				frames.clear()
+				decide("LICHT");
+				vosk_rec.Reset()
+				continue
+
+		else: # STATE RECORDING
+			if keywords[2] in heard:
 				state = STATE_IDLE
 				save_wave(frames, "rec.wav")
 				frames.clear()
-				vosk_rec.Reset()
 				text = transcribe_local("rec.wav").upper()
 				decide(text)
-				say("OK.")
+				vosk_rec.Reset()
 				continue
 
 finally:
-	say("Beendet.")
+	say("BEENDET")
 	print("Cleanup …")
 	stream.stop_stream()
 	stream.close()
