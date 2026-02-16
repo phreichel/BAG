@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/VulkanTestProjekt.dir/main.cpp.o -o VulkanTestProjekt  -Wl,-rpath,/home/philip/apps/vulcansdk-1.4.335.0/x86_64/lib: /home/philip/apps/vulcansdk-1.4.335.0/x86_64/lib/libvulkan.so 

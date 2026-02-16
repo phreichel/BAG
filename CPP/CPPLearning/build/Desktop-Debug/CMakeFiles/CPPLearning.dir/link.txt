@@ -1,0 +1,1 @@
+/usr/bin/clang++-18 -DQT_QML_DEBUG -g CMakeFiles/CPPLearning.dir/main.cpp.o -o CPPLearning 

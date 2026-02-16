@@ -1,0 +1,1 @@
+/usr/bin/clang++-18 -DQT_QML_DEBUG -g CMakeFiles/VulkanTestProjekt.dir/main.cpp.o -o VulkanTestProjekt  /usr/lib/x86_64-linux-gnu/libvulkan.so 

@@ -1,0 +1,7 @@
+/home/philip/VulkanTestProjekt/CMakeFiles/VulkanTestProjekt.dir
+/home/philip/VulkanTestProjekt/CMakeFiles/edit_cache.dir
+/home/philip/VulkanTestProjekt/CMakeFiles/rebuild_cache.dir
+/home/philip/VulkanTestProjekt/CMakeFiles/list_install_components.dir
+/home/philip/VulkanTestProjekt/CMakeFiles/install.dir
+/home/philip/VulkanTestProjekt/CMakeFiles/install/local.dir
+/home/philip/VulkanTestProjekt/CMakeFiles/install/strip.dir
