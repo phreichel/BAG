@@ -18,7 +18,7 @@ public class SliderComponent implements Component {
 	@Getter @Setter private LevelRuntime runtime;
 	@Getter @Setter private Transform transform;
 	@Getter @Setter private boolean sticky = true;
-	@Getter @Setter private float speed = 50f;
+	@Getter @Setter private float speed = 60f;
 	@Getter @Setter private boolean left = false;
 	@Getter @Setter private boolean right = false;
 //	@Getter @Setter private boolean up = false;

@@ -35,5 +35,20 @@ public class Bullet {
 	}
 	//==============================================================================================
 
+	//==============================================================================================
+	public void reset(Slider slider) {
+		
+		this.x = slider.getX() + slider.getWidth() / 2f;
+		this.y = slider.getY() + slider.getHeight() + radius;
+
+		float angle = (float) Math.toRadians((Math.random() * 90) + 45);
+		float sin = (float) Math.sin(angle);
+		float cos = (float) Math.cos(angle);
+		momentum = new Vector2f(cos, sin);
+		momentum.scale(50f);
+		
+	}
+	//==============================================================================================
+	
 }
 //**************************************************************************************************

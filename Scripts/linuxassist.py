@@ -212,8 +212,8 @@ try:
 			if time.time() - recording_start > MAX_RECORD_TIME:
 				# Timeout → verwerfen
 				state = STATE_IDLE
-				frames.clear()
 				vosk_rec.Reset()
+				frames.clear()
 				say("ABBRUCH")
 				continue
 
@@ -226,30 +226,29 @@ try:
 			heard = pres.get("partial", "").lower()
 
 		if state == STATE_IDLE:
+
 			if keywords[0] in heard:
 				say("JA")
-				time.sleep(0.4)
 				state = STATE_RECORDING
-				frames.clear()
+				time.sleep(0.2)
 				recording_start = time.time()
-				vosk_rec.Reset()   # reduziert Nachhall/Alttexte
+				vosk_rec.Reset()
+				frames.clear()
 				continue
 
 			if keywords[1] in heard:
 				time.sleep(0.4)
-				frames.clear()
 				decide("LICHT");
-				vosk_rec.Reset()
 				continue
 
 		else: # STATE RECORDING
 			if keywords[2] in heard:
 				state = STATE_IDLE
 				save_wave(frames, "rec.wav")
-				frames.clear()
 				text = transcribe_local("rec.wav").upper()
 				decide(text)
 				vosk_rec.Reset()
+				frames.clear()
 				continue
 
 finally:
