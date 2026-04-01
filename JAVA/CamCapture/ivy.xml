@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ivy-module
+	version="2.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd"
+	xmlns:m="http://ant.apache.org/ivy/maven">		
+
+	<info
+		organisation="phi"
+		module="CamCapture"
+		status="integration">
+	</info>
+	
+	<dependencies>
+	
+	    <!-- Lombok: https://repo.maven.apache.org/maven2/org/projectlombok/lombok/ -->
+	    <dependency org="org.projectlombok" name="lombok" rev="1.18.24" transitive="true" />
+	
+		<!-- https://mvnrepository.com/artifact/javax.vecmath/vecmath -->
+		<dependency org="javax.vecmath" name="vecmath" rev="1.5.2"  transitive="true" />
+
+		<!-- https://mvnrepository.com/artifact/javax.vecmath/vecmath -->
+		<dependency org="com.github.sarxos" name="webcam-capture" rev="0.3.12"  transitive="true" />
+
+	</dependencies>
+	
+</ivy-module>

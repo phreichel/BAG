@@ -1,0 +1,23 @@
+CREATE TABLE IF NOT EXISTS node (
+	id BIGSERIAL PRIMARY KEY,
+	label VARCHAR(255) UNIQUE NOT NULL,
+	quantity INT NOT NULL DEFAULT 1,
+	serialnr VARCHAR(255),
+	note TEXT	
+);
+
+CREATE TABLE IF NOT EXISTS link (
+	id BIGSERIAL PRIMARY KEY,
+	source_node BIGINT NOT NULL,
+	target_node BIGINT,
+	kind VARCHAR(255),
+	FOREIGN KEY (source_node) REFERENCES node(id),
+	FOREIGN KEY (target_node) REFERENCES node(id)
+);
+
+CREATE TABLE IF NOT EXISTS inventory (
+	id BIGSERIAL PRIMARY KEY,
+	label CHAR(8) UNIQUE NOT NULL,
+	target_node BIGINT,
+	FOREIGN KEY (target_node) REFERENCES node(id)	
+);
