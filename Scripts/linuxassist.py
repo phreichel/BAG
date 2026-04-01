@@ -135,13 +135,16 @@ def decide(text):
 	if "DIENST BEENDEN" in text:
 		found = True
 		stop_self()
-	if not found:
-		say("WAS?");
+	if found:
+		say("OK")
+	else:
+		say("SORRY")
 
 
+
+running = True
 
 # --- Stop Signal Handling Setup ---
-running = True
 def handle_sigterm(signum, frame):
     global running
     print("SIGTERM empfangen, beende sauber …")
@@ -165,7 +168,6 @@ client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
 client.connect(BROKER, PORT, 60)
 client.loop_start()
 
-
 # --- Whisper Setup (lokal) ---
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model = whisper.load_model("medium", device=device)
@@ -173,7 +175,7 @@ model = whisper.load_model("medium", device=device)
 # --- Vosk setup ---
 VOSK_MODEL_PATH = "/data/DAT/vosk-model-small-de-0.15"
 vosk_model = Model(VOSK_MODEL_PATH)
-keywords = ["hallo du", "licht", "stopp"]
+keywords = ["klick", "hell", "klack"]
 grammar  = json.dumps(keywords)
 vosk_rec = KaldiRecognizer(vosk_model, 16000, grammar)
 vosk_rec.SetWords(False)
@@ -199,57 +201,79 @@ recording_start = 0.0
 MAX_RECORD_TIME = 60  # Sekunden
 
 # --- Main Script ---
-say("Aktiv.")
+say("AKTIV")
 
 try:
 	while running:
 
+		heard = ""
 		pcm = stream.read(4000, exception_on_overflow=False)
-
-		# Audio puffern NUR im Recording-Modus
-		if state == STATE_RECORDING:
-			frames.append(pcm)
-			if time.time() - recording_start > MAX_RECORD_TIME:
-				# Timeout → verwerfen
-				state = STATE_IDLE
-				vosk_rec.Reset()
-				frames.clear()
-				say("ABBRUCH")
-				continue
-
 		has_final = vosk_rec.AcceptWaveform(pcm)
 		if has_final:
 			res = json.loads(vosk_rec.Result())
 			heard = res.get("text", "").lower()
-		else:
-			pres = json.loads(vosk_rec.PartialResult())
-			heard = pres.get("partial", "").lower()
 
-		if state == STATE_IDLE:
+		# Audio puffern NUR im Recording-Modus
+		if state == STATE_RECORDING:
+
+			frames.append(pcm)
+			if time.time() - recording_start > MAX_RECORD_TIME:
+				# Timeout → verwerfen
+
+				state = STATE_IDLE
+
+				stream.stop_stream()
+				say("ABBRUCH")
+				stream.start_stream()
+
+				vosk_rec.Reset()
+				frames.clear()
+
+				continue
+
+			elif keywords[2] in heard:
+
+				state = STATE_IDLE
+
+				filename = save_wave(frames)
+				detail = transcribe_local(filename).upper()
+				decide(detail)
+
+				vosk_rec.Reset()
+				frames.clear()
+
+				continue
+
+		elif state == STATE_IDLE:
 
 			if keywords[0] in heard:
-				say("JA")
+
 				state = STATE_RECORDING
-				time.sleep(0.2)
+
+				stream.stop_stream()
+				say("JA")
+				stream.start_stream()
+
 				recording_start = time.time()
+
 				vosk_rec.Reset()
 				frames.clear()
+
 				continue
 
-			if keywords[1] in heard:
-				time.sleep(0.4)
+			elif keywords[1] in heard:
+
+				stream.stop_stream()
+				say("WOHLAN")
+				stream.start_stream()
+
+				vosk_rec.Reset()
+				frames.clear()
+
 				decide("LICHT");
+
 				continue
 
-		else: # STATE RECORDING
-			if keywords[2] in heard:
-				state = STATE_IDLE
-				save_wave(frames, "rec.wav")
-				text = transcribe_local("rec.wav").upper()
-				decide(text)
-				vosk_rec.Reset()
-				frames.clear()
-				continue
 
 finally:
 	say("BEENDET")
