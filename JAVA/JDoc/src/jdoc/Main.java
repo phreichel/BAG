@@ -357,7 +357,7 @@ public class Main {
 				var clazz = Class.forName(className, false, loader);
 				aggregatePackageData(packageData, clazz);
 				createClassOutputFile(builder, transformer, clazz);
-			} catch (ClassNotFoundException e) {
+			} catch (Throwable e) {
 				e.printStackTrace();
 			}
 		}

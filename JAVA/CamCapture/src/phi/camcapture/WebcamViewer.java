@@ -61,7 +61,6 @@ public class WebcamViewer extends JPanel {
     private BufferedImage filter(BufferedImage input) {
     	
         // hier Filter einbauen
-    	/*
     	int w = input.getWidth();
     	int h = input.getHeight();
     	
@@ -77,7 +76,6 @@ public class WebcamViewer extends JPanel {
         		input.setRGB(x, y, rgb);
         	}
     	}
-    	*/
     	
         return input;
     }

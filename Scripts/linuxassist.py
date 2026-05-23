@@ -1,3 +1,4 @@
+import os
 import sys
 import signal
 import time
@@ -81,6 +82,10 @@ def transcribe_local(filename):
 	result = model.transcribe(filename, fp16=False)
 	return result["text"]
 
+def remote_boot(mac):
+	cmd = "wakeonlan " + mac
+	os.system(cmd)
+
 def remote_shutdown(
 	host: str,
 	user: str,
@@ -116,12 +121,16 @@ def stop_self():
 
 def decide(text):
 	found = False
+	print(text)
 	if "LICHT" in text:
 		found = True
 		client.publish(TOPIC_MAP[0], "TOGGLE")
 	if "NACHT" in text:
 		found = True
 		client.publish(TOPIC_MAP[1], "TOGGLE")
+	if ("HOCHFAHREN" in text or "HOCH FAHREN" in text):
+		found = True
+		remote_boot("0c:9d:92:82:31:95")
 	if ("SHUTDOWN" in text or "SHUT DOWN" in text):
 		found = True
 		try:
@@ -160,8 +169,8 @@ voice = PiperVoice.load("/data/DAT/VOICES/piper-voices/de/de_DE/thorsten/medium/
 BROKER = "127.0.0.1"
 PORT = 1883
 TOPIC_MAP = {
-	0: "cmnd/werkstatt/POWER",  # alexa
-	1: "cmnd/empore/POWER",	 # porcupine
+	0: "cmnd/werkstatt/POWER",
+	1: "cmnd/empore/POWER",
 }
 
 client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
@@ -175,7 +184,7 @@ model = whisper.load_model("medium", device=device)
 # --- Vosk setup ---
 VOSK_MODEL_PATH = "/data/DAT/vosk-model-small-de-0.15"
 vosk_model = Model(VOSK_MODEL_PATH)
-keywords = ["klick", "hell", "klack"]
+keywords = ["maschine", "renn"]
 grammar  = json.dumps(keywords)
 vosk_rec = KaldiRecognizer(vosk_model, 16000, grammar)
 vosk_rec.SetWords(False)
@@ -231,7 +240,7 @@ try:
 
 				continue
 
-			elif keywords[2] in heard:
+			elif keywords[1] in heard:
 
 				state = STATE_IDLE
 
@@ -260,20 +269,6 @@ try:
 				frames.clear()
 
 				continue
-
-			elif keywords[1] in heard:
-
-				stream.stop_stream()
-				say("WOHLAN")
-				stream.start_stream()
-
-				vosk_rec.Reset()
-				frames.clear()
-
-				decide("LICHT");
-
-				continue
-
 
 finally:
 	say("BEENDET")
