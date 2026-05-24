@@ -120,19 +120,18 @@ def stop_self():
 	subprocess.run(["systemctl", "--user", "stop", "linuxassist"], check=False)
 
 def decide(text):
-	found = False
-	print(text)
+	match = False
 	if "LICHT" in text:
-		found = True
+		match = True
 		client.publish(TOPIC_MAP[0], "TOGGLE")
 	if "NACHT" in text:
-		found = True
+		match = True
 		client.publish(TOPIC_MAP[1], "TOGGLE")
 	if ("HOCHFAHREN" in text or "HOCH FAHREN" in text):
-		found = True
+		match = True
 		remote_boot("0c:9d:92:82:31:95")
-	if ("SHUTDOWN" in text or "SHUT DOWN" in text):
-		found = True
+	if ("RUNTERFAHREN" in text or "RUNTER FAHREN" in text):
+		match = True
 		try:
 			remote_shutdown(
 				host="192.168.178.20",
@@ -140,14 +139,15 @@ def decide(text):
 				ssh_password="Sackkarre"
 			)
 		except:
+			match = False
 			say("FEHLER");
 	if "DIENST BEENDEN" in text:
-		found = True
+		match = True
 		stop_self()
-	if found:
+	if match:
 		say("OK")
 	else:
-		say("SORRY")
+		say("NICHTS ZU MACHEN")
 
 
 
@@ -184,7 +184,7 @@ model = whisper.load_model("medium", device=device)
 # --- Vosk setup ---
 VOSK_MODEL_PATH = "/data/DAT/vosk-model-small-de-0.15"
 vosk_model = Model(VOSK_MODEL_PATH)
-keywords = ["maschine", "renn"]
+keywords = ["maschine", "go", "stop"]
 grammar  = json.dumps(keywords)
 vosk_rec = KaldiRecognizer(vosk_model, 16000, grammar)
 vosk_rec.SetWords(False)
@@ -253,6 +253,18 @@ try:
 
 				continue
 
+			elif keywords[2] in heard:
+
+				state = STATE_IDLE
+
+				filename = save_wave(frames)
+				vosk_rec.Reset()
+				frames.clear()
+
+				say("STOP")
+
+				continue
+
 		elif state == STATE_IDLE:
 
 			if keywords[0] in heard:
@@ -278,5 +290,5 @@ finally:
 	pa.terminate()
 	client.loop_stop()
 	client.disconnect()
-	print("Beendet.")	
+	print("Stopped.")	
 	sys.exit(0)
