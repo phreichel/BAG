@@ -83,6 +83,15 @@ void drawShocked(int x, int y, int ex, int ey, uint16_t c) {
 //=======================================================================
 
 //=======================================================================
+#define EYES_OPEN 0
+#define EYES_NEUTRAL 1
+#define EYES_CLOSED 2
+#define EYES_QUENCHED 3
+#define EYES_CONFUSED 4
+#define EYES_SHOCKED 5
+//=======================================================================
+
+//=======================================================================
 void (*draw[])(int,int,int,int,uint16_t) = {
   drawOpen,
   drawNeutral,
@@ -91,10 +100,6 @@ void (*draw[])(int,int,int,int,uint16_t) = {
   drawConfused,
   drawShocked
 };
-//=======================================================================
-
-//=======================================================================
-const int DRAW_COUNT = sizeof(draw) / sizeof(draw[0]);
 //=======================================================================
 
 //=======================================================================
@@ -115,6 +120,7 @@ void render(
 
 //=======================================================================
 unsigned long textfade;
+unsigned long wakefade;
 //=======================================================================
 
 //=======================================================================
@@ -124,23 +130,28 @@ void text(const char* str) {
   const String text = str;
   tft.getTextBounds(text, 0, 0, &rx, &ry, &rw, &rh);
   int tx = (tft.width() - rw) / 2;  
+  textfade = millis();
   tft.fillRect(0, 110, tft.width(), tft.height()-110, ST77XX_BLACK);
   tft.setCursor(tx, 110);
+  tft.setTextColor(ST77XX_ORANGE, ST77XX_BLACK);
   tft.write(text.c_str());
-  textfade = millis();
 }
 //=======================================================================
 
-#define PASSIVE 0
-#define ACTIVE  1
+//=======================================================================
+#define STATE_SLEEPING_NEUTRAL 0
+#define STATE_SLEEPING_UNEASY  1
+#define STATE_LISTENING        2
+#define STATE_WAKE_HAPPY       3
+#define STATE_WAKE_CONFUSED    4
+//=======================================================================
 
 //=======================================================================
-unsigned int input_mode = PASSIVE;
+int current_state = 3;
 //=======================================================================
 
 //=======================================================================
 unsigned long mark;
-unsigned long sound;
 //=======================================================================
 
 //=======================================================================
@@ -235,7 +246,8 @@ void setup() {
   tft.initR(INITR_BLACKTAB);
   tft.fillScreen(ST77XX_BLACK);
   
-  mark = millis();
+  mark = wakefade = millis();
+  
   color = ST77XX_BLUE;
   draw[stage](dx, dy, 0, 0, color);
 
@@ -245,8 +257,9 @@ void setup() {
   textfade = 0;
   text("Hello!");
   
-  sound = 0;  
   pinMode(SOUND_PIN, INPUT);
+
+  current_state = STATE_WAKE_HAPPY;
  
 }
 //=======================================================================
@@ -274,75 +287,239 @@ void updateWifi()
 //=======================================================================
 
 //=======================================================================
+void aniSleepingNeutral() {
+
+  int oldstage = stage;
+  int olddx    = dx;
+  
+  int chance = random(100);
+  if (chance < 5) {
+    text("Zzzzz");
+  }
+  if (chance < 10) {
+    dx = (random(3)-1) * 10;
+  } else {
+    dx = 0;
+  }
+
+  chance = random(100);
+  if (chance < 1) {
+    stage = EYES_CONFUSED;
+  } else if (chance < 5) {
+    stage = EYES_QUENCHED;
+  } else {
+    stage = EYES_CLOSED;  
+  }
+
+  render(oldstage, stage, olddx, dx, dy, dx/2, 0, color);
+  
+}
+//=======================================================================
+
+//=======================================================================
+void aniSleepingUneasy() {
+
+  int oldstage = stage;
+  int olddx    = dx;
+  
+  int chance = random(100);
+  if (chance < 5) {
+    text("Chrr");
+  }
+  if (chance < 50) {
+    dx = (random(3)-1) * 10;
+  }
+
+  chance = random(100);
+  if (chance < 5) {
+    stage = EYES_CONFUSED;
+  } else if (chance < 20) {
+    stage = EYES_QUENCHED;
+  } else {
+    stage = EYES_CLOSED;
+  }
+
+  render(oldstage, stage, olddx, dx, dy, dx/2, 0, color);
+  
+}
+//=======================================================================
+
+//=======================================================================
+void aniListening() {
+
+  int oldstage = stage;
+  int olddx    = dx;
+  dx = 0;
+
+  int chance = random(100);
+  if (chance < 5) {
+    stage = EYES_SHOCKED;
+  } else {
+    stage = EYES_OPEN;  
+  }
+
+  render(oldstage, stage, olddx, dx, dy, dx/2, 0, color);
+  
+}
+//=======================================================================
+
+//=======================================================================
+void aniWakeConfused() {
+
+  int oldstage = stage;
+  int olddx    = dx;
+  
+  int chance = random(100);
+  if (chance < 25) {
+    dx = (random(3)-1) * 10;
+  }
+
+  chance = random(100);
+  if (chance < 1) {
+    stage = EYES_SHOCKED;
+  } else if (chance < 15) {
+    stage = EYES_CONFUSED;
+  } else {
+    stage = EYES_OPEN;
+  }
+
+  render(oldstage, stage, olddx, dx, dy, dx/2, 0, color);
+  
+}
+//=======================================================================
+
+//=======================================================================
+void aniWakeHappy() {
+
+  int oldstage = stage;
+  int olddx    = dx;
+  
+  int chance = random(100);
+  if (chance < 25) {
+    dx = (random(3)-1) * 10;
+  }
+
+  chance = random(100);
+  if (chance < 1) {
+    stage = EYES_QUENCHED;
+  } else if (chance < 5) {
+    stage = EYES_CLOSED;
+  } else if (chance < 40) {
+    stage = EYES_OPEN;
+  } else {
+    stage = EYES_NEUTRAL;
+  }
+
+  render(oldstage, stage, olddx, dx, dy, dx/2, 0, color);
+  
+}
+//=======================================================================
+
+//=======================================================================
 void loop() {
 
   updateWifi();
-  
-  unsigned long ms = millis();
-  unsigned long delta = ms-mark;
-  
-  if (delta >= 500) {
-  
-    mark = ms;
-    long rnd = random(100);
-    
-    if (rnd < 20) {
-      int oldstage = stage;
-      stage = random(DRAW_COUNT-1);
-      render(oldstage, stage, dx, dx, dy, dx/2, 0, color);
-    }
-    
-    else if (rnd < 30) {
-      int olddx = dx;
-      dx = (random(3)-1) * 10;
-      render(stage, stage, olddx, dx, dy, dx/2, 0, color);
-    }
-    
-  }
 
-  if ((input_mode == PASSIVE) && detectSoundPeak()) {
-    input_mode = ACTIVE;
-    peak_count = 0;
-    text("YES?");
-    render(stage, 5, dx, 0, dy, 0, 0, color);
-    stage = 5;
-    dx = 0;
-    activated = millis();
-  }
-
-  if (input_mode == ACTIVE) {
-    unsigned long compare = millis();
-    unsigned long delta = compare - activated;
-    if (delta >= 3000) {
-      input_mode = PASSIVE;
-      switch (peak_count) {
-        case 1:
-          text("Nacht!");
-          tasmotaCommand("192.168.178.84", "Power%20Toggle");
-          break;
-        case 2:
-          text("Licht!");
-          tasmotaCommand("192.168.178.82", "Power%20Toggle");
-          break;
-        case 3:
-          text("An Prime!");
-          sendWakeOnLan(wol_mac_first);
-          break;
-        case 4:
-          text("An Second!");
-          sendWakeOnLan(wol_mac_second);
-          break;
-        default:
-          text("Hm.");
-          break;
+  if (detectSoundPeak()) {
+    switch (current_state) {
+      case STATE_LISTENING: {
+        peak_count++;
+        int oldstage = stage;
+        int olddx = dx;
+        stage = EYES_QUENCHED;
+        dx = 0;
+        render(oldstage, stage, olddx, dx, dy, 0, 0, color);
+        break;
+      }
+      default: {
+        current_state = STATE_LISTENING;
+        peak_count = 0;
+        text("HUH?");
+        int oldstage = stage;
+        int olddx = dx;
+        stage = EYES_SHOCKED;
+        dx = 0;
+        render(oldstage, stage, olddx, dx, dy, 0, 0, color);
+        activated = millis();
+        break;
       }
     }
-    if (detectSoundPeak()) peak_count++;
-  }  
+  }
+
+  unsigned long now = millis();
+  unsigned long delta = now-mark;
+  
+  if (delta >= 200) {
+    mark = now;
+    switch (current_state) {
+      case STATE_SLEEPING_NEUTRAL: {
+        aniSleepingNeutral();
+        break;
+      }
+      case STATE_SLEEPING_UNEASY: {
+        aniSleepingUneasy();
+        break;
+      }
+      case STATE_LISTENING: {
+        aniListening();
+        unsigned long delta = now-activated;
+        if (delta >= 3000) {
+          current_state = STATE_WAKE_HAPPY;
+          wakefade = now;
+          switch (peak_count) {
+            case 1: {
+              text("Nacht!");
+              tasmotaCommand("192.168.178.84", "Power%20Toggle");
+              break;
+            }
+            case 2: {
+              text("Licht!");
+              tasmotaCommand("192.168.178.82", "Power%20Toggle");
+              break;
+            }
+            case 3: {
+              text("An Prime!");
+              sendWakeOnLan(wol_mac_first);
+              break;
+            }
+            case 4: {
+              text("An Second!");
+              sendWakeOnLan(wol_mac_second);
+              break;
+            }
+            default: {
+              current_state = STATE_WAKE_CONFUSED;
+              text("HMM?");
+              break;
+            }
+          }
+        }
+        break;
+      }
+      case STATE_WAKE_CONFUSED: {
+        aniWakeConfused();
+        if ((now-wakefade) >= (10000 + random(30000))) {
+          current_state = STATE_SLEEPING_UNEASY;
+        }
+        break;
+      }
+      case STATE_WAKE_HAPPY: {
+        aniWakeHappy();
+        if ((now-wakefade) >= (10000 + random(10000))) {
+          current_state = STATE_SLEEPING_NEUTRAL;
+        }
+        break;
+      }
+      default: {
+        aniWakeHappy();
+        break;
+      }
+    }
+  }
 
   if (textfade != 0) {
-    unsigned long d = millis() - textfade;
-    if (d >= 2500) {
+    unsigned long textdelta = now-textfade;
+    if (textdelta >= 2500) {
       textfade = 0;
       tft.fillRect(0, 110, tft.width(), tft.height()-110, ST77XX_BLACK);
     }
