@@ -1,0 +1,4107 @@
+===============================================
+ORT:     Lochwand
+ARTIKEL: Löschdecke
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Bananensteckerkabel
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: 90° Klemmzwinge
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Draht
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Blumendraht
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Lazy Susan
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Klingeldraht
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Hammer Haushalt
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Hammer Spezial
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Klettklebeband Weich
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Klettklebeband Noppen
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Stahl-Lochband
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Rolle PU-Rundriemen
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Doppelseitiges Klebeband Holz Weiß
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Doppelseitiges Klebeband Dünn Schmal
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Meterstab
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Schneidermaßband
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Klett-Kabelbinder Divers
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Satz Hex-Schlüssel Allen-Keys
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Schraubschlüssel Divers. Noch weiter zu unterteilen
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Haushalts Stromdraht Blau/Schwarz/Rot
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Kupferband breit
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: "Elektroklebeband" Antistatisch/Hitzebeständig verschiedene Breiten.
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Kupferdraht Lackiert. 3 Rollen. 2 Dicken?
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Zangenset Diverse Zangen.
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Mehrfachsteckdose
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Lineal Metall
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Lineal Kunststoff (Büro)
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Büroschere
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Messlehre Elektrisch
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Dremel Gerät
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Hohl- Hexschlüssel für m3 Muttern
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Graphit-Schmiermittel
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Schmieröl
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Crimp-Zange
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: 2 Elektro-Schneidzangen
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Abisolierzange. Alt. Robust
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Abisolierzange. Semiautomatisch.
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Satz kleiner Allen Keys.
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Diverse Isolierte Haushaltskabel Mehradrig. 3x Weiss, 1x Schwarz Lapp. Noch zu unterscheiden.
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Handholzschrauber winzig
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Schlosserfeile 3-Seitig
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Wire Wrapping Tool Klein und Groß
+
+===============================================
+ORT:     Lochwand
+ARTIKEL: Diverse Schraubenzieher. Noch zu unterscheiden.
+
+===============================================
+ORT:     Regal unter Lochwand
+ARTIKEL: Heißklebepistole
+
+===============================================
+ORT:     Regal unter Lochwand
+ARTIKEL: Lötkolben
+
+===============================================
+ORT:     Regal unter Lochwand
+ARTIKEL: Lötkolbenhalter mit Schwamm
+
+===============================================
+ORT:     Regal unter Lochwand
+ARTIKEL: Lötkolbenreiniger mit Metallgaze
+
+===============================================
+ORT:     Regal unter Lochwand
+ARTIKEL: Lötkolbenreparaturpaste 2x
+
+===============================================
+ORT:     Regal unter Lochwand
+ARTIKEL: Lötrauchabsauger schlecht
+
+===============================================
+ORT:     Regal unter Lochwand
+ARTIKEL: Kraftmesser samt Zubehör
+
+===============================================
+ORT:     Regal unter Lochwand
+ARTIKEL: Feinwaage samt Zubehör
+
+===============================================
+ORT:     Regal unter Lochwand
+ARTIKEL: Laborspannungsversorgungsgrät NANKADF
+
+===============================================
+ORT:     Regal unter Lochwand
+ARTIKEL: Fluke 115 Multimeter
+
+===============================================
+ORT:     Regal unter Lochwand
+ARTIKEL: Billiges Auto-Multimeter
+
+===============================================
+ORT:     Regal unter Lochwand
+ARTIKEL: Flex-Messer zum Öffenen/Lösen von Spalten/Deckeln etc.
+
+===============================================
+ORT:     Regal unter Lochwand
+ARTIKEL: Handy-Display-Entferner
+
+===============================================
+ORT:     Regal unter Lochwand
+ARTIKEL: 3D Gedruckte Vorgabe für Throughhole Beinchen zum Biegen.
+
+===============================================
+ORT:     Regal unter Lochwand
+ARTIKEL: Silikon-Pad zum Hitzesicheren Befestigen von Platinen zum Bestücken und Löten.
+
+===============================================
+ORT:     Regal unter Lochwand
+ARTIKEL: Elektromotor Speed Controller
+
+===============================================
+ORT:     Regal unter Lochwand
+ARTIKEL: IC-Pull-Zange Grün
+
+===============================================
+ORT:     Regal unter Lochwand
+ARTIKEL: IC-Pull-Zange Schwarz/komplex
+
+===============================================
+ORT:     Regal unter Lochwand
+ARTIKEL: Schnabelfläschchen mit gelöstem Kolophon
+
+===============================================
+ORT:     Regal unter Lochwand
+ARTIKEL: Ramschkiste
+
+===============================================
+ORT:     Regal unter Lochwand / Ramschkiste
+ARTIKEL: Einfacher PWM Servo - Tester
+
+===============================================
+ORT:     Regal unter Lochwand / Ramschkiste
+ARTIKEL: IC Komponenten - Tester mit Batterie
+
+===============================================
+ORT:     Regal unter Lochwand / Ramschkiste
+ARTIKEL: SPI-Programmer DIAMEX-AVR
+
+===============================================
+ORT:     Regal unter Lochwand / Ramschkiste
+ARTIKEL: SPI? Programmer.. No-Name.. Für andere Microcontroller als der obige.. Unterschiede?
+
+===============================================
+ORT:     Regal unter Lochwand / Kabeltrommeln
+ARTIKEL: 4-Adern LED-Leisten-Versorgungsdraht
+
+===============================================
+ORT:     Regal unter Lochwand / Kabeltrommeln
+ARTIKEL: Signaldraht Rot/Blau/Schwarz/Grün/Gelb
+
+===============================================
+ORT:     Regal unter Lochwand / Kabeltrommeln
+ARTIKEL: 2-Adern LED-Stromversorgungsdraht?
+
+===============================================
+ORT:     Regal unter Lochwand / Kabeltrommeln
+ARTIKEL: ??-Adern Signal-Flachbandkabel bunt
+
+===============================================
+ORT:     Regal unter Lochwand / Kabeltrommeln
+ARTIKEL: Dünner Signaldraht (Litze?) Schwarz/Rot/Hellblau/Gelb/Grün/Weiß/Braun
+
+===============================================
+ORT:     Regal unter Lochwand / Kabeltrommeln
+ARTIKEL: Dicker Signaldraht (Vollkern?) Rot/Schwarz/Gelb
+
+===============================================
+ORT:     Regal unter Lochwand / Kabeltrommeln
+ARTIKEL: Wire Wrapping Draht Schwarz/Braun
+
+===============================================
+ORT:     Regal unter Lochwand / Kabeltrommeln
+ARTIKEL: Mitteldicker Signaldraht (Vollkern?) Weiß/Grün/Braun/Rot/Blau/Gelb/Schwarz
+
+===============================================
+ORT:     Regal unter Lochwand / Kabeltrommeln
+ARTIKEL: Mitteldünner Signaldraht Litze Rot/Weiß/Blau/Grau/Schwarz/Gelb/Orange/Lila/Braun/Grün
+
+===============================================
+ORT:     Kistenwand
+ARTIKEL: Kiste - Kisten mit unterschiedlichem Inhalt
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: Neodym Magnete. Diverse Größen und Formen
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: Gummi-Stöpsel für Elektoinstallationsbox
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: Elektro-Installations-Box Anschlussverschraubungen für Zugfestigkeit etc.
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: Platine zum Wandeln eines Computer Netzgeräts in ein Spannungsversorgungsgerät für usb, direkt, etc.
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: Platinen zum Ethernet-Anschluss von Arduino/ESP32/etc 
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: ??-Adriges Flachband-Kabel (dicker) bunt
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: RC-Hochleistungs Lithium Akkus mit Zubehör(Ladegerät,Kabel)
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: Motocontroller-Platinen (Poti-Regler) mit Zubehör
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: Schaumstoff-Räder / RC-Leichtflugzeug?
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: Beardboards normal, mit Stromschine li/re
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: Breadboards winzig
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: Avionik-Stecker (6?-Adrig)
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: Kabelschellen zum Einhämmern (diese Plastikhaken mit Nagel)
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: 2-Fach Klick-Kabelverbinder. China-Zeug für einfaches Verbinden bei Niedrigstrom
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: 3-Fach Wago-Klemmen
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: DC-Motoren (Standard, 6V? - Nachsehen!)
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: NEMA 17 Schritt-Motoren 17Ncm. Nachsehen!
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: BY-?? Schrittmotoren Standard. Nachsehen!
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: Bürstenlose DC-Motoren klein 
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: 2mal Elektromagnet/Soleniod?
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: Metallzylinder grob/Möbelstecker?
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: Ramsch. Divers.
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: Lüsterklemmen Weiß
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: Lüsterklemmen Schwarz
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: Lüsterklemmen Transparent
+
+===============================================
+ORT:     Kistenwand / Kiste
+ARTIKEL: Anschraubbare Verbindungs-Klemmen-Box Robust mit Isolieren Bus-Verbinder-Schellen. 4/5/6 Adrig
+
+===============================================
+ORT:     Werktischplatte Seite
+ARTIKEL: Silikon-Unterlegmatte für Lötarbeiten
+
+===============================================
+ORT:     Werktischplatte Seite
+ARTIKEL: 2x DIN A 3 Schneidmatte
+
+===============================================
+ORT:     Werktischplatte Seite
+ARTIKEL: Roboter-Arm-Prototyp
+
+===============================================
+ORT:     Werktischplatte Seite
+ARTIKEL: Roboter-Arm-Rotations-Basis-Prototyp
+
+===============================================
+ORT:     Werktischplatte Seite
+ARTIKEL: Servo-Tester Robust/Hochwertig
+
+===============================================
+ORT:     Werktischplatte Seite
+ARTIKEL: SN90 Servo
+
+===============================================
+ORT:     Werktischplatte Seite
+ARTIKEL: Aufbewahrungskiste 2x
+
+===============================================
+ORT:     Werktischplatte Seite / Aufbewahrungskiste
+ARTIKEL: Kabelkiste. Dupont und Jumperkabel Divers
+
+===============================================
+ORT:     Werktischplatte Seite / Aufbewahrungskiste
+ARTIKEL: Servokiste. SN90 180° Servos, Metallversionen davon, Stärkere Servos. Divers. Nacharbeit!
+
+===============================================
+ORT:     Werktischplatte Seite
+ARTIKEL: Haushalts-Gummibänder in Plastikkiste
+
+===============================================
+ORT:     Werktischplatte Seite
+ARTIKEL: Schrittmotor-Tester/Controller Hochwertig.
+
+===============================================
+ORT:     Werktischplatte Seite
+ARTIKEL: Aufbewahrungskistchen 1x1 Grid
+
+===============================================
+ORT:     Werktischplatte Seite / Aufbewahrungskistchen 1x1 Grid
+ARTIKEL: Ramsch
+
+===============================================
+ORT:     Werktischplatte Seite / Pappschachtel
+ARTIKEL: Ramsch: Servos. Motoren, Sensoren Divers, unsortiert.
+
+===============================================
+ORT:     Werktischplatte Seite
+ARTIKEL: Seestar S30S Teleskop
+
+===============================================
+ORT:     Werktischplatte Seite
+ARTIKEL: Usb-Verteiler/Ladegerät
+
+===============================================
+ORT:     Seitenregal
+ARTIKEL: Schublade
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Wattestäbchen
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: IPA-Schnabelflasche mit Inhalt
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Flux-Paste in Sprizen
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: 3D Druck Glue Stick
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Flux RF800 in Fläschchen
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Tablett-Schreib-Handschuh
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Entlöt-Sauger einfach
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Entlöt-Litze
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Rolle Feinlot Bleifrei
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Rolle Feinlot Bleifrei (mittel)
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Rolle Feinlot Bleifrei (fein)
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Dose Lötpaste
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Dose Kolophon
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Rolle Lot Bleihaltig
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Brillenputztuch
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Kiste Papierschneidemesser mit Zubehör/Klingen
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Edding 780 Marker
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Permanent Marker Schwarz/Rot/Blau
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Öffnungs-Klingen (wie auf Regal)
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Tube Sekundenkleber
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Druckbleistift
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Nähnadelset
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Feuerzeug
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Billiger Lötkolben für Einschmelz-Gewinde
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Satz Hex-Keys
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Satz Plastik und Stahlbürsten
+
+===============================================
+ORT:     Seitenregal / Schublade (1)
+ARTIKEL: Plastik-Haken und Kratzer
+
+===============================================
+ORT:     Seitenregal / Schublade (2)
+ARTIKEL: Elektronik Schraubenzierher-Satz in Kiste
+
+===============================================
+ORT:     Seitenregal / Schublade (2)
+ARTIKEL: Entgrater in Kiste
+
+===============================================
+ORT:     Seitenregal / Schublade (2)
+ARTIKEL: Elektronik Schraubenschlüssel Satz im Kiste
+
+===============================================
+ORT:     Seitenregal / Schublade (2)
+ARTIKEL: Teleskopmagnet-Stange in Kiste
+
+===============================================
+ORT:     Seitenregal / Schublade (2)
+ARTIKEL: Satz an antisttischen Plastik-Pizetten in Kiste
+
+===============================================
+ORT:     Seitenregal / Schublade (2)
+ARTIKEL: Diverse Pinzetten in Kiste
+
+===============================================
+ORT:     Seitenregal / Schublade (2)
+ARTIKEL: Hex-Schlüssel Tool (Taschenmesser-Format)
+
+===============================================
+ORT:     Seitenregal / Schublade (2)
+ARTIKEL: Kiste mit M3 Kreuzschlitz Maschinenschrauben / Muttern / Metallabstandshaltern mehrere Längen
+
+===============================================
+ORT:     Seitenregal / Schublade (2)
+ARTIKEL: Kiste mit M2 Muttern / Beilagscheiben / Maschinen Hex-Schrauben mehrere Längen
+
+===============================================
+ORT:     Seitenregal / Schublade (2)
+ARTIKEL: Kiste mit M3 Muttern / Beilagscheiben / Maschinen Schlitzschrauben / Maschinen Kreuzschlitzschrauben / Messing-Einschmelzgewinde
+
+===============================================
+ORT:     Seitenregal / Schublade (2)
+ARTIKEL: Kiste mit Phillips Head Spitze Mikroschrauben M1/M1.2/M1.4/M1.7 verschiedene Längen
+
+===============================================
+ORT:     Seitenregal / Schublade (2)
+ARTIKEL: Kiste mit M3 Kreutzschlitz-Spitzschrauben mehrere Längen
+
+===============================================
+ORT:     Seitenregal / Schublade (2)
+ARTIKEL: Kiste mit Nylon Hex Lock Muttern M2/M2.5/M3/M4/M5/M6/M8
+
+===============================================
+ORT:     Seitenregal / Schublade (2)
+ARTIKEL: Kiste mit M6 Muttern und M6 Hex Maschinenschrauben verschiedene Längen
+
+===============================================
+ORT:     Seitenregal / Schublade (2)
+ARTIKEL: Kiste mit 1.5MM/2MM/3MM/4MM/5MM/6MM/7MM/8MM/9MM/10MM Achs-schellen?
+
+===============================================
+ORT:     Seitenregal / Schublade (2)
+ARTIKEL: Beutel mit M10 Beilagscheiben und Hex Lock Muttern
+
+===============================================
+ORT:     Seitenregal / Schublade (2)
+ARTIKEL: 2* Kiste mit M3 Muttern / Beilagscheiben / Hex Maschinenschrauben verschiedene Längen
+
+===============================================
+ORT:     Seitenregal / Schublade (2)
+ARTIKEL: Kiste mit M2 Zylinderstäben verschiedene Längen
+
+===============================================
+ORT:     Seitenregal / Schublade (2)
+ARTIKEL: Kiste mit M3 Zylinderstäben verschiedene Längen
+
+===============================================
+ORT:     Seitenregal / Schublade (3)
+ARTIKEL: Kiste mit JST-Connector Sätzen 1-5P Male/Female und Spitzen zum Crimpen. Die Crimpzange hängt an der Lochwand
+
+===============================================
+ORT:     Seitenregal / Schublade (3)
+ARTIKEL: Kiste mit Baurix Crimpzange für Aderendhülsen plus Aderendhülsen in verschiedenen Größen und Farben
+
+===============================================
+ORT:     Seitenregal / Schublade (3)
+ARTIKEL: 16x10 cm Lochplattenplatinen mit Kupferstreifen
+
+===============================================
+ORT:     Seitenregal / Schublade (3)
+ARTIKEL: 7x5 cm Lochplattenplatinen mit Kupferringen
+
+===============================================
+ORT:     Seitenregal / Schublade (3)
+ARTIKEL: 10x5 cm Lochplattenplatinen mit Kupferstreifen
+
+===============================================
+ORT:     Seitenregal / Schublade (3)
+ARTIKEL: 10 x 7 cm Vollkupferplatinen für Ätzen/CNC etc
+
+===============================================
+ORT:     Seitenregal / Schublade (3)
+ARTIKEL: 3x3 cm hochwertige Lochplatten mit Lötringen und Pads
+
+===============================================
+ORT:     Seitenregal / Schublade (3)
+ARTIKEL: Diverse hochwertige Lochplatten mit Lötringen und Pads verschiedene Dimensionen
+
+===============================================
+ORT:     Seitenregal / Schublade (4)
+ARTIKEL: Adaptersatz Stromstecker DC aller Art Trommelstecker (3 Reihen)
+
+===============================================
+ORT:     Seitenregal / Schublade (4)
+ARTIKEL: Kiste mit Breadboard Vorgeschnittenen Drähten - Mehrere Längen
+
+===============================================
+ORT:     Seitenregal / Schublade (4)
+ARTIKEL: Kiste mit Ferrit-Manteln zum Auftecken auf Kabel - Mehrere Größen
+
+===============================================
+ORT:     Seitenregal / Schublade (4)
+ARTIKEL: Kiste mit IC Chips NE555 LM324 LM393 UA741 ULN2803 LM358 LM386 NE5532 ULN2003 PC817
+
+===============================================
+ORT:     Seitenregal / Schublade (4)
+ARTIKEL: Kiste mit IC Chips 74LS-47 74HC-32 74LS-86 74HC-138 74LS-138 74HC-165 74LS-90 74HC-164 74LS-245 74HC-595 74LS-00 74HC-00 74LS-02 74HC-02 74LS-04 74HC-04 74LS-08 74HC-08 74LS-32 74HC-14
+
+===============================================
+ORT:     Seitenregal / Schublade (4)
+ARTIKEL: Kiste mit Draht Set: 20 AWG Rot/Grün/Blau/Gelb/Schwarz/Weiß Machart?
+
+===============================================
+ORT:     Seitenregal / Schublade (4)
+ARTIKEL: Kiste mit Draht Set: Rot/Grün/Blau/Gelb/Schwarz/Weiß Machart? Größe?
+
+===============================================
+ORT:     Seitenregal / Schublade (4)
+ARTIKEL: 2x Kiste mit Schrumppfschläuchen 12 Größen 1-13mm
+
+===============================================
+ORT:     Seitenregal / Schublade (4)
+ARTIKEL: Kiste mit Hufeisen- Ring- und Steckverbinder (male/female) Crimp-Endstücken. Mehrere größen/Farben
+
+===============================================
+ORT:     Seitenregal / Schublade (4)
+ARTIKEL: Kiste mit KFZ-Sicherungen 2A-40A
+
+===============================================
+ORT:     Seitenregal / Schublade (4)
+ARTIKEL: Kiste mit Terminal Steckern Schraubbar und Steckbar 2-4 Pins
+
+===============================================
+ORT:     Seitenregal / Schublade (4)
+ARTIKEL: 2x Kiste mit MOSFET 2N7000
+
+===============================================
+ORT:     Seitenregal / Schublade (4)
+ARTIKEL: Kiste mit Glasröhrensicherungen .2A bis 20 A
+
+===============================================
+ORT:     Seitenregal / Schublade (4)
+ARTIKEL: Kiste mit DIP Schaltern Rot 1, 2, 3, 4, 5, 8, 10, 12 Pins
+
+===============================================
+ORT:     Seitenregal / Schublade (4)
+ARTIKEL: Kiste mit DIP Schaltern Blau 1, 2, 3, 4, 5, 8, 10, 12 Pins
+
+===============================================
+ORT:     Seitenregal / Schublade (5)
+ARTIKEL: Schraubendreher-Set mit Kreuz-/Flach/Tork/Trapez/Quadrat/Hex-Nuss/Hex Steckern
+
+===============================================
+ORT:     Seitenregal / Schublade (5)
+ARTIKEL: Kiste mit Grünen O-Ringen verschiedene Größen
+
+===============================================
+ORT:     Seitenregal / Schublade (5)
+ARTIKEL: 1x2 Grid Kiste
+
+===============================================
+ORT:     Seitenregal / Schublade (5) / 1x2 Grid Kiste
+ARTIKEL: Ramsch
+
+===============================================
+ORT:     Seitenregal / Schublade (5) / 1x2 Grid Kiste
+ARTIKEL: 3D-Drucker/Laser Cutter/CNC Maschine/Zubehör
+
+===============================================
+ORT:     Seitenregal / Schublade (5) / 1x2 Grid Kiste
+ARTIKEL: Tasche mit Libraton Feinmechaniker Feilen Set und Drahtbürste
+
+===============================================
+ORT:     Seitenregal / Schublade (5) / Pappschachtel
+ARTIKEL: 4 50x65x7  mm Kugellager
+
+===============================================
+ORT:     Seitenregal / Schublade (5) / Pappschachtel
+ARTIKEL: ca 20x22x4? mm Kugellager
+
+===============================================
+ORT:     Seitenregal / Schublade (5) / Pappschachtel
+ARTIKEL: Kiste mit Standard Skateboard? Kugellagern
+
+===============================================
+ORT:     Seitenregal / Schublade (5) / Pappschachtel
+ARTIKEL: Schwacher Akku Schrauber Pack mit Zubehör (Schrauber/Bohrer)
+
+===============================================
+ORT:     Rückenregal / Schublade (1)
+ARTIKEL: Styropor-Blöcke und Schaumstoffblöcke aus Verpackung. Alle möglichen Formen/Größen
+
+===============================================
+ORT:     Rückenregal / Schublade (2)
+ARTIKEL: Styropor-Platte grob
+
+===============================================
+ORT:     Rückenregal / Schublade (2)
+ARTIKEL: DIN A 4 Bastelschuamplatten
+
+===============================================
+ORT:     Rückenregal / Schublade (2)
+ARTIKEL: DIN A 5 1mm? Acryl? Platten dursichtig
+
+===============================================
+ORT:     Rückenregal / Schublade (2)
+ARTIKEL: DIN A 4 Acryl? Platten-Folie Schwarz
+
+===============================================
+ORT:     Rückenregal / Schublade (2)
+ARTIKEL: DIN A 4 Acryl? Platten Schwarz 2mm?
+
+===============================================
+ORT:     Rückenregal / Schublade (2)
+ARTIKEL: DIN A 4 Trennfolien Dick Durchsichtig (Für Elektronikkomponenten-Ordner)
+
+===============================================
+ORT:     Rückenregal / Schublade (2)
+ARTIKEL: Klebelabels mehrere größen
+
+===============================================
+ORT:     Rückenregal / Schublade (2)
+ARTIKEL: Klebelabel-Rolle 7x5? (Für Elektronikkomponenten-Ordner)
+
+===============================================
+ORT:     Rückenregal / Schublade (2)
+ARTIKEL: Beutel mit 7x5 Plaskikfolien (Für Elektronikkomponenten-Ordner)
+
+===============================================
+ORT:     Rückenregal / Schublade (3)
+ARTIKEL: Laborschuzbrille
+
+===============================================
+ORT:     Rückenregal / Schublade (3)
+ARTIKEL: Kiste mit Nitril-Handschuhen
+
+===============================================
+ORT:     Rückenregal / Schublade (3)
+ARTIKEL: 3 CNC-Befestigungs-Schrauben
+
+===============================================
+ORT:     Rückenregal / Schublade (3)
+ARTIKEL: 2 Paare Elektroniker Handschuhe
+
+===============================================
+ORT:     Rückenregal / Schublade (3)
+ARTIKEL: 1 Paar Mechanikerhandschuhe
+
+===============================================
+ORT:     Rückenregal / Schublade (3)
+ARTIKEL: 1 Paar Physischer Metall/Ketten Schutzhandschuh mit Innnen handschuh (Schnitte, etc)
+
+===============================================
+ORT:     Rückenregal / Schublade (3) / Aufbewahrungsschachtel
+ARTIKEL: 2x 3D Druck Reste / Zwischendrucke eventuell wiederverwendbar
+
+===============================================
+ORT:     Rückenregal / Schublade (3) / Aufbewahrungsschachtel
+ARTIKEL: 1x 3D Druck Reste / Abfall
+
+===============================================
+ORT:     Rückenregal / Schublade (3) / Aufbewahrungsschachtel
+ARTIKEL: Folien / Tütchen aller Art
+
+===============================================
+ORT:     Rückenregal / Schublade (3)
+ARTIKEL: Getriebe-Versuch Zwischenergebnis.
+
+===============================================
+ORT:     Rückenregal / Schublade (3)
+ARTIKEL: Platinenhalter
+
+===============================================
+ORT:     Rückenregal / Schublade (4)
+ARTIKEL: Elektronikreste zum Verwerten: Laptopplatinen, Kaputtes Computernetzteil, Kaputtes Blutdruckgerät, Ausgebauter Lüfter etc
+
+===============================================
+ORT:     Rückenregal / Schublade (5)
+ARTIKEL: 2x MDF? Holzplatte 50x25 cm 3mm? Einseitig Weiß beschichtet
+
+===============================================
+ORT:     Rückenregal / Schublade (5)
+ARTIKEL: DIN A 5 MDF Holzplatten 4mm? 
+
+===============================================
+ORT:     Rückenregal / Schublade (5)
+ARTIKEL: Verpackungsschaum Blöcke
+
+===============================================
+ORT:     Rückenregal / Schublade (5)
+ARTIKEL: grobe Pappkarton Platten
+
+===============================================
+ORT:     Rückenregal / Schublade (5)
+ARTIKEL: Linden? Holz Platten 15x15 cm? 3mm? für Bastelarbeiten
+
+===============================================
+ORT:     Rückenregal / Schublade (5)
+ARTIKEL: Papp/Holz Reste
+
+===============================================
+ORT:     Rückenregal / Schublade (5)
+ARTIKEL: Acryl-FormPlatte für Rover/Roboter
+
+===============================================
+ORT:     Rückenregal / Schublade (6)
+ARTIKEL: 2x Anycubic 3D-Printer Filament TPU Black
+
+===============================================
+ORT:     Rückenregal / Schublade (6)
+ARTIKEL: 1x Tecbears 3D-Printer Filament PETG Black
+
+===============================================
+ORT:     Rückenregal / Schublade (6)
+ARTIKEL: Strom-Generator Bastelset - Kiste
+
+===============================================
+ORT:     Rückenregal / Schublade (6)
+ARTIKEL: Metallkonstruktion Bastelset Kiste von Eitech. Hochwertig
+
+===============================================
+ORT:     Rückenregal / Schublade (7)
+ARTIKEL: 2x Tasmota Wifi Netz-Adapter
+
+===============================================
+ORT:     Rückenregal / Schublade (7)
+ARTIKEL: Smart Robot Car V 4.0 Schachtel / Hülle. (Das aufgebaute Produkt steht im Bücherregal)
+
+===============================================
+ORT:     Rückenregal / Schublade (7)
+ARTIKEL: 4Pack 70W LED Lampen
+
+===============================================
+ORT:     Rückenregal / Schublade (7)
+ARTIKEL: Dose mit Natriumpersulfat
+
+===============================================
+ORT:     Rückenregal / Schublade (7)
+ARTIKEL: 2x Gummi-Riemen 5 cm Breit 2mm dick?
+
+===============================================
+ORT:     Rückenregal / Schublade (7)
+ARTIKEL: 4x Bürostuhl Rollen
+
+===============================================
+ORT:     Rückenregal / Schublade (7)
+ARTIKEL: Haltemagnete für Feuermelder
+
+===============================================
+ORT:     Rückenregal / Schublade (7)
+ARTIKEL: Sport Brillen Bänder
+
+===============================================
+ORT:     Rückenregal / Schublade (7)
+ARTIKEL: 3x Glasfläschchen mit Plastikdeckel
+
+===============================================
+ORT:     Rückenregal / Schublade (7)
+ARTIKEL: Lack Spraydose
+
+===============================================
+ORT:     Rückenregal / Schublade (7)
+ARTIKEL: Lack / Dekofolie Schwarz - Selbstklebend
+
+===============================================
+ORT:     Rückenregal / Schublade (7)
+ARTIKEL: Reinigungsklammern? / Düsenreinigung? für irgendein Tool?
+
+===============================================
+ORT:     Rückenregal / Schublade (7)
+ARTIKEL: 3x Schnabelfläschchen Plastik mit Trichter
+
+===============================================
+ORT:     Rückenregal / Schublade (7)
+ARTIKEL: Rolle Teflonschlauch mit Teflon-Cutter
+
+===============================================
+ORT:     Rückenregal / Schublade (7)
+ARTIKEL: 2 Glaspipetten mit Schlauch und Reinigungsbürste
+
+===============================================
+ORT:     Rückenregal / Schublade (7)
+ARTIKEL: 2x? Bowden-Zug für Fahrrad
+
+===============================================
+ORT:     Rückenregal / Schublade (7)
+ARTIKEL: Schlauch-Befestigungs-Clips? für Teflon-Schläuche (Also diese Clipbaren Blauen oder Schwarzen..)
+
+===============================================
+ORT:     Rückenregal / Schublade (7)
+ARTIKEL: Pneumatik-Schlauch
+
+===============================================
+ORT:     Rückenregal / Schublade (7)
+ARTIKEL: Pneumatik-Greifer
+
+===============================================
+ORT:     Rückenregal / Schublade (7)
+ARTIKEL: Pneumatik-Stossdüse?
+
+===============================================
+ORT:     Rückenregal / Schublade (7)
+ARTIKEL: Kleiner Luft/Wasser? Pumpmotor
+
+===============================================
+ORT:     Rückenregal / Schublade (7)
+ARTIKEL: Diverse Plastikkleinteile für Möbel-Steckverbindungen, etc
+
+===============================================
+ORT:     Rückenregal / Schublade (8)
+ARTIKEL: 2x 1:50 Reduction Planetengetriebe
+
+===============================================
+ORT:     Rückenregal / Schublade (8)
+ARTIKEL: 2x 12V12000U DC Motoren
+
+===============================================
+ORT:     Rückenregal / Schublade (8)
+ARTIKEL: 4x DC Getriebemotoren plus Zubehör Mit Encoder?
+
+===============================================
+ORT:     Rückenregal / Schublade (8)
+ARTIKEL: 1x Winzige Spielzeugpanzer-Plattform mit Ketten
+
+===============================================
+ORT:     Rückenregal / Schublade (8)
+ARTIKEL: 3D VR Brille mit Controllern Alt - brauchbar Quest Vorgänger? Rift 2?
+
+===============================================
+ORT:     Rückenregal / Schublade (8)
+ARTIKEL: 10x NEMA 17 17Ncm Stepper Motoren
+
+===============================================
+ORT:     Rückenregal / Schublade (8)
+ARTIKEL: 5x NEMA 17 Stepper Motoren von Stepperonline mit Hohem Drehmoment (4 Weitere Eingebaut in Cable Mover)
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Fläschchen mit Brillenputzmittel
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Schreibtischlampe
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: DIN A 2 Schneideunterlage
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: 3Fach Steckdose
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Mehrfach Steckdose
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: ACER Monitor
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Samsung TV - benutzt als Monitor
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Casio Taschenrechner
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Lineal
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Zirkel + Zubehör
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Billige Leselupe mit Licht
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Billiges Einauge Vergrößerungsmikroskop
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Billige Juwelier-Lupe
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: TAN Generator
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Papierlocher für Ordner
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Bleistifspitzer
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Radiergummies
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Kleine Klammern
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Heftklammerer
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Samsung TV Fernbedienung
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Smart-Key Wrist Watch für Fitness Center
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Nagelpflege-Mäppchen
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: 3D gedruckter Kreisel
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: usb-Kamera mit Ständer-Befestigung
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Kleine Mini-Schraubzwinge
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: usb-Verteiler an Computer angeschlossen
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Tastatur
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Funkmaus
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Companion Bot Setup
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Tagesplaner Ordner mit Stift
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: DIN A 5 Ringblock für Tagesplaner
+
+===============================================
+ORT:     Arbeitstisch / Darunter
+ARTIKEL: Haupt Computer
+
+===============================================
+ORT:     Arbeitstisch / Darunter
+ARTIKEL: DIN A 2 Zeichenblätter
+
+===============================================
+ORT:     Arbeitstisch / Darunter
+ARTIKEL: 10x PLA 3D Druck Filament - Rollen
+
+===============================================
+ORT:     Arbeitstisch / Darunter
+ARTIKEL: Papierkorb / Abfallkorb
+
+===============================================
+ORT:     Seitentisch / Darunter
+ARTIKEL: 3Fach Verteiler mit 2 usb-Ausgängen
+
+===============================================
+ORT:     Seitentisch
+ARTIKEL: Billige Lupen - Lampe für Lötarbeiten
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Fläschchen mit Brillenputzmittel
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Schreibtischlampe
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: DIN A 2 Schneideunterlage
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: 3Fach Steckdose
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Mehrfach Steckdose
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: ACER Monitor
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Samsung TV - benutzt als Monitor
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Casio Taschenrechner
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Lineal
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Zirkel + Zubehör
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Billige Leselupe mit Licht
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Billiges Einauge Vergrößerungsmikroskop
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Billige Juwelier-Lupe
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: TAN Generator
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Papierlocher für Ordner
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Bleistifspitzer
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Radiergummies
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Kleine Klammern
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Heftklammerer
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Samsung TV Fernbedienung
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Smart-Key Wrist Watch für Fitness Center
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Nagelpflege-Mäppchen
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: 3D gedruckter Kreisel
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: usb-Kamera mit Ständer-Befestigung
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Kleine Mini-Schraubzwinge
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: usb-Verteiler an Computer angeschlossen
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Tastatur
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Funkmaus
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Companion Bot Setup
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: Tagesplaner Ordner mit Stift
+
+===============================================
+ORT:     Arbeitstisch
+ARTIKEL: DIN A 5 Ringblock für Tagesplaner
+
+===============================================
+ORT:     Arbeitstisch / Darunter
+ARTIKEL: Haupt Computer
+
+===============================================
+ORT:     Arbeitstisch / Darunter
+ARTIKEL: DIN A 2 Zeichenblätter
+
+===============================================
+ORT:     Arbeitstisch / Darunter
+ARTIKEL: 10x PLA 3D Druck Filament - Rollen
+
+===============================================
+ORT:     Arbeitstisch / Darunter
+ARTIKEL: Papierkorb / Abfallkorb
+
+===============================================
+ORT:     Seitentisch / Darunter
+ARTIKEL: 3Fach Verteiler mit 2 usb-Ausgängen
+
+===============================================
+ORT:     Seitentisch
+ARTIKEL: Billige Lupen - Lampe für Lötarbeiten
+
+===============================================
+ORT:     Lochwand / Steckerleiste
+ARTIKEL: Tasmota Wifi Netzteil (für Arbeits-Lichtsteuerung)
+
+===============================================
+ORT:     Über Arbeitsplatz
+ARTIKEL: Arbeits - Lichtanlage (3 LED Panele, Trafos, Installationsdosen, Kabel)
+
+===============================================
+ORT:     Rückwand
+ARTIKEL: 3Fach Steckdose
+
+===============================================
+ORT:     Rückwand
+ARTIKEL: Kleine Wandlampe
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal
+ARTIKEL: 8 500x20x2 mm Vierkantstahlprofile
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal
+ARTIKEL: 1 Holzblock
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal
+ARTIKEL: 2 Linearachsen mit Abnehmer
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal
+ARTIKEL: Metalleinlageteile für Lastregale
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal
+ARTIKEL: DIN A 4 Buchpinderpappen
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal
+ARTIKEL: DIN A 3 Sperrholzplatten 3mm
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal
+ARTIKEL: FePo? 13V Batterie Blockformat
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal
+ARTIKEL: 2x Ponal Holzkleber
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal
+ARTIKEL: Tischbohrständer für normalen Bohrer
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal
+ARTIKEL: Helfende Hand mit Greifern und Licht für Löten etc
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal
+ARTIKEL: 1000°C Handbunsenbrenner (Küchenbunenbrenner)
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal
+ARTIKEL: DIN A 4 Großordner
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / DIN A 4 Großordner(1)
+ARTIKEL: Projektablage
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / DIN A 4 Großordner(1)
+ARTIKEL: Elektronikkomponenten Sammlung
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 2pF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 3F 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 5F 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 10pF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 15pF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 22pF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 30pF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 33pF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 47pF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 68pF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 75pF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 82pF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 100pF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 150pF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 220pF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 330pF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 470pF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 680pF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 1nF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 1.5nF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 2.2nF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 3.3nF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 4.7nF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 6.8nF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 100nF 50V -- Falsches Label?
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 15nF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 22nF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 47nF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 68nF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 100nF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik .22microF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik .47microF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Keramik 1microF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Elektrolyt 2.2microF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Elektrolyt 3.3microF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Elektrolyt 4.7microF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Elektrolyt 10microF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Elektrolyt 22microF 50V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Elektrolyt 33microF 16V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Elektrolyt 47microF 16V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Elektrolyt 100microF 16V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Elektrolyt 220microF 16V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Kapazitator Elektrolyt 470microF 16V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Jumper Pins
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Weiße Rechteckige LEDS
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Grüne Recheckige LEDS
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Lötlaschen (Ring mit Lasche)
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: LEDS Rot 2V 20mA
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: LEDS Blau 3.2V 20mA
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: LEDS Grün 2.4V 20mA
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: LEDS Gelb 2V 20mA
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: LEDS Weiß 3V 20mA
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: LEDS RGB
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: LEDS Rechteckig Blau
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: LEDS Rechteckig Gelb
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Diode Gleichrichter 1N5399
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Diode Gleichrichter 1N4007
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Diode Gleichrichter FR107
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Diode Gleichrichter 1N5408
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Diode Gleichrichter FR207
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Diode 1N4149
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Diode Schottky 1N5819
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Diode Schottky 1N5822
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Photoresistor GM5539
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Transistor NPN BJT 2N5551
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Transistor PNP BJT S8550
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Transistor PNP BJT 2N3906
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Transistor PNP BJT 59012
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Transistor PNP BJT 59015
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Transistor PNP BJT A1015
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Transistor PNP BJT 2N5401
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Transistor PNP BJT 2N5401 -- Falsch gelabelt?
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Transistor PNP BJT MPS A92
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Transistor NPN BJT 9018
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Transistor NPN BJT 59013
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Transistor NPN BJT 2N2222A
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Transistor NPN BJT 9014
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Transistor NPN BJT C945
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Transistor NPN BJT C1815
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Transistor NPN BJT A733
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Transistor NPN BJT 58050
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Transistor NPN BJT 2N8904
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 10 Ohm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 22 Ohm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 47 Ohm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 100 Ohm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 150 Ohm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 200 Ohm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 220 Ohm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 270 Ohm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 330 Ohm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 470 Ohm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 510 Ohm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 680 Ohm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 1kOhm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 2kOhm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 2.2kOhm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 3.3kOhm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 4.7kOhm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 5.1kOhm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 6.8kOhm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 10kOhm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 15.1kOhm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 20kOhm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 47kOhm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 51kOhm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 68kOhm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 100kOhm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 220kOhm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 300kOhm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 470kOhm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 680kOhm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Widerstand 1MOhm .25V
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Polyfuse 1 ?A
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Polyfuse 2 ?A
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Polyfuse 3 ?A
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: Polyfuse 4 ?A
+
+===============================================
+ORT:     Elektronikkomponenten Sammlung
+ARTIKEL: 3Pin IC Unbekannt..
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal
+ARTIKEL: Schubschachtel
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal
+ARTIKEL: Handy Dreifuß Fotohalter
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal
+ARTIKEL: Gaming Headset
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal
+ARTIKEL: 3Fach Steckdose
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal
+ARTIKEL: 4x Einhand-Klemmen
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal
+ARTIKEL: 2x Schraub-Klemmen
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (1)
+ARTIKEL: unbekanntes Breadboard-Experiment
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (1)
+ARTIKEL: gebrauchte Test-Vollkupferplatine für CNC Tests
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (1)
+ARTIKEL: Test Vollkupfer Platine mit Lackschrift für Ätztest
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (1)
+ARTIKEL: gebrauchte 7x7 cm Lochraster Platine zum Ausschlachten?
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (1)
+ARTIKEL: Silberdraht für feine Platinenlötarbeit
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (1)
+ARTIKEL: Wandcontainer mit Drahtresten für Platinen Lötarbeiten
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (2)
+ARTIKEL: 3x3 cm SPI Wire Wrapping Schaltung in Pappschachtel
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (2)
+ARTIKEL: 3x3 cm ATTiny 13A Wire Wrapping Schaltung in Pappschachtel
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (2)
+ARTIKEL: 2x 5x7 cm Wire Wrapping Sockel Schaltung in Pappschachtel für 2 28 Pin ICs
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (2)
+ARTIKEL: 1x 5x7 cm Wire Wrapping Sockel Schaltung in Pappschachtel für 2 28 Pin ICs mit 2 55PCN 2248 ICs
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (2)
+ARTIKEL: CNC gefräste und gelötete Platine zum I2C Anschluss an einen Microcontroller um 16 Eingabeschalter abzufragen
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (2)
+ARTIKEL: 4 Motorcontroller für Brushless Motoren ESP? für max. 10A
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (2)
+ARTIKEL: Mini -Linear - Aktuator
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (2)
+ARTIKEL: 10 cm Doppelstab Konstrukt mit 3D Gedruckten Enden als Linearschiene?
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (2)
+ARTIKEL: Arduino - Experiment - Aufbau mit Breadboard und Gyro? Experiment Überbleibsel
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (2)
+ARTIKEL: 20kg Servo mit Installationsblechen
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (2)
+ARTIKEL: Mehrere Plastik-Stopfen als Standbeine
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (2)
+ARTIKEL: 2 3D gedruckte Test Herringbone Zahnräder von einem ehemaligen Test
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (3)
+ARTIKEL: 2x Hochqualitäts Breadboards
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (3)
+ARTIKEL: Test Pad 8547 Für Lego Mindstorms für Path following etc.
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (3)
+ARTIKEL: Mouser Rechnung für IC Kauf! Wichtig später für Identifikation der ICs!
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (3)
+ARTIKEL: AZ Delivery Inventarliste für Spätere Identifikation von Komponenten!
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (3)
+ARTIKEL: 2 Temperatur Sensoren mit Kabel in AZDelivery Box
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (3)
+ARTIKEL: 1 SN9 Servo in AZDelivery Box
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (3)
+ARTIKEL: Kamera? Flachband in AZDelivery Box
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (3)
+ARTIKEL: Packet miot Photoresistoren? in AZDelivery Box
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (3)
+ARTIKEL: 1 kurzes und 1 langes Breadboard in AZDelivery Box
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (3)
+ARTIKEL: 1 Ardino Nano in AZDelivery Box
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (3)
+ARTIKEL: Digispark RohS Modul Platine? in AZDelivery Box
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (3)
+ARTIKEL: ESP23 basiertes LoRa Modul? in AZDelivery Box
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (4)
+ARTIKEL: Altes Zimmertür-Schloß ohne Schlüssel
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (4)
+ARTIKEL: CNC Drill Bits grob (gehärtet?)
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (4)
+ARTIKEL: CNC Drill Bits fein Gravur (gehärtet?)
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (4)
+ARTIKEL: CNC Drill Bits grob ab Werk
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (4)
+ARTIKEL: CNC Drill Bits gravur ab Werk
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (4)
+ARTIKEL: usb-C Handy-Arthroskop? mit Zubehör
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (4)
+ARTIKEL: Tasche mit mm Präzisionsbohrköpfen (diese stufigen Kegelartigen)
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (4)
+ARTIKEL: US-Stromkabel
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (4)
+ARTIKEL: HDMI zu HDMI mini Kabel für Raspberyy PI?
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (4)
+ARTIKEL: 4 usb Speichersticks
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (5)
+ARTIKEL: Selbstgebauter nicht funktionaler Halbprojekt Capstan-Seilrollen Provider. Ausschlachten?
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (5)
+ARTIKEL: 3D gedruckte mit MDF inlay Rotationsplattform und Zahnkranz für Zahnriemen. Noch brauchbar?
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (5)
+ARTIKEL: Halbprojekt 3D Gedruckter Riemenschlitten für Greifer. Noch Brauchbar?
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (5)
+ARTIKEL: 3D Gedruckte Teile für ersten Roboterarm Test. War funktional. Behalten? in Pappschachtel
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (5)
+ARTIKEL: Raspberry Pico auf Development Shield mit Bewegungssensor und usb-Kabel. Für weiter Tests mit Micro Python? In Schachtel
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (5)
+ARTIKEL: Gelötete Platine mit Sicherung und 4fach Load Balancer für 4 S3? LiPo Zellen in Serie. Mit Spannungsanzeiger. Erster Prototyptest. Funktionert aber ganz schöner Kabelsalat
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (6)
+ARTIKEL: Raspaudio Zusatz Stecker in Schachtel. Relikt von einem Raspaudio Projekt in Schachtel
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (6)
+ARTIKEL: Breadboard mit Arduino Nano und 2 DCMotoren mit angeklebten Schaumstoffrädern und Motordriver IC in Pappschachtel. Ehemaliger Test.
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (6)
+ARTIKEL: A1 RPLIDAR in Schachtel. 360° Laser Scanner in der Ebene.
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (6)
+ARTIKEL: 2 Hochwertige DCMotoren mit Encoder, anmontierten Rädern und Mounting Plates. Bester Kandidat für Kleinrover-Antrieb. In Schachtel
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (7)
+ARTIKEL: Plastikbox mit 3D gedruckten Getriebeteilen Aller Art, und Pulleys, und Achsstangen und Kugellagern. Teilweise eventuell verwendbar. Durchsicht?
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (7)
+ARTIKEL: Plastikbox mit Ramschteilen, Filament-Resten, Plastikfolien, Schrauben, Silikat-Kissen, 3D-Teilen, Kaputtem? Gelbem DC Motor, kaputtem? SN9 Servo. Ramsch.
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (8)
+ARTIKEL: DC Kleinmotoren in Plastikbox
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (8)
+ARTIKEL: Andere Art DC Kleinmotoren in Plastiktasche
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (8)
+ARTIKEL: Dünne Edelmetall Stifte in Plastiktasche
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (8)
+ARTIKEL: 6mm? Stahlkugeln in Plastiktasche
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (8)
+ARTIKEL: 4mm? Stahlkugeln in Plastikdose
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (8)
+ARTIKEL: 2mm? Stahlkugeln in Plastikdose
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (8)
+ARTIKEL: 1mm? Stahlkugeln in Plastiktasche
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (8)
+ARTIKEL: Edelstahl Achsstangen verschiedene Dicken 2, 3, 5, 8? mm
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (8)
+ARTIKEL: Linearschiene klein
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (8)
+ARTIKEL: M2? M3? Gewindestangen
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (8)
+ARTIKEL: 4 Achsringe 8mm? mit Madenschrauben
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (8)
+ARTIKEL: Achsringe 6mm? mit Madenschrauben
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (8)
+ARTIKEL: Achsringe 5mm? mit Madenschrauben
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (8)
+ARTIKEL: Achsringe 2mm? mit Madenschrauben
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (8)
+ARTIKEL: 8mm? Linearlager
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (8)
+ARTIKEL: 6mm? Linearlager
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (8)
+ARTIKEL: 5mm? Linearlager
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (8)
+ARTIKEL: 3mm? Linearlager
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (8)
+ARTIKEL: 2mm Stifte?
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (8)
+ARTIKEL: 3mm Stifte?
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (8)
+ARTIKEL: Servostangen Endkappen (Diese Ringe) 3mm?
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (8)
+ARTIKEL: Plastikbox mit M1.5 bis M8 Stiften
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (8)
+ARTIKEL: Plastiktüte mit Liftkaren-Roller (Also die Selbstaufrollenden Halter für den Gürtel etc. und einer Schnur für die Karte)
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (9)
+ARTIKEL: SD-Karte. Die Andere wurde für das Audioprojekt verwendet.
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (9)
+ARTIKEL: Zusammengebauter nicht wirklich gut funktionierender Akryl Roboterarm vom Chinamann. Ausschlachten?
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (9)
+ARTIKEL: Volles RC Roboter Gamekonsole Remote Steuersystem. in Schachtel
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (10)
+ARTIKEL: Keysight Logik-Analyzer in Box
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (10)
+ARTIKEL: Altes Galaxy Pad mit Ladekabel. Funktionert immer noch aber veraltet
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (10)
+ARTIKEL: Fnirsi Ozilloskop mit Zubehör
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Schubschachtel (10)
+ARTIKEL: Krokodilklemmen mit Bananen-Stecker female
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: Teileliste
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 2x KY-023 Joystick-Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-039 Heart Beat Sensor Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-034 color changing LED Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-026 Flame Detector Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-001DS18B20 Temperature Sensor Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-003 Digital Hall Sensor Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-013 Analog Temperature Thermistor Sensor Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 2x LED Traffic Light module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-005 IR Transmitter Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 2x KY-009 SMD RGB LED Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-024 Digital Hall Sensor Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-019 Relay Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-038 Small Microphone Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-036 Touch Sensor Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-011 Bi-color LED 5mm Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-020 Tilt-Sensor Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-032 Obstacle Detector Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-028 Thermistor Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-029 Bi-Color 3mm LED Module. Andere Bauart?
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-004 Button Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 2x KY-018 Photoresistor LDR Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-005 IR Transmitter Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-005 IR Transmitter Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-033 Line Follower module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-006 Passive Buzzer Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-025 Reed Sensor Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-002 Shock Sensor Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-015 DHT 11 Temperature Sensor module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-022 IR Receiver Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-032 Obstacle Detector Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-012 Active Buzzer Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-021 Mini Reed Sensor Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-035 Bighor Magnetic Sensor Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-010 Light Barrier Detector Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / AZ Delivery Box
+ARTIKEL: 1x KY-031 Hit Knock Sensor Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: Inventarliste
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: 128*160 TFT Display Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: AZ Delivery ESP23 Devboard Arduino Clone
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: 3x 16000M Quartz NRF M Component? w. Wifi? Adapter?
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: 2x LCD2004 LCD1602 Controller Board?
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: 1x AZ Delivery usb to serial component? 2422-C?
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: 2x usb Battery Charger? 4065 IC?
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: RElay mit ESP Wifi Controller zum Schalten?
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: Usb Relay/Schalter??? mit ESP Wifi Controller? Trransmitter?
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: 16 Kanal Servo oder LED PWM Schaltboard mit I2C? PCA9685
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: 4 Relay Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: 2004A V3.0 Display LCD 1602 Module
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: Membrane Switch Module. Zifferntastatur
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: Widerstände, wohl 220 Ohm
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: 1x Passive Buzzer
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: 1x Active Buzzer
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: 2x 10k Poti
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: LM324N IC
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: SN74HC595N IC
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: NE555P IC
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: 3x Photoresistor
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: 5x Buttons Transistor
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: 5x NPN PN2222 Transistor
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: 2x 2N3904 Transistor
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: 2x 2N3904 Transistor
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: 1x Thermistor
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: 5 Gleichrichter Dioden (N40007?)
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: 2x 100microF 50V Elkos
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: 1x 100microF 16V Elko
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: 2x 10microF Elkos
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: 1x SW18010P (Kipp-Sensor?)
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: 5x 104 pF Cerkos
+
+===============================================
+ORT:     Rückwandregal / Regal auf Rückwandregal / Arduino Starter Kit Box
+ARTIKEL: 6x 22 pF Cerkos
+
+===============================================
+ORT:     Arbeitstisch Regal / Ablage
+ARTIKEL: 1x VEVOR Standbohrmaschine
+
+===============================================
+ORT:     Arbeitstisch Regal / Ablage
+ARTIKEL: 1x Anycubic Kobra 2 Neo 3D Drucker
+
+===============================================
+ORT:     Arbeitstisch Regal / Ablage
+ARTIKEL: 1x CREALITY Filament Trockner
+
+===============================================
+ORT:     Arbeitstisch Regal / Ablage
+ARTIKEL: Golfkappe zum Licht abschirmen
+
+===============================================
+ORT:     Arbeitstisch Regal / Ablage
+ARTIKEL: SSD Card + Stick für den 3D Drucker
+
+===============================================
+ORT:     Arbeitstisch Regal
+ARTIKEL: Schubfach
+
+===============================================
+ORT:     Arbeitstisch Regal / Ablage
+ARTIKEL: 2 Mini Klemmen
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (1)
+ARTIKEL: Zubehör für Standbohrmaschine
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (1)
+ARTIKEL: Körner
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (1)
+ARTIKEL: Gewindeschneider M3-M8
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (1)
+ARTIKEL: Teppichmesser
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (1)
+ARTIKEL: Hex Nuts M4 - M13
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (1)
+ARTIKEL: Metall Bohrköpfe? M1.5 - M6.5
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (1)
+ARTIKEL: Holz Bohrköpfe? M4 - M10
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (1)
+ARTIKEL: Dremel Zubehör - Set mit Verlängerung, Schleiffscheiben, Gravierer, Polierer, etc.
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (2)
+ARTIKEL: Heißkleber - Stangen
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (2)
+ARTIKEL: Heißklebepistole
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (2)
+ARTIKEL: Metallsäge klein
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (2)
+ARTIKEL: Metallsäge groß
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (2)
+ARTIKEL: Laubsäge
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (2)
+ARTIKEL: Laubsägeblätter
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (2)
+ARTIKEL: Wasserwaage
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (2)
+ARTIKEL: Aluminium 45° Sägeführung
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (2)
+ARTIKEL: Nähnadelset
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (2)
+ARTIKEL: Heißluftpistole
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (2)
+ARTIKEL: Kleiner Eletrobläser/sauger
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (3)
+ARTIKEL: Behälter
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (3) / Behälter
+ARTIKEL: Zahnbürste
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (3) / Behälter
+ARTIKEL: Entlöt-Sauger
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (3) / Behälter
+ARTIKEL: kleiner usb-Lüfter
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (3) / Behälter
+ARTIKEL: usb A zu usb mini? Ladekabel?
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (3) / Behälter
+ARTIKEL: 2 Satz Plastikpinzetten
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (3) / Behälter
+ARTIKEL: 1 Satz Plastikbürsten
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (3) / Behälter
+ARTIKEL: 1 Pinsel
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (3) / Behälter
+ARTIKEL: 1 Bleistift
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (3) / Behälter
+ARTIKEL: 1 Satz Entgrater-Klingen
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (3) / Behälter
+ARTIKEL: Diverse Allen Hex Keys
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (3) / Behälter
+ARTIKEL: Enfacher Wirecutter / Abisolierer
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (3) / Behälter
+ARTIKEL: 3 Krokodilklemmen
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (3) / Behälter
+ARTIKEL: 1 Hautpinzette
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (3) / Behälter
+ARTIKEL: 1 kleiner Phillips Schraubenzieher
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (3)
+ARTIKEL: Satz an Papierfeilen (Parallelogramm geformt)
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (3)
+ARTIKEL: Satz Multimeter Messkabel
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (3)
+ARTIKEL: Satz an roten Elktroisolierband-Rollen
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (3)
+ARTIKEL: Billiges DIY Oszilloskop
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (3)
+ARTIKEL: PWM Servomotor-Verlängerungskabel
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (3)
+ARTIKEL: Allen Key Taschenmesser: 5/64 - 1/4
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (3)
+ARTIKEL: Torx Taschenmesser?: T9-T40
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (3)
+ARTIKEL: 2 DIY Signal Generatoren
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (3)
+ARTIKEL: 1 5V DC Netz to Barrel Transformatorkabel
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4)
+ARTIKEL: Satz 360° SG90 Servos
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4)
+ARTIKEL: Behälter
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4) / Behälter
+ARTIKEL: Satz Gelbe 6V Getriebemotoren
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4) / Behälter
+ARTIKEL: 3 25kg Servos mit Adaptern
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4)
+ARTIKEL: 5 Stepperonline NEMA 17 Stepper Motoren
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4) / Behälter
+ARTIKEL: 3 usb A Verteiler Hubs
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4) / Behälter
+ARTIKEL: usb Kernkabel ohne Konnektoren
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4) / Behälter
+ARTIKEL: Lötbare usb A Konnektoren mit Kabelansatz
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4) / Behälter
+ARTIKEL: Lötbare usb Mini Konnektoren mit Kabelansatz
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4) / Behälter
+ARTIKEL: Lötbare usb Micro Konnektoren mit Kabelansatz
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4)
+ARTIKEL: Male/Male Display Port Kabel
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4)
+ARTIKEL: Male/Male Display Port Kabel (lang)
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4)
+ARTIKEL: Aktiver Wifi Steuerbarer XYSTEC usb Hub
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4)
+ARTIKEL: 2 Male/Female usb A Kabel
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4)
+ARTIKEL: 1 Male/Female usb A Kabel mit Schalter
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4)
+ARTIKEL: Laptop Netzkabel mit Trafo OUT 19.5V, 3.33A
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4)
+ARTIKEL: Laptop Netzkabel mit Trafo OUT 19V, 3.42A
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4)
+ARTIKEL: Netzkabel für Computernetzteil
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4)
+ARTIKEL: Male/Male usb A to usb B Kabel
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4)
+ARTIKEL: 2 Male/Female usb A Kabel
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4)
+ARTIKEL: Laptop Netzkabel mit Trafo OUT 12V, 3A
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4)
+ARTIKEL: Laptop Netzkabel mit Trafo OUT 19.5V, 2.31A
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4)
+ARTIKEL: Haushaltsverlängerungskabel
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4)
+ARTIKEL: 6 usb Male/Male A to C Kabel
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4)
+ARTIKEL: usb Male/Male C  to C Kabel
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4)
+ARTIKEL: 6 male/male usb mini to A Kabel
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4)
+ARTIKEL: 4 male/male usb A to B Kabel
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4)
+ARTIKEL: 2 male/male usb A to C Kabel
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4)
+ARTIKEL: 2 male/male usb A to A Kabel
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4)
+ARTIKEL: 2 male/female barrel Connector Kabel mit Schalter
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (4)
+ARTIKEL: 1 Single to double Klinke male/male Kabel
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (5)
+ARTIKEL: Female Barrel Connector Kabelende
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (5)
+ARTIKEL: 2 China Laptop Netzkabel mit Trafo OUT 12V, 10A
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (5)
+ARTIKEL: Fugasun LiIonen Akku Ladegerät mit usb Kabel AA, AAA, A, SC, C, F6, Kompatibel mit IMF/LiION
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (5)
+ARTIKEL: ECO Worthy 12V/24V 20A Batterieladegerät
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (5)
+ARTIKEL: VARTA 2-4 AA/AAA Batterien (NiMH) Ladegerät
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (5)
+ARTIKEL: dona 200-S Batterie Tester
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (5)
+ARTIKEL: 2 3.7V 3000mAh 11.1 WH Wiederladbare Convex Head Batterien POWO18 B
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (5)
+ARTIKEL: Kiste
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (5) / Kiste
+ARTIKEL: AA Batterie 2er Halter mit Lötbaren Kabel
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (5) / Kiste
+ARTIKEL: LiIO AA? 3.7V 2er Batterie Halter mit Lötbaren Kabel
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (5) / Kiste
+ARTIKEL: Diverse Batterien 9V Batterie, AAA Batterien, AA Batterien, Knopfzellen Set
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (6)
+ARTIKEL: 100m 1mm Durchmesser Dyneema Kordel
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (6)
+ARTIKEL: UHU Alleskleber
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (6)
+ARTIKEL: 1 Rolle Paketschnur
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (6)
+ARTIKEL: 1 Rolle Drachenschnur
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (6)
+ARTIKEL: Klebbare Möbelplastikfüßchen
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (6)
+ARTIKEL: Je 1 Rolle Hartes/Weiches Klettband
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (6)
+ARTIKEL: Blumendrahtrollen
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (6)
+ARTIKEL: 10x10cm Metall lochrasterplatten
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (6)
+ARTIKEL: 3D Drucker Klebestifte
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (6)
+ARTIKEL: 1 Rolle Tesa
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (6)
+ARTIKEL: 2 Rollen Nähgarn (schwarz, weiß)
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (6)
+ARTIKEL: Kabelbinder in allen Größen
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (6)
+ARTIKEL: Rechteckige Bambusbastelstäbe
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (6)
+ARTIKEL: Sortiment an kleinen Stahlfedern
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (6)
+ARTIKEL: 7mm breite Zahnriemenrolle (Standardzahnriemen)
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (6)
+ARTIKEL: Professionelles Bausatz-Set für 10mm Aluprofile mit schrauben, T-Nuten?, Muttern, Verbindern, etc.
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (7)
+ARTIKEL: Alter Funktionierender Lötkolben mit Trafostation
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (7)
+ARTIKEL: Zubehörkiste für Lötkolben mit billigem China Lötdraht, Lötspitzen, Zukaufspitzen, draht rot, schwarz, Entlötpumpe, Entlötlitze.
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (7)
+ARTIKEL: Lötkolbenständer mit Schwamm
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (7)
+ARTIKEL: Behälter für Heissluftpistole mit Zubehör
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (7)
+ARTIKEL: Tasche für billiges Multimeter
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (7)
+ARTIKEL: Feilenset für gröbere Feilenarbeit
+
+===============================================
+ORT:     Arbeitstisch Regal / Schubfach (7)
+ARTIKEL: Behälter für Caliper
+
+===============================================
+ORT:     Kleiderschrank
+ARTIKEL: Alte Pappschachteln in allen Größen
+
+===============================================
+ORT:     Kleiderschrank
+ARTIKEL: Kleine Plastikkästen in allen Größen
+
+===============================================
+ORT:     Kleiderschrank
+ARTIKEL: Behälter für Anycubic 3 Drucker mit hochwertigem Verpackungs Schaumstoff
+
+===============================================
+ORT:     Kleiderschrank
+ARTIKEL: Sammelbehälter mit 3D Druck Abfall
+
+===============================================
+ORT:     Kleiderschrank
+ARTIKEL: Kleiner Aufstellventilator
+
+===============================================
+ORT:     Zimmer
+ARTIKEL: HEPA Luftreiniger
+
+===============================================
+ORT:     Zimmer
+ARTIKEL: Standventilator
+
+===============================================
+ORT:     Zimmer
+ARTIKEL: Klapptisch
+
+===============================================
+ORT:     Zimmer
+ARTIKEL: Werkrollhocker
+
+===============================================
+ORT:     Zimmer
+ARTIKEL: Scheppach Werkstattsauger mit Zubehör
+
+===============================================
+ORT:     Zimmer
+ARTIKEL: Holzplatten von Regalmöbeln
+
+===============================================
+ORT:     Zimmer
+ARTIKEL: PVC Rohre 2 und 5 cm Durchmesser
+
+===============================================
+ORT:     Zimmer
+ARTIKEL: Holzstäbe
+
+===============================================
+ORT:     Zimmer
+ARTIKEL: M3 Metall und Messingstäbe, auch mit Gewinde
+
+===============================================
+ORT:     Zimmer
+ARTIKEL: L Profile, Reste von Schwerlastregalen
+
+===============================================
+ORT:     Zimmer
+ARTIKEL: Hantelgewichte
+
+===============================================
+ORT:     Rückseitenschrank / Ablage
+ARTIKEL: Auto Abdeckplane
+
+===============================================
+ORT:     Rückseitenschrank
+ARTIKEL: Moosgummidichtungen
+
+===============================================
+ORT:     Rückseitenschrank
+ARTIKEL: Schlagbohrmaschine samt Bohrköpfen
+
+===============================================
+ORT:     Rückseitenschrank
+ARTIKEL: Gafferband oder Pnazerklebeband? schwarz
+
+===============================================
+ORT:     Rückseitenschrank
+ARTIKEL: PLA Filamentrollen
+
+===============================================
+ORT:     Rückseitenschrank
+ARTIKEL: Tatami Hülle Reste
+
+===============================================
+ORT:     Rückseitenschrank
+ARTIKEL: 1l Isopropanol
+
+===============================================
+ORT:     Rückseitenschrank
+ARTIKEL: Thrustmaster Joystick
+
+===============================================
+ORT:     Rückseitenschrank
+ARTIKEL: Noname usb Game Controller
+
+===============================================
+ORT:     Rückseitenschrank
+ARTIKEL: Auto Werkzeugkasten mit Hammer, Schraubenschlüsseln, Tacker, Schraubenzieher, etc.
+
+===============================================
+ORT:     Rückseitenschrank
+ARTIKEL: Hand-Nietmaschiene für Gewindenieten
+
+===============================================
+ORT:     Rückseitenschrank
+ARTIKEL: 1 Styropor Block
+
+===============================================
+ORT:     Balkonregal
+ARTIKEL: 1 Two Trees Laser Cutter
+
+===============================================
+ORT:     Balkonregal
+ARTIKEL: Behälter
+
+===============================================
+ORT:     Balkonregal / Behälter
+ARTIKEL: 1 RATT CNC Machine
+
+===============================================
+ORT:     Balkonregal
+ARTIKEL: 1 Stromverlängerungskabel mit Verteiler
+
+===============================================
+ORT:     Balkonregal
+ARTIKEL: 1 Lasercutter Hülle mit usb betriebener Absauganlage.
+
+===============================================
+ORT:     Balkonregal
+ARTIKEL: 1 Wetterfeste Abdeckhülle
+
+===============================================
+ORT:     Rückseitenregal / Ablage
+ARTIKEL: Sortimentskasten
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten
+ARTIKEL: 1x1 Schale
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten
+ARTIKEL: 2x1 Schale
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten
+ARTIKEL: 2x2 Schale
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (1) / 2x1 Schale
+ARTIKEL: Feinsicherungen 1A, 0.1A, 0.5A, 0.2A
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (1) / 2x2 Schale
+ARTIKEL: Potentiometer B5k, B10k, B20k, B50k, B100k, B250k
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (1) / 2x2 Schale
+ARTIKEL: Solide Buck Konverter mit Heat Sinks - Wahrscheinlich 5V ziel.. Wahrscheinlich hohe Amps
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (1) / 2x2 Schale
+ARTIKEL: Arduino CNC Shield für 3/evtl. 4 Achsen, V3.0
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (1) / 2x1 Schale
+ARTIKEL: AZ Delivery Kaera Module. 0V7670?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (1) / 1x1 Schale
+ARTIKEL: MPU-6050 Boards. Zweck? IMU-System?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (1) / 1x1 Schale
+ARTIKEL: (MP3?) SD-Kartenreader Boards. MP3-TP-16P V3.0
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (1) / 1x1 Schale
+ARTIKEL: Elegoo DS1307-Module-V03 Echtzeituhr?, AZDelivery D53231 Echtzeit Uhren?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (1) / 1x1 Schale
+ARTIKEL: ZY-MINI-360 Buck Converter? 5V? Wenig Ampere?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (1) / 2x1 Schale
+ARTIKEL: PCA9685 16Kanäle 12 Bit PWM Treiber (Servotreiber)
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (1) / 2x1 Schale
+ARTIKEL: PCA9685 16Kanäle 12 Bit PWM Treiber (Servotreiber)
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (1) / 1x1 Schale
+ARTIKEL: L7805CV Linearregulatoren 5V
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (1) / 1x1 Schale
+ARTIKEL: IRLZ44N MOSFETs?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (1) / 1x1 Schale
+ARTIKEL: IRF9540 MOSFETs?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (1) / 1x1 Schale
+ARTIKEL: RCWL-0516 Zweck?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (1) / 2x2 Schale
+ARTIKEL: DSN-VC288 Voltmeter, Ampere Modules
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (1) / 2x1 Schale
+ARTIKEL: 1.8 TFT SPI 128*160 V1.1 Display
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (2) / 2x1 Schale
+ARTIKEL: Einbaubare Female Barrel Connectors und Verkabelbare Male Barrel Connector Gegenstücke
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (2) / 2x1 Schale
+ARTIKEL: Female Barrel Connector Adapter to 2 Draht Terminals
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (2) / 1x1 Schale
+ARTIKEL: 2Throw 1 Pole Schalter
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (2) / 1x1 Schale
+ARTIKEL: ESP32-CAM Board
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (2) / 2x1 Schale
+ARTIKEL: Heat Sinks, Schraubbar, für Mosfets etc?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (2) / 2x1 Schale
+ARTIKEL: Male brechbare lötbare Pin-Leisten Standard-Weite.
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (2) / 2x1 Schale
+ARTIKEL: Female Rundsteckerleisten mit langen LötPins
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (2) / 2x1 Schale
+ARTIKEL: Male brechbare lötbare Doppel-Pin-Leisten Standard-Weite. Lange Pins
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (2) / 2x1 Schale
+ARTIKEL: Female brechpare lötbare Dupont Pinleisten
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (2) / 2x1 Schale
+ARTIKEL: Female brechpare lötbare Dupont Pinleisten lange Lötpins
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (2) / 2x1 Schale
+ARTIKEL: 2x5 Female Konnektoren mit Steckbarem Anschlussmechanismus für Bandkabel
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (2) / 2x1 Schale
+ARTIKEL: 2x5 male Konnektorbuchsen mit Lötpins zum auflöten auf boards etc
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (2) / 1x1 Schale
+ARTIKEL: Male Dupont Stecker zum Crimpen
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (2) / 1x1 Schale
+ARTIKEL: Female Dupont Stecker zum Crimpen
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (2) / 1x1 Schale
+ARTIKEL: Male brechbare lötbare Pin-Leisten Standard-Weite. Lange Pins
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (2) / 1x1 Schale
+ARTIKEL: M3? Schneidschrauben. Phillips Gewinde?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (2) / 1x1 Schale
+ARTIKEL: M3 Maschinensenkschrauben? Torx Gewinde?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (2) / 1x1 Schale
+ARTIKEL: M3 15mm Standoffs
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (2) / 1x1 Schale
+ARTIKEL: M3 10mm Standoffs
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (2) / 1x1 Schale
+ARTIKEL: M3 5mm Standoffs
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (2) / 1x1 Schale
+ARTIKEL: M3 4mm? Standoffs
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (2) / 1x1 Schale
+ARTIKEL: M2 Hex Standoffs
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (3) / 1x1 Schale
+ARTIKEL: 2 Möbelrollen / Coaster
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (3) / 1x1 Schale
+ARTIKEL: Diverse Male Pinleisten Reste
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (3) / 1x1 Schale
+ARTIKEL: 14x2 IC Sockel
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (3) / 1x1 Schale
+ARTIKEL: 8x2 IC Sockel
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (3) / 1x1 Schale
+ARTIKEL: 10x2 IC Sockel
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (3) / 2x1 Schale
+ARTIKEL: 220 Ohm? Widerstände
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (3) / 2x1 Schale
+ARTIKEL: Level Converter (5V - 3.3 V ?)
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (3) / 1x1 Schale
+ARTIKEL: Timer Quartze. 8.00C46?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (3) / 2x1 Schale
+ARTIKEL: 220 Ohm? Widerstände
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (3) / 2x1 Schale
+ARTIKEL: AZDelivery? WCMCU-230 Boards.. Zweck? IMU? Compass?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (3) / 2x2 Schale
+ARTIKEL: IC Kraftfreie Klemm Sockel.
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (3) / 2x1 Schale
+ARTIKEL: Female Rundsteckerleisten mit langen LötPins
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (3) / 2x2 Schale
+ARTIKEL: Raspberry Pi 5
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (3) / 1x1 Schale
+ARTIKEL: Shelly Wandmodul. Shelly Plus 1
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (3) / 1x1 Schale
+ARTIKEL: Zugeschnittene Inventar QR-Code ID Aufkleber
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (3) / 1x1 Schale
+ARTIKEL: Mini Stabmotoren Drohne? Bürstenlos? 
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (3) / 1x1 Schale
+ARTIKEL: Mini Linear Aktuatoren
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (3) / 1x1 Schale
+ARTIKEL: Stabförmige Vibrationsmdule
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (3) / 1x1 Schale
+ARTIKEL: DC 3V-3.7V Mini Coreless Motoren
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (4)
+ARTIKEL: Star Solar CNC85X115-18 Solarpanel
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (4) / 2x2 Schale
+ARTIKEL: Mini Solarpanele 65x48
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (4) / 2x2 Schale
+ARTIKEL: Zahnrundriemen, 20TPulleys, 40T Pulley?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (4) / 2x1 Schale
+ARTIKEL: Buzzer (Aktiv?)
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (4) / 2x1 Schale
+ARTIKEL: Dioden? Keine Beschriftung
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (4) / 1x1 Schale
+ARTIKEL: Schrittmotor Treiber MCU 10? Für BY... Schrittmotoren...
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (4) / 1x1 Schale
+ARTIKEL: 2 SN74HC157N ICs Zweck?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (4) / 1x1 Schale
+ARTIKEL: Schwarze Holzschneidschrauben M3?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (4) / 1x1 Schale
+ARTIKEL: XT60-HM Molex Stecker
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (4) / 1x1 Schale
+ARTIKEL: XT60-HF Molex Stecker
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (4) / 1x1 Schale
+ARTIKEL: XT60-HF Molex Steckerkappen (An Lötstelle)
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (4) / 1x1 Schale
+ARTIKEL: Einbaubare Druckschalter (Typ: Computer-An-Schalter)
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (4) / 1x1 Schale
+ARTIKEL: Male/Female 1Pin und 3Pin Magnetkonnektoren
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (4) / 1x1 Schale
+ARTIKEL: CD74HC163E ICs Zweck?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (4) / 1x1 Schale
+ARTIKEL: SN74HC245N ICs Zweck?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (4) / 1x1 Schale
+ARTIKEL: SN74HC273N ICs Zweck?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (4) / 1x1 Schale
+ARTIKEL: CD74HC173E ICs Zweck? Ja, Zweite Schactel..
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (4) / 1x1 Schale
+ARTIKEL: CD74HC173E ICs Zweck?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (4) / 1x1 Schale
+ARTIKEL: SN74HC14N ICs Zweck?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (4) / 1x1 Schale
+ARTIKEL: SN74HC153N ICs Zweck?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (4) / 1x1 Schale
+ARTIKEL: ALLIANCE AS6C62256 -55PCN 2348 CU34030B05W1G - Zweck?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (4) / 1x1 Schale
+ARTIKEL: AT28C256 15U-19802C 25231HK ICs Zweck?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 1x1 Schale
+ARTIKEL: GY-271 Gyroskop Boards
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 1x1 Schale
+ARTIKEL: MCP23017 Boards - Zweck? 
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 1x1 Schale
+ARTIKEL: PMW3901 SPI Modul 5V Optical Flow Sensor FOV42° Dist: 80mm-Unendlich - pimoroni.com
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 1x1 Schale
+ARTIKEL: MP1684 - Buck Konverter Boards?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 2x1 Schale
+ARTIKEL: Mini Pointer Laser Dioden
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 2x1 Schale
+ARTIKEL: HCSR04 Ultraschall Sensoren
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 2x2 Schale
+ARTIKEL: HC-SR501 Infrarot Sensor Module
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 1x1 Schale
+ARTIKEL: Fotoresistoren oder Fotodioden? 
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 1x1 Schale
+ARTIKEL: SW-18010P Kipp Sensoren?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 1x1 Schale
+ARTIKEL: ADS1115 16Bit I2C ADC+PGA Analog-Digital Wandler?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 1x1 Schale
+ARTIKEL: MH-Serie: Schlitz Photo Sensor für Tachometer ?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 1x1 Schale
+ARTIKEL: IR Sender/Receiver Distanzmesser? Boards
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 1x1 Schale
+ARTIKEL: AZ Delivery Small Sound Module Boards
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 1x1 Schale
+ARTIKEL: DRV8825 Board mit Heat Sink - Stepper Driver? oder DC Driver?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 1x1 Schale
+ARTIKEL: ELEGOO MAX7219 Dot Matrix Module V02 - 8x8 LED Matrix.
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 1x1 Schale
+ARTIKEL: Ausgebaute Laptop Speaker Lautsprecher
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 1x1 Schale
+ARTIKEL: AS5600 Magnetometer für Rotationsmessung?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 1x1 Schale
+ARTIKEL: Wifi Flachantennen (Kabel mit Kupferboard)  mit diesem mini Konnektor
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 1x1 Schale
+ARTIKEL: A4988 Stepper Motor Treiber? - Grün
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 1x1 Schale
+ARTIKEL: A4988 Stepper Motor Treiber? - Rot
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 1x1 Schale
+ARTIKEL: Menschlicher Anwesenheits Sensor - Radar? Modul..
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 1x1 Schale
+ARTIKEL: < 5V Voltmeter Modul? Oder 3fach 7 Segment Anzeige?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 2x1 Schale
+ARTIKEL: H-Bridge Motortreiber Module
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 1x1 Schale
+ARTIKEL: 2302AB SPI? Board? Zweck? Time of Flight? 
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (5) / 1x1 Schale
+ARTIKEL: kleine LED "Glühbirnen" mit Fassungen
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (6) / 1x1 Schale
+ARTIKEL: 2 Rotary Encoder
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (6) / 1x1 Schale
+ARTIKEL: IR Reciever Board?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (6) / 1x1 Schale
+ARTIKEL: SRD-05VDC-SL-C Relais
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (6) / 1x1 Schale
+ARTIKEL: Kamera Flachbandkabel?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (6) / 1x1 Schale
+ARTIKEL: Reed Schalter Board modul
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (6) / 1x1 Schale
+ARTIKEL: FC-75 usb mini Battier Charger Modul?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (6) / 2x1 Schale
+ARTIKEL: Temperatursensoren / Thermometer
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (6) / 2x1 Schale
+ARTIKEL: H961-U V6.0 1023HS - usb Lademodul? Batterie-Lademodul? Stromversorger?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (6) / 1x1 Schale
+ARTIKEL: 64x64 OLED Modul
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (6) / 1x1 Schale
+ARTIKEL: IR Modul?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (6) / 1x1 Schale
+ARTIKEL: 2238AB SPI? Board? Zweck? Time of Flight? Selbes wie in Kasten (5)?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (6) / 1x1 Schale
+ARTIKEL: PW548A Board - TCA9548A - Zweck?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (6) / 1x1 Schale
+ARTIKEL: 3_Clor 3 Farb LED Modul?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (6) / 1x1 Schale
+ARTIKEL: 8 LED Ringmodul
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (6) / 1x1 Schale
+ARTIKEL: Temperatursensormodul? Luftdruckmodul? Luftfeuche?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (6) / 1x1 Schale
+ARTIKEL: LCD2004 - LCD Driver Modul? I2C to LCD?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (6) / 2x1 Schale
+ARTIKEL: 2 Breadboard Power Module
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (6) / 2x2 Schale
+ARTIKEL: 3Pin Male JSP Buchsen zum anlöten + 3Pin Female Stecker mit kabeln zum anlöten
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (6) / 2x1 Schale
+ARTIKEL: 1602A LED Module
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (6) / 1x1 Schale
+ARTIKEL: IIC Address Select - GME12864-11-12-13 V3.22 ? Zweck?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (6) / 1x1 Schale
+ARTIKEL: AZDelivery Relais Module
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (6) / 1x1 Schale
+ARTIKEL: Relais Module mit LEDs Rot Grün?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (6) / 1x1 Schale
+ARTIKEL: AZDeliver 2 Solid State Relay
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (6) / 2x1 Schale
+ARTIKEL: MH-RD Regentropfen Sensor
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (7) / 2x1 Schale
+ARTIKEL: 2 usb Überspannungs Schuzmodule
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (7) / 1x1 Schale
+ARTIKEL: usb Papier Clips aus Metall
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (7) / 1x1 Schale
+ARTIKEL: Bilderrahmen Stifte
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (7) / 1x1 Schale
+ARTIKEL: Male/Female usb C to A Adapter
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (7) / 1x1 Schale
+ARTIKEL: D2 - 2 Kabel Stecker Schnell Clips ?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (7) / 1x1 Schale
+ARTIKEL: M3 Einschlaggewinde
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (7) / 1x1 Schale
+ARTIKEL: Male/Female Fass Stecker Adapter zwischen verschiendenen Größen
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (7) / 1x1 Schale
+ARTIKEL: M3 Spann - Muttern
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (7) / 2x2 Schale
+ARTIKEL: L - Metallverbinder 3 Größen
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (7) / 2x2 Schale
+ARTIKEL: Schwerlast Rotationslager, Zahnriemen-Rollen
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (7) / 1x1 Schale
+ARTIKEL: T - Messing - Paketverschlussklammern?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (7) / 1x1 Schale
+ARTIKEL: T - Messing - Paketverschlussklammern? - Zweite Schale
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (7) / 1x1 Schale
+ARTIKEL: Bereits geöffneter Sekundenkleber
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (7) / 1x1 Schale
+ARTIKEL: Verdrilldraht als Kabelhalter
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (7) / 1x1 Schale
+ARTIKEL: Silikat Gel Pads
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (7) / 1x1 Schale
+ARTIKEL: Möbeluntersetzer groß
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (7) / 1x1 Schale
+ARTIKEL: Möbeluntersetzer klein
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (7) / 1x1 Schale
+ARTIKEL: Möbeluntersetzer Mittel mit Einschlagstift
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (7) / 1x1 Schale
+ARTIKEL: Kaputte? <5V Voltmeter und Stepper Driver Module?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (7) / 1x1 Schale
+ARTIKEL: Reißzwecken mit Plastikzylinder-Kopf
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (7) / 1x1 Schale
+ARTIKEL: Kabel/Seilenden U-Haken mit Schellen und Rändelrad?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 2x1 Schale
+ARTIKEL: Zahnriemenspanner mit Zubehör
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 1x1 Schale
+ARTIKEL: Billige RC Plastikpropeller
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 1x1 Schale
+ARTIKEL: 4 M3 4cm Hex Standoffs (Rover Kit?) / M2 5cm Schrauben mit muttern. (Für Radbefestigung gedacht gewesen)
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 1x1 Schale
+ARTIKEL: ca 18x6x1.5 mm Beilagscheiben
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 1x1 Schale
+ARTIKEL: M4 Muttern
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 1x1 Schale
+ARTIKEL: M4 Maschinenschrauben 30mm Phillips Kopf
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 2x1 Schale
+ARTIKEL: Billiges Plastikgetriebe Set
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 2x2 Schale
+ARTIKEL: Möbelroller -  Untersetzer / RC-Haltespline
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 1x1 Schale
+ARTIKEL: M2 einschmelzgewinde
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 1x1 Schale
+ARTIKEL: M3 einschmelzgewinde
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 1x1 Schale
+ARTIKEL: Lötkolben Adapersatz zum sicheren schmelzen von Einschmelzgewinden M2-M6?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 1x1 Schale
+ARTIKEL: Kurze schneidschrauben M3? Phillips Head - Zweck Ursprünglich?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 1x1 Schale
+ARTIKEL: M3 Torx? Senkkopf? Maschinenschrauben 30mm?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 2x1 Schale
+ARTIKEL: Normale Skateboard Kugellager
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 2x1 Schale
+ARTIKEL: Zahnriemen Zubehör: Pulleys 20T?, Klemmstangen, Spannfedern?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 1x1 Schale
+ARTIKEL: M3? Schneidschrauben Torx Flachkopf? 20mm?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 1x1 Schale
+ARTIKEL: 20x20 Aluprofil Führungsrollen Mit Kugellager.
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 1x1 Schale
+ARTIKEL: Madenschrauben verschiedene Größen
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 1x1 Schale
+ARTIKEL: Kugellager 11x55x4mm?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 1x1 Schale
+ARTIKEL: Kugellager 8x3x4mm?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 1x1 Schale
+ARTIKEL: 12x3x4mm? V-Pulley für Rundriemen?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 1x1 Schale
+ARTIKEL: 25.75x12x2mm? Radialrollenlager
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 1x1 Schale
+ARTIKEL: 22x10x5 x2x12mm Achsverbindungs-Flansche.
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 1x1 Schale
+ARTIKEL: M2?Achsen Starre Kopplungsmodule
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (8) / 1x1 Schale
+ARTIKEL: M8 Achsen Kopplungsgelenke
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (9) / 2x1 Schale
+ARTIKEL: Raspberry Pi Pico
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (9) / 1x1 Schale
+ARTIKEL: Arduino Nanos
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (9) / 1x1 Schale
+ARTIKEL: Arduino Pro Mini ? - The Simple - Nano Klon?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (9) / 2x1 Schale
+ARTIKEL: AZ-Delivery ESP32-WROOM-32 Board
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (9) / 1x1 Schale
+ARTIKEL: ATTINY84A ICs
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (9) / 1x1 Schale
+ARTIKEL: LM358P OpAmps? Zweck?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (9) / 1x1 Schale
+ARTIKEL: LM358P OpAmps? Zweck? Zweite Kiste
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (9) / 1x1 Schale
+ARTIKEL: V1426-1429 Buck Konverter? 5V?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (9) / 1x1 Schale
+ARTIKEL: ESP32 C3 Super Minis
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (9) / 2x1 Schale
+ARTIKEL: 2 ESP8266 MOD 12-F? AZDelivery Boards with usb Mini Adapter
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (9) / 1x1 Schale
+ARTIKEL: ATMEGA328P U ICs
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (9) / 1x1 Schale
+ARTIKEL: SN74HC595N ICs Zweck? 
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (9) / 1x1 Schale
+ARTIKEL: ATTINY13A ICs
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (9) / 2x1 Schale
+ARTIKEL: RS485 to TTL Boards. Zweck? Busmodul?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (9) / 4x4 Schale
+ARTIKEL: ESP32-WROOM-32D Arduino Kopatible Boards mit usb C Adapter
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (9) / 4x4 Schale
+ARTIKEL: AZDelivery Arduino Kompatible Boards? usb B Adapter, Barrel Conector
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (9) / 2x1 Schale
+ARTIKEL: Arduino Prototype Development Shield.
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (9)
+ARTIKEL: Small IR Camera Control Module?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (9)
+ARTIKEL: AZDelivery Ardunino Compatible? MEGA 2560 Boards.
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (10) / 2x1 Schale
+ARTIKEL: M3 8mm Phillips Verbreiterterte Rundkopfschrauben? für Pinpall Standoffs?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (10) / 4x4 Schale
+ARTIKEL: Pinball Standoffs - L-Füße
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (10) / 2x1 Schale
+ARTIKEL: ESP32-CAM Boards mit Cams
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (10) / 2x1 Schale
+ARTIKEL: WiFi Antennen mit mini-Konnector?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (10) / 2x1 Schale
+ARTIKEL: Billiger Ventilator Fan.
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (10) / 2x1 Schale
+ARTIKEL: 8x2 Pin Sockel
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (10) / 4x4 Schale
+ARTIKEL: 14x2 Pin Sockel
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (10) / 4x4 Schale
+ARTIKEL: HX-4S-F30A Battery Balancer und Lade Module? 
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (10) / 4x4 Schale
+ARTIKEL: Wägemodule für Körperwage
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (10) / 4x4 Schale
+ARTIKEL: 2Pin Male/Female JST? Connectors mit Kabelenden zum Löten
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (10) / 1x1 Schale
+ARTIKEL: Reed Schalter
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (10) / 1x1 Schale
+ARTIKEL: Level Converter Modules
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (11) / 1x1 Schale
+ARTIKEL: Keramik Kondensatoren 106 gelb
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (11) / 1x1 Schale
+ARTIKEL: AZDelivery Temperatur? Luftdruck? Feuchtigkeit? Sensor Modul?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (11) / 2x1 Schale
+ARTIKEL: Keramik Kondensatoren 104 orange
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (11) / 2x1 Schale
+ARTIKEL: Keramik Kondensatoren 104 gelb
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (11) / 1x1 Schale
+ARTIKEL: 2N2907A Transistor? Zweck?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (11) / 1x1 Schale
+ARTIKEL: 100 mykroF 50V Elektrolyt Kondensatoren
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (11) / 1x1 Schale
+ARTIKEL: AZDelivery Joystick Modul
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (11) / 1x1 Schale
+ARTIKEL: 7 Segment Display klein, eine Zahl
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (11) / 2x1 Schale
+ARTIKEL: RFID? Chip, Karte? Chipreader-Modul
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (11) / 2x1 Schale
+ARTIKEL: N5822 Dioden M10 - Zweck?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (11) / 1x1 Schale
+ARTIKEL: Bodenfeuchte Sensor?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (11) / 1x1 Schale
+ARTIKEL: 7 Segment Display, 4 Zahlen.?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (11) / 4x4 Schale
+ARTIKEL: Krokodilklemmen Kabel verschiedene Farben
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (11) / 2x1 Schale
+ARTIKEL: Dupont Kabel mit Sonden-Klemmen. Verschiedene Farben
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (11) / 2x1 Schale
+ARTIKEL: Card Reader Laser-Cutter? / Laser Cutter Zubehör?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (11) / 2x1 Schale
+ARTIKEL: ELEGOO IR Remote Control
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (11) / 1x1 Schale
+ARTIKEL: 49E 3758D? Hull Sensor? Zweck?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (11) / 1x1 Schale
+ARTIKEL: MPU-6050 Boards? Zweck? Accelerometers?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (11) / 1x1 Schale
+ARTIKEL: SPI? Micro SD Card Adapter Boards? + Micro SDs
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (11) / 1x1 Schale
+ARTIKEL: M3? Schneidschrauben Phillips Rundkopf verbreitert? Woher? Zweck?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (11) / 1x1 Schale
+ARTIKEL: usb micro Batter Charger Module? Transformator?
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (12) / 2x1 Schale
+ARTIKEL: 2 Schleifringe 6 Kanäle
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (12) / 2x1 Schale
+ARTIKEL: Terminal Konnektoren zum anlöten 2 - 10 Pins
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (12) / 1x1 Schale
+ARTIKEL: Endschalter
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (12) / 1x1 Schale
+ARTIKEL: Mini-Druckschalter
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (12) / 1x1 Schale
+ARTIKEL: Mini-Schiebeschalter
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (12) / 1x1 Schale
+ARTIKEL: Mini-Endschalter
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (12) / 2x2 Schale
+ARTIKEL: Einbaubare Kippschalter
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (12) / 2x1 Schale
+ARTIKEL: 6x2 Stromverteiler Boards
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (12) / 2x1 Schale
+ARTIKEL: Arduino Nano Terminal Adapter.
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (12) / 2x2 Schale
+ARTIKEL: 4 Relay Module
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (12) / 2x1 Schale
+ARTIKEL: 7x2 Pin IC Sockets
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (12) / 2x2 Schale
+ARTIKEL: 4x2 Pin IC Sockets
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (12) / 1x1 Schale
+ARTIKEL: Lötbare Crimpbare? Ring Kabelendkonnektoren
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (12) / 1x1 Schale
+ARTIKEL: Crimpbare Aderendhülsen Steckverbindungen
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (12) / 1x1 Schale
+ARTIKEL: Lötbare Glassicherungs- Klemmhalter
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (12) / 1x1 Schale
+ARTIKEL: Schrumpfschlauchreste, Crimpbare 2Kabel Konnectorhülsen
+
+===============================================
+ORT:     Rückseitenregal / Ablage / Sortimentskasten (12) / 2x1 Schale
+ARTIKEL: Glassicherungs-Halter zum Einbauen mit Kabelstutzen zum Löten
+
+===============================================
+ORT:     Kleiderschrank / Ablage
+ARTIKEL: 1 LED 50x50cm Leuchpanel mit Trafo

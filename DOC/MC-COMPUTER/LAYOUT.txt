@@ -1,0 +1,838 @@
+############################################################
+#                                                          #
+#   MC-COMPUTER LAYOUT                                    #
+#                                                          #
+############################################################
+
+
+1. ZWECK DES DOKUMENTS
+----------------------
+
+Dieses Dokument definiert die mikroarchitektonischen Register,
+Busanschlüsse und Steuersignale des MC-Computers.
+
+Das Dokument beschreibt nicht den endgültigen Makro-Befehlssatz.
+Der Makro-Befehlssatz, sichtbare CPU-Register, Adressierungsarten
+und Instruktionsformate werden in einem separaten Dokument definiert.
+
+Dieses Dokument dient als Grundlage zur Formulierung von
+Mikroprogrammen beziehungsweise Mikrosteuersequenzen.
+
+
+2. GRUNDKONVENTIONEN
+--------------------
+
+2.1 Hauptbus
+
+Der MC-Computer besitzt einen gemeinsamen Hauptbus.
+
+Alle explizit als busangebunden definierten Register können Daten
+vom Bus lesen oder Daten auf den Bus schreiben.
+
+Pro Mikrozyklus gilt:
+
+- Mehrere Register dürfen gleichzeitig vom Bus lesen.
+- Maximal ein Register darf gleichzeitig auf den Bus schreiben.
+- Ein Schreibkonflikt auf dem Bus ist ein ungültiger Steuerzustand.
+
+2.2 Signalbenennung
+
+Register werden nach Funktionsblock und Registername benannt.
+
+Beispiele:
+
+ALU.OPERATION
+ALU.IN1
+ALU.IN2
+ALU.OUT
+
+PMEM.ADRLO
+PMEM.ADRHI
+PMEM.VALUE
+
+2.3 Standardsignale busangebundener Register
+
+Für jedes busangebundene Register R gelten grundsätzlich folgende
+Steuersignale:
+
+R.READ
+R.WRITE
+R.SET
+
+Bedeutung:
+
+R.READ
+    Das Register übernimmt den aktuellen Wert vom Hauptbus.
+
+R.WRITE
+    Das Register legt seinen aktuellen Wert auf den Hauptbus.
+
+R.SET
+    Pulsförmiges Übernahmesignal.
+    Das Signal bewirkt die tatsächliche Übernahme des am Eingang
+    anliegenden Wertes in das Register.
+
+READ und WRITE sind Gate-Signale.
+SET ist ein Pulssignal.
+
+2.4 Begriffsklärung READ / WRITE
+
+Die Signalnamen werden aus Sicht des Registers definiert.
+
+R.READ bedeutet:
+    Das Register liest vom Bus.
+
+R.WRITE bedeutet:
+    Das Register schreibt auf den Bus.
+
+Damit gilt beispielsweise:
+
+ALU.IN1.READ + ALU.IN1.SET
+    übernimmt den aktuellen Buswert in ALU.IN1.
+
+ALU.OUT.WRITE
+    legt den Inhalt von ALU.OUT auf den Bus.
+
+
+3. BUSANGEBUNDENE REGISTER
+--------------------------
+
+Die folgenden Register liegen direkt am Hauptbus und besitzen,
+sofern nicht anders angegeben, die Standardsignale:
+
+    <REGISTER>.READ
+    <REGISTER>.WRITE
+    <REGISTER>.SET
+
+
+3.1 ALU-Register
+
+ALU.OPERATION
+    Enthält den Operationscode der auszuführenden ALU-Operation.
+
+ALU.IN1
+    Erster Eingabewert der ALU.
+
+ALU.IN2
+    Zweiter Eingabewert der ALU.
+
+ALU.OUT
+    Ergebnisregister der ALU.
+
+ALU.STATES
+    Zustandsregister der ALU.
+    Enthält Statusbits der letzten ALU-Operation.
+
+    Mögliche Bits:
+        ZERO
+        CARRY
+        NEGATIVE
+        OVERFLOW
+
+    Die genaue Bitbelegung wird separat festgelegt.
+
+
+3.2 Programmspeicher-Register
+
+PMEM.ADRLO
+    Niederwertiger Teil der Programmspeicheradresse.
+
+PMEM.ADRHI
+    Höherwertiger Teil der Programmspeicheradresse.
+
+PMEM.VALUE
+    Datenregister des Programmspeichers.
+    Enthält den zuletzt aus dem Programmspeicher gelesenen Wert.
+
+
+3.3 Datenspeicher-Register
+
+DMEM.ADRLO
+    Niederwertiger Teil der Datenspeicheradresse.
+
+DMEM.ADRHI
+    Höherwertiger Teil der Datenspeicheradresse.
+
+DMEM.VALUE
+    Datenregister des Datenspeichers.
+    Enthält den zuletzt gelesenen oder zu schreibenden Wert.
+
+
+3.4 IO-Register
+
+IO.ADR
+    Adresse innerhalb des IO-Bereichs.
+
+IO.VALUE
+    Datenregister für IO-Lese- und Schreiboperationen.
+
+Hinweis:
+    IO kann memory-mapped abgebildet werden.
+    Alternativ kann IO als eigene 8-Bit-adressierbare IO-Bank
+    behandelt werden.
+
+    Die endgültige Festlegung erfolgt im Architekturdesign des
+    Speicher- und IO-Modells.
+
+
+3.5 Befehls- und Operandenregister
+
+IR
+    Instruction Register.
+    Enthält den aktuell geladenen Makrobefehl oder Opcode.
+
+IOP1
+    Instruction Operand 1.
+    Enthält den ersten aus dem Programmspeicher gelesenen Operanden
+    oder ein dekodiertes Operandenfeld.
+
+IOP2
+    Instruction Operand 2.
+    Enthält den zweiten aus dem Programmspeicher gelesenen Operanden
+    oder ein dekodiertes Operandenfeld.
+
+
+3.6 Adress- und Zeigerregister
+
+IPLO
+    Niederwertiger Teil des Instruction Pointer.
+
+IPHI
+    Höherwertiger Teil des Instruction Pointer.
+
+SPLO
+    Niederwertiger Teil des Stack Pointer.
+
+SPHI
+    Höherwertiger Teil des Stack Pointer.
+
+BPLO
+    Niederwertiger Teil des Base Pointer.
+
+BPHI
+    Höherwertiger Teil des Base Pointer.
+
+DPLO
+    Niederwertiger Teil des Data Pointer.
+
+DPHI
+    Höherwertiger Teil des Data Pointer.
+
+
+3.7 Allgemeine Register
+
+R1
+    Allgemeines Arbeitsregister 1.
+
+R2
+    Allgemeines Arbeitsregister 2.
+
+R3
+    Allgemeines Arbeitsregister 3.
+
+R4
+    Allgemeines Arbeitsregister 4.
+
+
+4. NICHT BUSANGEBUNDENE INTERNE STEUERREGISTER
+----------------------------------------------
+
+Die folgenden Elemente sind interne Steuer- oder Ablaufzustände.
+Sie gelten nicht als normale busangebundene Register, sofern nicht
+später ausdrücklich anders definiert.
+
+
+4.1 STEP
+
+STEP
+    Interner Mikroablaufzähler.
+
+    STEP bestimmt, welcher Mikrozyklus innerhalb der aktuellen
+    Makroinstruktion aktiv ist.
+
+    STEP liegt in der Grundarchitektur nicht am Hauptbus.
+
+    Zugriff erfolgt ausschließlich über spezielle Steuersignale:
+
+        STEP.RESET
+        STEP.INC
+
+    STEP.RESET
+        Setzt STEP auf den Anfangszustand der Mikroinstruktion.
+
+    STEP.INC
+        Erhöht STEP auf den nächsten Mikrozyklus.
+
+
+4.2 CONTROL
+
+CONTROL
+    Bezeichnet das aktuell aktive Steuersignalwort.
+
+    CONTROL ist kein architektonisches Register.
+    CONTROL liegt nicht am Hauptbus.
+
+    CONTROL ergibt sich aus der Mikrosteuerlogik, typischerweise aus:
+
+        IR
+        STEP
+        optionalen Statusbits
+        optionalen Decoderzuständen
+
+    CONTROL enthält die aktuell aktiven Steuersignale für den
+    jeweiligen Mikrozyklus.
+
+
+4.3 MICRO
+
+MICRO
+    Bezeichnet konzeptionell das aktuelle Mikrokommando.
+
+    MICRO ist in der Grundarchitektur kein sichtbares Register.
+
+    Falls eine Mikrocode-ROM verwendet wird, kann MICRO als interne
+    Ausgabe der Mikrocode-ROM betrachtet werden.
+
+    Falls die Steuerlogik hart verdrahtet ist, existiert MICRO nur
+    als logischer Begriff und nicht als eigenes Register.
+
+    MICRO liegt nicht am Hauptbus.
+
+
+5. SPEZIELLE STEUERSIGNALE
+--------------------------
+
+Neben den Standardsignalen busangebunder Register existieren
+funktionsblockbezogene Sondersteuersignale.
+
+
+5.1 ALU-Steuersignale
+
+ALU.EXECUTE
+    Führt die durch ALU.OPERATION definierte Operation aus.
+
+    Eingangswerte:
+
+        ALU.IN1
+        ALU.IN2
+        ALU.OPERATION
+
+    Ergebnis:
+
+        ALU.OUT
+        ALU.STATES
+
+    Wirkung:
+
+        Das Rechenergebnis wird in ALU.OUT geschrieben.
+        Die Statusbits werden in ALU.STATES geschrieben.
+
+
+5.2 Programmspeicher-Steuersignale
+
+PMEM.FETCH
+    Liest einen Wert aus dem Programmspeicher.
+
+    Adresse:
+
+        PMEM.ADRHI:PMEM.ADRLO
+
+    Ergebnis:
+
+        PMEM.VALUE
+
+PMEM.STORE
+    Reserviertes Signal.
+
+    Dieses Signal ist nur gültig, falls der Programmspeicher
+    beschreibbar ausgelegt wird.
+
+    In einer reinen ROM- oder Festprogrammspeicher-Architektur
+    ist PMEM.STORE ungültig und darf nicht verwendet werden.
+
+
+5.3 Datenspeicher-Steuersignale
+
+DMEM.FETCH
+    Liest einen Wert aus dem Datenspeicher.
+
+    Adresse:
+
+        DMEM.ADRHI:DMEM.ADRLO
+
+    Ergebnis:
+
+        DMEM.VALUE
+
+DMEM.STORE
+    Schreibt einen Wert in den Datenspeicher.
+
+    Adresse:
+
+        DMEM.ADRHI:DMEM.ADRLO
+
+    Wert:
+
+        DMEM.VALUE
+
+
+5.4 IO-Steuersignale
+
+IO.FETCH
+    Liest einen Wert aus dem IO-Bereich.
+
+    Adresse:
+
+        IO.ADR
+
+    Ergebnis:
+
+        IO.VALUE
+
+IO.STORE
+    Schreibt einen Wert in den IO-Bereich.
+
+    Adresse:
+
+        IO.ADR
+
+    Wert:
+
+        IO.VALUE
+
+
+5.5 Pointer-Steuersignale
+
+IP.INC
+    Erhöht den Instruction Pointer um 1.
+
+    Betroffene Register:
+
+        IPLO
+        IPHI
+
+SP.INC
+    Erhöht den Stack Pointer um 1.
+
+    Betroffene Register:
+
+        SPLO
+        SPHI
+
+SP.DEC
+    Verringert den Stack Pointer um 1.
+
+    Betroffene Register:
+
+        SPLO
+        SPHI
+
+DP.INC
+    Erhöht den Data Pointer um 1.
+
+    Betroffene Register:
+
+        DPLO
+        DPHI
+
+DP.DEC
+    Verringert den Data Pointer um 1.
+
+    Betroffene Register:
+
+        DPLO
+        DPHI
+
+
+5.6 Mikroablauf-Steuersignale
+
+STEP.RESET
+    Setzt den Mikroablaufzähler auf den Startwert.
+
+STEP.INC
+    Erhöht den Mikroablaufzähler um 1.
+
+
+6. ADRESSBREITEN UND REGISTERBREITEN
+------------------------------------
+
+Die Registerbreite des Hauptbusses beträgt in der Grundannahme 8 Bit.
+
+Folgende Register sind 8 Bit breit:
+
+    ALU.OPERATION
+    ALU.IN1
+    ALU.IN2
+    ALU.OUT
+    ALU.STATES
+
+    PMEM.ADRLO
+    PMEM.ADRHI
+    PMEM.VALUE
+
+    DMEM.ADRLO
+    DMEM.ADRHI
+    DMEM.VALUE
+
+    IO.ADR
+    IO.VALUE
+
+    IR
+    IOP1
+    IOP2
+
+    IPLO
+    IPHI
+    SPLO
+    SPHI
+    BPLO
+    BPHI
+    DPLO
+    DPHI
+
+    R1
+    R2
+    R3
+    R4
+
+16-Bit-Adressen werden aus jeweils zwei 8-Bit-Registern gebildet.
+
+Programmspeicheradresse:
+
+    PMEM.ADRHI:PMEM.ADRLO
+
+Datenspeicheradresse:
+
+    DMEM.ADRHI:DMEM.ADRLO
+
+Instruction Pointer:
+
+    IPHI:IPLO
+
+Stack Pointer:
+
+    SPHI:SPLO
+
+Base Pointer:
+
+    BPHI:BPLO
+
+Data Pointer:
+
+    DPHI:DPLO
+
+
+7. GÜLTIGKEITSREGELN FÜR MIKROZYKLEN
+------------------------------------
+
+7.1 Bus-Schreibregel
+
+In einem Mikrozyklus darf maximal ein WRITE-Signal eines
+busangebundenen Registers aktiv sein.
+
+Beispiel gültig:
+
+    R1.WRITE
+    ALU.IN1.READ
+    ALU.IN1.SET
+    R2.READ
+    R2.SET
+
+Beispiel ungültig:
+
+    R1.WRITE
+    R2.WRITE
+
+Begründung:
+
+    Zwei Register würden gleichzeitig auf den Hauptbus schreiben.
+
+
+7.2 Bus-Leseregel
+
+In einem Mikrozyklus dürfen mehrere READ-Signale aktiv sein.
+
+Beispiel gültig:
+
+    R1.WRITE
+    ALU.IN1.READ
+    ALU.IN1.SET
+    DMEM.VALUE.READ
+    DMEM.VALUE.SET
+
+Begründung:
+
+    Ein Register schreibt auf den Bus.
+    Mehrere Register übernehmen denselben Buswert.
+
+
+7.3 SET-Regel
+
+Ein Register übernimmt einen neuen Wert nur dann, wenn sein
+SET-Signal aktiv ist.
+
+READ allein bereitet die Übernahme vor, speichert aber noch nicht
+zwingend dauerhaft.
+
+Für eine normale Busübernahme wird daher verwendet:
+
+    QUELLE.WRITE
+    ZIEL.READ
+    ZIEL.SET
+
+
+7.4 Speicherzugriffe
+
+Speicheroperationen verwenden interne Adress- und Datenregister.
+
+Beispiel Programmspeicher lesen:
+
+    IPLO.WRITE
+    PMEM.ADRLO.READ
+    PMEM.ADRLO.SET
+
+    IPHI.WRITE
+    PMEM.ADRHI.READ
+    PMEM.ADRHI.SET
+
+    PMEM.FETCH
+
+    PMEM.VALUE.WRITE
+    IR.READ
+    IR.SET
+
+Beispiel Datenspeicher schreiben:
+
+    DPLO.WRITE
+    DMEM.ADRLO.READ
+    DMEM.ADRLO.SET
+
+    DPHI.WRITE
+    DMEM.ADRHI.READ
+    DMEM.ADRHI.SET
+
+    R1.WRITE
+    DMEM.VALUE.READ
+    DMEM.VALUE.SET
+
+    DMEM.STORE
+
+
+8. BEISPIEL-MIKROSEQUENZEN
+--------------------------
+
+8.1 Registertransfer R1 nach R2
+
+Ziel:
+
+    R2 := R1
+
+Mikrozyklus:
+
+    R1.WRITE
+    R2.READ
+    R2.SET
+    STEP.INC
+
+
+8.2 ALU-Addition R1 + R2 nach R3
+
+Ziel:
+
+    R3 := R1 + R2
+
+Mikrozyklus 1:
+
+    R1.WRITE
+    ALU.IN1.READ
+    ALU.IN1.SET
+    STEP.INC
+
+Mikrozyklus 2:
+
+    R2.WRITE
+    ALU.IN2.READ
+    ALU.IN2.SET
+    STEP.INC
+
+Mikrozyklus 3:
+
+    ALU.OPERATION := ADD
+    ALU.EXECUTE
+    STEP.INC
+
+Hinweis:
+
+    Das Setzen von ALU.OPERATION kann entweder über den Bus erfolgen
+    oder durch direkte Steuerlogik, abhängig von der endgültigen
+    Codierung der ALU-Operationen.
+
+Mikrozyklus 4:
+
+    ALU.OUT.WRITE
+    R3.READ
+    R3.SET
+    STEP.RESET
+
+
+8.3 Programmbefehl laden
+
+Ziel:
+
+    IR := PMEM[IP]
+    IP := IP + 1
+
+Mikrozyklus 1:
+
+    IPLO.WRITE
+    PMEM.ADRLO.READ
+    PMEM.ADRLO.SET
+    STEP.INC
+
+Mikrozyklus 2:
+
+    IPHI.WRITE
+    PMEM.ADRHI.READ
+    PMEM.ADRHI.SET
+    STEP.INC
+
+Mikrozyklus 3:
+
+    PMEM.FETCH
+    STEP.INC
+
+Mikrozyklus 4:
+
+    PMEM.VALUE.WRITE
+    IR.READ
+    IR.SET
+    IP.INC
+    STEP.RESET
+
+
+9. OFFENE ENTSCHEIDUNGEN
+------------------------
+
+9.1 IO-Modell
+
+Offen:
+
+    IO als eigener IO-Bereich mit IO.ADR und IO.VALUE
+
+oder:
+
+    IO vollständig memory-mapped im Programmspeicher- oder
+    Datenspeicher-Adressraum
+
+Arbeitsannahme:
+
+    IO bleibt zunächst als eigene 8-Bit-adressierbare IO-Bank
+    modelliert.
+
+Begründung:
+
+    Die Mikroarchitektur bleibt dadurch klarer.
+    Eine spätere memory-mapped Abbildung kann durch Adressdecoder
+    ergänzt werden.
+
+
+9.2 PMEM.STORE
+
+Offen:
+
+    Programmspeicher nur lesbar
+
+oder:
+
+    Programmspeicher beschreibbar
+
+Arbeitsannahme:
+
+    PMEM.STORE bleibt reserviert.
+    Standardmäßig ist Programmspeicher nur lesbar.
+
+
+9.3 ALU.OPERATION-Codierung
+
+Offen:
+
+    ALU.OPERATION wird über den Hauptbus gesetzt
+
+oder:
+
+    ALU.OPERATION wird direkt aus dem Mikrokommando gesetzt
+
+Arbeitsannahme:
+
+    ALU.OPERATION bleibt zunächst busangebunden.
+
+Begründung:
+
+    Dadurch lassen sich ALU-Operationen explizit über Mikrocode
+    modellieren.
+
+
+9.4 STATUS-Register
+
+Offen:
+
+    ALU.STATES ist nur internes ALU-Statusregister
+
+oder:
+
+    ALU.STATES dient zugleich als allgemein sichtbares STATUS-Register
+
+Arbeitsannahme:
+
+    ALU.STATES ist busangebunden und kann bei Bedarf in Makro-
+    oder Mikroprogrammen gelesen werden.
+
+    Ein separates STATUS-Register wird vorerst nicht eingeführt,
+    solange ALU.STATES diese Rolle erfüllen kann.
+
+
+10. MINIMALE REGISTERLISTE
+-------------------------
+
+Busangebunden:
+
+    ALU.OPERATION
+    ALU.IN1
+    ALU.IN2
+    ALU.OUT
+    ALU.STATES
+
+    PMEM.ADRLO
+    PMEM.ADRHI
+    PMEM.VALUE
+
+    DMEM.ADRLO
+    DMEM.ADRHI
+    DMEM.VALUE
+
+    IO.ADR
+    IO.VALUE
+
+    IR
+    IOP1
+    IOP2
+
+    IPLO
+    IPHI
+    SPLO
+    SPHI
+    BPLO
+    BPHI
+    DPLO
+    DPHI
+
+    R1
+    R2
+    R3
+    R4
+
+Nicht busangebunden:
+
+    STEP
+    CONTROL
+    MICRO

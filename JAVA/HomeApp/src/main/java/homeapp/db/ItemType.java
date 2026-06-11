@@ -2,42 +2,36 @@
 package homeapp.db;
 //*****************************************************************************
 
+import java.util.List;
+import java.util.ArrayList;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 //*****************************************************************************
-@Entity(name = "Link")
-@Table(name = "link")
-public class Link {
+@Entity(name = "ItemType")
+@Table(name = "itemtype")
+public class ItemType {
 
-	//=========================================================================
+    //=========================================================================
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Long id;
 	//=========================================================================
 
 	//=========================================================================
-	@ManyToOne
-	@JoinColumn(name = "source_node")
-	public Node source;
+	@Column(name = "ident", unique = true, length = 255, nullable = false)
+	public String ident;
 	//=========================================================================
 
 	//=========================================================================
-	@ManyToOne
-	@JoinColumn(name = "target_node")
-	public Node target;	
-	//=========================================================================
-
-	//=========================================================================
-	@Column(name = "kind", unique = false, length = 255, nullable = true)
-	public String kind;
+	@OneToMany
+	public List<ItemText> entries = new ArrayList<>();
 	//=========================================================================
 
 }
