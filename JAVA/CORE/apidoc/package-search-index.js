@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"Alle Packages","u":"allpackages-index.html"},{"l":"core.api"},{"l":"core.asset"},{"l":"core.clock"},{"l":"core.event"},{"l":"core.gui"},{"l":"core.input.mapping"},{"l":"core.input.raw"},{"l":"core.input.virtual"},{"l":"core.main"},{"l":"core.platform"}];updateSearchResults();
